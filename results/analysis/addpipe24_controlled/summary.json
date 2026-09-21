@@ -1,0 +1,160 @@
+{
+  "algorithms": {
+    "claude_structural": {
+      "best_new_blocks": [
+        21,
+        3
+      ],
+      "best_new_mask": "0x100000",
+      "best_new_reward": 74.69239,
+      "combined_frontier_points": 5,
+      "final_incumbent_mask": "0x100000",
+      "final_incumbent_reward": 74.69239,
+      "first_seed_improvement_query": 4,
+      "max_block_count": 3,
+      "mean_block_count": 2.5625,
+      "min_block_count": 2,
+      "new_final_frontier_members": [
+        {
+          "area": 507.528,
+          "blocks": [
+            16,
+            5,
+            3
+          ],
+          "mask": "0x108000",
+          "reward": 73.968972,
+          "wns": 7.44765
+        },
+        {
+          "area": 522.158,
+          "blocks": [
+            21,
+            1,
+            2
+          ],
+          "mask": "0x300000",
+          "reward": 74.591642,
+          "wns": 7.51138
+        },
+        {
+          "area": 547.694,
+          "blocks": [
+            20,
+            3,
+            1
+          ],
+          "mask": "0x480000",
+          "reward": 74.647306,
+          "wns": 7.5195
+        },
+        {
+          "area": 554.61,
+          "blocks": [
+            21,
+            3
+          ],
+          "mask": "0x100000",
+          "reward": 74.69239,
+          "wns": 7.5247
+        }
+      ],
+      "new_queries": 16,
+      "reward_improvement_over_seed": 0.03672600000000159,
+      "unique_masks": 16
+    },
+    "evolution": {
+      "best_new_blocks": [
+        21,
+        3
+      ],
+      "best_new_mask": "0x100000",
+      "best_new_reward": 74.69239,
+      "combined_frontier_points": 4,
+      "final_incumbent_mask": "0x100000",
+      "final_incumbent_reward": 74.69239,
+      "first_seed_improvement_query": 3,
+      "max_block_count": 13,
+      "mean_block_count": 4.125,
+      "min_block_count": 2,
+      "new_final_frontier_members": [
+        {
+          "area": 507.528,
+          "blocks": [
+            16,
+            5,
+            3
+          ],
+          "mask": "0x108000",
+          "reward": 73.968972,
+          "wns": 7.44765
+        },
+        {
+          "area": 523.754,
+          "blocks": [
+            21,
+            2,
+            1
+          ],
+          "mask": "0x500000",
+          "reward": 74.513446,
+          "wns": 7.50372
+        },
+        {
+          "area": 554.61,
+          "blocks": [
+            21,
+            3
+          ],
+          "mask": "0x100000",
+          "reward": 74.69239,
+          "wns": 7.5247
+        }
+      ],
+      "new_queries": 16,
+      "reward_improvement_over_seed": 0.03672600000000159,
+      "unique_masks": 16
+    },
+    "random": {
+      "best_new_blocks": [
+        9,
+        3,
+        2,
+        1,
+        2,
+        3,
+        4
+      ],
+      "best_new_mask": "0x096900",
+      "best_new_reward": 73.356756,
+      "combined_frontier_points": 1,
+      "final_incumbent_mask": "0x000000",
+      "final_incumbent_reward": 74.655664,
+      "first_seed_improvement_query": null,
+      "max_block_count": 17,
+      "mean_block_count": 11.25,
+      "min_block_count": 7,
+      "new_final_frontier_members": [],
+      "new_queries": 16,
+      "reward_improvement_over_seed": 0.0,
+      "unique_masks": 16
+    }
+  },
+  "pairwise_overlap": {
+    "evolution__claude_structural": [
+      "0x100000",
+      "0x108000",
+      "0x180000",
+      "0x500000"
+    ],
+    "random__claude_structural": [],
+    "random__evolution": []
+  },
+  "shared_best": {
+    "blocks": [
+      24
+    ],
+    "mask": "0x000000",
+    "reward": 74.655664
+  }
+}
