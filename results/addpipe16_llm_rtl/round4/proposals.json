@@ -1,0 +1,18 @@
+{
+  "round": 4,
+  "proposer": "GPT-5.6 Sol",
+  "architecture_family": "low-order ripple plus high-order parallel prefix",
+  "observations_used": [
+    "ripple2_prefix14 strictly dominates prefix16 in area, WNS, and reported power.",
+    "ripple4_prefix12 loses substantial timing relative to ripple2_prefix14.",
+    "ripple6_prefix10 and ripple10_prefix6 extend the observed low-area timing frontier.",
+    "The ripple-prefix tradeoff is non-monotonic, making the missing odd boundary widths important."
+  ],
+  "hypothesis": "Odd ripple widths adjacent to the measured even widths may expose better physical mappings, especially around the high-performance 1-3 bit region and the middle 5-7 bit region.",
+  "proposals": [
+    "ripple1_prefix15",
+    "ripple3_prefix13",
+    "ripple5_prefix11",
+    "ripple7_prefix9"
+  ]
+}
