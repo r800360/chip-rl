@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module tb_addpipe24;
+module tb;
 
 logic        clk;
 logic        rst_n;
