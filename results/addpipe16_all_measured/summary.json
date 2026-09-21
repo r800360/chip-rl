@@ -1,0 +1,73 @@
+{
+  "all_unique_designs_valid": true,
+  "best_reward": {
+    "area": 365.75,
+    "blocks": [
+      16
+    ],
+    "mask": "0x0000",
+    "reward": 75.38475,
+    "wns": 7.57505
+  },
+  "best_wns": {
+    "area": 365.75,
+    "blocks": [
+      16
+    ],
+    "mask": "0x0000",
+    "wns": 7.57505
+  },
+  "coverage_fraction": 0.00238037109375,
+  "coverage_percent": 0.238037109375,
+  "minimum_area": {
+    "area": 326.382,
+    "blocks": [
+      9,
+      5,
+      2
+    ],
+    "mask": "0x2100",
+    "wns": 7.52306
+  },
+  "minimum_reported_power": {
+    "area": 329.308,
+    "blocks": [
+      12,
+      4
+    ],
+    "mask": "0x0800",
+    "power_w": 4.29427e-05,
+    "wns": 7.50794
+  },
+  "observed_pareto_points": 5,
+  "search_space_size": 32768,
+  "sources": [
+    {
+      "new_unique_masks": 16,
+      "records": 16,
+      "source": "random_pilot"
+    },
+    {
+      "new_unique_masks": 16,
+      "records": 16,
+      "source": "online_random"
+    },
+    {
+      "new_unique_masks": 16,
+      "records": 16,
+      "source": "online_evolution"
+    },
+    {
+      "new_unique_masks": 14,
+      "records": 16,
+      "source": "single_split"
+    },
+    {
+      "new_unique_masks": 16,
+      "records": 16,
+      "source": "model_guided"
+    }
+  ],
+  "total_evaluation_records": 80,
+  "unique_masks_measured": 78
+}
