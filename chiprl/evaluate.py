@@ -811,6 +811,7 @@ def main() -> None:
         choices=(
             "addpipe8",
             "addpipe16",
+            "addpipe24",
         ),
     )
 
