@@ -1,0 +1,17 @@
+attempt,name,status,functional,formal_ok,place_route_ok,cells,area,wns,power_w,reward,new_scalar_best,entered_frontier,changed_frontier,frontier_size_before,frontier_size_after,incumbent_reward_after,on_final_frontier
+1,addpipe16_kogge_stone,success,True,True,True,311,359.366,7.55092,4.50941e-05,75.149834,False,False,False,12,12,75.38475,False
+2,addpipe16_condsum_tree,success,True,True,True,318,370.538,7.35438,4.61893e-05,73.173262,False,False,False,12,12,75.38475,False
+3,addpipe16_cla4,success,True,True,True,279,334.362,7.47195,4.43335e-05,74.385138,False,False,False,12,12,75.38475,False
+4,addpipe16_carryselect8_8,success,True,True,True,283,341.278,7.52161,4.64871e-05,74.874822,False,False,False,12,12,75.38475,False
+5,addpipe16_carryselect4_tree,success,True,True,True,294,361.76,7.49215,4.75639e-05,74.55974,False,False,False,12,12,75.38475,False
+6,addpipe16_flat_cla_sop,success,True,True,True,291,345.002,7.55449,4.45727e-05,75.199898,False,False,False,12,12,75.38475,False
+7,addpipe16_sklansky,success,True,True,True,265,319.2,7.49365,4.20441e-05,74.6173,False,True,True,12,13,75.38475,True
+8,addpipe16_han_carlson,success,True,True,True,231,305.9,7.4101,4.08313e-05,73.7951,False,True,True,13,13,75.38475,True
+9,addpipe16_brent_kung,success,True,True,True,236,306.964,7.47045,4.06695e-05,74.397536,False,True,True,13,14,75.38475,True
+10,addpipe16_carry_skip4,success,True,True,True,223,299.516,7.37783,3.956e-05,73.478784,False,True,True,14,15,75.38475,True
+11,addpipe16_carry_skip_var,success,True,True,True,228,307.23,7.33885,3.99713e-05,73.08127,False,False,False,15,15,75.38475,False
+12,addpipe16_ripple3_sklansky13,success,True,True,True,279,331.702,7.48366,4.31144e-05,74.504898,False,False,False,15,15,75.38475,False
+13,addpipe16_ripple4_prefix12_fixedcin,success,True,True,True,252,304.57,7.21869,3.96407e-05,71.88233,False,False,False,15,15,75.38475,False
+14,addpipe16_carry_skip_355_symmetric,success,True,True,True,226,308.294,7.29101,3.95981e-05,72.601806,False,False,False,15,15,75.38475,False
+15,addpipe16_ripple2_sklansky14,success,True,True,True,274,319.732,7.57096,4.09605e-05,75.389868,True,True,True,15,11,75.389868,True
+16,addpipe16_ripple1_sklansky15,success,True,True,True,285,329.574,7.54306,4.23533e-05,75.101026,False,False,False,11,11,75.389868,False

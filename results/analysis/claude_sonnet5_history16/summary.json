@@ -1,0 +1,58 @@
+{
+  "budget": 16,
+  "final_agent_frontier_members": [
+    "addpipe16_sklansky",
+    "addpipe16_han_carlson",
+    "addpipe16_brent_kung",
+    "addpipe16_carry_skip4",
+    "addpipe16_ripple2_sklansky14"
+  ],
+  "final_best": {
+    "area": 319.732,
+    "candidate": "rtl/agent/claude_sonnet5_history16/attempt_014_addpipe16_ripple2_sklansky14.v",
+    "cells": 274,
+    "evaluation_id": "80bdfb5eb43c47c8",
+    "label": "addpipe16_ripple2_sklansky14",
+    "power_w": 4.09605e-05,
+    "reward": 75.389868,
+    "wns": 7.57096
+  },
+  "final_candidate_records": 110,
+  "final_frontier_points": 11,
+  "frontier_changing_attempts": [
+    7,
+    8,
+    9,
+    10,
+    15
+  ],
+  "pass_counts": {
+    "attempts": 16,
+    "formal": 16,
+    "functional": 16,
+    "place_route": 16
+  },
+  "replication": {
+    "area_reduction_pct": 12.581818181818175,
+    "historical_metrics_identical": true,
+    "historical_runs": 3,
+    "power_reduction_pct": 12.918368344852647,
+    "reward_delta": 0.00511800000001017,
+    "winner_metrics_identical": true,
+    "winner_runs": 3,
+    "wns_loss_ps": 4.089999999999705
+  },
+  "run_id": "claude_sonnet5_history16",
+  "starting_best": {
+    "area": 365.75,
+    "candidate": "rtl/generated/addpipe16_random_pilot/candidate_001.v",
+    "cells": 310,
+    "evaluation_id": "f0230dfa462f493b",
+    "label": "(16,)",
+    "power_w": 4.70369e-05,
+    "reward": 75.38475,
+    "wns": 7.57505
+  },
+  "starting_candidate_records": 94,
+  "starting_frontier_points": 12
+}
