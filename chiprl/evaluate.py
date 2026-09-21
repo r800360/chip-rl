@@ -395,7 +395,7 @@ def evaluate(
         functional = (
             sim_result.returncode == 0
             and
-            "PASS exhaustive: 65536 additions"
+            "PASS exhaustive+protocol: 65536 additions"
             in sim_result.stdout
         )
 
