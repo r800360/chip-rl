@@ -11,6 +11,8 @@ import time
 from pathlib import Path
 from typing import Any
 
+from chiprl.formal import check_equivalence, REFERENCE, FORMAL_SEQ
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -25,7 +27,7 @@ ORFS_SDC_HOST = ROOT / "orfs" / "constraint.sdc"
 
 ORFS_CONFIG_CONTAINER = "/work/orfs/config.mk"
 
-EVALUATOR_SCHEMA_VERSION = "2"
+EVALUATOR_SCHEMA_VERSION = "3"
 
 
 def run(
@@ -115,6 +117,8 @@ def make_fingerprint(
             ORFS_CONFIG_HOST
         ),
         "sdc_sha256": sha256_file(ORFS_SDC_HOST),
+        "reference_rtl_sha256": sha256_file(REFERENCE),
+        "formal_seq": FORMAL_SEQ,
 
         "or_image": environment["or_image"],
         "or_image_id": environment["or_image_id"],
@@ -226,6 +230,9 @@ def proxy_reward_v0(
     result: dict[str, Any],
 ) -> float:
     if not result["functional"]:
+        return -1000.0
+
+    if not result["formal_ok"]:
         return -1000.0
 
     if not result["place_route_ok"]:
@@ -412,6 +419,7 @@ def evaluate(
         "environment": environment,
 
         "functional": functional,
+        "formal_ok": False,
         "synthesis_ok": False,
         "place_route_ok": False,
 
@@ -430,6 +438,7 @@ def evaluate(
             verilator_runtime,
             3,
         ),
+        "formal_runtime_s": 0.0,
         "orfs_runtime_s": 0.0,
 
         "proxy_reward_v0": None,
@@ -466,6 +475,46 @@ def evaluate(
         )
 
         return base_result
+
+    # --------------------------------------------------------
+    # Formal equivalence
+    # --------------------------------------------------------
+
+    formal_result = check_equivalence(
+        relative_candidate
+    )
+
+    base_result["formal_ok"] = (
+        formal_result["formal_ok"]
+    )
+
+    base_result["formal_runtime_s"] = (
+        formal_result["formal_runtime_s"]
+    )
+
+    if not formal_result["formal_ok"]:
+        base_result["runtime_s"] = round(
+            time.perf_counter()
+            - total_start,
+            3,
+        )
+
+        base_result["proxy_reward_v0"] = (
+            -1000.0
+        )
+
+        save_result(
+            result_json,
+            base_result,
+        )
+
+        print_failure(
+            "Formal equivalence",
+            formal_result["formal_output"],
+        )
+
+        return base_result
+
 
     # --------------------------------------------------------
     # ASIC implementation
