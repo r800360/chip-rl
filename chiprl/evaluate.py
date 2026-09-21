@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import os
@@ -11,30 +12,24 @@ import time
 from pathlib import Path
 from typing import Any
 
-from chiprl.formal import check_equivalence, REFERENCE, FORMAL_SEQ
+from chiprl.benchmarks import (
+    Benchmark,
+    ROOT,
+    get_benchmark,
+)
+from chiprl.formal import check_equivalence
 
-
-ROOT = Path(__file__).resolve().parents[1]
 
 ORFS = Path.home() / "eda" / "OpenROAD-flow-scripts"
 DOCKER_SHELL = ORFS / "flow" / "util" / "docker_shell"
 
-TOP_MODULE = "addpipe"
-
-TESTBENCH = ROOT / "sim" / "tb_addpipe.sv"
-ORFS_CONFIG_HOST = ROOT / "orfs" / "config.mk"
-ORFS_SDC_HOST = ROOT / "orfs" / "constraint.sdc"
-
-ORFS_CONFIG_CONTAINER = "/work/orfs/config.mk"
-
-EVALUATOR_SCHEMA_VERSION = "3"
+EVALUATOR_SCHEMA_VERSION = "4"
 
 
 def run(
     cmd: list[str],
     *,
     env=None,
-    check=False,
 ) -> subprocess.CompletedProcess:
     return subprocess.run(
         cmd,
@@ -43,7 +38,6 @@ def run(
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
-        check=check,
     )
 
 
@@ -72,60 +66,81 @@ def environment_manifest() -> dict[str, Any]:
         "openroad/orfs:local",
     )
 
-    image_id = command_text(
-        [
+    return {
+        "python": sys.version.split()[0],
+        "platform": platform.platform(),
+
+        "verilator": command_text(
+            ["verilator", "--version"]
+        ),
+
+        "or_image": or_image,
+
+        "or_image_id": command_text([
             "docker",
             "image",
             "inspect",
             or_image,
             "--format={{.Id}}",
-        ]
-    )
+        ]),
 
-    orfs_commit = command_text(
-        [
+        "orfs_git_commit": command_text([
             "git",
             "-C",
             str(ORFS),
             "rev-parse",
             "HEAD",
-        ]
-    )
-
-    return {
-        "python": sys.version.split()[0],
-        "platform": platform.platform(),
-        "verilator": command_text(
-            ["verilator", "--version"]
-        ),
-        "or_image": or_image,
-        "or_image_id": image_id,
-        "orfs_git_commit": orfs_commit,
+        ]),
     }
 
 
 def make_fingerprint(
     candidate: Path,
+    benchmark: Benchmark,
     environment: dict[str, Any],
 ) -> tuple[str, dict[str, Any]]:
+
     components = {
-        "schema_version": EVALUATOR_SCHEMA_VERSION,
+        "schema_version":
+            EVALUATOR_SCHEMA_VERSION,
 
-        "rtl_sha256": sha256_file(candidate),
-        "testbench_sha256": sha256_file(TESTBENCH),
-        "orfs_config_sha256": sha256_file(
-            ORFS_CONFIG_HOST
-        ),
-        "sdc_sha256": sha256_file(ORFS_SDC_HOST),
-        "reference_rtl_sha256": sha256_file(REFERENCE),
-        "formal_seq": FORMAL_SEQ,
+        "benchmark":
+            benchmark.name,
 
-        "or_image": environment["or_image"],
-        "or_image_id": environment["or_image_id"],
-        "orfs_git_commit": environment[
-            "orfs_git_commit"
-        ],
-        "verilator": environment["verilator"],
+        "top_module":
+            benchmark.top_module,
+
+        "rtl_sha256":
+            sha256_file(candidate),
+
+        "testbench_sha256":
+            sha256_file(benchmark.testbench),
+
+        "reference_rtl_sha256":
+            sha256_file(benchmark.reference),
+
+        "orfs_config_sha256":
+            sha256_file(
+                benchmark.orfs_config_host
+            ),
+
+        "sdc_sha256":
+            sha256_file(benchmark.sdc),
+
+        "formal_seq":
+            benchmark.formal_seq,
+
+        "or_image":
+            environment["or_image"],
+
+        "or_image_id":
+            environment["or_image_id"],
+
+        "orfs_git_commit":
+            environment["orfs_git_commit"],
+
+        "verilator":
+            environment["verilator"],
     }
 
     encoded = json.dumps(
@@ -134,7 +149,9 @@ def make_fingerprint(
         separators=(",", ":"),
     ).encode()
 
-    evaluation_id = sha256_bytes(encoded)[:16]
+    evaluation_id = (
+        sha256_bytes(encoded)[:16]
+    )
 
     return evaluation_id, components
 
@@ -143,6 +160,7 @@ def numeric_metric(
     metrics: dict[str, Any],
     *names: str,
 ) -> float | int | None:
+
     for name in names:
         if name not in metrics:
             continue
@@ -173,10 +191,17 @@ def load_json(path: Path) -> dict[str, Any]:
 def extract_metrics(
     metrics: dict[str, Any],
 ) -> dict[str, Any]:
+
     return {
         "area": numeric_metric(
             metrics,
             "finish__design__instance__area",
+        ),
+
+        "cells": numeric_metric(
+            metrics,
+            "finish__design__instance__count__stdcell",
+            "finish__design__instance__count",
         ),
 
         "wns": numeric_metric(
@@ -197,12 +222,6 @@ def extract_metrics(
             "finish__timing__hold__ws",
         ),
 
-        "cells": numeric_metric(
-            metrics,
-            "finish__design__instance__count__stdcell",
-            "finish__design__instance__count",
-        ),
-
         "setup_violations": numeric_metric(
             metrics,
             "finish__timing__drv__setup_violation_count",
@@ -218,6 +237,8 @@ def extract_metrics(
             "finish__power__total",
         ),
 
+        # Preserve for inspection, but do not use
+        # this metric in optimization yet.
         "fmax_hz": numeric_metric(
             metrics,
             "finish__timing__fmax__clock:core_clock",
@@ -229,6 +250,7 @@ def extract_metrics(
 def proxy_reward_v0(
     result: dict[str, Any],
 ) -> float:
+
     if not result["functional"]:
         return -1000.0
 
@@ -251,8 +273,10 @@ def proxy_reward_v0(
 
 
 def clear_variant(
+    benchmark: Benchmark,
     evaluation_id: str,
 ) -> None:
+
     variant = f"eval_{evaluation_id}"
 
     for tree in (
@@ -264,8 +288,8 @@ def clear_variant(
         path = (
             ROOT
             / tree
-            / "nangate45"
-            / TOP_MODULE
+            / benchmark.platform
+            / benchmark.top_module
             / variant
         )
 
@@ -274,25 +298,62 @@ def clear_variant(
             ignore_errors=True,
         )
 
-    build_dir = (
+    shutil.rmtree(
         ROOT
         / ".chiprl"
         / "verilator"
-        / evaluation_id
-    )
-
-    shutil.rmtree(
-        build_dir,
+        / evaluation_id,
         ignore_errors=True,
     )
+
+
+def save_result(
+    path: Path,
+    result: dict[str, Any],
+) -> None:
+
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    path.write_text(
+        json.dumps(
+            result,
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n"
+    )
+
+
+def print_failure(
+    stage: str,
+    output: str,
+) -> None:
+
+    print(
+        f"\n--- {stage} failure: "
+        "last 60 lines ---"
+    )
+
+    for line in output.splitlines()[-60:]:
+        print(line)
+
+    print("--- end failure output ---\n")
 
 
 def evaluate(
     candidate: str | Path,
     *,
+    benchmark: str | Benchmark = "addpipe8",
     cache: bool = True,
     clean: bool = False,
 ) -> dict[str, Any]:
+
+    if isinstance(benchmark, str):
+        benchmark = get_benchmark(benchmark)
+
     candidate = Path(candidate)
 
     if not candidate.is_absolute():
@@ -301,11 +362,13 @@ def evaluate(
     candidate = candidate.resolve()
 
     try:
-        relative_candidate = candidate.relative_to(ROOT)
+        relative_candidate = (
+            candidate.relative_to(ROOT)
+        )
     except ValueError:
         raise ValueError(
-            f"Candidate must be inside {ROOT}: "
-            f"{candidate}"
+            f"Candidate must be inside "
+            f"{ROOT}: {candidate}"
         )
 
     if not candidate.is_file():
@@ -313,9 +376,12 @@ def evaluate(
 
     environment = environment_manifest()
 
-    evaluation_id, fingerprint = make_fingerprint(
-        candidate,
-        environment,
+    evaluation_id, fingerprint = (
+        make_fingerprint(
+            candidate,
+            benchmark,
+            environment,
+        )
     )
 
     variant = f"eval_{evaluation_id}"
@@ -324,6 +390,7 @@ def evaluate(
         ROOT
         / "results"
         / "evaluations"
+        / benchmark.name
         / f"{evaluation_id}.json"
     )
 
@@ -331,11 +398,15 @@ def evaluate(
         ROOT
         / "results"
         / "evaluations"
+        / benchmark.name
         / f"{evaluation_id}.metrics.json"
     )
 
     if clean:
-        clear_variant(evaluation_id)
+        clear_variant(
+            benchmark,
+            evaluation_id,
+        )
 
         result_json.unlink(
             missing_ok=True
@@ -359,8 +430,10 @@ def evaluate(
         / evaluation_id
     )
 
-    if build_dir.exists():
-        shutil.rmtree(build_dir)
+    shutil.rmtree(
+        build_dir,
+        ignore_errors=True,
+    )
 
     build_dir.mkdir(
         parents=True,
@@ -369,40 +442,37 @@ def evaluate(
 
     total_start = time.perf_counter()
 
-    # --------------------------------------------------------
-    # Functional verification
-    # --------------------------------------------------------
+    # ========================================================
+    # 1. Dynamic simulation
+    # ========================================================
 
     verilator_start = time.perf_counter()
 
-    compile_result = run(
-        [
-            "verilator",
-            "--binary",
-            "--timing",
-            "-Wall",
-            "-Wno-fatal",
-            "--Mdir",
-            str(build_dir),
-            str(candidate),
-            str(TESTBENCH),
-            "--top-module",
-            "tb",
-        ]
-    )
+    compile_result = run([
+        "verilator",
+        "--binary",
+        "--timing",
+        "-Wall",
+        "-Wno-fatal",
+        "--Mdir",
+        str(build_dir),
+        str(candidate),
+        str(benchmark.testbench),
+        "--top-module",
+        "tb",
+    ])
 
     sim_result = None
     functional = False
 
     if compile_result.returncode == 0:
-        sim_result = run(
-            [str(build_dir / "Vtb")]
-        )
+        sim_result = run([
+            str(build_dir / "Vtb")
+        ])
 
         functional = (
             sim_result.returncode == 0
-            and
-            "PASS exhaustive+protocol: 65536 additions"
+            and benchmark.pass_marker
             in sim_result.stdout
         )
 
@@ -412,41 +482,83 @@ def evaluate(
     )
 
     base_result: dict[str, Any] = {
-        "evaluation_id": evaluation_id,
-        "candidate": str(relative_candidate),
+        "evaluation_id":
+            evaluation_id,
 
-        "fingerprint": fingerprint,
-        "environment": environment,
+        "benchmark":
+            benchmark.name,
 
-        "functional": functional,
-        "formal_ok": False,
-        "synthesis_ok": False,
-        "place_route_ok": False,
+        "candidate":
+            str(relative_candidate),
 
-        "area": None,
-        "cells": None,
-        "wns": None,
-        "tns": None,
-        "hold_wns": None,
-        "setup_violations": None,
-        "hold_violations": None,
-        "power_w": None,
-        "fmax_hz": None,
+        "fingerprint":
+            fingerprint,
 
-        "runtime_s": None,
-        "verilator_runtime_s": round(
-            verilator_runtime,
-            3,
-        ),
-        "formal_runtime_s": 0.0,
-        "orfs_runtime_s": 0.0,
+        "environment":
+            environment,
 
-        "proxy_reward_v0": None,
+        "functional":
+            functional,
 
-        "gds": None,
-        "metrics_file": None,
+        "formal_ok":
+            False,
 
-        "cache_hit": False,
+        "synthesis_ok":
+            False,
+
+        "place_route_ok":
+            False,
+
+        "area":
+            None,
+
+        "cells":
+            None,
+
+        "wns":
+            None,
+
+        "tns":
+            None,
+
+        "hold_wns":
+            None,
+
+        "setup_violations":
+            None,
+
+        "hold_violations":
+            None,
+
+        "power_w":
+            None,
+
+        "fmax_hz":
+            None,
+
+        "runtime_s":
+            None,
+
+        "verilator_runtime_s":
+            round(verilator_runtime, 3),
+
+        "formal_runtime_s":
+            0.0,
+
+        "orfs_runtime_s":
+            0.0,
+
+        "proxy_reward_v0":
+            None,
+
+        "gds":
+            None,
+
+        "metrics_file":
+            None,
+
+        "cache_hit":
+            False,
     }
 
     if not functional:
@@ -456,9 +568,9 @@ def evaluate(
             3,
         )
 
-        base_result["proxy_reward_v0"] = (
-            -1000.0
-        )
+        base_result[
+            "proxy_reward_v0"
+        ] = -1000.0
 
         save_result(
             result_json,
@@ -476,12 +588,13 @@ def evaluate(
 
         return base_result
 
-    # --------------------------------------------------------
-    # Formal equivalence
-    # --------------------------------------------------------
+    # ========================================================
+    # 2. Formal equivalence
+    # ========================================================
 
     formal_result = check_equivalence(
-        relative_candidate
+        relative_candidate,
+        benchmark,
     )
 
     base_result["formal_ok"] = (
@@ -499,9 +612,9 @@ def evaluate(
             3,
         )
 
-        base_result["proxy_reward_v0"] = (
-            -1000.0
-        )
+        base_result[
+            "proxy_reward_v0"
+        ] = -1000.0
 
         save_result(
             result_json,
@@ -515,10 +628,9 @@ def evaluate(
 
         return base_result
 
-
-    # --------------------------------------------------------
-    # ASIC implementation
-    # --------------------------------------------------------
+    # ========================================================
+    # 3. ASIC physical implementation
+    # ========================================================
 
     env = os.environ.copy()
 
@@ -538,8 +650,17 @@ def evaluate(
         [
             str(DOCKER_SHELL),
             "make",
-            f"DESIGN_CONFIG={ORFS_CONFIG_CONTAINER}",
-            f"VERILOG_FILES={candidate_container}",
+
+            (
+                "DESIGN_CONFIG="
+                f"{benchmark.orfs_config_container}"
+            ),
+
+            (
+                "VERILOG_FILES="
+                f"{candidate_container}"
+            ),
+
             f"FLOW_VARIANT={variant}",
         ],
         env=env,
@@ -553,16 +674,16 @@ def evaluate(
     result_dir = (
         ROOT
         / "results"
-        / "nangate45"
-        / TOP_MODULE
+        / benchmark.platform
+        / benchmark.top_module
         / variant
     )
 
     log_dir = (
         ROOT
         / "logs"
-        / "nangate45"
-        / TOP_MODULE
+        / benchmark.platform
+        / benchmark.top_module
         / variant
     )
 
@@ -581,7 +702,9 @@ def evaluate(
         / "6_report.json"
     )
 
-    synthesis_ok = synth_odb.is_file()
+    synthesis_ok = (
+        synth_odb.is_file()
+    )
 
     place_route_ok = (
         orfs_result.returncode == 0
@@ -615,35 +738,45 @@ def evaluate(
         **base_result,
         **qos,
 
-        "synthesis_ok": synthesis_ok,
-        "place_route_ok": place_route_ok,
+        "formal_ok":
+            True,
 
-        "runtime_s": round(
-            time.perf_counter()
-            - total_start,
-            3,
-        ),
+        "synthesis_ok":
+            synthesis_ok,
 
-        "orfs_runtime_s": round(
-            orfs_runtime,
-            3,
-        ),
+        "place_route_ok":
+            place_route_ok,
 
-        "gds": (
-            str(
-                gds.relative_to(ROOT)
-            )
-            if gds.is_file()
-            else None
-        ),
+        "runtime_s":
+            round(
+                time.perf_counter()
+                - total_start,
+                3,
+            ),
 
-        "metrics_file": (
-            str(
-                raw_metrics_copy.relative_to(ROOT)
-            )
-            if raw_metrics_copy.is_file()
-            else None
-        ),
+        "orfs_runtime_s":
+            round(
+                orfs_runtime,
+                3,
+            ),
+
+        "gds":
+            (
+                str(gds.relative_to(ROOT))
+                if gds.is_file()
+                else None
+            ),
+
+        "metrics_file":
+            (
+                str(
+                    raw_metrics_copy.relative_to(
+                        ROOT
+                    )
+                )
+                if raw_metrics_copy.is_file()
+                else None
+            ),
     }
 
     result["proxy_reward_v0"] = round(
@@ -665,51 +798,20 @@ def evaluate(
     return result
 
 
-def save_result(
-    path: Path,
-    result: dict[str, Any],
-) -> None:
-    path.parent.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
-    path.write_text(
-        json.dumps(
-            result,
-            indent=2,
-            sort_keys=True,
-        )
-        + "\n"
-    )
-
-
-def print_failure(
-    stage: str,
-    output: str,
-) -> None:
-    print(
-        f"\n--- {stage} failure: "
-        "last 60 lines ---"
-    )
-
-    for line in output.splitlines()[-60:]:
-        print(line)
-
-    print(
-        "--- end failure output ---\n"
-    )
-
-
 def main() -> None:
-    import argparse
-
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
         "candidate",
-        nargs="?",
-        default="rtl/addpipe.v",
+    )
+
+    parser.add_argument(
+        "--benchmark",
+        default="addpipe8",
+        choices=(
+            "addpipe8",
+            "addpipe16",
+        ),
     )
 
     parser.add_argument(
@@ -726,6 +828,7 @@ def main() -> None:
 
     result = evaluate(
         args.candidate,
+        benchmark=args.benchmark,
         cache=not args.no_cache,
         clean=args.clean,
     )
@@ -737,10 +840,10 @@ def main() -> None:
         )
     )
 
-    if (
-        not result["functional"]
-        or
-        not result["place_route_ok"]
+    if not (
+        result["functional"]
+        and result["formal_ok"]
+        and result["place_route_ok"]
     ):
         raise SystemExit(1)
 
