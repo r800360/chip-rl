@@ -1,0 +1,154 @@
+{
+  "action_space": {
+    "interpretation": "bit i = 1 inserts a block boundary after datapath bit i",
+    "maximum": "0x7fffff",
+    "minimum": "0x000000",
+    "size": 8388608,
+    "type": "23-bit boundary mask"
+  },
+  "already_measured_masks": [
+    "0x000000",
+    "0x000080",
+    "0x000800",
+    "0x008000",
+    "0x008080",
+    "0x020820",
+    "0x088888",
+    "0x7fffff"
+  ],
+  "benchmark": "addpipe24",
+  "current_frontier": [
+    {
+      "area": 530.936,
+      "blocks": [
+        24
+      ],
+      "mask": "0x000000",
+      "power_w": 6.79251e-05,
+      "proxy_reward_v0": 74.655664,
+      "wns": 7.51866
+    }
+  ],
+  "objective": "proxy_reward_v0 = -0.001 * area + 10 * WNS",
+  "own_previous_queries": [],
+  "query_budget": 16,
+  "query_number": 1,
+  "shared_seed_measurements": [
+    {
+      "area": 530.936,
+      "blocks": [
+        24
+      ],
+      "mask": "0x000000",
+      "power_w": 6.79251e-05,
+      "proxy_reward_v0": 74.655664,
+      "wns": 7.51866
+    },
+    {
+      "area": 568.708,
+      "blocks": [
+        8,
+        16
+      ],
+      "mask": "0x000080",
+      "power_w": 7.47648e-05,
+      "proxy_reward_v0": 73.429692,
+      "wns": 7.39984
+    },
+    {
+      "area": 534.926,
+      "blocks": [
+        12,
+        12
+      ],
+      "mask": "0x000800",
+      "power_w": 7.02084e-05,
+      "proxy_reward_v0": 73.243774,
+      "wns": 7.37787
+    },
+    {
+      "area": 539.448,
+      "blocks": [
+        16,
+        8
+      ],
+      "mask": "0x008000",
+      "power_w": 6.85991e-05,
+      "proxy_reward_v0": 74.482552,
+      "wns": 7.5022
+    },
+    {
+      "area": 545.566,
+      "blocks": [
+        8,
+        8,
+        8
+      ],
+      "mask": "0x008080",
+      "power_w": 7.16833e-05,
+      "proxy_reward_v0": 73.218034,
+      "wns": 7.37636
+    },
+    {
+      "area": 574.294,
+      "blocks": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "mask": "0x020820",
+      "power_w": 7.46908e-05,
+      "proxy_reward_v0": 73.781106,
+      "wns": 7.43554
+    },
+    {
+      "area": 552.216,
+      "blocks": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "mask": "0x088888",
+      "power_w": 7.1973e-05,
+      "proxy_reward_v0": 72.907584,
+      "wns": 7.34598
+    },
+    {
+      "area": 593.18,
+      "blocks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "mask": "0x7fffff",
+      "power_w": 7.54356e-05,
+      "proxy_reward_v0": 70.14362,
+      "wns": 7.07368
+    }
+  ]
+}
