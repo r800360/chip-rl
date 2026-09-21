@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 
 from anthropic import Anthropic
@@ -240,10 +241,25 @@ def main():
             "'rtl' must be a string"
         )
 
-    if "module addpipe16" not in proposal["rtl"]:
+    try:
+        top_module = observation[
+            "correctness_contract"
+        ][
+            "top_module"
+        ]
+    except KeyError as exc:
         raise SystemExit(
-            "Proposal does not contain "
-            "'module addpipe16'"
+            "Observation is missing "
+            "correctness_contract.top_module"
+        ) from exc
+
+    if not re.search(
+        rf"\\bmodule\\s+{re.escape(top_module)}\\b",
+        proposal["rtl"],
+    ):
+        raise SystemExit(
+            "Proposal does not contain required "
+            f"top module {top_module!r}"
         )
 
     # stdout belongs exclusively to the protocol
