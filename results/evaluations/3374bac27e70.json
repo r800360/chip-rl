@@ -1,0 +1,20 @@
+{
+  "candidate": "rtl/candidates/candidate_01.v",
+  "id": "3374bac27e70",
+  "functional": true,
+  "synthesis_ok": true,
+  "place_route_ok": true,
+  "area": 138.852,
+  "wns": 7.33351,
+  "tns": 0,
+  "cells": 111,
+  "wirelength": null,
+  "drc_errors": null,
+  "power_w": 1.9613e-05,
+  "runtime_s": 4.031,
+  "verilator_runtime_s": 3.452,
+  "orfs_runtime_s": 0.58,
+  "reward": 73.196248,
+  "gds": "results/nangate45/addpipe/eval_3374bac27e70/6_final.gds",
+  "metrics_file": "logs/nangate45/addpipe/eval_3374bac27e70/6_report.json"
+}

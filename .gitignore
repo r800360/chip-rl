@@ -1,0 +1,11 @@
+.venv/
+obj_dir/
+__pycache__/
+*.pyc
+
+# chip-rl generated state
+.chiprl/
+logs/
+reports/
+objects/
+results/nangate45/
