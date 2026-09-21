@@ -1,0 +1,130 @@
+[
+  {
+    "algorithm": "random",
+    "budget": 2,
+    "mean_best": 75.7592935132,
+    "p_best": 0.1681,
+    "pareto": 0.16363333333333333,
+    "unique_hw": 2
+  },
+  {
+    "algorithm": "random",
+    "budget": 3,
+    "mean_best": 75.9876522212,
+    "p_best": 0.2506,
+    "pareto": 0.24746666666666664,
+    "unique_hw": 3
+  },
+  {
+    "algorithm": "random",
+    "budget": 4,
+    "mean_best": 76.0775242848,
+    "p_best": 0.3341,
+    "pareto": 0.3305666666666667,
+    "unique_hw": 4
+  },
+  {
+    "algorithm": "random",
+    "budget": 5,
+    "mean_best": 76.123998765,
+    "p_best": 0.4193,
+    "pareto": 0.4149333333333333,
+    "unique_hw": 5
+  },
+  {
+    "algorithm": "random",
+    "budget": 6,
+    "mean_best": 76.1513305404,
+    "p_best": 0.5035,
+    "pareto": 0.4972,
+    "unique_hw": 6
+  },
+  {
+    "algorithm": "random",
+    "budget": 8,
+    "mean_best": 76.181336225,
+    "p_best": 0.6661,
+    "pareto": 0.6633,
+    "unique_hw": 8
+  },
+  {
+    "algorithm": "random",
+    "budget": 10,
+    "mean_best": 76.19792441199999,
+    "p_best": 0.829,
+    "pareto": 0.8306,
+    "unique_hw": 10
+  },
+  {
+    "algorithm": "random",
+    "budget": 12,
+    "mean_best": 76.207832,
+    "p_best": 1.0,
+    "pareto": 1.0,
+    "unique_hw": 12
+  },
+  {
+    "algorithm": "evolution",
+    "budget": 2,
+    "mean_best": 75.7493190396,
+    "p_best": 0.1628,
+    "pareto": 0.16829999999999998,
+    "unique_hw": 2
+  },
+  {
+    "algorithm": "evolution",
+    "budget": 3,
+    "mean_best": 75.9293820772,
+    "p_best": 0.3511,
+    "pareto": 0.25236666666666663,
+    "unique_hw": 3
+  },
+  {
+    "algorithm": "evolution",
+    "budget": 4,
+    "mean_best": 76.0603906362,
+    "p_best": 0.4857,
+    "pareto": 0.31053333333333333,
+    "unique_hw": 4
+  },
+  {
+    "algorithm": "evolution",
+    "budget": 5,
+    "mean_best": 76.1312226922,
+    "p_best": 0.5876,
+    "pareto": 0.3627666666666666,
+    "unique_hw": 5
+  },
+  {
+    "algorithm": "evolution",
+    "budget": 6,
+    "mean_best": 76.165387731,
+    "p_best": 0.6836,
+    "pareto": 0.41596666666666665,
+    "unique_hw": 6
+  },
+  {
+    "algorithm": "evolution",
+    "budget": 8,
+    "mean_best": 76.189382763,
+    "p_best": 0.8417,
+    "pareto": 0.6001666666666666,
+    "unique_hw": 8
+  },
+  {
+    "algorithm": "evolution",
+    "budget": 10,
+    "mean_best": 76.2033543684,
+    "p_best": 0.9255,
+    "pareto": 0.8852666666666666,
+    "unique_hw": 10
+  },
+  {
+    "algorithm": "evolution",
+    "budget": 12,
+    "mean_best": 76.207832,
+    "p_best": 1.0,
+    "pareto": 1.0,
+    "unique_hw": 12
+  }
+]
