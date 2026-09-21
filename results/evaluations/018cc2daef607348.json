@@ -1,0 +1,42 @@
+{
+  "area": 157.206,
+  "cache_hit": false,
+  "candidate": "rtl/generated/random_20260920/candidate_005.v",
+  "cells": 133,
+  "environment": {
+    "or_image": "openroad/orfs:local",
+    "or_image_id": "sha256:8cae1bdb8296eed70b4d981696b0f29aa7faeb61b64b1f2950506aaac65ef442",
+    "orfs_git_commit": "3a964e13f11a4e435aac01ffa14db0a7d2853720",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "verilator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)"
+  },
+  "evaluation_id": "018cc2daef607348",
+  "fingerprint": {
+    "or_image": "openroad/orfs:local",
+    "or_image_id": "sha256:8cae1bdb8296eed70b4d981696b0f29aa7faeb61b64b1f2950506aaac65ef442",
+    "orfs_config_sha256": "e9281256894f32f11ed2bdd6649ff514cd986870479f89763775b6861fec0d22",
+    "orfs_git_commit": "3a964e13f11a4e435aac01ffa14db0a7d2853720",
+    "rtl_sha256": "a3910daa9a0f8377a30288612645bca1d1c25002e6e659590137acb2c8d36f12",
+    "schema_version": "2",
+    "sdc_sha256": "8c10796568145a89b32eec885016b6715a7a72901d3ac3337002560b12f7f749",
+    "testbench_sha256": "df130f4cb9cb4253f3022badc455c20ee4fb2fc3a0fc4f11a2989e2bad2967d5",
+    "verilator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)"
+  },
+  "fmax_hz": 5209390000.0,
+  "functional": true,
+  "gds": "results/nangate45/addpipe/eval_018cc2daef607348/6_final.gds",
+  "hold_violations": 0,
+  "hold_wns": 0.110756,
+  "metrics_file": "results/evaluations/018cc2daef607348.metrics.json",
+  "orfs_runtime_s": 16.783,
+  "place_route_ok": true,
+  "power_w": 2.16913e-05,
+  "proxy_reward_v0": 74.812394,
+  "runtime_s": 20.548,
+  "setup_violations": 0,
+  "synthesis_ok": true,
+  "tns": 0,
+  "verilator_runtime_s": 3.765,
+  "wns": 7.49696
+}

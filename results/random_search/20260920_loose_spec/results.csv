@@ -1,0 +1,11 @@
+candidate,architecture,gated_output,functional,routed,cells,area,wns,tns,power_w,runtime_s,proxy_reward_v0
+rtl/generated/random_20260920/candidate_000.v,behavioral,True,True,True,156,178.22,7.62411,0,2.32793e-05,20.336,76.06288
+rtl/generated/random_20260920/candidate_001.v,carry_select,True,True,True,144,168.112,7.60849,0,2.3082e-05,20.2,75.916788
+rtl/generated/random_20260920/candidate_002.v,chunk2,False,True,True,100,122.626,7.38993,0,1.80746e-05,20.291,73.776674
+rtl/generated/random_20260920/candidate_003.v,behavioral,False,True,True,134,151.088,7.64862,0,2.05257e-05,20.946,76.335112
+rtl/generated/random_20260920/candidate_004.v,chunk4,False,True,True,117,136.458,7.54818,0,1.92489e-05,20.259,75.345342
+rtl/generated/random_20260920/candidate_005.v,chunk4,True,True,True,133,157.206,7.49696,0,2.16913e-05,20.548,74.812394
+rtl/generated/random_20260920/candidate_006.v,ripple,False,True,True,100,122.626,7.34972,0,1.82182e-05,20.45,73.374574
+rtl/generated/random_20260920/candidate_007.v,ripple,True,True,True,111,138.852,7.33351,0,1.9613e-05,20.691,73.196248
+rtl/generated/random_20260920/candidate_008.v,chunk2,True,True,True,111,138.852,7.35951,0,1.94181e-05,20.028,73.456248
+rtl/generated/random_20260920/candidate_009.v,carry_select,False,True,True,125,150.822,7.61566,0,2.1432e-05,20.586,76.005778
