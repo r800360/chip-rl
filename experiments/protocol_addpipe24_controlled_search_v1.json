@@ -1,0 +1,67 @@
+{
+  "protocol_version": 1,
+  "parent_protocol": "experiments/protocol_addpipe24.json",
+  "parent_protocol_sha256": "6503ad4fdd38b733be377aba1bd8a626ceb251c461a24674258dbc0301004ad0",
+
+  "benchmark": "addpipe24",
+  "action_space": {
+    "type": "23-bit boundary mask",
+    "size": 8388608,
+    "range": ["0x000000", "0x7fffff"],
+    "generator": "chiprl.generate_addpipe24",
+    "semantics": "ordered composition of 24 bits using the frozen segmented carry-select generator"
+  },
+
+  "shared_starting_information": {
+    "results": "results/addpipe24_shared_seed/results.json",
+    "candidate_count": 8,
+    "pareto_count": 1,
+    "best_mask": "0x000000",
+    "best_reward": 74.655664
+  },
+
+  "evaluation": {
+    "new_unique_queries_per_algorithm": 16,
+    "reward": "proxy_reward_v0 = -0.001 * area + 10.0 * WNS",
+    "pareto_objectives": ["minimize area", "maximize WNS"],
+    "fmax_is_not_an_objective": true,
+    "cross_algorithm_results_visible": false,
+    "cross_algorithm_mask_overlap_allowed": true,
+    "within_algorithm_duplicate_queries_allowed": false
+  },
+
+  "uniform_random_structural": {
+    "rng": "python random.Random",
+    "seed": 20260921,
+    "policy": "uniformly sample unseen masks from the complete 23-bit mask space without replacement"
+  },
+
+  "evolution_structural": {
+    "rng": "python random.Random",
+    "seed": 20260921,
+    "initial_archive": "the 8 shared seed observations",
+    "selection": "tournament",
+    "tournament_size": 3,
+    "selection_metric": "proxy_reward_v0",
+    "random_restart_probability": 0.15,
+    "mutation": {
+      "operation": "flip distinct boundary bits",
+      "one_bit_probability": 0.70,
+      "two_bit_probability": 0.25,
+      "three_bit_probability": 0.05
+    },
+    "archive_update": "append each new evaluated candidate before choosing the next candidate"
+  },
+
+  "claude_structural": {
+    "model": "claude-sonnet-5",
+    "effort": "high",
+    "max_tokens": 48000,
+    "starting_context": "only the 8 shared seed observations plus the frozen benchmark/action-space description",
+    "adaptive_context": "the shared seed plus only this algorithm's own previous query results",
+    "action": "select exactly one previously unseen 23-bit boundary mask",
+    "rtl_generation": "none; the same frozen structural generator used by random and evolution produces RTL",
+    "invalid_or_duplicate_model_outputs": "do not consume an EDA query; record and request a replacement",
+    "new_unique_eda_query_budget": 16
+  }
+}
