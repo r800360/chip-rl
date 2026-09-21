@@ -145,12 +145,14 @@ def main():
 
     client = Anthropic()
 
-    message = client.messages.create(
+    # Use the streaming API even though this adapter only
+    # needs the final accumulated message. Large max_tokens
+    # values can exceed the SDK's estimated non-streaming
+    # request-duration limit. Streaming also keeps the HTTP
+    # connection active during long adaptive-thinking calls.
+    with client.messages.stream(
         model=MODEL,
 
-        # This is a hard output ceiling.
-        # Sonnet 5 adaptive thinking is allowed
-        # enough room to reason and still emit RTL.
         max_tokens=MAX_TOKENS,
 
         thinking={
@@ -180,7 +182,8 @@ def main():
                 ),
             }
         ],
-    )
+    ) as stream:
+        message = stream.get_final_message()
 
     # Always log the provider/model configuration,
     # usage, block types, and stop reason to stderr.
