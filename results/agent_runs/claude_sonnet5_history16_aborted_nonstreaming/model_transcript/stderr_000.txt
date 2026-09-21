@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/home/rohan/fpga/chip-rl/adapters/claude_rtl_agent.py", line 257, in <module>
+    main()
+  File "/home/rohan/fpga/chip-rl/adapters/claude_rtl_agent.py", line 148, in main
+    message = client.messages.create(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rohan/fpga/chip-rl/.venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rohan/fpga/chip-rl/.venv/lib/python3.12/site-packages/anthropic/resources/messages/messages.py", line 951, in create
+    timeout = self._client._calculate_nonstreaming_timeout(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rohan/fpga/chip-rl/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 768, in _calculate_nonstreaming_timeout
+    raise ValueError(
+ValueError: Streaming is required for operations that may take longer than 10 minutes. See https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/python#long-requests for more details

@@ -1,0 +1,5 @@
+{
+  "name": "addpipe16_han_carlson",
+  "rationale": "All seven prior hand-built full-width prefix/CLA/select adders underperformed the plain '+' baseline, but none has tried the Han-Carlson topology, which is structurally distinct from both Kogge-Stone (dense fan-out-2 merges on every bit) and Sklansky (upper-half merges every stage). Han-Carlson first pre-merges odd bits with their even neighbor, then runs the deep O(log2(n)) parallel-prefix network only on the 8 odd-indexed lanes (roughly half the prefix cells of Kogge-Stone), and finally does one cheap OR-merge per even bit using the adjacent odd lane's final carry. This should cut total prefix-cell count well below KS (which scored 359.366 area / 7.55092 WNS) while adding only one extra logic level versus Sklansky's fastest-known hand-built variant (319.2 area / 7.49365 WNS), plausibly landing at a new non-dominated area/WNS point between these two previously observed results, and is a genuinely new topology not yet tested in this search.",
+  "source_sha256": "dc8f182f6d6157dfdbc858707878782c556ab7514c5d8b3c0d977bf329dcc3f1"
+}

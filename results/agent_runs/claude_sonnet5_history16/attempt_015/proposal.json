@@ -1,0 +1,5 @@
+{
+  "name": "addpipe16_ripple1_sklansky15",
+  "rationale": "The two best-scoring hybrid variants in this search family are ripple2/sklansky14 (75.39 reward, current best) and ripple3/sklansky13 (74.50 reward), showing reward increases as the ripple prefix shrinks toward the tree. This candidate extends that trend one step further: only bit 0 is treated as 'ripple' (c0 = g0[0], which requires zero extra logic beyond the base generate signal, since Cin=0 already makes c0 trivial), and a 15-bit Sklansky tree (still only 4 stages, since 2^4=16 covers 15 elements) computes local prefixes over bits 1..15 assuming local Cin=0, with a single post-tree merge injecting the real carry c0 exactly as in the proven-best ripple2 structure. This removes the one small ripple merge gate that ripple2 needed (g0[1]|(p0[1]&c0)) without adding any tree stages, so it should be at least as fast and potentially smaller than the current best point, testing the next logical split in the winning family.",
+  "source_sha256": "aead7e6674ce032e90ef034daba56eda386da77f3f8817782ceaf786528111fd"
+}

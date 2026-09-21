@@ -1,0 +1,5 @@
+{
+  "name": "addpipe16_kogge_stone",
+  "rationale": "The frontier shows the fully parallel-prefix (16,) adder gives the best proxy_reward_v0 (dominated by the 10x WNS weight), but its area (365.75) suggests the generic '+' operator was mapped to a fairly generic prefix tree by the synthesizer, not necessarily the minimum-depth structure. Explicitly coding a true 4-stage Kogge-Stone (log2(16)=4) generate/propagate prefix adder gives the theoretical minimum logic depth for 16-bit carry computation, which should match or beat the best observed WNS while potentially reducing area versus whatever structure the tool inferred for the unconstrained '+' case, improving on both minimum-area and minimum-area/best-WNS Pareto points.",
+  "source_sha256": "0e5664711ebe55f84467957b65bbf1847554ecf6b174fe13091d2aebdbd67acb"
+}

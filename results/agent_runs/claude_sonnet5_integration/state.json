@@ -1,0 +1,66 @@
+{
+  "attempts": [
+    {
+      "attempt_index": 0,
+      "feedback_tail": "",
+      "name": "addpipe16_kogge_stone",
+      "rationale": "The frontier shows the fully parallel-prefix (16,) adder gives the best proxy_reward_v0 (dominated by the 10x WNS weight), but its area (365.75) suggests the generic '+' operator was mapped to a fairly generic prefix tree by the synthesizer, not necessarily the minimum-depth structure. Explicitly coding a true 4-stage Kogge-Stone (log2(16)=4) generate/propagate prefix adder gives the theoretical minimum logic depth for 16-bit carry computation, which should match or beat the best observed WNS while potentially reducing area versus whatever structure the tool inferred for the unconstrained '+' case, improving on both minimum-area and minimum-area/best-WNS Pareto points.",
+      "result": {
+        "agent_name": "addpipe16_kogge_stone",
+        "agent_rationale": "The frontier shows the fully parallel-prefix (16,) adder gives the best proxy_reward_v0 (dominated by the 10x WNS weight), but its area (365.75) suggests the generic '+' operator was mapped to a fairly generic prefix tree by the synthesizer, not necessarily the minimum-depth structure. Explicitly coding a true 4-stage Kogge-Stone (log2(16)=4) generate/propagate prefix adder gives the theoretical minimum logic depth for 16-bit carry computation, which should match or beat the best observed WNS while potentially reducing area versus whatever structure the tool inferred for the unconstrained '+' case, improving on both minimum-area and minimum-area/best-WNS Pareto points.",
+        "area": 359.366,
+        "benchmark": "addpipe16",
+        "cache_hit": false,
+        "candidate": "rtl/agent/claude_sonnet5_integration/attempt_000_addpipe16_kogge_stone.v",
+        "cells": 311,
+        "environment": {
+          "or_image": "openroad/orfs:local",
+          "or_image_id": "sha256:8cae1bdb8296eed70b4d981696b0f29aa7faeb61b64b1f2950506aaac65ef442",
+          "orfs_git_commit": "3a964e13f11a4e435aac01ffa14db0a7d2853720",
+          "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+          "python": "3.12.3",
+          "verilator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)"
+        },
+        "evaluation_id": "e4b07ef4781c5d65",
+        "fingerprint": {
+          "benchmark": "addpipe16",
+          "formal_seq": 4,
+          "or_image": "openroad/orfs:local",
+          "or_image_id": "sha256:8cae1bdb8296eed70b4d981696b0f29aa7faeb61b64b1f2950506aaac65ef442",
+          "orfs_config_sha256": "92aadf21538b5f78ad955211fe1d08702713f9a987a0f1b427b43081b564a8f3",
+          "orfs_git_commit": "3a964e13f11a4e435aac01ffa14db0a7d2853720",
+          "reference_rtl_sha256": "aaa98879bfdd443133135df102c11a4480205e768639f983c74cf11b5e01018d",
+          "rtl_sha256": "0e5664711ebe55f84467957b65bbf1847554ecf6b174fe13091d2aebdbd67acb",
+          "schema_version": "4",
+          "sdc_sha256": "933d6133119126e0c2dd6de4e69fef2bf48888a2db336da3f890dcfddc1ed75e",
+          "testbench_sha256": "5a74c3a8bb2401130ef5b2f8af4849f613c1f8d8819ad34a1f4e68a86221f2ef",
+          "top_module": "addpipe16",
+          "verilator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)"
+        },
+        "fmax_hz": 4347150000.0,
+        "formal_ok": true,
+        "formal_runtime_s": 0.254,
+        "functional": true,
+        "gds": "results/nangate45/addpipe16/eval_e4b07ef4781c5d65/6_final.gds",
+        "hold_violations": 0,
+        "hold_wns": 0.107947,
+        "metrics_file": "results/evaluations/addpipe16/e4b07ef4781c5d65.metrics.json",
+        "orfs_runtime_s": 19.022,
+        "place_route_ok": true,
+        "power_w": 4.49985e-05,
+        "proxy_reward_v0": 75.130034,
+        "runtime_s": 22.915,
+        "setup_violations": 0,
+        "synthesis_ok": true,
+        "tns": 0,
+        "verilator_runtime_s": 3.638,
+        "wns": 7.54894
+      },
+      "source_sha256": "0e5664711ebe55f84467957b65bbf1847554ecf6b174fe13091d2aebdbd67acb",
+      "status": "success"
+    }
+  ],
+  "benchmark": "addpipe16",
+  "budget": 1,
+  "run_id": "claude_sonnet5_integration"
+}

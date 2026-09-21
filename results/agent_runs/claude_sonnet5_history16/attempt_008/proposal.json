@@ -1,0 +1,5 @@
+{
+  "name": "addpipe16_brent_kung",
+  "rationale": "All previous hand-built full-width prefix networks (Kogge-Stone, Sklansky, Han-Carlson) update prefix info at every bit position each stage or every-other stage, giving very wide fan-out cell counts (Sklansky ~32, Kogge-Stone ~49). Brent-Kung is a genuinely different topology not yet tried here: an up-sweep tree that computes full prefixes at only log2(n) touch-points (positions 1,3,7,15 for 16 bits, 15 cells total) followed by a down-sweep that fills in the remaining bit positions with one cheap combine each (11 cells), for only 26 total prefix cells versus 32 (Sklansky) or 49 (Kogge-Stone). This should reduce total gate/area footprint noticeably below Sklansky and possibly below Han-Carlson's 305.9 area, at the cost of a longer critical path (7 logic levels vs 4-5), landing at a new area/WNS trade-off point that may be non-dominated relative to the current frontier (e.g. lower area than Han-Carlson at a still-competitive WNS, or filling the gap between ripple6_prefix10 and addpipe16_han_carlson).",
+  "source_sha256": "eab3b8cc7ef3d27394dbff9da31a85ec389962cb843ae3eae860e2df586334eb"
+}

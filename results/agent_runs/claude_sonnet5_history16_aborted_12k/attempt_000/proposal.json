@@ -1,0 +1,5 @@
+{
+  "name": "addpipe16_koggestone",
+  "rationale": "The current frontier's best-WNS design is a full parallel-prefix adder labeled '(16,)', but its exact structure is opaque. I implement a canonical 4-stage Kogge-Stone prefix adder, which achieves the theoretically minimal logic depth (ceil(log2(16))=4 stages) for carry propagation, potentially yielding a shorter critical path (higher WNS) than the previously explored hybrid ripple/prefix combos, while area scales predictably with the well-understood KS fan-out structure. Since proxy_reward weights WNS 10x more heavily than area (coefficient -0.001 vs +10), even a modest WNS improvement should dominate any area increase from the extra prefix gates.",
+  "source_sha256": "9080b084c888cc03a221d5973d6960df6a81270c4de0636341e1954ada3a0141"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "addpipe16_carry_skip_355_symmetric",
+  "rationale": "Prior variable-group carry-skip attempt (5,5,4,2) underperformed the uniform 4x4 carry-skip because it left the FIRST group large (5 bits): the first group's own ripple-to-Cout0 is on the critical path exactly like the last group's tail ripple, not just the tail. This candidate corrects that by using a symmetric [3,5,5,3] split: both the head and tail groups are shortened to 3 bits (versus skip4's 4 bits), shrinking both ends of the critical path (head ripple-to-Cout0 and tail ripple-to-sum[15]), while the two middle 5-bit groups only contribute a single fast AND-OR skip merge each to the critical path (their group G/P are computed off the direct chain). This should yield a shorter worst-case delay than the uniform 4x4 carry_skip4 (299.516 area / 7.37783 WNS) at a similar or only slightly larger area (5-bit group G/P terms are only marginally wider than 4-bit ones), plausibly producing a new non-dominated area/WNS frontier point between carry_skip4 and the deeper prefix trees.",
+  "source_sha256": "6e7d80a8b42cb104be58a68793cf65efd45e075c18a4170593de863db051dc01"
+}

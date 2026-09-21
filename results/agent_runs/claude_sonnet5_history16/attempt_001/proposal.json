@@ -1,0 +1,5 @@
+{
+  "name": "addpipe16_condsum_tree",
+  "rationale": "Default '+' synthesis ((16,) point) is currently the reward leader, and an explicit gate-level Kogge-Stone attempt underperformed it, showing that RTL coding style materially changes how ABC/OpenROAD map and optimize logically-equivalent adders. Instead of re-deriving G/P AND-OR prefix logic, this design builds the sum via a recursive 'conditional-sum' (carry-select) doubling tree: each bit first computes hypothesis sum/carry pairs assuming incoming carry 0 or 1, and successive levels merge adjacent blocks purely with 2:1 multiplexers selecting between precomputed hypothesis results. This has the same theoretical depth (log2(16)=4 levels) as Sklansky/Kogge-Stone but is expressed entirely with simple mux logic rather than AND-OR generate/propagate merges, which may map more favorably onto Nangate45's mux/AOI cells and yield a shorter critical path (higher WNS) than both the default '+' inference and the explicit KS network, at comparable area.",
+  "source_sha256": "702c35b281429f38bd44ac0323deadd383d99d8b7d71ba68196e489c1fadae67"
+}

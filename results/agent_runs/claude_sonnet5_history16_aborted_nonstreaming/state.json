@@ -1,0 +1,6 @@
+{
+  "attempts": [],
+  "benchmark": "addpipe16",
+  "budget": 16,
+  "run_id": "claude_sonnet5_history16"
+}

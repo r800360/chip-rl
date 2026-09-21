@@ -1,0 +1,5 @@
+{
+  "name": "addpipe16_ripple2_sklansky14",
+  "rationale": "The externally observed frontier point ripple2_prefix14 (334.628 area, 7.56156 WNS, reward 75.28) is the closest challenger to the current best (16,) point, clearly beating every full-width hand-built prefix tree this agent has tried (best full Sklansky: 74.62, full KS: 75.15). My earlier ripple3_sklansky13 attempt used the same 'ripple prefix then post-tree carry-merge' structure but at a 3/13 split and scored 74.5 (worse), while the 'fold carry into base G0' variant (ripple4_prefix12_fixedcin) was much worse (71.88), showing that structure choice matters strongly and post-tree merge (not base-fold) is the right family. This candidate keeps the validated post-tree-merge Sklansky structure but matches the empirically best-known split point exactly (2-bit ripple + 14-bit Sklansky), which should land closer to the observed 75.28 reward than my 3/13 attempt, and is a genuinely new split point I have not yet implemented myself.",
+  "source_sha256": "5fa64d3c7beb2471846090d4669dc607fab778350b6f6610c88afbc431b13a42"
+}

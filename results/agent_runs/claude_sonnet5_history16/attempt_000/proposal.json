@@ -1,0 +1,5 @@
+{
+  "name": "addpipe16_kogge_stone",
+  "rationale": "The current best-reward design ('(16,)') is likely a Sklansky-style full-width prefix adder, which minimizes prefix-cell count but incurs high fan-out at internal nodes, adding buffering delay. A Kogge-Stone parallel-prefix adder has the same logarithmic depth (4 stages for 16 bits) but strictly fan-out-2 prefix nodes, which typically yields lower critical-path delay after synthesis at the cost of some extra area. Since proxy_reward_v0 weights WNS by 10x versus area by 0.001x, even a modest WNS improvement from reduced fan-out should dominate any area increase, potentially pushing past the current best_proxy_reward point.",
+  "source_sha256": "6d81c25dd266a3ca9cb2467adddd0b6a29885d9159d8ce36a1c3bf9d7a44173e"
+}
