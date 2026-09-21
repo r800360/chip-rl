@@ -7,24 +7,16 @@ import time
 from pathlib import Path
 from typing import Any
 
+from chiprl.benchmarks import Benchmark, ROOT
 
-ROOT = Path(__file__).resolve().parents[1]
 
 ORFS = Path.home() / "eda" / "OpenROAD-flow-scripts"
 DOCKER_SHELL = ORFS / "flow" / "util" / "docker_shell"
 
-REFERENCE = (
-    ROOT
-    / "rtl"
-    / "reference"
-    / "addpipe_ref.v"
-)
-
-FORMAL_SEQ = 4
-
 
 def check_equivalence(
     candidate: str | Path,
+    benchmark: Benchmark,
 ) -> dict[str, Any]:
     candidate = Path(candidate)
 
@@ -32,40 +24,32 @@ def check_equivalence(
         candidate = ROOT / candidate
 
     candidate = candidate.resolve()
+
     candidate_rel = candidate.relative_to(ROOT)
+    reference_rel = benchmark.reference.relative_to(ROOT)
+
+    digest_input = (
+        candidate.read_bytes()
+        + benchmark.reference.read_bytes()
+        + benchmark.name.encode()
+    )
 
     digest = hashlib.sha256(
-        candidate.read_bytes()
+        digest_input
     ).hexdigest()[:16]
 
-    formal_dir = (
-        ROOT
-        / ".chiprl"
-        / "formal"
-    )
+    formal_dir = ROOT / ".chiprl" / "formal"
+    formal_dir.mkdir(parents=True, exist_ok=True)
 
-    formal_dir.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
-    script_host = (
-        formal_dir
-        / f"{digest}.ys"
-    )
-
-    script_container = (
-        f"/work/.chiprl/formal/{digest}.ys"
-    )
+    script_host = formal_dir / f"{digest}.ys"
+    script_container = f"/work/.chiprl/formal/{digest}.ys"
 
     candidate_container = (
-        "/work/"
-        + candidate_rel.as_posix()
+        "/work/" + candidate_rel.as_posix()
     )
 
     reference_container = (
-        "/work/"
-        + REFERENCE.relative_to(ROOT).as_posix()
+        "/work/" + reference_rel.as_posix()
     )
 
     script_host.write_text(
@@ -76,21 +60,17 @@ read_verilog -formal {candidate_container}
 proc
 opt
 
-equiv_make addpipe_ref addpipe equiv
+equiv_make {benchmark.reference_top} {benchmark.top_module} equiv
 hierarchy -top equiv
 
-equiv_simple -seq {FORMAL_SEQ}
-equiv_induct -seq {FORMAL_SEQ}
+equiv_simple -seq {benchmark.formal_seq}
+equiv_induct -seq {benchmark.formal_seq}
 equiv_status -assert
 """.lstrip()
     )
 
     env = os.environ.copy()
-
-    env.setdefault(
-        "OR_IMAGE",
-        "openroad/orfs:local",
-    )
+    env.setdefault("OR_IMAGE", "openroad/orfs:local")
 
     start = time.perf_counter()
 
@@ -108,26 +88,18 @@ equiv_status -assert
         stderr=subprocess.STDOUT,
     )
 
-    runtime = (
-        time.perf_counter()
-        - start
-    )
-
-    proven = (
-        proc.returncode == 0
-        and
-        "Equivalence successfully proven!"
-        in proc.stdout
-    )
-
     return {
-        "formal_ok": proven,
+        "formal_ok": (
+            proc.returncode == 0
+            and "Equivalence successfully proven!"
+            in proc.stdout
+        ),
+
         "formal_runtime_s": round(
-            runtime,
+            time.perf_counter() - start,
             3,
         ),
-        "formal_returncode":
-            proc.returncode,
-        "formal_output":
-            proc.stdout,
+
+        "formal_returncode": proc.returncode,
+        "formal_output": proc.stdout,
     }
