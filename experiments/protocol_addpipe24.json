@@ -1,0 +1,59 @@
+{
+  "protocol_version": 1,
+  "benchmark": "addpipe24",
+  "purpose": "Fresh controlled benchmark for equal-information hardware-search comparisons.",
+  "design": {
+    "width_bits": 24,
+    "top_module": "addpipe24",
+    "reference_module": "addpipe24_ref",
+    "clock_period_ns": 10.0,
+    "technology": "Nangate45",
+    "die_area": [0, 0, 80, 80],
+    "core_area": [5, 5, 75, 75],
+    "placement_density": 0.20
+  },
+  "correctness": {
+    "simulation": "directed + deterministic randomized + protocol hold/back-to-back",
+    "formal": "sequential equivalence against addpipe24_ref",
+    "formal_seq": 4,
+    "physical": "OpenROAD-flow-scripts through final GDS"
+  },
+  "structural_space": {
+    "representation": "23-bit boundary mask representing an ordered composition of 24 bits",
+    "size": 8388608,
+    "generator_family": "segmented carry-select using native additions"
+  },
+  "shared_initial_seed_masks": [
+    "0x000000",
+    "0x000080",
+    "0x000800",
+    "0x008000",
+    "0x008080",
+    "0x020820",
+    "0x088888",
+    "0x7fffff"
+  ],
+  "controlled_comparison": {
+    "shared_seed_candidates": 8,
+    "new_query_budget_per_algorithm": 16,
+    "algorithms": [
+      "uniform_random_structural",
+      "evolution_structural",
+      "llm_structural"
+    ],
+    "rule": "All algorithms receive exactly the same measured 8-candidate seed corpus and cannot observe another algorithm's new-query results."
+  },
+  "open_ended_comparison": {
+    "algorithm": "llm_unrestricted_rtl",
+    "new_query_budget": 16,
+    "starting_information": "same shared 8-candidate seed corpus",
+    "interpretation": "Separate open-ended RTL-generation experiment; not a direct same-action-space ranking against structural algorithms."
+  },
+  "reward": {
+    "name": "proxy_reward_v0",
+    "formula": "-0.001 * area + 10.0 * WNS",
+    "note": "Preserved unchanged from addpipe16. Pareto area/WNS results are tracked separately."
+  },
+  "random_seed": 20260921,
+  "fmax_policy": "Record but do not optimize or use in conclusions until validated."
+}
