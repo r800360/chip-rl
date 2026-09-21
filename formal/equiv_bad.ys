@@ -1,0 +1,12 @@
+read_verilog -formal /work/rtl/reference/addpipe_ref.v
+read_verilog -formal /work/rtl/generated/random_20260920/candidate_003.v
+
+proc
+opt
+
+equiv_make addpipe_ref addpipe equiv
+hierarchy -top equiv
+
+equiv_simple -seq 4
+equiv_induct -seq 4
+equiv_status -assert
