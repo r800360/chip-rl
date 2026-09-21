@@ -1,0 +1,34 @@
+{
+  "round": 3,
+  "proposer": "GPT-5.6 Sol",
+  "architecture_family": "low-order ripple plus high-order parallel prefix",
+  "observations_used": [
+    "ripple16 produced extremely low area and power but poor timing.",
+    "ripple8_prefix8 produced substantially better timing than ripple16 while retaining much of its area advantage.",
+    "At the 8/8 boundary, the prefix upper half was much smaller and lower-power than the carry-select upper half, at a moderate timing cost.",
+    "prefix16 reached the high-timing region but with substantially greater area than the ripple-prefix hybrid."
+  ],
+  "hypothesis": "Varying the ripple-prefix boundary should trace a useful continuous area/timing tradeoff and may discover new Pareto-optimal hybrids.",
+  "proposals": [
+    {
+      "name": "ripple2_prefix14",
+      "low_ripple_bits": 2,
+      "high_prefix_bits": 14
+    },
+    {
+      "name": "ripple4_prefix12",
+      "low_ripple_bits": 4,
+      "high_prefix_bits": 12
+    },
+    {
+      "name": "ripple6_prefix10",
+      "low_ripple_bits": 6,
+      "high_prefix_bits": 10
+    },
+    {
+      "name": "ripple10_prefix6",
+      "low_ripple_bits": 10,
+      "high_prefix_bits": 6
+    }
+  ]
+}
