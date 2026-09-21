@@ -1,0 +1,32 @@
+{
+  "protocol_version": 1,
+  "benchmark": "addpipe24",
+  "experiment": "claude_sonnet5_unrestricted_rtl",
+  "shared_seed_results": "results/addpipe24_shared_seed/results.json",
+  "shared_seed_results_sha256": "b42b2867138791c2827a7f836716e9c382a9b42a3d0a714dba5220b7a80594fd",
+  "starting_candidate_count": 8,
+  "starting_information": "Only the frozen eight shared seed measurements, benchmark specification, reference RTL, and this agent's own subsequent attempts.",
+  "explicitly_hidden_information": [
+    "results/addpipe24_controlled/random",
+    "results/addpipe24_controlled/evolution",
+    "results/addpipe24_controlled/claude_structural",
+    "all addpipe16 search trajectories and results"
+  ],
+  "model": {
+    "provider": "Anthropic",
+    "model": "claude-sonnet-5",
+    "effort": "high",
+    "max_tokens": 48000
+  },
+  "action_space": "arbitrary single-file synthesizable Verilog implementing addpipe24",
+  "proposal_budget": 16,
+  "budget_semantics": "Every accepted model proposal consumes one attempt, including simulation failures, formal failures, physical failures, and exact duplicate-source proposals. Provider/API/harness failures before proposal submission do not consume an attempt.",
+  "correctness_pipeline": [
+    "Verilator protocol simulation",
+    "Yosys sequential formal equivalence",
+    "OpenROAD physical implementation"
+  ],
+  "reward": "proxy_reward_v0 = -0.001 * area + 10.0 * WNS",
+  "secondary_analysis": "Track the area/WNS Pareto frontier separately.",
+  "fmax_policy": "Record only; do not optimize or use for conclusions."
+}
