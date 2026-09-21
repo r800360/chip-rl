@@ -1,0 +1,36 @@
+{
+  "all_valid": true,
+  "best_reward": {
+    "area": 365.75,
+    "label": "(16,)",
+    "power_w": 4.70369e-05,
+    "reward": 75.38475,
+    "wns": 7.57505
+  },
+  "best_wns": {
+    "area": 365.75,
+    "label": "(16,)",
+    "wns": 7.57505
+  },
+  "candidate_records": 94,
+  "minimum_area": {
+    "area": 259.084,
+    "label": "ripple16",
+    "power_w": 3.5281e-05,
+    "wns": 6.75716
+  },
+  "minimum_power": {
+    "area": 259.084,
+    "label": "ripple16",
+    "power_w": 3.5281e-05,
+    "wns": 6.75716
+  },
+  "pareto_points": 12,
+  "source_counts": {
+    "llm_rtl_round1": 4,
+    "llm_rtl_round2": 4,
+    "llm_rtl_round3": 4,
+    "llm_rtl_round4": 4,
+    "structural": 78
+  }
+}
