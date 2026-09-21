@@ -1,0 +1,5 @@
+proposal,functional,formal,routed,cells,area,wns,tns,power_w,reward,runtime_s
+cla4x4,True,True,True,284,333.564,7.46534,0,4.21728e-05,74.319836,21.758
+prefix16,True,True,True,290,338.352,7.55785,0,4.48138e-05,75.240148,21.785
+prefix8_select8,True,True,True,285,344.204,7.45318,0,4.52193e-05,74.187596,22.831
+ripple16,True,True,True,195,259.084,6.75716,0,3.5281e-05,67.312516,21.331
