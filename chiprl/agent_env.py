@@ -237,11 +237,24 @@ class Addpipe16AgentEnv:
         )
 
     def _scan_existing_rtl_hashes(self):
+        """
+        Hash the frozen pre-agent RTL corpus.
+
+        Previous autonomous-agent runs are deliberately
+        excluded so integration tests or earlier model runs
+        cannot contaminate a new experiment's starting state.
+        """
         hashes = set()
 
-        for path in (
-            ROOT / "rtl"
-        ).rglob("*.v"):
+        rtl_root = ROOT / "rtl"
+        agent_root = rtl_root / "agent"
+
+        for path in rtl_root.rglob("*.v"):
+            # rtl/agent contains outputs of previous agent
+            # experiments, not the frozen baseline corpus.
+            if agent_root in path.parents:
+                continue
+
             try:
                 hashes.add(
                     sha256_text(
@@ -388,12 +401,28 @@ class Addpipe16AgentEnv:
 
         previous = []
 
-        for attempt in self.state[
-            "attempts"
-        ][-8:]:
+        # API calls are stateless, so provide the model with
+        # the source of its previous proposals. This allows it
+        # to repair formal/simulation failures and make genuine
+        # RTL-level revisions rather than relying on names and
+        # rationales alone.
+        for attempt in self.state["attempts"]:
+            attempt_index = attempt["attempt_index"]
+
+            rtl_path = (
+                self.run_dir
+                / f"attempt_{attempt_index:03d}"
+                / "candidate.v"
+            )
+
+            try:
+                previous_rtl = rtl_path.read_text()
+            except OSError:
+                previous_rtl = ""
+
             previous.append({
                 "attempt_index":
-                    attempt["attempt_index"],
+                    attempt_index,
 
                 "name":
                     attempt["name"],
@@ -414,6 +443,9 @@ class Addpipe16AgentEnv:
                         "feedback_tail",
                         "",
                     ),
+
+                "rtl":
+                    previous_rtl,
             })
 
         def compact_best(row):
