@@ -1,0 +1,36 @@
+{
+  "round": 4,
+  "proposer": "GPT-5.6 Sol interactive",
+  "budget_total": 16,
+  "batch_size": 4,
+  "observations_used": [
+    "Round 3 discovered a new global area/WNS Pareto point: (10,4,2), area 327.18, WNS 7.52158.",
+    "(10,4,2) strictly dominates the previous minimum-area frontier point (12,4).",
+    "For first-block width 10, moving from (10,2,4) through (10,3,3) to (10,4,2) improved WNS and ultimately reduced area substantially.",
+    "(13,2,1) retained high timing at WNS 7.56610, suggesting that some one-bit tails can be useful.",
+    "Three-block architectures are therefore not generally inferior; their exact partition strongly affects physical QoR."
+  ],
+  "hypothesis": "Continuing the shift toward a larger middle block and smaller final block may either extend the low-area frontier or recover enough timing to improve scalar reward.",
+  "proposals": [
+    {
+      "mask": "0x2100",
+      "blocks": [9,5,2],
+      "rationale": "Move one bit from the strong (10,4,2) first block into its middle block while retaining the 2-bit tail; probe for a further area reduction."
+    },
+    {
+      "mask": "0x4200",
+      "blocks": [10,5,1],
+      "rationale": "Direct continuation of the observed (10,2,4) -> (10,3,3) -> (10,4,2) progression."
+    },
+    {
+      "mask": "0x4400",
+      "blocks": [11,4,1],
+      "rationale": "Continue the high-timing diagonal toward a one-bit tail from the measured (11,3,2) structure."
+    },
+    {
+      "mask": "0x4800",
+      "blocks": [12,3,1],
+      "rationale": "Bridge toward the strong high-timing (13,2,1) structure and test whether it offers a better area/timing balance."
+    }
+  ]
+}

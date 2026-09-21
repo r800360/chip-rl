@@ -1,0 +1,39 @@
+{
+  "round": 1,
+  "proposer": "GPT-5.6 Sol interactive",
+  "budget_total": 16,
+  "batch_size": 4,
+  "objective": {
+    "primary": "increase proxy_reward_v0",
+    "secondary": "seek improvements to the observed area/WNS Pareto frontier"
+  },
+  "observations_used": [
+    "(16,) has the highest observed reward and WNS",
+    "(12,4) has the minimum observed area",
+    "(13,3) gives a strong area/timing compromise",
+    "(14,2) lies between (13,3) and (16,) on the observed frontier",
+    "large-first-block asymmetric splits outperform many highly segmented structures"
+  ],
+  "proposals": [
+    {
+      "mask": "0x2800",
+      "blocks": [12, 2, 2],
+      "rationale": "Refine the four-bit tail of the minimum-area (12,4) design."
+    },
+    {
+      "mask": "0x3000",
+      "blocks": [13, 1, 2],
+      "rationale": "Refine the three-bit tail of the strong (13,3) Pareto point."
+    },
+    {
+      "mask": "0x5000",
+      "blocks": [13, 2, 1],
+      "rationale": "Complementary subdivision of the (13,3) tail."
+    },
+    {
+      "mask": "0x6000",
+      "blocks": [14, 1, 1],
+      "rationale": "Test whether subdividing the final two bits can improve timing near the high-WNS end of the frontier."
+    }
+  ]
+}

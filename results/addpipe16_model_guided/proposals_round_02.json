@@ -1,0 +1,36 @@
+{
+  "round": 2,
+  "proposer": "GPT-5.6 Sol interactive",
+  "budget_total": 16,
+  "batch_size": 4,
+  "observations_used": [
+    "All four round-1 tail-refinement proposals were globally dominated.",
+    "(12,4), (13,3), (14,2), and (16,) remain the observed global area/WNS frontier.",
+    "(13,2,1) was dominated even by (14,2), despite having similar timing.",
+    "Introducing one-bit blocks near the tail did not improve the frontier.",
+    "Round 2 therefore preserves terminal blocks of width 3 or 4 and instead subdivides the large prefix."
+  ],
+  "hypothesis": "A moderate subdivision of the large prefix may improve mapping or physical locality while retaining the favorable 3-4 bit terminal carry-select block.",
+  "proposals": [
+    {
+      "mask": "0x0900",
+      "blocks": [9, 3, 4],
+      "rationale": "Preserve a 4-bit tail while splitting the original 12-bit prefix into 9+3."
+    },
+    {
+      "mask": "0x0a00",
+      "blocks": [10, 2, 4],
+      "rationale": "A more asymmetric prefix subdivision while preserving the strong 4-bit tail."
+    },
+    {
+      "mask": "0x1200",
+      "blocks": [10, 3, 3],
+      "rationale": "Preserve a 3-bit tail and divide the original 13-bit prefix into moderate blocks."
+    },
+    {
+      "mask": "0x1400",
+      "blocks": [11, 2, 3],
+      "rationale": "A sparse two-boundary architecture close to the strong (13,3) design without introducing one-bit blocks."
+    }
+  ]
+}

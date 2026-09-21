@@ -1,0 +1,51 @@
+module addpipe16 (
+    input  wire        clk,
+    input  wire        rst_n,
+    input  wire        valid_i,
+    input  wire [15:0] a_i,
+    input  wire [15:0] b_i,
+    output reg         valid_o,
+    output reg  [15:0] y_o
+);
+
+wire [15:0] sum;
+
+wire [10:0] blk_0;
+assign blk_0 = {1'b0, a_i[9:0]} + {1'b0, b_i[9:0]};
+assign sum[9:0] = blk_0[9:0];
+wire carry_0;
+assign carry_0 = blk_0[10];
+
+wire [2:0] blk_1_0;
+wire [2:0] blk_1_1;
+wire [2:0] blk_1;
+assign blk_1_0 = {1'b0, a_i[11:10]} + {1'b0, b_i[11:10]};
+assign blk_1_1 = {1'b0, a_i[11:10]} + {1'b0, b_i[11:10]} + {{2{1'b0}}, 1'b1};
+assign blk_1 = carry_0 ? blk_1_1 : blk_1_0;
+assign sum[11:10] = blk_1[1:0];
+wire carry_1;
+assign carry_1 = blk_1[2];
+
+wire [4:0] blk_2_0;
+wire [4:0] blk_2_1;
+wire [4:0] blk_2;
+assign blk_2_0 = {1'b0, a_i[15:12]} + {1'b0, b_i[15:12]};
+assign blk_2_1 = {1'b0, a_i[15:12]} + {1'b0, b_i[15:12]} + {{4{1'b0}}, 1'b1};
+assign blk_2 = carry_1 ? blk_2_1 : blk_2_0;
+assign sum[15:12] = blk_2[3:0];
+wire carry_2;
+assign carry_2 = blk_2[4];
+
+always @(posedge clk) begin
+    if (!rst_n) begin
+        valid_o <= 1'b0;
+        y_o     <= 16'd0;
+    end else begin
+        valid_o <= valid_i;
+
+        if (valid_i)
+            y_o <= sum;
+    end
+end
+
+endmodule
