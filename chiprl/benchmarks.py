@@ -151,6 +151,39 @@ BENCHMARKS = {
 
         pass_marker="PASS addpipe36 randomized+protocol",
     ),
+    "cmp32": Benchmark(
+        name="cmp32",
+        top_module="cmp32",
+        reference_top="cmp32_ref",
+        testbench=ROOT / "sim/tb_cmp32.sv",
+        reference=ROOT / "rtl/reference/cmp32_ref.v",
+        orfs_config_host=ROOT / "orfs/cmp32/config.mk",
+        orfs_config_container="/work/orfs/cmp32/config.mk",
+        sdc=ROOT / "orfs/cmp32/constraint.sdc",
+        pass_marker="PASS cmp32 randomized+protocol",
+    ),
+    "popcount32": Benchmark(
+        name="popcount32",
+        top_module="popcount32",
+        reference_top="popcount32_ref",
+        testbench=ROOT / "sim/tb_popcount32.sv",
+        reference=ROOT / "rtl/reference/popcount32_ref.v",
+        orfs_config_host=ROOT / "orfs/popcount32/config.mk",
+        orfs_config_container="/work/orfs/popcount32/config.mk",
+        sdc=ROOT / "orfs/popcount32/constraint.sdc",
+        pass_marker="PASS popcount32 randomized+protocol",
+    ),
+    "priority32": Benchmark(
+        name="priority32",
+        top_module="priority32",
+        reference_top="priority32_ref",
+        testbench=ROOT / "sim/tb_priority32.sv",
+        reference=ROOT / "rtl/reference/priority32_ref.v",
+        orfs_config_host=ROOT / "orfs/priority32/config.mk",
+        orfs_config_container="/work/orfs/priority32/config.mk",
+        sdc=ROOT / "orfs/priority32/constraint.sdc",
+        pass_marker="PASS priority32 randomized+protocol",
+    ),
 }
 
 

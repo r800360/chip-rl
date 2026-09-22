@@ -817,6 +817,9 @@ def main() -> None:
             "addpipe36",
             "addpipe48",
             "addpipe56",
+            "cmp32",
+            "popcount32",
+            "priority32",
         ),
     )
 

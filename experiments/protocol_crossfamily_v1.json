@@ -1,0 +1,187 @@
+{
+  "analysis": {
+    "limitations": [
+      "three task families at one width",
+      "three pseudorandom trajectories each, same EDA setup",
+      "v2 positional logits are context-shared except for monotone availability",
+      "duplicate-rejection changes effective proposal distribution",
+      "seeds and physical design chosen after prior adder-family observations",
+      "fixed placement/tool seed; no multi-PDK robustness"
+    ],
+    "primary": [
+      "v2_learn minus v2_frozen in per-task/run final seed-relative reward",
+      "v2_frozen minus count_matched_uniform (combined position prior + ordered sampling geometry versus sparsity-only) in per-task/run final seed-relative reward",
+      "v2_learn minus v1_learn in per-task/run final seed-relative reward"
+    ],
+    "secondary": [
+      "first scalar improvement query (censor failures at 17)",
+      "improvement frequency",
+      "Pareto additions",
+      "mean boundary count",
+      "exact proposed-mask overlap"
+    ]
+  },
+  "background": "post-addpipe observational follow-up; no policy tuning",
+  "bootstrap_sha256": "1d596335bac0c81f2ca745e13ee6d362db4d4116021c5451acbb42b6296baee8",
+  "budget_per_run": 16,
+  "clock_ns": 10.0,
+  "core": [
+    5,
+    5,
+    95,
+    95
+  ],
+  "datapath_width": 32,
+  "die": [
+    0,
+    0,
+    100,
+    100
+  ],
+  "evaluation_gate": "simulation -> sequential formal -> ORFS through GDS",
+  "experiment_id": "crossfamily_policy_causality_v1",
+  "families": [
+    "cmp32",
+    "popcount32",
+    "priority32"
+  ],
+  "fmax": "UNTRUSTED; record only, never use in conclusions",
+  "formal_seq": 4,
+  "frozen_source_sha256": {
+    "chiprl/autoregressive_policy.py": "8441ee22e82388f4f7ccf2fbf1c9abcb917be32f8cbe2012c7ffec37b9449e95",
+    "chiprl/rl_env.py": "0573cd00111e4b24c751647f2f80f05aaabbff1425817f3684c991399339cdea",
+    "experiments/addpipe36_reinforce_v1.py": "4b082c3ba6ac950bc8f6328b9672d357bd34139820b1c5e97ad115ef17caaba1"
+  },
+  "generators_sha256": "b1667cd1e9f32ca96001b60c946399a098228ed82374f8161c7e5e2081447269",
+  "information_rule": "each method sees shared seed measurements and only its own past queries",
+  "logical_search_queries": 576,
+  "mask_bits": 31,
+  "mask_space": 2147483648,
+  "method_definitions": {
+    "count_matched_uniform": "exact initial v2 K distribution; positions chosen uniformly without replacement; no updates; differs from frozen v2 in positional prior AND ordered-sampler geometry",
+    "v1_learn": "unmodified frozen independent-Bernoulli REINFORCE code, adjusted only for 31 bits and run seed",
+    "v2_frozen": "EXACT same v2 initializer and sampler but NO updates",
+    "v2_learn": "unmodified frozen hierarchical count/ordered-position policy with score-based online update"
+  },
+  "output_semantics": {
+    "cmp32": "unsigned a < b, one-bit registered output",
+    "popcount32": "number of asserted bits in a, six-bit registered output",
+    "priority32": "highest asserted bit in a, six-bit {found,index} output; zero if none"
+  },
+  "physical_seed_queries": 24,
+  "place_density": 0.2,
+  "platform": "Nangate45",
+  "power": "rough tool-reported power, not activity validated",
+  "reward": "proxy_reward_v0 = -0.001*area + 10.0*WNS; fail -1000",
+  "runner_sha256": "683a1a93828a20bcfe81a4685a8883083fa32281c251051476a30b2c1ddf99c9",
+  "search_methods": [
+    "v1_learn",
+    "v2_learn",
+    "v2_frozen",
+    "count_matched_uniform"
+  ],
+  "search_policy_seeds": [
+    20260923,
+    20260924,
+    20260925
+  ],
+  "seed_blocks": [
+    [
+      32
+    ],
+    [
+      8,
+      24
+    ],
+    [
+      16,
+      16
+    ],
+    [
+      24,
+      8
+    ],
+    [
+      8,
+      8,
+      8,
+      8
+    ],
+    [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "shared_physical_cache": "allowed; count logical queries separately from physical cache misses",
+  "shared_runner_sha256": "6a068eca1ff97fe8d41bc3476e3f6b2b1d9cf10771c87253e74787e2cce24fc1",
+  "shared_seed_masks": [
+    "0x00000000",
+    "0x00000080",
+    "0x00008000",
+    "0x00800000",
+    "0x00808080",
+    "0x08888888",
+    "0x2aaaaaaa",
+    "0x7fffffff"
+  ],
+  "status": "PREREGISTERED_BEFORE_ANY_NEW_FAMILY_PPA",
+  "testbench": "10,000 fixed-seed random pairs plus directed, reset, invalid hold and back-to-back tests"
+}
