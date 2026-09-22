@@ -1,0 +1,40 @@
+{
+  "amendment_version": 1,
+  "benchmark": "addpipe40",
+  "corrections": [
+    {
+      "algorithmic_effect": "none; this fixes historical snapshot semantics and the regression test",
+      "change": "snapshot() now copies count_logits and position_logits rather than returning references to live mutable policy lists.",
+      "issue": "snapshot_aliasing"
+    },
+    {
+      "change": "count_pseudocount=0.02 is defined as TOTAL symmetric prior mass distributed uniformly over K=0..bits, rather than 0.02 independently added to every K.",
+      "issue": "count_prior_width_scaling",
+      "reason": "The previous implementation made total count-prior mass grow linearly with width and unintentionally biased the hierarchy toward large boundary counts."
+    }
+  ],
+  "data_use_statement": "The correction was selected from the zero-EDA addpipe32 regression smoke behavior. The observed addpipe40 baseline PPA was not used to select or tune the correction.",
+  "git_head_before_amendment": "f2002b73197d0c4ea7d17e05136490bb0691b3ff",
+  "protocol": "protocol_addpipe40_rl_v2.json",
+  "protocol_sha256": "8716717f7937b33480c96c2624bd10ec2269c8ea7f4c264457e20482df3af78b",
+  "timing": {
+    "addpipe40_algorithm_searches_started": false,
+    "addpipe40_baseline_sanity_evaluation_completed": true,
+    "addpipe40_shared_seed_measurements_started": false
+  },
+  "trigger": "Zero-new-EDA smoke testing on the already-frozen addpipe32 seed corpus exposed two implementation issues in the new autoregressive policy before addpipe40 shared-seed or algorithm-search results were observed.",
+  "unchanged": [
+    "seed reward softmax temperature",
+    "position pseudocount semantics",
+    "count learning rate",
+    "position learning rate",
+    "advantage clipping",
+    "EMA rates",
+    "minimum scale",
+    "policy RNG seed",
+    "query budget",
+    "reward function",
+    "structural action space",
+    "all non-RL search policies"
+  ]
+}

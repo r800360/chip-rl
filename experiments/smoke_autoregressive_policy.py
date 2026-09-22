@@ -30,6 +30,26 @@ def main():
         policy.snapshot()
     )
 
+    # The frozen addpipe32 seed evidence strongly favors
+    # sparse masks.  This regression check ensures that the
+    # count pseudocount is total prior mass rather than a
+    # per-K prior whose total grows with benchmark width.
+    assert (
+        initial[
+            "expected_boundary_count"
+        ]
+        < 2.0
+    )
+
+    assert (
+        sum(
+            initial[
+                "count_probabilities"
+            ][:2]
+        )
+        > 0.90
+    )
+
     print(
         "expected boundaries:",
         initial[
@@ -95,6 +115,14 @@ def main():
         policy.snapshot()
     )
 
+    frozen_count_logits = list(
+        before["count_logits"]
+    )
+
+    frozen_position_logits = list(
+        before["position_logits"]
+    )
+
     advantage = policy.update(
         mask=0x24000000,
         score=73.747818,
@@ -104,16 +132,30 @@ def main():
         policy.snapshot()
     )
 
+    # The policy itself must update.
     assert (
-        before["count_logits"]
+        frozen_count_logits
         != after["count_logits"]
     )
 
     assert (
-        before["position_logits"]
+        frozen_position_logits
         != after[
             "position_logits"
         ]
+    )
+
+    # And the previously returned snapshot must remain an
+    # immutable historical value rather than aliasing the
+    # policy's live lists.
+    assert (
+        before["count_logits"]
+        == frozen_count_logits
+    )
+
+    assert (
+        before["position_logits"]
+        == frozen_position_logits
     )
 
     print(

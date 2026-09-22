@@ -184,8 +184,19 @@ class HierarchicalAutoregressiveMaskPolicy:
             for w in raw_weights
         ]
 
+        # count_prior is TOTAL symmetric pseudocount mass
+        # across the complete support K = 0..bits.  It is
+        # deliberately not a per-category pseudocount:
+        # otherwise the total prior mass would grow with
+        # design width and strongly bias wider benchmarks
+        # toward large boundary counts.
+        count_prior_total = float(
+            count_prior
+        )
+
         count_mass = [
-            float(count_prior)
+            count_prior_total
+            / (self.bits + 1)
             for _ in range(
                 self.bits + 1
             )
@@ -552,7 +563,9 @@ class HierarchicalAutoregressiveMaskPolicy:
                 self.scale,
 
             "count_logits":
-                self.count_logits,
+                list(
+                    self.count_logits
+                ),
 
             "count_probabilities": [
                 count_probs[k]
@@ -569,7 +582,9 @@ class HierarchicalAutoregressiveMaskPolicy:
                 ),
 
             "position_logits":
-                self.position_logits,
+                list(
+                    self.position_logits
+                ),
 
             "position_preferences": [
                 position_probs[k]
