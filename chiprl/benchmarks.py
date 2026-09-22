@@ -106,6 +106,51 @@ BENCHMARKS = {
 
         pass_marker="PASS addpipe40 randomized+protocol",
     ),
+    "addpipe56": Benchmark(
+        name="addpipe56",
+
+        top_module="addpipe56",
+        reference_top="addpipe56_ref",
+
+        testbench=ROOT / "sim" / "tb_addpipe56.sv",
+        reference=ROOT / "rtl/reference/addpipe56_ref.v",
+
+        orfs_config_host=ROOT / "orfs/addpipe56/config.mk",
+        orfs_config_container="/work/orfs/addpipe56/config.mk",
+        sdc=ROOT / "orfs/addpipe56/constraint.sdc",
+
+        pass_marker="PASS addpipe56 randomized+protocol",
+    ),
+    "addpipe48": Benchmark(
+        name="addpipe48",
+
+        top_module="addpipe48",
+        reference_top="addpipe48_ref",
+
+        testbench=ROOT / "sim" / "tb_addpipe48.sv",
+        reference=ROOT / "rtl/reference/addpipe48_ref.v",
+
+        orfs_config_host=ROOT / "orfs/addpipe48/config.mk",
+        orfs_config_container="/work/orfs/addpipe48/config.mk",
+        sdc=ROOT / "orfs/addpipe48/constraint.sdc",
+
+        pass_marker="PASS addpipe48 randomized+protocol",
+    ),
+    "addpipe36": Benchmark(
+        name="addpipe36",
+
+        top_module="addpipe36",
+        reference_top="addpipe36_ref",
+
+        testbench=ROOT / "sim" / "tb_addpipe36.sv",
+        reference=ROOT / "rtl/reference/addpipe36_ref.v",
+
+        orfs_config_host=ROOT / "orfs/addpipe36/config.mk",
+        orfs_config_container="/work/orfs/addpipe36/config.mk",
+        sdc=ROOT / "orfs/addpipe36/constraint.sdc",
+
+        pass_marker="PASS addpipe36 randomized+protocol",
+    ),
 }
 
 

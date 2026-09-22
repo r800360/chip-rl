@@ -1,0 +1,212 @@
+{
+  "algorithms": [
+    "uniform_random_structural",
+    "evolution_structural",
+    "reinforce_factorized_v1",
+    "reinforce_hierarchical_v2",
+    "claude_structural"
+  ],
+  "benchmark": "addpipe48",
+  "boundary_mask_bits": 47,
+  "claude_structural": {
+    "action": "one unseen complete boundary mask",
+    "effort": "high",
+    "max_tokens": 48000,
+    "model": "claude-sonnet-5",
+    "rtl_generation": "frozen structural generator only"
+  },
+  "core_area": [
+    5,
+    5,
+    135,
+    135
+  ],
+  "cross_algorithm_mask_overlap_allowed": true,
+  "cross_algorithm_results_visible": false,
+  "die_area": [
+    0,
+    0,
+    140,
+    140
+  ],
+  "evolution": {
+    "mutation_probabilities": {
+      "1_distinct_bit": 0.7,
+      "2_distinct_bits": 0.25,
+      "3_distinct_bits": 0.05
+    },
+    "random_restart_probability": 0.15,
+    "rng_seed": 20260921,
+    "selection": "3-way tournament on proxy_reward_v0"
+  },
+  "fmax_policy": "record only; never use as reward, ranking, or conclusion",
+  "information_rule": "Each algorithm sees only the same eight measured seed candidates plus that algorithm's own subsequent evaluations on the current benchmark.",
+  "placement_density": 0.2,
+  "query_budget_per_algorithm": 16,
+  "reinforce_v1": {
+    "advantage_clip": [
+      -3.0,
+      3.0
+    ],
+    "baseline_ema_rate": 0.2,
+    "learning_rate": 0.35,
+    "minimum_scale": 0.25,
+    "policy": "independent Bernoulli boundary bits",
+    "policy_rng_seed": 20260921,
+    "probability_clip": [
+      0.02,
+      0.98
+    ],
+    "scale_ema_rate": 0.2,
+    "seed_reward_softmax_temperature": 0.5,
+    "status": "FROZEN_FROM_ADDPIPE40",
+    "symmetric_beta_pseudocount_per_bit": 0.05
+  },
+  "reinforce_v2": {
+    "advantage_clip": [
+      -3.0,
+      3.0
+    ],
+    "baseline_ema_rate": 0.2,
+    "count_learning_rate": 0.3,
+    "count_total_symmetric_pseudocount": 0.02,
+    "minimum_scale": 0.25,
+    "policy": "sample boundary count K, then sample K ordered boundary positions using the frozen hierarchical ordered-position policy",
+    "policy_rng_seed": 20260921,
+    "position_learning_rate": 0.2,
+    "position_pseudocount": 0.02,
+    "seed_reward_softmax_temperature": 0.5,
+    "status": "FROZEN_FROM_ADDPIPE40"
+  },
+  "reward": "proxy_reward_v0 = -0.001 * area + 10.0 * WNS",
+  "shared_initial_seed_masks": [
+    "0x000000000000",
+    "0x000000000080",
+    "0x000000800000",
+    "0x008000000000",
+    "0x000800800800",
+    "0x088888888888",
+    "0x2aaaaaaaaaaa",
+    "0x7fffffffffff"
+  ],
+  "shared_seed_blocks": [
+    [
+      48
+    ],
+    [
+      8,
+      40
+    ],
+    [
+      24,
+      24
+    ],
+    [
+      40,
+      8
+    ],
+    [
+      12,
+      12,
+      12,
+      12
+    ],
+    [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "structural_space_size": 140737488355328,
+  "uniform_random": {
+    "policy": "uniform over unseen complete boundary masks",
+    "rng_seed": 20260921
+  },
+  "width_bits": 48,
+  "within_algorithm_duplicate_queries_allowed": false
+}

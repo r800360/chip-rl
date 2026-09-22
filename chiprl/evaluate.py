@@ -814,6 +814,9 @@ def main() -> None:
             "addpipe24",
             "addpipe32",
             "addpipe40",
+            "addpipe36",
+            "addpipe48",
+            "addpipe56",
         ),
     )
 
