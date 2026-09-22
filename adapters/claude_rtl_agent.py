@@ -144,6 +144,18 @@ def main():
             f"Invalid observation JSON: {exc}"
         )
 
+    try:
+        top_module = observation[
+            "correctness_contract"
+        ][
+            "top_module"
+        ]
+    except KeyError as exc:
+        raise SystemExit(
+            "Observation is missing "
+            "correctness_contract.top_module"
+        ) from exc
+
     client = Anthropic()
 
     # Use the streaming API even though this adapter only
@@ -172,6 +184,8 @@ def main():
                 "content": (
                     "Here is the complete current "
                     "hardware-search observation.\n\n"
+                    f"You MUST emit a complete Verilog implementation "
+                    f"whose required top module is {top_module!r}.\n\n"
                     + json.dumps(
                         observation,
                         indent=2,
@@ -240,18 +254,6 @@ def main():
         raise SystemExit(
             "'rtl' must be a string"
         )
-
-    try:
-        top_module = observation[
-            "correctness_contract"
-        ][
-            "top_module"
-        ]
-    except KeyError as exc:
-        raise SystemExit(
-            "Observation is missing "
-            "correctness_contract.top_module"
-        ) from exc
 
     module_names = re.findall(
         r"\bmodule\s+([A-Za-z_][A-Za-z0-9_$]*)\b",
