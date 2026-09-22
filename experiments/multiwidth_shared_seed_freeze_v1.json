@@ -1,0 +1,50 @@
+{
+  "benchmarks": {
+    "addpipe36": {
+      "all_valid": true,
+      "best_seed_mask": "0x000000000",
+      "best_seed_reward": 73.47108,
+      "num_seeds": 8,
+      "protocol_sha256": "6485155676e06031697ea52d431d96b1679c72a9b4c8e5967c3dacdf42fd9bbe",
+      "results_sha256": "605d2959ceb5bb0bf0442483d126fa96d6c9b72311ca2e9c34c46f74e81a0fb7",
+      "source_hashes": {
+        "orfs_config_sha256": "d80c954104659421df796fc9a0e77809d1420a4a8fb2f27b5908c881edc0d00f",
+        "reference_rtl_sha256": "d035d032e3085f86344426bc5e2583bb9f56122b135c271255a979e2bcca1f03",
+        "sdc_sha256": "933d6133119126e0c2dd6de4e69fef2bf48888a2db336da3f890dcfddc1ed75e",
+        "testbench_sha256": "c6ba59e3f0849c2924dd9d5d5d02d382cfec843ebfef44515570f899aa6f9f42"
+      }
+    },
+    "addpipe48": {
+      "all_valid": true,
+      "best_seed_mask": "0x008000000000",
+      "best_seed_reward": 72.76501,
+      "num_seeds": 8,
+      "protocol_sha256": "1bffa25f2d2e1c86f163bcfde4402e027b7b8121581ede5792b8c70ebc34c470",
+      "results_sha256": "1777148275aae0fbe55fb1c0013b653a111e9978514ec7e75256bc022555448a",
+      "source_hashes": {
+        "orfs_config_sha256": "49e42618de7ba32b5cb1d1abb6a99d47489f9ba095770d9460a35517752e57f3",
+        "reference_rtl_sha256": "1348c8489df72cdba5b8049ea77fe489fbb51011f38f057e39f776dae2b4c40b",
+        "sdc_sha256": "933d6133119126e0c2dd6de4e69fef2bf48888a2db336da3f890dcfddc1ed75e",
+        "testbench_sha256": "3a46069f8678109df73590090ddeebfda58f8c192196e2ac12fc91426e53d241"
+      }
+    },
+    "addpipe56": {
+      "all_valid": true,
+      "best_seed_mask": "0x00800000000000",
+      "best_seed_reward": 72.52257,
+      "num_seeds": 8,
+      "protocol_sha256": "9047e9b341f7f741dc7d7bc89b9b63eb9e5153c87c0ebb67b78f4feb3f304ae9",
+      "results_sha256": "d0b20dc83b6a741bd7fed410cdec62cefc897253d0bd65bbe39242503623b58a",
+      "source_hashes": {
+        "orfs_config_sha256": "cdba0efc263094065f0ccea2059a7302241f2d066a8bd3da998281744a2f8612",
+        "reference_rtl_sha256": "49d729228019568c766d1ae828bc190835b15a7e355768eb3e36e0ed4e959586",
+        "sdc_sha256": "933d6133119126e0c2dd6de4e69fef2bf48888a2db336da3f890dcfddc1ed75e",
+        "testbench_sha256": "31797241e6b66b8e5b12f30f3f7669bbd59a394e92bff89584e87c55e77d309f"
+      }
+    }
+  },
+  "experiment": "multiwidth_structural_generalization_v1",
+  "freeze_version": 1,
+  "source_commit": "699779d6b8b2949b9cbb5eb61b7ce115759bdd03",
+  "status": "SHARED_SEEDS_FROZEN"
+}
