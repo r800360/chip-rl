@@ -1,0 +1,84 @@
+{
+  "benchmark": "addpipe24",
+  "files": {
+    "experiments/protocol_addpipe24.json": {
+      "bytes": 2035,
+      "sha256": "6503ad4fdd38b733be377aba1bd8a626ceb251c461a24674258dbc0301004ad0"
+    },
+    "experiments/protocol_addpipe24_controlled_search_v1.json": {
+      "bytes": 2482,
+      "sha256": "1b3f93afdd6835c2a432af99c52bd7f5fc0cd62d12dcc88243d7988b40eb60e5"
+    },
+    "experiments/protocol_addpipe24_open_rtl_v1.json": {
+      "bytes": 1570,
+      "sha256": "28a96b6f2d9cc79cabe0eda974c69dc6100a10f9d87219c08157442d350887f0"
+    },
+    "results/addpipe24_shared_seed/results.json": {
+      "bytes": 18507,
+      "sha256": "b42b2867138791c2827a7f836716e9c382a9b42a3d0a714dba5220b7a80594fd"
+    },
+    "results/agent_runs/addpipe24/claude_sonnet5_open16/state.json": {
+      "bytes": 77732,
+      "sha256": "13c38de4905348aabe2d52b249e0843fb24a06ad6bb7afebb788e6fc7b2f65ae"
+    },
+    "results/analysis/addpipe24_controlled/summary.json": {
+      "bytes": 3525,
+      "sha256": "608e3211ee331086ab619398a5f6cb9fba641def3d67804bea5e1eb8858517b0"
+    },
+    "results/analysis/addpipe24_final/summary.json": {
+      "bytes": 2560,
+      "sha256": "679a6c41cadab370633ffe8f430c7ec9444efe2949c0d23625b9df82c334db85"
+    },
+    "rtl/agent/addpipe24/claude_sonnet5_open16/attempt_015_addpipe24_ks_fused_window16.v": {
+      "bytes": 3819,
+      "sha256": "599a4ae091680c9975762ce1822c7703e29f815dc00a273d219f5be57e2e119e"
+    },
+    "rtl/generated/addpipe24_controlled/evolution/query_02_100000.v": {
+      "bytes": 1070,
+      "sha256": "bd4f599fdbb6579a63e659efde9f7d46a7abc8fb11529f254b55700809bba56d"
+    },
+    "rtl/generated/addpipe24_shared_seed/seed_00_000000.v": {
+      "bytes": 682,
+      "sha256": "6fc163a3e812dc9f75a62d4dcad56ff2975abcda8110c7bf8db6a3d52c27efc8"
+    }
+  },
+  "freeze_version": 1,
+  "git_head_before_freeze_manifest": "368215c2663ed1a40dff0d4e849280246922d6b9",
+  "status": "FROZEN_NO_FURTHER_SEARCH",
+  "validated_results": {
+    "controlled_champion": {
+      "area": 554.61,
+      "blocks": [
+        21,
+        3
+      ],
+      "cells": 469,
+      "exactly_stable": true,
+      "label": "0x100000",
+      "power_w": 7.08707e-05,
+      "proxy_reward_v0": 74.69239,
+      "replications": 3,
+      "wns": 7.5247
+    },
+    "open_rtl_winner": {
+      "area": 497.154,
+      "cells": 425,
+      "exactly_stable": true,
+      "label": "addpipe24_ks_fused_window16",
+      "power_w": 6.53099e-05,
+      "proxy_reward_v0": 74.683046,
+      "replications": 3,
+      "wns": 7.51802
+    },
+    "shared_seed": {
+      "area": 530.936,
+      "cells": 465,
+      "exactly_stable": true,
+      "label": "0x000000",
+      "power_w": 6.79251e-05,
+      "proxy_reward_v0": 74.655664,
+      "replications": 3,
+      "wns": 7.51866
+    }
+  }
+}
