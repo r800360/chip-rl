@@ -1,0 +1,51 @@
+{
+  "protocol_version": 1,
+  "benchmark": "addpipe40",
+  "purpose": "Fresh equal-information comparison including factorized REINFORCE v1 and hierarchical autoregressive REINFORCE v2.",
+  "width_bits": 40,
+  "boundary_mask_bits": 39,
+  "structural_space_size": 549755813888,
+
+  "shared_initial_seed_masks": [
+    "0x0000000000",
+    "0x0000000080",
+    "0x0000080000",
+    "0x0080000000",
+    "0x0020080200",
+    "0x0421084210",
+    "0x2aaaaaaaaa",
+    "0x7fffffffff"
+  ],
+
+  "shared_query_budget_per_algorithm": 16,
+
+  "algorithms": [
+    "uniform_random_structural",
+    "evolution_structural",
+    "reinforce_factorized_v1",
+    "reinforce_autoregressive_v2",
+    "claude_structural"
+  ],
+
+  "information_rule": "Every algorithm sees only the same measured eight-seed corpus plus its own subsequent evaluations.",
+
+  "reward": "proxy_reward_v0 = -0.001 * area + 10.0 * WNS",
+
+  "autoregressive_v2": {
+    "policy": "sample global boundary count K, then sample K ordered boundary positions autoregressively",
+    "full_space_support": true,
+    "seed_reward_softmax_temperature": 0.5,
+    "count_pseudocount": 0.02,
+    "position_pseudocount": 0.02,
+    "count_learning_rate": 0.30,
+    "position_learning_rate": 0.20,
+    "advantage_clip": 3.0,
+    "baseline_ema_rate": 0.20,
+    "minimum_scale": 0.25,
+    "policy_rng_seed": 20260921,
+    "training_score": "candidate proxy_reward_v0",
+    "evaluation_metric": "best-so-far proxy_reward_v0 after 16 physical queries"
+  },
+
+  "fmax_policy": "record only; not an optimization target"
+}
