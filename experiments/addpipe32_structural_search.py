@@ -135,7 +135,7 @@ def choose_evolution(
         )
 
         bits = rng.sample(
-            range(23),
+            range(31),
             k=flips,
         )
 
