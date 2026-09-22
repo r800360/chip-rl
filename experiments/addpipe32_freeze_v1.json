@@ -1,0 +1,53 @@
+{
+  "benchmark": "addpipe32",
+  "files": {
+    "experiments/protocol_addpipe32_rl_v1.json": {
+      "bytes": 3241,
+      "sha256": "ef853395e1e5551658c710c91c235b512cf5263050772f05aa6c64cccbe716ac"
+    },
+    "results/addpipe32_controlled/claude_structural/results.json": {
+      "bytes": 39984,
+      "sha256": "c3a530a6bb01542eb8cef541c083a3045569a55e3a677955963ec16c0ec4925b"
+    },
+    "results/addpipe32_controlled/evolution/results.json": {
+      "bytes": 36577,
+      "sha256": "b104bb7645d02ed93608066d2dd344a954ec58ddb1feb5a275d882fcd2414354"
+    },
+    "results/addpipe32_controlled/random/results.json": {
+      "bytes": 37709,
+      "sha256": "2958e8380b525c815991ab9e161d9cd86d494f4e8c7de235203293123c3e5504"
+    },
+    "results/addpipe32_shared_seed/results.json": {
+      "bytes": 18757,
+      "sha256": "c21c3fe82cebe62ab79dc245fb5636abdb8a9335108afeb62429f599795d752a"
+    },
+    "results/analysis/addpipe32_controlled/summary.json": {
+      "bytes": 10485,
+      "sha256": "84f4b74b5be1220e466f1d04152587e69b0ddbb890045433d556bccc1ad329a6"
+    },
+    "results/rl_runs/addpipe32/reinforce_v1/state.json": {
+      "bytes": 38926,
+      "sha256": "7f903133996cfd0d3a63d5f681fad627ef76fb226d94824640dd1f487634a95d"
+    }
+  },
+  "freeze_version": 1,
+  "git_head_before_manifest": "3ccc26f1ce77e3734178663dff34ce90806264bc",
+  "headline_result": {
+    "claude_structural_best": {
+      "blocks": [
+        28,
+        4
+      ],
+      "mask": "0x08000000",
+      "reward": 74.256584
+    },
+    "evolution_best": 74.15097,
+    "random_best": 74.15097,
+    "reinforce_v1_best": 74.15097,
+    "shared_seed_best": {
+      "mask": "0x00000000",
+      "reward": 74.15097
+    }
+  },
+  "status": "FROZEN_NO_FURTHER_SEARCH"
+}
