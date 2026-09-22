@@ -1,0 +1,1 @@
+CHIPRL_MODEL_METADATA={"content_block_types": ["thinking", "text"], "effort": "high", "input_tokens": 31304, "max_tokens": 48000, "model": "claude-sonnet-5", "output_tokens": 7789, "request_id": null, "stop_reason": "end_turn"}

@@ -1,0 +1,5 @@
+{
+  "name": "addpipe24_structural_ripple",
+  "rationale": "Frozen-seed data shows the plain 24-bit adder (no partitioning) already dominates all split/carry-select variants in both area and WNS, since partitioning adds extra muxing/select logic without benefit at this bit-width. Rather than repeat that exact netlist, we express the same monolithic adder as an explicit structural full-adder ripple chain (generate loop of XOR/AND/OR gates) instead of relying on Yosys's default '+' inference. This preserves identical sequential/reset/valid semantics but gives the synthesis/mapping tool a more literal, minimal gate-level carry chain, which may map to fewer or smaller standard cells (or at least match the current best) while keeping the short critical path (~2.5ns) that yielded the best WNS in the seed set.",
+  "source_sha256": "f0c142db9c9a0c7e4b3f5a77d55fdf5fef94e1de02375858db775f21f0e134a1"
+}

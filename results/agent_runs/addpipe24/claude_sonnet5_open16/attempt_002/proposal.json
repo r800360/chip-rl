@@ -1,0 +1,5 @@
+{
+  "name": "addpipe24_sklansky",
+  "rationale": "Frozen data shows plain '+' (WNS 7.51866, area 530.936) already beats every manual partition/carry-select variant, and our own full Kogge-Stone prefix adder essentially matched its WNS (7.51732) but cost ~19 extra area units because every bit recomputes a distinct neighbor at every one of the 5 levels (~n*log2(n) combine nodes). A Sklansky parallel-prefix adder keeps the same theoretical depth (ceil(log2(24))=5 levels, so comparable critical path/WNS) but only the upper half of each group is recombined at each level, reusing one shared reference signal per group instead of a per-bit shifted neighbor. This roughly halves the number of generate/propagate combine cells versus Kogge-Stone while preserving the same logical depth, so it should land near the same WNS at lower area than our Kogge-Stone attempt, potentially improving on the current best proxy_reward point without touching sequential/reset/valid semantics.",
+  "source_sha256": "d1972b9075353f4bb41a6c41176828f282771e61409c1eefe17b0f8c21aad43d"
+}

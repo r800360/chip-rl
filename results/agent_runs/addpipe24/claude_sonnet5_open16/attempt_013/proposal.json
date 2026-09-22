@@ -1,0 +1,5 @@
+{
+  "name": "addpipe24_ks_fused_flat4",
+  "rationale": "Full per-bit Kogge-Stone (attempt_001) matched baseline WNS (7.517) but cost +19 area versus the tool-inferred adder, likely because its 5 explicitly-staged 2-input levels prevented ABC from merging/sharing logic across stage boundaries. This candidate keeps the mathematically identical KS carry recurrence but folds the first two stride-1/stride-2 stages into a single flat sliding-window SOP expression per bit (true global window, not block-partitioned like the earlier buggy radix4 attempt), then finishes with the same 3 remaining stride-4/8/16 doublings as attempt_001. Collapsing two staged 2-input levels into one balanced 4-term expression gives ABC a single logic cone to optimize (similar to how flat-SOP CLA blocks empirically beat staged CLA-KS hybrids in prior attempts), aiming to reduce total cell count/area versus full per-bit KS while preserving its near-baseline critical path and WNS.",
+  "source_sha256": "5b22cdbf798c06b3062c8a9b095557e72465be924e7c250f4cc12c998336ff74"
+}
