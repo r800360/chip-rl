@@ -152,6 +152,26 @@ def main():
         info1,
     )
 
+    duplicate_rejected = False
+    queries_before_duplicate = env.queries_used
+
+    try:
+        env.step(
+            0x100000
+        )
+
+    except InvalidAction as exc:
+        duplicate_rejected = True
+
+        print()
+        print(
+            "duplicate rejected:",
+            type(exc).__name__,
+            str(exc),
+        )
+
+    assert env.queries_used == queries_before_duplicate
+
     _, reward2, done2, info2 = (
         env.step(
             0x108000
@@ -163,26 +183,6 @@ def main():
         "step 2:",
         info2,
     )
-
-    duplicate_rejected = False
-
-    try:
-        env.step(
-            0x100000
-        )
-
-    except (
-        InvalidAction,
-        RuntimeError,
-    ) as exc:
-        duplicate_rejected = True
-
-        print()
-        print(
-            "duplicate rejected:",
-            type(exc).__name__,
-            str(exc),
-        )
 
     final = env.observation()
 
