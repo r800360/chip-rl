@@ -1,0 +1,64 @@
+[
+  {
+    "area": 859.978,
+    "boundaries": 2,
+    "discovered_by": [
+      "claude_structural"
+    ],
+    "mask": "0x5000000000",
+    "reward": 73.042222,
+    "wns": 7.39022
+  },
+  {
+    "area": 890.036,
+    "boundaries": 3,
+    "discovered_by": [
+      "evolution"
+    ],
+    "mask": "0x4108000000",
+    "reward": 73.128364,
+    "wns": 7.40184
+  },
+  {
+    "area": 903.336,
+    "boundaries": 0,
+    "discovered_by": [
+      "shared_seed"
+    ],
+    "mask": "0x0000000000",
+    "reward": 73.481864,
+    "wns": 7.43852
+  },
+  {
+    "area": 911.316,
+    "boundaries": 1,
+    "discovered_by": [
+      "claude_structural",
+      "evolution"
+    ],
+    "mask": "0x0100000000",
+    "reward": 73.496984,
+    "wns": 7.44083
+  },
+  {
+    "area": 919.828,
+    "boundaries": 1,
+    "discovered_by": [
+      "claude_structural"
+    ],
+    "mask": "0x4000000000",
+    "reward": 73.600572,
+    "wns": 7.45204
+  },
+  {
+    "area": 933.926,
+    "boundaries": 1,
+    "discovered_by": [
+      "claude_structural",
+      "reinforce_v2"
+    ],
+    "mask": "0x1000000000",
+    "reward": 73.663774,
+    "wns": 7.45977
+  }
+]
