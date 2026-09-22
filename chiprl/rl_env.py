@@ -330,14 +330,50 @@ class StructuralMaskEnv:
         )
 
     def own_results(self):
-        return [
-            q["result"]
-            for q in self.state[
-                "queries"
-            ]
-            if q.get("result")
-            is not None
-        ]
+        rows = []
+
+        for q in self.state[
+            "queries"
+        ]:
+            result = q.get(
+                "result"
+            )
+
+            if result is None:
+                continue
+
+            # The evaluator owns physical metrics while the
+            # environment owns action metadata.  Normalize
+            # them here so both newly evaluated and resumed
+            # query records have the same row schema as the
+            # measured seed corpus.
+            row = dict(
+                result
+            )
+
+            row["boundary_mask"] = int(
+                q["boundary_mask"]
+            )
+
+            row["mask"] = q.get(
+                "mask",
+                mask_text(
+                    int(
+                        q["boundary_mask"]
+                    ),
+                    self.mask_bits,
+                ),
+            )
+
+            row["query_index"] = int(
+                q["query_index"]
+            )
+
+            rows.append(
+                row
+            )
+
+        return rows
 
     def successful_rows(self):
         return (

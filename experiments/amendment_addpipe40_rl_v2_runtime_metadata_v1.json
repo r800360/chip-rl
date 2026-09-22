@@ -1,0 +1,25 @@
+{
+  "amendment_version": 1,
+  "benchmark": "addpipe40",
+  "budget_semantics": "Query 7 was physically evaluated and saved before observation construction failed. It remains an official consumed query and will not be repeated.",
+  "experiment": "reinforce_autoregressive_v2",
+  "failure": "StructuralMaskEnv stored evaluator results without the environment-owned boundary_mask metadata. The defect remained latent while a seed row was best-so-far and surfaced when an RL-generated row became the incumbent.",
+  "git_head_before_fix": "dd30af19e8188a18e422663952b8fd6512046802",
+  "repair": "own_results() now copies each stored evaluator result and attaches boundary_mask, mask, and query_index from its query record.",
+  "saved_query_7_mask": "0x0010000000",
+  "saved_query_7_status": "success",
+  "state_sha256_before_resume": "18c376cbf287c10a24922e66c3fc6df52b5823741a16611d3c97664325b64094",
+  "trigger_after_saved_query": 7,
+  "unchanged": [
+    "all seven measured physical results",
+    "policy architecture",
+    "policy initialization",
+    "policy learning rates",
+    "advantage calculation",
+    "reward function",
+    "RNG seeds",
+    "action space",
+    "query budget",
+    "EDA evaluator"
+  ]
+}
