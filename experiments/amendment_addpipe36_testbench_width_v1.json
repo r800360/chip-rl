@@ -1,0 +1,17 @@
+{
+  "amendment_version": 1,
+  "benchmark": "addpipe36",
+  "corrected_testbench_sha256": "c6ba59e3f0849c2924dd9d5d5d02d382cfec843ebfef44515570f899aa6f9f42",
+  "experiment": "multiwidth_structural_generalization_v1",
+  "failed_evaluation_id": "c065a465b05d9d55",
+  "failed_evaluation_present": true,
+  "failure": "The mechanically generated addpipe36 testbench retained 40-bit hexadecimal literal text while changing explicit literal widths to 36 bits. Verilator rejected those literals before simulation, formal evaluation, synthesis, or place-and-route.",
+  "git_head_at_failure": "ce99a27a519bfaf9d9f0045bb890dcddc025b36f",
+  "repair": "Only directed-test hexadecimal literals in sim/tb_addpipe36.sv were shortened to legal 36-bit representations. No design RTL, reference RTL, generator, physical configuration, seed mask, reward, search policy, hyperparameter, or query budget changed.",
+  "timing": {
+    "algorithm_searches_started": false,
+    "physical_design_reached_in_failed_baseline": false,
+    "shared_seed_measurements_started": false
+  },
+  "trigger": "baseline functional sanity evaluation"
+}

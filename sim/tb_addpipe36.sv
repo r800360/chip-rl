@@ -79,7 +79,7 @@ begin
     @(negedge clk);
 
     a_i     = ~a;
-    b_i     = b ^ 36'ha55aa55aa5;
+    b_i     = b ^ 36'h55aa55aa5;
     valid_i = 1'b0;
 
     @(posedge clk);
@@ -176,33 +176,33 @@ initial begin
     rst_n = 1'b1;
 
     check_valid_then_hold(
-        36'h0000000000,
-        36'h0000000000
+        36'h000000000,
+        36'h000000000
     );
 
     check_valid_then_hold(
-        36'hffffffffff,
-        36'h0000000001
+        36'hfffffffff,
+        36'h000000001
     );
 
     check_valid_then_hold(
-        36'hffffffffff,
-        36'hffffffffff
+        36'hfffffffff,
+        36'hfffffffff
     );
 
     check_valid_then_hold(
-        36'haaaaaaaaaa,
-        36'h5555555555
+        36'haaaaaaaaa,
+        36'h555555555
     );
 
     check_valid_then_hold(
-        36'h8000000000,
-        36'h8000000000
+        36'h800000000,
+        36'h800000000
     );
 
     check_valid_then_hold(
-        36'h7fffffffff,
-        36'h0000000001
+        36'h7ffffffff,
+        36'h000000001
     );
 
     for (i = 0; i < 10000; i = i + 1) begin
@@ -219,10 +219,10 @@ initial begin
     end
 
     check_back_to_back(
-        36'h123456789a,
-        36'h0102030405,
-        36'hfedcba9876,
-        36'h0011223344
+        36'h23456789a,
+        36'h102030405,
+        36'hedcba9876,
+        36'h011223344
     );
 
     $display(
