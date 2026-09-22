@@ -76,6 +76,21 @@ BENCHMARKS = {
 
         pass_marker="PASS addpipe24 randomized+protocol",
     ),
+    "addpipe32": Benchmark(
+        name="addpipe32",
+
+        top_module="addpipe32",
+        reference_top="addpipe32_ref",
+
+        testbench=ROOT / "sim" / "tb_addpipe32.sv",
+        reference=ROOT / "rtl/reference/addpipe32_ref.v",
+
+        orfs_config_host=ROOT / "orfs/addpipe32/config.mk",
+        orfs_config_container="/work/orfs/addpipe32/config.mk",
+        sdc=ROOT / "orfs/addpipe32/constraint.sdc",
+
+        pass_marker="PASS addpipe32 randomized+protocol",
+    ),
 }
 
 

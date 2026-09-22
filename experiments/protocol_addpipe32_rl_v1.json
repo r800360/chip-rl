@@ -1,0 +1,101 @@
+{
+  "protocol_version": 1,
+  "benchmark": "addpipe32",
+
+  "purpose": "Fresh equal-information comparison of uniform random search, evolutionary search, restricted Claude structural search, and a policy-gradient RL baseline.",
+
+  "design": {
+    "width_bits": 32,
+    "boundary_mask_bits": 31,
+    "structural_space_size": 2147483648,
+    "technology": "Nangate45",
+    "clock_period_ns": 10.0,
+    "die_area": [0, 0, 100, 100],
+    "core_area": [5, 5, 95, 95],
+    "placement_density": 0.20
+  },
+
+  "shared_initial_seed_masks": [
+    "0x00000000",
+    "0x00000080",
+    "0x00008000",
+    "0x00800000",
+    "0x00808080",
+    "0x08888888",
+    "0x2aaaaaaa",
+    "0x7fffffff"
+  ],
+
+  "evaluation": {
+    "shared_seed_candidates": 8,
+    "new_unique_queries_per_algorithm": 16,
+    "reward": "proxy_reward_v0 = -0.001 * area + 10.0 * WNS",
+    "pareto_objectives": [
+      "minimize area",
+      "maximize WNS"
+    ],
+    "fmax_is_not_an_objective": true,
+    "cross_algorithm_results_visible": false,
+    "cross_algorithm_mask_overlap_allowed": true,
+    "within_algorithm_duplicate_queries_allowed": false
+  },
+
+  "uniform_random_structural": {
+    "rng_seed": 20260921,
+    "policy": "uniform sample over unseen 31-bit masks"
+  },
+
+  "evolution_structural": {
+    "rng_seed": 20260921,
+    "initial_archive": "shared eight measured seeds",
+    "selection": "3-way tournament on proxy_reward_v0",
+    "random_restart_probability": 0.15,
+    "mutation": {
+      "one_distinct_bit_flip_probability": 0.70,
+      "two_distinct_bit_flip_probability": 0.25,
+      "three_distinct_bit_flip_probability": 0.05
+    }
+  },
+
+  "claude_structural": {
+    "model": "claude-sonnet-5",
+    "effort": "high",
+    "max_tokens": 48000,
+    "action": "one unseen complete 31-bit boundary mask",
+    "starting_information": "shared eight seed measurements only",
+    "adaptive_information": "shared seeds plus only Claude structural's own prior queries",
+    "rtl_generation": "frozen structural generator only"
+  },
+
+  "reinforce_structural": {
+    "name": "independent-Bernoulli REINFORCE baseline",
+    "interpretation": "31-step terminal-reward policy-gradient episode producing one complete boundary mask per physical query",
+    "policy_rng_seed": 20260921,
+    "action": "31 binary boundary decisions forming one complete mask",
+    "query_budget": 16,
+
+    "initialization": {
+      "source": "shared eight seed measurements only",
+      "seed_reward_softmax_temperature": 0.5,
+      "symmetric_beta_pseudocount_per_bit": 0.05,
+      "minimum_bit_probability": 0.02,
+      "maximum_bit_probability": 0.98
+    },
+
+    "online_update": {
+      "algorithm": "REINFORCE",
+      "learning_rate": 0.35,
+      "training_score": "candidate proxy_reward_v0",
+      "advantage": "(candidate_score - EMA_baseline) / EMA_scale",
+      "advantage_clip": [-3.0, 3.0],
+      "baseline_ema_rate": 0.20,
+      "scale_ema_rate": 0.20,
+      "minimum_scale": 0.25,
+      "probability_clip": [0.02, 0.98]
+    },
+
+    "evaluation_metric": "final best-so-far proxy_reward_v0 after 16 physical queries",
+
+    "note": "The dense candidate score is used as the policy-gradient training signal; the StructuralMaskEnv also records best-so-far improvement reward separately."
+  }
+}
