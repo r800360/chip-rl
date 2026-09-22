@@ -253,13 +253,16 @@ def main():
             "correctness_contract.top_module"
         ) from exc
 
-    if not re.search(
-        rf"\\bmodule\\s+{re.escape(top_module)}\\b",
+    module_names = re.findall(
+        r"\bmodule\s+([A-Za-z_][A-Za-z0-9_$]*)\b",
         proposal["rtl"],
-    ):
+    )
+
+    if top_module not in module_names:
         raise SystemExit(
             "Proposal does not contain required "
-            f"top module {top_module!r}"
+            f"top module {top_module!r}; "
+            f"found modules: {module_names}"
         )
 
     # stdout belongs exclusively to the protocol
