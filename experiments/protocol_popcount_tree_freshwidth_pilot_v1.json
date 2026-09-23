@@ -1,0 +1,101 @@
+{
+  "action_grammar": "width-1 independent decisions: arithmetic addition (0) or explicit CLA (1)",
+  "anticipated_future_methods_not_yet_executed": [
+    "corrected v3 global",
+    "uniform local one-flip",
+    "50/50 global-local with v3 updates only on global proposals",
+    "50/50 frozen global-local with no policy updates"
+  ],
+  "eda": {
+    "cache": false,
+    "clean": true,
+    "clock_period_ns": 10.0,
+    "die_and_core": {
+      "popcount16_tree": "80x80 die, [5,5,75,75] core",
+      "popcount64_tree": "150x150 die, [5,5,145,145] core"
+    },
+    "fixed_reward": "-0.001 * area + 10 * WNS",
+    "place_density": 0.2,
+    "platform": "Nangate45"
+  },
+  "experiment": "popcount_tree_freshwidth_diversity_v1",
+  "fresh_widths": [
+    16,
+    64
+  ],
+  "future_study_scope": "freeze implemented learning protocols before seeing new-width search results; never reuse 32-bit one-flip data as held-out",
+  "gate": {
+    "all_eight_functional_formal_routed_uncached": true,
+    "area_distinct_round_dp": 1,
+    "area_round_dp": 2,
+    "minimum_distinct_rounded_areas": 3,
+    "minimum_distinct_rounded_physical_pairs": 4,
+    "minimum_relative_area_span": 0.01,
+    "minimum_reward_span": 0.1,
+    "wns_round_dp": 3
+  },
+  "gate_application": "each width individually; failure is preserved, no threshold relaxation",
+  "node_order": "bottom-up, left-to-right",
+  "reference": "one-cycle unsigned popcount(a_i), reset and invalid-cycle output hold; b_i ignored",
+  "relationship_to_32bit": "Width transfer within same task family; 32-bit data excluded from new measurements",
+  "rtl_hashes": {
+    "orfs/popcount16_tree/config.mk": "a6266192a8e5fbc4e25ca04cadd94a817ba925c00ae32c168b5d3051a50f4ad2",
+    "orfs/popcount16_tree/constraint.sdc": "dce8a93c26ab915d8b69f6976bd99a3c0c6515b60810a38a9344bc678814e66b",
+    "orfs/popcount64_tree/config.mk": "9f8613b29edc2445f5451a382ee5f2398f73ad27a64b949bfe76719729ffc806",
+    "orfs/popcount64_tree/constraint.sdc": "f134ac15c262a0cf33bfd7ce2a22cdff0ebbd771d5a82767e488f55cb5a36bb4",
+    "rtl/generated/popcount16_tree_arch_seed_v1/mask_0000.v": "242dfcf177ffeffe2ce10e2cfc7e12e80d60eedaaf6fda6d97bcc53819225a07",
+    "rtl/generated/popcount16_tree_arch_seed_v1/mask_00ff.v": "4b7a8f14231ab15d44a36ff74b855878d97190f21d933aa3d399cd8dfde89399",
+    "rtl/generated/popcount16_tree_arch_seed_v1/mask_2aaa.v": "f8eb608cdfe0130a7dc96c98763d84bf7fa801453e4ebdad0cc8cb9a4302b8ed",
+    "rtl/generated/popcount16_tree_arch_seed_v1/mask_4000.v": "eae3c76f02d4ccc9109a343d4145271ef0ec297d361af04991791f13103a9a88",
+    "rtl/generated/popcount16_tree_arch_seed_v1/mask_5555.v": "bc9df7a56012507f17759ced82d65ad70cc352dd8f19fb2b4f1a87b6fc7c7bf1",
+    "rtl/generated/popcount16_tree_arch_seed_v1/mask_7000.v": "55a1d1e6b30e6f941d9918619ba756e47f476ec2ceac853cc8f15fbfad0d0810",
+    "rtl/generated/popcount16_tree_arch_seed_v1/mask_7f00.v": "39b7a1a024ea25c3d73270ce513f541057f815e0e91000fc57b2810e6f1f6f55",
+    "rtl/generated/popcount16_tree_arch_seed_v1/mask_7fff.v": "a1010e7ba97e4be09a17db7be2ec7e015e95f0def5617534da7767e81aec885f",
+    "rtl/generated/popcount64_tree_arch_seed_v1/mask_0000000000000000.v": "c0af1fee1aeb2ca96871fb7ddadb0cab8964a246471785c3a243b88d984885da",
+    "rtl/generated/popcount64_tree_arch_seed_v1/mask_00000000ffffffff.v": "df770eaafde0e1cddc9656230e9969a4c8b170a3e2454bee88b7cb0b8586c531",
+    "rtl/generated/popcount64_tree_arch_seed_v1/mask_2aaaaaaaaaaaaaaa.v": "6a94b39688b795ab95929629f402e414ff76c7b373349d63bc3361ac532c5ec3",
+    "rtl/generated/popcount64_tree_arch_seed_v1/mask_4000000000000000.v": "b721f09bede937d3c897638186f176380c96cc53a243e4c58d8013e3c413dc93",
+    "rtl/generated/popcount64_tree_arch_seed_v1/mask_5555555555555555.v": "61e38be39c9b8e17e35d264eee1c20a8d108bdc4f41c5a0d5e85347f285e2d69",
+    "rtl/generated/popcount64_tree_arch_seed_v1/mask_7000000000000000.v": "a894c90810b5dfd14d6cd4c34766af09de8040cb82bb150ab5226f164015e52d",
+    "rtl/generated/popcount64_tree_arch_seed_v1/mask_7f00000000000000.v": "17a435658630df5a4058fab3697dd301dd0756d4f56cd953b83fa88cac5a7182",
+    "rtl/generated/popcount64_tree_arch_seed_v1/mask_7fffffffffffffff.v": "9a1671d5b3ecf5514cc184eae6baad732e11ae3592bdb5c4ff5ce6b6627e204d",
+    "rtl/popcount16_tree/baseline.v": "242dfcf177ffeffe2ce10e2cfc7e12e80d60eedaaf6fda6d97bcc53819225a07",
+    "rtl/popcount64_tree/baseline.v": "c0af1fee1aeb2ca96871fb7ddadb0cab8964a246471785c3a243b88d984885da",
+    "rtl/reference/popcount16_tree_ref.v": "a4812c93ec18e95a6331a28b5bde2c6f906ed6e29c24e88c381f78ecbfb76b66",
+    "rtl/reference/popcount64_tree_ref.v": "d575b06b43a3e7fdb4f1e5107b12fa46e723b6198223163e8ae7a8e7a10e4dca",
+    "sim/tb_popcount16_tree.sv": "dac7b76e54f2d8a4a0b178e3bbb7a6be4d6bd6d93e6ca246495d33878910a81e",
+    "sim/tb_popcount64_tree.sv": "2ffca9f7d3729515d50f46ec4872c121c1dc406c1f5987d92ec167892c8c4989"
+  },
+  "shared_pilot_masks": {
+    "popcount16_tree": [
+      "0x0000",
+      "0x7fff",
+      "0x4000",
+      "0x7000",
+      "0x7f00",
+      "0x00ff",
+      "0x5555",
+      "0x2aaa"
+    ],
+    "popcount64_tree": [
+      "0x0000000000000000",
+      "0x7fffffffffffffff",
+      "0x4000000000000000",
+      "0x7000000000000000",
+      "0x7f00000000000000",
+      "0x00000000ffffffff",
+      "0x5555555555555555",
+      "0x2aaaaaaaaaaaaaaa"
+    ]
+  },
+  "source_sha256": {
+    "chiprl/benchmarks.py": "6692248c8d9663982a54d49d647df5b927b5004ae73c9a84462b918fe16b6ff9",
+    "chiprl/evaluate.py": "f11ce560b85fd08a63072c3f51827770556b4224d107e8309050b37f2fcce59c",
+    "chiprl/formal.py": "00666de278fb1f4d4ca161e4461f88b47bd1357d64fa8e3bfca7cc4ff88b64ab",
+    "chiprl/popcount_tree_generator.py": "a620da39ec662962a54b3c9d06cc9f959186862595d29da2e3c3303c26815393",
+    "chiprl/popcount_tree_widths_v1.py": "eb379a33df0f692a1c3d677c2028e4244f96c78d897cfec749a5690693e55b86",
+    "experiments/popcount_tree_freshwidth_pilot_v1.py": "353c310d150c757c4ffc920185100a53f66a53f4e4b2121e85136cdb72e660b1"
+  },
+  "status": "PREREGISTER_BEFORE_NEW_WIDTH_PPA",
+  "stop_after": "new baseline physical validations, followed by separate eight-architecture diversity gates"
+}
