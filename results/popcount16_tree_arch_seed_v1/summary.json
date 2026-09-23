@@ -1,0 +1,24 @@
+{
+  "benchmark": "popcount16_tree",
+  "best_mask": "0x7000",
+  "best_reward": 73.245274,
+  "distinct_rounded_areas": 8,
+  "distinct_signatures": 8,
+  "eight_valid_uncached": true,
+  "frontier_size": 3,
+  "gate_passed": true,
+  "pilot_protocol_sha256": "22ae2b5d0798dd1b8b5422947b76ac7a3f33381189d0c4accc0eddd84bde4bb7",
+  "predeclared_gate": {
+    "all_eight_functional_formal_routed_uncached": true,
+    "area_distinct_round_dp": 1,
+    "area_round_dp": 2,
+    "minimum_distinct_rounded_areas": 3,
+    "minimum_distinct_rounded_physical_pairs": 4,
+    "minimum_relative_area_span": 0.01,
+    "minimum_reward_span": 0.1,
+    "wns_round_dp": 3
+  },
+  "relative_area_span": 0.30278232405891964,
+  "results_sha256": "30cec0ef5c63352aa9391d0c46a254682c6e33455eebb04763139a98d8258a0f",
+  "reward_span": 1.3139619999999894
+}

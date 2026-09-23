@@ -1,0 +1,80 @@
+{
+  "experiment": "popcount_freshwidth_global_local_v1",
+  "pilot_protocol_sha256": "22ae2b5d0798dd1b8b5422947b76ac7a3f33381189d0c4accc0eddd84bde4bb7",
+  "source_commit_before_search": "4143136da359f6127a9cb30c59d78612d72ae4ee",
+  "status": "SEEDS_FROZEN_BEFORE_SEARCH",
+  "widths": {
+    "popcount16_tree": {
+      "baseline_sha256": "9dfd450efb097e5b3882ca12838a2d2c23c16a57ee7c6ccde4ebba82d987481d",
+      "best_seed_mask": "0x7000",
+      "best_seed_reward": 73.245274,
+      "frontier_sha256": "6b92f4adba745d3c2b52c911a511de1492a4f75da3c32580039840954ec0704b",
+      "gate_passed": true,
+      "physical_signatures": 8,
+      "relative_area_span": 0.30278232405891964,
+      "results_sha256": "30cec0ef5c63352aa9391d0c46a254682c6e33455eebb04763139a98d8258a0f",
+      "reward_span": 1.3139619999999894,
+      "seed_count": 8,
+      "seed_masks": [
+        "0x0000",
+        "0x7fff",
+        "0x4000",
+        "0x7000",
+        "0x7f00",
+        "0x00ff",
+        "0x5555",
+        "0x2aaa"
+      ],
+      "source_fingerprint": {
+        "benchmark": "popcount16_tree",
+        "formal_seq": 4,
+        "or_image_id": "sha256:8cae1bdb8296eed70b4d981696b0f29aa7faeb61b64b1f2950506aaac65ef442",
+        "orfs_config_sha256": "a6266192a8e5fbc4e25ca04cadd94a817ba925c00ae32c168b5d3051a50f4ad2",
+        "orfs_git_commit": "3a964e13f11a4e435aac01ffa14db0a7d2853720",
+        "reference_rtl_sha256": "a4812c93ec18e95a6331a28b5bde2c6f906ed6e29c24e88c381f78ecbfb76b66",
+        "schema_version": "4",
+        "sdc_sha256": "dce8a93c26ab915d8b69f6976bd99a3c0c6515b60810a38a9344bc678814e66b",
+        "testbench_sha256": "dac7b76e54f2d8a4a0b178e3bbb7a6be4d6bd6d93e6ca246495d33878910a81e",
+        "top_module": "popcount16_tree",
+        "verilator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)"
+      },
+      "summary_sha256": "121cf95e4d27d8506005603286bb2d7c63e4733ac167f7302674e24e66007adc"
+    },
+    "popcount64_tree": {
+      "baseline_sha256": "d356cfb052b3db7d9a16f9a9973feb7d55a3fe21cd29d2aa1dfc26e146e27009",
+      "best_seed_mask": "0x7fffffffffffffff",
+      "best_seed_reward": 68.925898,
+      "frontier_sha256": "3f326a2e348cd2bb08366fa806fa4c5d9834bac942986e43567c5ca477fc3e8d",
+      "gate_passed": true,
+      "physical_signatures": 8,
+      "relative_area_span": 0.549584487534626,
+      "results_sha256": "4f258e6ada6dfb4b33a4a06708f8703ef33bfebc7ced9df7cfbb8e322fa4a1d8",
+      "reward_span": 2.388295999999997,
+      "seed_count": 8,
+      "seed_masks": [
+        "0x0000000000000000",
+        "0x7fffffffffffffff",
+        "0x4000000000000000",
+        "0x7000000000000000",
+        "0x7f00000000000000",
+        "0x00000000ffffffff",
+        "0x5555555555555555",
+        "0x2aaaaaaaaaaaaaaa"
+      ],
+      "source_fingerprint": {
+        "benchmark": "popcount64_tree",
+        "formal_seq": 4,
+        "or_image_id": "sha256:8cae1bdb8296eed70b4d981696b0f29aa7faeb61b64b1f2950506aaac65ef442",
+        "orfs_config_sha256": "9f8613b29edc2445f5451a382ee5f2398f73ad27a64b949bfe76719729ffc806",
+        "orfs_git_commit": "3a964e13f11a4e435aac01ffa14db0a7d2853720",
+        "reference_rtl_sha256": "d575b06b43a3e7fdb4f1e5107b12fa46e723b6198223163e8ae7a8e7a10e4dca",
+        "schema_version": "4",
+        "sdc_sha256": "f134ac15c262a0cf33bfd7ce2a22cdff0ebbd771d5a82767e488f55cb5a36bb4",
+        "testbench_sha256": "2ffca9f7d3729515d50f46ec4872c121c1dc406c1f5987d92ec167892c8c4989",
+        "top_module": "popcount64_tree",
+        "verilator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)"
+      },
+      "summary_sha256": "7eab156730abe6e7e5585aa9a78cd3a8bcf04a22aa52beb095f1cdb8482ae462"
+    }
+  }
+}
