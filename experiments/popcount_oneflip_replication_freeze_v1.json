@@ -1,0 +1,47 @@
+{
+  "experiment": "popcount_oneflip_replication_v1",
+  "status": "FROZEN",
+  "protocol_sha256": "bf7dce4288410ba2dfad7db9474d55334d73d29903a36c42533a92328c91754d",
+  "original_sweep_summary_sha256": "ef9730e1455a233bc31abe20b0fa1d55419fd7042073b8bc4bd5e021ba2b686a",
+  "repetitions_per_design": 3,
+  "all_six_uncached_and_valid": true,
+  "identical_metrics_within_each_design": true,
+  "paired_reward_delta": 0.010905999999991423,
+  "records": {
+    "seed": {
+      "metrics": {
+        "area": 384.636,
+        "wns": 7.18593,
+        "cells": 311,
+        "power_w": 0.000149129,
+        "proxy_reward_v0": 71.474664
+      },
+      "evaluation_id": "c09e8884b6c7b6ba",
+      "replication_files_sha256": {
+        "seed_1.json": "a3d4ba29f6af9bb372598435e7556850b2c2483ccdb4dbbfa6c9a81127c0ee63",
+        "seed_2.json": "19abc1033378420b08496eaa7964fc46c1e7806af8371277b9812bbb19d598e5",
+        "seed_3.json": "2875b1e077c8b9672493ed1ba3e112efa73c6091139d8efc692a25f79ea47cd9"
+      }
+    },
+    "neighbor": {
+      "metrics": {
+        "area": 387.03,
+        "wns": 7.18726,
+        "cells": 311,
+        "power_w": 0.000150631,
+        "proxy_reward_v0": 71.48557
+      },
+      "evaluation_id": "76493be368efa0c1",
+      "replication_files_sha256": {
+        "neighbor_1.json": "7e30333b55d574ee7a8ba374c361cf227c6feb6f443ec468ce0631b6a5357240",
+        "neighbor_2.json": "2607228c3647fb1e87d97f7ec516dc51664cb916a7e6276f838abca9c957bb57",
+        "neighbor_3.json": "1e011c1170ba4da968c1318f6be9715315c5bb6c4a35c4bf95ef119a8660518e"
+      }
+    }
+  },
+  "limitations": [
+    "Fixed-flow deterministic replication",
+    "No independent placement-seed variation",
+    "Exploratory, previously selected neighbor"
+  ]
+}
