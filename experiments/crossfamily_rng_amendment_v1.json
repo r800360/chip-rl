@@ -1,0 +1,23 @@
+{
+  "amendment_version": 1,
+  "corrected_runner_sha256": "bbc8b78cb311212b99dc2154a930986309f27d29b7594e3056b96ea941e33126",
+  "correction": "Allocate 1000 per-query RNG seed values to each preregistered policy seed. Use effective_rng_seed = policy_seed * 1000 + query_index.",
+  "experiment": "crossfamily_policy_causality_v1",
+  "issue": "Three consecutive policy seed identifiers combined with seed + query_index produced overlapping per-query pseudorandom streams.",
+  "original_protocol_sha256": "6f16ac7a5ea115d0393ba19267516da1fa75c319b2518d7b3b5d1253ecea5cb4",
+  "original_runner_sha256": "683a1a93828a20bcfe81a4685a8883083fa32281c251051476a30b2c1ddf99c9",
+  "reason": "Prevent shifted and overlapping RNG streams across replicate trajectories.",
+  "search_results_observed_before_change": false,
+  "stage": "after_shared_seeds_before_all_searches",
+  "unchanged": [
+    "all shared-seed physical measurements",
+    "all search policy initializations",
+    "all policy learning rates and update rules",
+    "all reward calculations",
+    "all structural RTL generators",
+    "all benchmark physical configurations",
+    "all 36 run identifiers",
+    "all query budgets",
+    "the original preregistration document"
+  ]
+}

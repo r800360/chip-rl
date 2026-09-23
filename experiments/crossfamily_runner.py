@@ -113,7 +113,7 @@ def run(benchmark, method, seed):
         # dimension and RNG seed are parameterized for a new benchmark.
         from experiments import addpipe36_reinforce_v1 as v1
         v1.BITS = BITS
-        v1.POLICY_SEED = seed
+        v1.POLICY_SEED = seed * 1000
         logits, baseline, scale = v1.initialize(seeds)
         for record in env.state['queries']:
             baseline, scale, _ = v1.update_policy(
@@ -133,7 +133,7 @@ def run(benchmark, method, seed):
 
     while not env.done:
         index = env.queries_used
-        rng = random.Random(seed + index)
+        rng = random.Random(seed * 1000 + index)
         if method == 'v1_learn':
             mask = v1.sample_mask(logits, index, env.seen_masks())
         elif method == 'count_matched_uniform':
