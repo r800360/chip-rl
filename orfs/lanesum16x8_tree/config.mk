@@ -1,0 +1,10 @@
+export DESIGN_NAME = lanesum16x8_tree
+export PLATFORM = nangate45
+export VERILOG_FILES = /work/rtl/lanesum16x8_tree/baseline.v
+export SDC_FILE = /work/orfs/lanesum16x8_tree/constraint.sdc
+export DIE_AREA = 0 0 200 200
+export CORE_AREA = 5 5 195 195
+export PLACE_DENSITY = 0.20
+export TNS_END_PERCENT = 100
+export SYNTH_REPEATABLE_BUILD = 1
+export PDN_TCL = /OpenROAD-flow-scripts/flow/designs/nangate45/gcd/grid_strategy-M1-M4-M7.tcl
