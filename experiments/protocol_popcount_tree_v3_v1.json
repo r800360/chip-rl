@@ -1,0 +1,70 @@
+{
+  "benchmark": "popcount32_tree",
+  "budget": 16,
+  "exact_initial_policy": "same HierarchicalAutoregressiveMaskPolicy initialization and sampling",
+  "experiment": "popcount32_tree_v3_pilot_v1",
+  "interpretation": "three seeds on one post-selected benchmark are exploratory, not evidence of cross-task generalization",
+  "isolated_history": "methods see the eight shared seed rows and ONLY their own query history",
+  "logical_queries": 192,
+  "methods": [
+    "v2_legacy",
+    "v2_raw_aggregate",
+    "v3_conditioned",
+    "v2_frozen"
+  ],
+  "no_hyperparameter_tuning_during_study": true,
+  "primary": [
+    "matched final seed-relative reward v3 minus raw_aggregate",
+    "matched final seed-relative reward v3 minus frozen"
+  ],
+  "rng_rule": "random.Random(seed * 1000 + zero_based_query_index)",
+  "rng_seeds": [
+    31001,
+    31002,
+    31003
+  ],
+  "role": "exploratory mechanistic ablation; selected task for PPA variation, not held-out confirmation",
+  "secondary": [
+    "v3 minus legacy",
+    "first improvement query censored at 17",
+    "PPA Pareto contribution",
+    "validity",
+    "cache counts",
+    "mean K",
+    "policy acceptance probability"
+  ],
+  "seed_freeze_sha256": "8a0d48b35886e2017336cbee25b28c48f47bde7d04311ce13bba28c7b56a192a",
+  "seed_masks": [
+    "0x00000000",
+    "0x7fffffff",
+    "0x40000000",
+    "0x70000000",
+    "0x7f000000",
+    "0x0000ffff",
+    "0x55555555",
+    "0x2aaaaaaa"
+  ],
+  "seed_results_sha256": "a9cedc5408b9599327865b659bf2f1b7d19aea9889d76713ef9ecfc610b5d55c",
+  "shared_physical_cache": "allowed; logical queries and cache misses reported separately",
+  "source_sha256": {
+    "chiprl/autoregressive_policy.py": "8441ee22e82388f4f7ccf2fbf1c9abcb917be32f8cbe2012c7ffec37b9449e95",
+    "chiprl/benchmarks.py": "6692248c8d9663982a54d49d647df5b927b5004ae73c9a84462b918fe16b6ff9",
+    "chiprl/conditioned_autoregressive_policy.py": "96de26f912757ad8b28e041bfdc5b88e19caaac5aae733042a8469d2bb4e49aa",
+    "chiprl/conditioned_policy_gradient.py": "fb02736943121ecd6a4dde3b329c94b1c8ab72e09beac4abbeab5ce45cff207f",
+    "chiprl/evaluate.py": "f11ce560b85fd08a63072c3f51827770556b4224d107e8309050b37f2fcce59c",
+    "chiprl/popcount_tree_generator.py": "a620da39ec662962a54b3c9d06cc9f959186862595d29da2e3c3303c26815393",
+    "chiprl/rl_env.py": "0573cd00111e4b24c751647f2f80f05aaabbff1425817f3684c991399339cdea",
+    "experiments/measure_popcount_tree_arch_seed_v1.py": "2cb56d2b90f1b365cea99e114c27095932091c8647b289e14d20c21b917b038c",
+    "experiments/preregister_popcount_tree_v3_v1.py": "384ed8b08b640e179f0948532755219f5dc3c8f763e837db58fad3b534ee3557",
+    "experiments/run_popcount_tree_v3_v1.py": "e6cb5a077b909c0393066157033fd01df0f68af4da6887cb634c0effd0c82d17",
+    "orfs/popcount32_tree/config.mk": "98a2293ecc44f397facc911da1e803d9c1589e62ee3138dba124e0f68df3fc3f",
+    "orfs/popcount32_tree/constraint.sdc": "340faf59128fb28cac59979db7a6dfdb7bf0ea34937fdd808d3800df24ff75f5",
+    "rtl/reference/popcount32_tree_ref.v": "a502d84ee2d70dc8cc26cc410497fa5bf2a1e848d398307137db830df94e9d8e",
+    "sim/tb_popcount32_tree.sv": "c3fb2c4b616fcfd5f7237ef20fdd51b9a90a99d08a5c4d5f811f2fd59f943f1c"
+  },
+  "status": "PREREGISTERED_AFTER_PILOT_BEFORE_ALL_NEW_RL_QUERIES",
+  "v2_frozen": "same initial policy and sampling, no updates",
+  "v2_legacy": "original unconditioned in-place ordered-position REINFORCE update",
+  "v2_raw_aggregate": "aggregate gradient and simultaneous step, but zero correction",
+  "v3_conditioned": "same aggregate update as raw control plus exact pre-query rejection correction"
+}

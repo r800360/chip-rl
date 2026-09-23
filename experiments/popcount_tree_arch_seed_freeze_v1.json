@@ -1,0 +1,20 @@
+{
+  "benchmark": "popcount32_tree",
+  "diversity_gate_passed": true,
+  "frontier_sha256": "1f23bb02036ed7d8cbed1b712d735c1be6b46ef5007d75d715c7affd575e60c1",
+  "pilot_protocol_sha256": "89ae8725f54bfebddcea316e122ec4e07a7f72601493e47faf67208bcdb5dedc",
+  "results_sha256": "a9cedc5408b9599327865b659bf2f1b7d19aea9889d76713ef9ecfc610b5d55c",
+  "seed_best_reward": 71.474664,
+  "seed_masks": [
+    "0x00000000",
+    "0x7fffffff",
+    "0x40000000",
+    "0x70000000",
+    "0x7f000000",
+    "0x0000ffff",
+    "0x55555555",
+    "0x2aaaaaaa"
+  ],
+  "status": "SEEDS_FROZEN_BEFORE_NEW_RL_QUERIES",
+  "summary_sha256": "328374649e3c5884e59efa551404f68026f175d94150614eaeb0f8022b167b9e"
+}

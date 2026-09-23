@@ -1,0 +1,26 @@
+{
+  "benchmark": "popcount32_tree",
+  "count": 8,
+  "distinct_physical_signatures": 8,
+  "distinct_rounded_areas": 8,
+  "diversity_gate_passed": true,
+  "frontier_size": 4,
+  "predeclared_gate": {
+    "all_eight_functional_formal_routed": true,
+    "area_distinct_round_dp": 1,
+    "area_round_dp": 2,
+    "minimum_distinct_rounded_areas": 3,
+    "minimum_distinct_rounded_physical_pairs": 4,
+    "minimum_relative_area_span": 0.01,
+    "minimum_reward_span": 0.1,
+    "wns_round_dp": 3
+  },
+  "protocol_sha256": "89ae8725f54bfebddcea316e122ec4e07a7f72601493e47faf67208bcdb5dedc",
+  "relative_area_span": 0.45326633165829144,
+  "results_sha256": "a9cedc5408b9599327865b659bf2f1b7d19aea9889d76713ef9ecfc610b5d55c",
+  "reward_span": 2.0930820000000097,
+  "seed_best_mask": "0x7fffffff",
+  "seed_best_reward": 71.474664,
+  "stage": "exploratory_grammar_diversity",
+  "valid": 8
+}
