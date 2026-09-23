@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 from chiprl.benchmarks import (
+    BENCHMARKS,
     Benchmark,
     ROOT,
     get_benchmark,
@@ -808,19 +809,7 @@ def main() -> None:
     parser.add_argument(
         "--benchmark",
         default="addpipe8",
-        choices=(
-            "addpipe8",
-            "addpipe16",
-            "addpipe24",
-            "addpipe32",
-            "addpipe40",
-            "addpipe36",
-            "addpipe48",
-            "addpipe56",
-            "cmp32",
-            "popcount32",
-            "priority32",
-        ),
+        choices=tuple(sorted(BENCHMARKS)),
     )
 
     parser.add_argument(
