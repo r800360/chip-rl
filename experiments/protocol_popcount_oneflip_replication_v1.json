@@ -1,0 +1,51 @@
+{
+  "experiment": "popcount_oneflip_replication_v1",
+  "original_sweep_sha256": "dec6b262be612f04347c877032c8bb2231a99cbed99a12e3db2af2976b2f3fa7",
+  "seed_results_sha256": "a9cedc5408b9599327865b659bf2f1b7d19aea9889d76713ef9ecfc610b5d55c",
+  "designs": {
+    "seed": {
+      "path": "rtl/generated/popcount32_tree_arch_seed/mask_7fffffff.v",
+      "rtl_sha256": "6923869652de64094fdcc988308bead7361754756361c9d969db1fd5dd756663"
+    },
+    "neighbor": {
+      "path": "rtl/generated/popcount32_tree_oneflip_v1/mask_7ffffffb.v",
+      "rtl_sha256": "2cdab3fde67a230d5965a925868cc920794b3735ee56735ef469b5add5303611"
+    }
+  },
+  "repetitions_per_design": 3,
+  "evaluation_order": [
+    {
+      "replicate": 1,
+      "design": "seed"
+    },
+    {
+      "replicate": 1,
+      "design": "neighbor"
+    },
+    {
+      "replicate": 2,
+      "design": "seed"
+    },
+    {
+      "replicate": 2,
+      "design": "neighbor"
+    },
+    {
+      "replicate": 3,
+      "design": "seed"
+    },
+    {
+      "replicate": 3,
+      "design": "neighbor"
+    }
+  ],
+  "benchmark": "popcount32_tree",
+  "cache": false,
+  "clean": true,
+  "reward": "-0.001 * area + 10 * WNS",
+  "purpose": "Test same-flow measurement reproducibility",
+  "limitations": [
+    "Repeated deterministic runs are not independent placement-seed trials",
+    "Reproducibility does not establish robustness to process or tool changes"
+  ]
+}
