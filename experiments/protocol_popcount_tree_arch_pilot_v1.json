@@ -1,0 +1,41 @@
+{
+  "action_space": "2**31 masks; 0=sized addition, 1=explicit parallel carry lookahead at node",
+  "benchmark": "popcount32_tree",
+  "core_algorithm_sources_not_modified": true,
+  "decisions": 31,
+  "experiment": "popcount32_tree_architecture_pilot_v1",
+  "gate": {
+    "all_eight_functional_formal_routed": true,
+    "area_distinct_round_dp": 1,
+    "area_round_dp": 2,
+    "minimum_distinct_rounded_areas": 3,
+    "minimum_distinct_rounded_physical_pairs": 4,
+    "minimum_relative_area_span": 0.01,
+    "minimum_reward_span": 0.1,
+    "wns_round_dp": 3
+  },
+  "if_gate_fails": "stop; report exploratory negative result; no v3 RL experiment on this grammar",
+  "no_initial_policy_or_runner_tuning_from_pilot": true,
+  "node_bit_order": "bottom up; 16, 8, 4, 2, 1 nodes at ascending mask bits",
+  "physical_setup": "unchanged Nangate45, 10ns, 100x100 die, core 5:5:95:95, density 0.2",
+  "pilot_validity_warning": "The gate requires area diversity AND scalar-reward variation; nontrivial physical diversity remains a necessary but not sufficient learning condition.",
+  "provisional_future_methods": [
+    "v2_legacy",
+    "v2_raw_aggregate",
+    "v3_conditioned",
+    "v2_frozen"
+  ],
+  "reward": "frozen proxy_reward_v0 = -0.001*area + 10*WNS",
+  "seed_masks": [
+    "0x00000000",
+    "0x7fffffff",
+    "0x40000000",
+    "0x70000000",
+    "0x7f000000",
+    "0x0000ffff",
+    "0x55555555",
+    "0x2aaaaaaa"
+  ],
+  "stage": "exploratory_diversity_gate_before_any_v3_search",
+  "tree_levels": 5
+}

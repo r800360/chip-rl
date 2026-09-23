@@ -173,6 +173,17 @@ BENCHMARKS = {
         sdc=ROOT / "orfs/popcount32/constraint.sdc",
         pass_marker="PASS popcount32 randomized+protocol",
     ),
+    "popcount32_tree": Benchmark(
+        name="popcount32_tree",
+        top_module="popcount32_tree",
+        reference_top="popcount32_tree_ref",
+        testbench=ROOT / "sim/tb_popcount32_tree.sv",
+        reference=ROOT / "rtl/reference/popcount32_tree_ref.v",
+        orfs_config_host=ROOT / "orfs/popcount32_tree/config.mk",
+        orfs_config_container="/work/orfs/popcount32_tree/config.mk",
+        sdc=ROOT / "orfs/popcount32_tree/constraint.sdc",
+        pass_marker="PASS popcount32_tree randomized+protocol",
+    ),
     "priority32": Benchmark(
         name="priority32",
         top_module="priority32",
