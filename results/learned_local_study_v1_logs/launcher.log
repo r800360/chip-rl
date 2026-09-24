@@ -1,0 +1,358 @@
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+========== lanesum16x8_tree v3_global / 33001 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree v3_global seed=33001 q=01/16 source=global mask=0x7cc1 parent=None status=success score=66.968390 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=02/16 source=global mask=0x7f01 parent=None status=success score=66.845210 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=03/16 source=global mask=0x7b12 parent=None status=success score=67.178880 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=04/16 source=global mask=0x7506 parent=None status=success score=66.602060 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=05/16 source=global mask=0x4081 parent=None status=success score=67.498070 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=06/16 source=global mask=0x0100 parent=None status=success score=65.443862 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=07/16 source=global mask=0x7ffb parent=None status=success score=66.719920 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=08/16 source=global mask=0x4110 parent=None status=success score=66.600390 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=09/16 source=global mask=0x0002 parent=None status=success score=64.901748 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=10/16 source=global mask=0x3020 parent=None status=success score=66.136110 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=11/16 source=global mask=0x0400 parent=None status=success score=65.415962 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=12/16 source=global mask=0x7cc0 parent=None status=success score=67.205650 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=13/16 source=global mask=0x7cd0 parent=None status=success score=67.084410 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=14/16 source=global mask=0x7970 parent=None status=success score=67.326780 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=15/16 source=global mask=0x6f40 parent=None status=success score=67.066250 best=67.980992
+lanesum16x8_tree v3_global seed=33001 q=16/16 source=global mask=0x6ea0 parent=None status=success score=66.294850 best=67.980992
+COMPLETE lanesum16x8_tree v3_global seed=33001
+========== lanesum16x8_tree v3_global / 33002 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree v3_global seed=33002 q=01/16 source=global mask=0x7e08 parent=None status=success score=67.324440 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=02/16 source=global mask=0x7f08 parent=None status=success score=66.727710 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=03/16 source=global mask=0x7ec0 parent=None status=success score=67.215030 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=04/16 source=global mask=0x7c44 parent=None status=success score=66.983440 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=05/16 source=global mask=0x7e80 parent=None status=success score=67.269540 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=06/16 source=global mask=0x7e40 parent=None status=success score=67.338140 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=07/16 source=global mask=0x5f04 parent=None status=success score=67.251150 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=08/16 source=global mask=0x2000 parent=None status=success score=63.539094 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=09/16 source=global mask=0x7d20 parent=None status=success score=66.327290 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=10/16 source=global mask=0x5200 parent=None status=success score=67.307810 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=11/16 source=global mask=0x27c4 parent=None status=success score=66.127440 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=12/16 source=global mask=0x7e01 parent=None status=success score=66.589490 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=13/16 source=global mask=0x7348 parent=None status=success score=66.981470 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=14/16 source=global mask=0x4810 parent=None status=success score=67.227750 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=15/16 source=global mask=0x7a61 parent=None status=success score=67.067060 best=67.980992
+lanesum16x8_tree v3_global seed=33002 q=16/16 source=global mask=0x7712 parent=None status=success score=66.885630 best=67.980992
+COMPLETE lanesum16x8_tree v3_global seed=33002
+========== lanesum16x8_tree v3_global / 33003 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree v3_global seed=33003 q=01/16 source=global mask=0x1000 parent=None status=success score=63.883176 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=02/16 source=global mask=0x4c00 parent=None status=success score=67.597330 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=03/16 source=global mask=0x7990 parent=None status=success score=66.665770 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=04/16 source=global mask=0x0200 parent=None status=success score=65.406262 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=05/16 source=global mask=0x6f20 parent=None status=success score=67.127150 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=06/16 source=global mask=0x6100 parent=None status=success score=66.714490 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=07/16 source=global mask=0x7f01 parent=None status=success score=66.845210 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=08/16 source=global mask=0x7e20 parent=None status=success score=67.174640 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=09/16 source=global mask=0x2202 parent=None status=success score=65.387390 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=10/16 source=global mask=0x4010 parent=None status=success score=67.456084 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=11/16 source=global mask=0x7ac0 parent=None status=success score=67.412250 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=12/16 source=global mask=0x6400 parent=None status=success score=67.341730 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=13/16 source=global mask=0x0800 parent=None status=success score=65.422862 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=14/16 source=global mask=0x6200 parent=None status=success score=66.736290 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=15/16 source=global mask=0x7e10 parent=None status=success score=67.265640 best=67.980992
+lanesum16x8_tree v3_global seed=33003 q=16/16 source=global mask=0x7b20 parent=None status=success score=66.609690 best=67.980992
+COMPLETE lanesum16x8_tree v3_global seed=33003
+========== lanesum16x8_tree uniform_local / 33001 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=01/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=02/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=03/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=04/16 source=local mask=0x1000 parent=0x0 status=success score=63.883176 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=05/16 source=local mask=0x0002 parent=0x0 status=success score=64.901748 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=06/16 source=local mask=0x0080 parent=0x0 status=success score=64.734848 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=07/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=08/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=09/16 source=local mask=0x0001 parent=0x0 status=success score=64.812848 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=10/16 source=local mask=0x0040 parent=0x0 status=success score=64.771648 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=11/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=12/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=13/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=14/16 source=local mask=0x0100 parent=0x0 status=success score=65.443862 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=15/16 source=local mask=0x4010 parent=0x4000 status=success score=67.456084 best=67.980992
+lanesum16x8_tree uniform_local seed=33001 q=16/16 source=local mask=0x4200 parent=0x4000 status=success score=66.184600 best=67.980992
+COMPLETE lanesum16x8_tree uniform_local seed=33001
+========== lanesum16x8_tree uniform_local / 33002 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=01/16 source=local mask=0x0002 parent=0x0 status=success score=64.901748 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=02/16 source=local mask=0x0080 parent=0x0 status=success score=64.734848 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=03/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=04/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=05/16 source=local mask=0x1000 parent=0x0 status=success score=63.883176 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=06/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=07/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=08/16 source=local mask=0x0100 parent=0x0 status=success score=65.443862 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=09/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=10/16 source=local mask=0x0001 parent=0x0 status=success score=64.812848 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=11/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=12/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=13/16 source=local mask=0x0040 parent=0x0 status=success score=64.771648 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=14/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=15/16 source=local mask=0x4020 parent=0x4000 status=success score=67.395784 best=67.980992
+lanesum16x8_tree uniform_local seed=33002 q=16/16 source=local mask=0x4010 parent=0x4000 status=success score=67.456084 best=67.980992
+COMPLETE lanesum16x8_tree uniform_local seed=33002
+========== lanesum16x8_tree uniform_local / 33003 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=01/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=02/16 source=local mask=0x0040 parent=0x0 status=success score=64.771648 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=03/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=04/16 source=local mask=0x0002 parent=0x0 status=success score=64.901748 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=05/16 source=local mask=0x1000 parent=0x0 status=success score=63.883176 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=06/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=07/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=08/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=09/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=10/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=11/16 source=local mask=0x0100 parent=0x0 status=success score=65.443862 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=12/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=13/16 source=local mask=0x0080 parent=0x0 status=success score=64.734848 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=14/16 source=local mask=0x0001 parent=0x0 status=success score=64.812848 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=15/16 source=local mask=0x4400 parent=0x4000 status=success score=66.637160 best=67.980992
+lanesum16x8_tree uniform_local seed=33003 q=16/16 source=local mask=0x6000 parent=0x4000 status=success score=67.111378 best=67.980992
+COMPLETE lanesum16x8_tree uniform_local seed=33003
+========== lanesum16x8_tree learned_local / 33001 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree learned_local seed=33001 q=01/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=02/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=03/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=04/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=05/16 source=local mask=0x0002 parent=0x0 status=success score=64.901748 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=06/16 source=local mask=0x0080 parent=0x0 status=success score=64.734848 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=07/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=08/16 source=local mask=0x1000 parent=0x0 status=success score=63.883176 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=09/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=10/16 source=local mask=0x0040 parent=0x0 status=success score=64.771648 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=11/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=12/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=13/16 source=local mask=0x0001 parent=0x0 status=success score=64.812848 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=14/16 source=local mask=0x0100 parent=0x0 status=success score=65.443862 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=15/16 source=local mask=0x4008 parent=0x4000 status=success score=67.721592 best=67.980992
+lanesum16x8_tree learned_local seed=33001 q=16/16 source=local mask=0x4200 parent=0x4000 status=success score=66.184600 best=67.980992
+COMPLETE lanesum16x8_tree learned_local seed=33001
+========== lanesum16x8_tree learned_local / 33002 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree learned_local seed=33002 q=01/16 source=local mask=0x0002 parent=0x0 status=success score=64.901748 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=02/16 source=local mask=0x0080 parent=0x0 status=success score=64.734848 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=03/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=04/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=05/16 source=local mask=0x1000 parent=0x0 status=success score=63.883176 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=06/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=07/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=08/16 source=local mask=0x0100 parent=0x0 status=success score=65.443862 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=09/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=10/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=11/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=12/16 source=local mask=0x0001 parent=0x0 status=success score=64.812848 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=13/16 source=local mask=0x0040 parent=0x0 status=success score=64.771648 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=14/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=15/16 source=local mask=0x4040 parent=0x4000 status=success score=67.445584 best=67.980992
+lanesum16x8_tree learned_local seed=33002 q=16/16 source=local mask=0x4010 parent=0x4000 status=success score=67.456084 best=67.980992
+COMPLETE lanesum16x8_tree learned_local seed=33002
+========== lanesum16x8_tree learned_local / 33003 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree learned_local seed=33003 q=01/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=02/16 source=local mask=0x0080 parent=0x0 status=success score=64.734848 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=03/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=04/16 source=local mask=0x0002 parent=0x0 status=success score=64.901748 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=05/16 source=local mask=0x1000 parent=0x0 status=success score=63.883176 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=06/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=07/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=08/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=09/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=10/16 source=local mask=0x0100 parent=0x0 status=success score=65.443862 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=11/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=12/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=13/16 source=local mask=0x0001 parent=0x0 status=success score=64.812848 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=14/16 source=local mask=0x0040 parent=0x0 status=success score=64.771648 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=15/16 source=local mask=0x4400 parent=0x4000 status=success score=66.637160 best=67.980992
+lanesum16x8_tree learned_local seed=33003 q=16/16 source=local mask=0x6000 parent=0x4000 status=success score=67.111378 best=67.980992
+COMPLETE lanesum16x8_tree learned_local seed=33003
+========== lanesum16x8_tree frozen_hybrid / 33001 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=01/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=02/16 source=global mask=0x7f01 parent=None status=success score=66.845210 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=03/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=04/16 source=global mask=0x7506 parent=None status=success score=66.602060 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=05/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=06/16 source=global mask=0x0100 parent=None status=success score=65.443862 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=07/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=08/16 source=global mask=0x1000 parent=None status=success score=63.883176 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=09/16 source=local mask=0x0001 parent=0x0 status=success score=64.812848 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=10/16 source=global mask=0x5e05 parent=None status=success score=66.869730 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=11/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=12/16 source=global mask=0x4c00 parent=None status=success score=67.597330 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=13/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=14/16 source=global mask=0x6a00 parent=None status=success score=66.424880 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=15/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33001 q=16/16 source=global mask=0x5900 parent=None status=success score=66.764400 best=67.980992
+COMPLETE lanesum16x8_tree frozen_hybrid seed=33001
+========== lanesum16x8_tree frozen_hybrid / 33002 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=01/16 source=local mask=0x0002 parent=0x0 status=success score=64.901748 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=02/16 source=global mask=0x7f08 parent=None status=success score=66.727710 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=03/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=04/16 source=global mask=0x7c44 parent=None status=success score=66.983440 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=05/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=06/16 source=global mask=0x6400 parent=None status=success score=67.341730 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=07/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=08/16 source=global mask=0x2000 parent=None status=success score=63.539094 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=09/16 source=local mask=0x0100 parent=0x0 status=success score=65.443862 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=10/16 source=global mask=0x0040 parent=None status=success score=64.771648 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=11/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=12/16 source=global mask=0x7e01 parent=None status=success score=66.589490 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=13/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=14/16 source=global mask=0x2c00 parent=None status=success score=63.469210 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=15/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33002 q=16/16 source=global mask=0x1404 parent=None status=success score=63.882270 best=67.980992
+COMPLETE lanesum16x8_tree frozen_hybrid seed=33002
+========== lanesum16x8_tree frozen_hybrid / 33003 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=01/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=02/16 source=global mask=0x6800 parent=None status=success score=67.154130 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=03/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=04/16 source=global mask=0x0200 parent=None status=success score=65.406262 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=05/16 source=local mask=0x1000 parent=0x0 status=success score=63.883176 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=06/16 source=global mask=0x7ffd parent=None status=success score=66.891320 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=07/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=08/16 source=global mask=0x7e20 parent=None status=success score=67.174640 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=09/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=10/16 source=global mask=0x0100 parent=None status=success score=65.443862 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=11/16 source=local mask=0x0080 parent=0x0 status=success score=64.734848 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=12/16 source=global mask=0x0002 parent=None status=success score=64.901748 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=13/16 source=local mask=0x0040 parent=0x0 status=success score=64.771648 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=14/16 source=global mask=0x7981 parent=None status=success score=67.225750 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=15/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree frozen_hybrid seed=33003 q=16/16 source=global mask=0x7b20 parent=None status=success score=66.609690 best=67.980992
+COMPLETE lanesum16x8_tree frozen_hybrid seed=33003
+========== lanesum16x8_tree learned_hybrid / 33001 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=01/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=02/16 source=global mask=0x7f01 parent=None status=success score=66.845210 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=03/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=04/16 source=global mask=0x7506 parent=None status=success score=66.602060 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=05/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=06/16 source=global mask=0x0100 parent=None status=success score=65.443862 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=07/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=08/16 source=global mask=0x1000 parent=None status=success score=63.883176 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=09/16 source=local mask=0x0002 parent=0x0 status=success score=64.901748 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=10/16 source=global mask=0x5e05 parent=None status=success score=66.869730 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=11/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=12/16 source=global mask=0x4c00 parent=None status=success score=67.597330 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=13/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=14/16 source=global mask=0x6a00 parent=None status=success score=66.424880 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=15/16 source=local mask=0x0040 parent=0x0 status=success score=64.771648 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33001 q=16/16 source=global mask=0x5900 parent=None status=success score=66.764400 best=67.980992
+COMPLETE lanesum16x8_tree learned_hybrid seed=33001
+========== lanesum16x8_tree learned_hybrid / 33002 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=01/16 source=local mask=0x0002 parent=0x0 status=success score=64.901748 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=02/16 source=global mask=0x7f08 parent=None status=success score=66.727710 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=03/16 source=local mask=0x0800 parent=0x0 status=success score=65.422862 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=04/16 source=global mask=0x7c44 parent=None status=success score=66.983440 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=05/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=06/16 source=global mask=0x6400 parent=None status=success score=67.341730 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=07/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=08/16 source=global mask=0x2000 parent=None status=success score=63.539094 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=09/16 source=local mask=0x0100 parent=0x0 status=success score=65.443862 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=10/16 source=global mask=0x0040 parent=None status=success score=64.771648 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=11/16 source=local mask=0x0200 parent=0x0 status=success score=65.406262 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=12/16 source=global mask=0x7e01 parent=None status=success score=66.589490 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=13/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=14/16 source=global mask=0x2c00 parent=None status=success score=63.469210 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=15/16 source=local mask=0x0004 parent=0x0 status=success score=64.885748 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33002 q=16/16 source=global mask=0x1404 parent=None status=success score=63.882270 best=67.980992
+COMPLETE lanesum16x8_tree learned_hybrid seed=33002
+========== lanesum16x8_tree learned_hybrid / 33003 ==========
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=01/16 source=local mask=0x0008 parent=0x0 status=success score=64.827348 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=02/16 source=global mask=0x6800 parent=None status=success score=67.154130 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=03/16 source=local mask=0x0010 parent=0x0 status=success score=64.905648 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=04/16 source=global mask=0x0200 parent=None status=success score=65.406262 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=05/16 source=local mask=0x1000 parent=0x0 status=success score=63.883176 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=06/16 source=global mask=0x7ffd parent=None status=success score=66.891320 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=07/16 source=local mask=0x2000 parent=0x0 status=success score=63.539094 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=08/16 source=global mask=0x7e20 parent=None status=success score=67.174640 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=09/16 source=local mask=0x0020 parent=0x0 status=success score=64.881948 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=10/16 source=global mask=0x0100 parent=None status=success score=65.443862 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=11/16 source=local mask=0x0080 parent=0x0 status=success score=64.734848 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=12/16 source=global mask=0x0002 parent=None status=success score=64.901748 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=13/16 source=local mask=0x0040 parent=0x0 status=success score=64.771648 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=14/16 source=global mask=0x7981 parent=None status=success score=67.225750 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=15/16 source=local mask=0x0400 parent=0x0 status=success score=65.415962 best=67.980992
+lanesum16x8_tree learned_hybrid seed=33003 q=16/16 source=global mask=0x7b20 parent=None status=success score=66.609690 best=67.980992
+COMPLETE lanesum16x8_tree learned_hybrid seed=33003
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+PASS: unchanged prior source, new-family source and all 8 RTL/config fingerprints
+GATE=PASS signatures=8 areas=8 area_span=39.51% reward_span=3.417372 frontier=1 best=0x0000 score=67.980992
+PASS: pilot gate, seed hashes and frozen search protocol; seed reward=67.980992
+v3_global        33001 gain=+0.000000 first=none valid=16/16 cached=00 local_updates=0
+v3_global        33002 gain=+0.000000 first=none valid=16/16 cached=00 local_updates=0
+v3_global        33003 gain=+0.000000 first=none valid=16/16 cached=01 local_updates=0
+uniform_local    33001 gain=+0.000000 first=none valid=16/16 cached=08 local_updates=0
+uniform_local    33002 gain=+0.000000 first=none valid=16/16 cached=15 local_updates=0
+uniform_local    33003 gain=+0.000000 first=none valid=16/16 cached=14 local_updates=0
+learned_local    33001 gain=+0.000000 first=none valid=16/16 cached=15 local_updates=16
+learned_local    33002 gain=+0.000000 first=none valid=16/16 cached=15 local_updates=16
+learned_local    33003 gain=+0.000000 first=none valid=16/16 cached=16 local_updates=16
+frozen_hybrid    33001 gain=+0.000000 first=none valid=16/16 cached=13 local_updates=0
+frozen_hybrid    33002 gain=+0.000000 first=none valid=16/16 cached=14 local_updates=0
+frozen_hybrid    33003 gain=+0.000000 first=none valid=16/16 cached=13 local_updates=0
+learned_hybrid   33001 gain=+0.000000 first=none valid=16/16 cached=16 local_updates=8
+learned_hybrid   33002 gain=+0.000000 first=none valid=16/16 cached=16 local_updates=8
+learned_hybrid   33003 gain=+0.000000 first=none valid=16/16 cached=16 local_updates=8
+PAIRED {'seed': 33001, 'learned_local_minus_uniform': 0.0, 'learned_hybrid_minus_frozen': 0.0, 'global_minus_uniform': 0.0}
+PAIRED {'seed': 33002, 'learned_local_minus_uniform': 0.0, 'learned_hybrid_minus_frozen': 0.0, 'global_minus_uniform': 0.0}
+PAIRED {'seed': 33003, 'learned_local_minus_uniform': 0.0, 'learned_hybrid_minus_frozen': 0.0, 'global_minus_uniform': 0.0}
+PASS: 15 replayed runs; 240 logical queries; fresh=68 cache_hits=172
+Summary: /home/rohan/fpga/chip-rl/results/learned_local_study_v1_audit/summary.json

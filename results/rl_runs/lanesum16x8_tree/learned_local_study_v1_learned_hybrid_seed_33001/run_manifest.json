@@ -1,0 +1,8 @@
+{
+  "experiment": "learned_local_study_v1",
+  "method": "learned_hybrid",
+  "pilot_protocol_sha256": "619cfa322da3b712f413fc76fb1496c838a6e59ce0c82873519a7351883085d2",
+  "protocol_sha256": "fd74607841e71964633720299340081d4d00dbef1bafe77d9754fafe0ed9e400",
+  "rng_seed": 33001,
+  "seed_results_sha256": "cb2afe941a91f16cbbd8cc52d140686a7e6e1eb7631a5bbd1d6c4c132fa05830"
+}

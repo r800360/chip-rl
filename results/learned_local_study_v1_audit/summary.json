@@ -1,0 +1,211 @@
+{
+  "cache_hits": 172,
+  "experiment": "lanesum16x8_learned_local_study_v1",
+  "fresh_evaluations": 68,
+  "limitations": "One shared tree topology, one non-popcount task family, three RNG seeds, selected after exploratory popcount studies.",
+  "paired": [
+    {
+      "global_minus_uniform": 0.0,
+      "learned_hybrid_minus_frozen": 0.0,
+      "learned_local_minus_uniform": 0.0,
+      "seed": 33001
+    },
+    {
+      "global_minus_uniform": 0.0,
+      "learned_hybrid_minus_frozen": 0.0,
+      "learned_local_minus_uniform": 0.0,
+      "seed": 33002
+    },
+    {
+      "global_minus_uniform": 0.0,
+      "learned_hybrid_minus_frozen": 0.0,
+      "learned_local_minus_uniform": 0.0,
+      "seed": 33003
+    }
+  ],
+  "protocol_sha256": "fd74607841e71964633720299340081d4d00dbef1bafe77d9754fafe0ed9e400",
+  "runs": [
+    {
+      "cached": 0,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 16,
+      "gain": 0.0,
+      "local_updates": 0,
+      "method": "v3_global",
+      "seed": 33001,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 0,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 16,
+      "gain": 0.0,
+      "local_updates": 0,
+      "method": "v3_global",
+      "seed": 33002,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 1,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 15,
+      "gain": 0.0,
+      "local_updates": 0,
+      "method": "v3_global",
+      "seed": 33003,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 8,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 8,
+      "gain": 0.0,
+      "local_updates": 0,
+      "method": "uniform_local",
+      "seed": 33001,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 15,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 1,
+      "gain": 0.0,
+      "local_updates": 0,
+      "method": "uniform_local",
+      "seed": 33002,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 14,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 2,
+      "gain": 0.0,
+      "local_updates": 0,
+      "method": "uniform_local",
+      "seed": 33003,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 15,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 1,
+      "gain": 0.0,
+      "local_updates": 16,
+      "method": "learned_local",
+      "seed": 33001,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 15,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 1,
+      "gain": 0.0,
+      "local_updates": 16,
+      "method": "learned_local",
+      "seed": 33002,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 16,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 0,
+      "gain": 0.0,
+      "local_updates": 16,
+      "method": "learned_local",
+      "seed": 33003,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 13,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 3,
+      "gain": 0.0,
+      "local_updates": 0,
+      "method": "frozen_hybrid",
+      "seed": 33001,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 14,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 2,
+      "gain": 0.0,
+      "local_updates": 0,
+      "method": "frozen_hybrid",
+      "seed": 33002,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 13,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 3,
+      "gain": 0.0,
+      "local_updates": 0,
+      "method": "frozen_hybrid",
+      "seed": 33003,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 16,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 0,
+      "gain": 0.0,
+      "local_updates": 8,
+      "method": "learned_hybrid",
+      "seed": 33001,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 16,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 0,
+      "gain": 0.0,
+      "local_updates": 8,
+      "method": "learned_hybrid",
+      "seed": 33002,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    },
+    {
+      "cached": 16,
+      "final_reward": 67.980992,
+      "first_improvement_query": 17,
+      "fresh": 0,
+      "gain": 0.0,
+      "local_updates": 8,
+      "method": "learned_hybrid",
+      "seed": 33003,
+      "seed_reward": 67.980992,
+      "valid_queries": 16
+    }
+  ],
+  "seed_results_sha256": "cb2afe941a91f16cbbd8cc52d140686a7e6e1eb7631a5bbd1d6c4c132fa05830",
+  "total_queries": 240
+}
