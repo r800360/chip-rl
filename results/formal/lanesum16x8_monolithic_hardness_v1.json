@@ -1,0 +1,37 @@
+{
+  "question": "Can SAT prove reference(sequential accumulation) == all-ADD balanced tree directly?",
+  "miter": "3-cycle unrolled sequential miter (reset, one valid input, compare outputs)",
+  "cnf_variables": 12347,
+  "cnf_clauses": 33797,
+  "per_solver_limit_s": 120.0,
+  "solvers": [
+    {
+      "solver": "minisat22",
+      "limit_s": 120.0,
+      "outcome": "TIMEOUT",
+      "elapsed_s": 120.0,
+      "variables": 12347,
+      "clauses": 33797
+    },
+    {
+      "solver": "glucose4",
+      "limit_s": 120.0,
+      "outcome": "TIMEOUT",
+      "elapsed_s": 120.0,
+      "variables": 12347,
+      "clauses": 33797
+    },
+    {
+      "solver": "cadical195",
+      "limit_s": 120.0,
+      "outcome": "TIMEOUT",
+      "elapsed_s": 120.1,
+      "variables": 12347,
+      "clauses": 33797
+    }
+  ],
+  "context": {
+    "original_checker": "chiprl/formal.py equiv_simple/equiv_induct ran 69 min 55 s on mask 0x0000 without finishing (2026-09-23)",
+    "decomposed_checker": "chiprl/formal_tree_v1.py: 47-link certificate in about 5 s once, then about 0.5 s per candidate"
+  }
+}

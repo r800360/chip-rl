@@ -1,0 +1,57 @@
+{
+  "amendment": "lanesum_formal_v1",
+  "applies_to": [
+    "lanesum16x8_architecture_pilot_v1",
+    "lanesum16x8_learned_local_study_v1"
+  ],
+  "evidence": {
+    "cnf_clauses": 33797,
+    "cnf_variables": 12347,
+    "hardness_record": "results/formal/lanesum16x8_monolithic_hardness_v1.json",
+    "solvers_timed_out_at_s": {
+      "cadical195": 120.0,
+      "glucose4": 120.0,
+      "minisat22": 120.0
+    }
+  },
+  "frozen_pilot_protocol_sha256": "619cfa322da3b712f413fc76fb1496c838a6e59ce0c82873519a7351883085d2",
+  "issue": "chiprl/formal.py ran 69 min 55 s on seed 0x0000 without finishing. The reference accumulates 16 lanes sequentially and candidates use a balanced tree, so the circuits share no internal signals and the SAT problem is a re-association proof.",
+  "limitation": "Sound but incomplete: RTL without the tree's node names falls back to a monolithic proof and times out.",
+  "new_method": {
+    "certificate": "results/formal/lanesum16x8_tree_reassociation_certificate_v1.json",
+    "certificate_sha256": "44535bfed1f0bf69474a1902a176645a5499baf463558328f4346118d7f3e515",
+    "id": "tree_cutpoint_v1",
+    "one_time": "reference == all-ADD tree via 47 single-rewrite links, all proven",
+    "per_candidate": "candidate == all-ADD tree (frozen rtl/lanesum16x8_tree/baseline.v); node names are cut points",
+    "same_yosys_commands": [
+      "proc",
+      "opt",
+      "equiv_make {gold} {gate} equiv",
+      "hierarchy -top equiv",
+      "equiv_simple -seq 4",
+      "equiv_induct -seq 4",
+      "equiv_status -assert"
+    ],
+    "validation": "tests/test_formal_tree_v1.py: 8/8 seeds proven, 7/7 mutants rejected, corrupted rewrite step rejected"
+  },
+  "new_source_sha256": {
+    "chiprl/formal_tree_v1.py": "7883a0a2ffda241226619a5013b12200a611fa41c658b23c908fcf46299cb37d",
+    "experiments/lanesum_amend1_common.py": "2a7c90f225af3c6e816f0a6d9565149b73194e0ee8101458730678b3110ede34",
+    "experiments/lanesum_formal_hardness_v1.py": "53b87a3e0421c6663a7367b2141c6e3c8f38d1c07ecae54a202f2d5f0199aded",
+    "experiments/lanesum_pilot_v1_amend1.py": "fe5d12b894f49b0f67d44ac7bffd4cadea5b38404174f3410f651d613f05d511",
+    "experiments/learned_local_study_v1_amend1.py": "3fa6ea30e77a838c80edd98752ee0135ba7891c187f15bc387e7a5156f3100d4",
+    "experiments/run_learned_local_v1_amend1.sh": "f3ac20b1e56272e4ed9ffd784e85d9dd5052155502baac6fc0c2d3c338a39bd2",
+    "tests/test_formal_tree_v1.py": "385cef24f16dd31e8c5543259e18463e764871c7b6ace30c79ef5a8010103518"
+  },
+  "physical_results_observed_before_amendment": false,
+  "stage": "after HDL simulation of seed 0x0000, before any formal pass or physical measurement",
+  "unchanged": [
+    "candidate RTL and generator",
+    "behavioral reference",
+    "Verilator testbench",
+    "ORFS config and SDC",
+    "proxy_reward_v0",
+    "diversity gate thresholds",
+    "search algorithms, budgets and RNG seeds"
+  ]
+}
