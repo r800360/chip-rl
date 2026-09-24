@@ -1,0 +1,71 @@
+{
+  "routed_designs": 1487,
+  "benchmarks": [
+    "addpipe16",
+    "addpipe24",
+    "addpipe32",
+    "addpipe36",
+    "addpipe40",
+    "addpipe48",
+    "addpipe56",
+    "addpipe8",
+    "cmp32",
+    "lanesum16x8_tree",
+    "popcount16_tree",
+    "popcount32",
+    "popcount32_tree",
+    "popcount64_tree",
+    "priority32"
+  ],
+  "per_stage": {
+    "synth": {
+      "benchmarks": 14,
+      "median_spearman": 0.0379,
+      "min_spearman": -0.9068,
+      "true_best_kept_at_25pct": "2/14",
+      "median_top5_recall_at_25pct": 0.2,
+      "median_time_fraction_of_flow": 0.0717
+    },
+    "floorplan": {
+      "benchmarks": 14,
+      "median_spearman": 0.9802,
+      "min_spearman": 0.7099,
+      "true_best_kept_at_25pct": "14/14",
+      "median_top5_recall_at_25pct": 1.0,
+      "median_time_fraction_of_flow": 0.15105000000000002
+    },
+    "global_place": {
+      "benchmarks": 14,
+      "median_spearman": 0.9972,
+      "min_spearman": 0.945,
+      "true_best_kept_at_25pct": "14/14",
+      "median_top5_recall_at_25pct": 1.0,
+      "median_time_fraction_of_flow": 0.2621
+    },
+    "detailed_place": {
+      "benchmarks": 14,
+      "median_spearman": 0.9977,
+      "min_spearman": 0.9458,
+      "true_best_kept_at_25pct": "14/14",
+      "median_top5_recall_at_25pct": 1.0,
+      "median_time_fraction_of_flow": 0.3178
+    },
+    "cts": {
+      "benchmarks": 14,
+      "median_spearman": 0.9979,
+      "min_spearman": 0.9522,
+      "true_best_kept_at_25pct": "14/14",
+      "median_top5_recall_at_25pct": 1.0,
+      "median_time_fraction_of_flow": 0.3922
+    },
+    "global_route": {
+      "benchmarks": 14,
+      "median_spearman": 0.992,
+      "min_spearman": 0.9507,
+      "true_best_kept_at_25pct": "14/14",
+      "median_top5_recall_at_25pct": 1.0,
+      "median_time_fraction_of_flow": 0.4988
+    }
+  },
+  "median_flow_tool_seconds": 10.62
+}

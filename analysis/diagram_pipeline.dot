@@ -1,0 +1,37 @@
+// Chip-RL system diagram. Render: dot -Tpng -Gdpi=200 analysis/diagram_pipeline.dot -o docs/figures/pipeline.png
+digraph chiprl {
+  graph [rankdir=LR, compound=true, splines=ortho, bgcolor="#fcfcfb", fontname="DejaVu Sans", fontsize=11, nodesep=0.35, ranksep=0.45, pad=0.3];
+  node  [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=10.5, color="#c3c2b7",
+         fillcolor="#ffffff", fontcolor="#0b0b0b", penwidth=1, margin="0.14,0.08"];
+  edge  [color="#898781", arrowsize=0.7, penwidth=1.1, fontname="DejaVu Sans", fontsize=9, fontcolor="#52514e"];
+
+  subgraph cluster_agents {
+    label="Proposers (same budget, same seed designs)"; fontcolor="#52514e"; color="#e1e0d9"; style="rounded";
+    agents [label="Claude agent\n(tool use: simulate, prove,\nestimate, place_and_route)"];
+    rl     [label="RL policies\n(REINFORCE v1, v2, v3,\nlearned local edits)"];
+    search [label="Baselines\n(random, evolution,\nfrozen policies, sweeps)"];
+  }
+
+  rtl [label="Candidate RTL\n(Verilog)", fillcolor="#cde2fb", color="#2a78d6"];
+
+  subgraph cluster_eval {
+    label="evaluate(): verify first, then measure"; labelloc=b; fontcolor="#52514e"; color="#e1e0d9"; style="rounded";
+    sim    [label="Verilator\n10,000 transactions\n+ protocol checks"];
+    formal [label="Yosys sequential\nequivalence vs reference\n(cut-point decomposition)"];
+    orfs   [label="OpenROAD flow (Nangate45)\nsynth > floorplan > place >\nCTS > route > GDS"];
+    reject [label="reward -1000\n(rejected)", fillcolor="#fbe4e4", color="#d03b3b"];
+  }
+
+  metrics [label="Metrics\narea, WNS, power\n+ per-stage proxies"];
+  reward  [label="reward = 10*WNS - 0.001*area\nfingerprinted, cached, logged", fillcolor="#cde2fb", color="#2a78d6"];
+
+  agents -> rtl; rl -> rtl; search -> rtl;
+  rtl -> sim;
+  sim -> formal [xlabel="pass"];
+  formal -> orfs [xlabel="proven"];
+  sim -> reject [xlabel="fail", style=dashed];
+  formal -> reject [xlabel="fail", style=dashed];
+  orfs -> metrics -> reward;
+  reward -> agents [xlabel="feedback: score, metrics, failure logs (policy update for RL)", lhead=cluster_agents,
+                    constraint=false, style=dashed, headport=n, tailport=n];
+}
