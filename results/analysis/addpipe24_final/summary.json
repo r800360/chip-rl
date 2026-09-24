@@ -1,0 +1,90 @@
+{
+  "all_observed": {
+    "combined_frontier_points": 7,
+    "raw_candidate_records": 71,
+    "unique_rtl_designs": 67
+  },
+  "benchmark": "addpipe24",
+  "controlled_search": {
+    "claude_structural_final_reward": 74.69239,
+    "evolution_final_reward": 74.69239,
+    "overall_best_label": "0x100000",
+    "overall_best_reward": 74.69239,
+    "query_budget_per_method": 16,
+    "random_final_reward": 74.655664
+  },
+  "open_rtl_search": {
+    "attempts": 16,
+    "best_label": "addpipe24_ks_fused_window16",
+    "best_reward": 74.683046,
+    "first_reward_improvement_attempt": 16,
+    "frontier_points_with_shared_seed": 5,
+    "proposal_budget": 16,
+    "status_counts": {
+      "simulation_failed": 1,
+      "success": 15
+    },
+    "successful_physical_designs": 15
+  },
+  "open_winner_vs_controlled_champion": {
+    "area_reduction_pct": 10.35971223021583,
+    "reported_power_reduction_pct": 7.846401968655588,
+    "reward_delta": -0.009343999999998687,
+    "wns_loss_ps": 6.680000000000241
+  },
+  "open_winner_vs_shared_seed": {
+    "area_reduction_pct": 6.36272545090181,
+    "reported_power_reduction_pct": 3.8501231503523754,
+    "reward_delta": 0.027382000000002904,
+    "wns_loss_ps": 0.6399999999997519
+  },
+  "replication": {
+    "controlled_champion": {
+      "all_uncached": true,
+      "all_valid": true,
+      "area": 554.61,
+      "cells": 469,
+      "evaluation_id": "654d32f36d3887ad",
+      "hold_wns": 0.108906,
+      "power_w": 7.08707e-05,
+      "reward": 74.69239,
+      "rtl_sha256": "bd4f599fdbb6579a63e659efde9f7d46a7abc8fb11529f254b55700809bba56d",
+      "runs": 3,
+      "stable": true,
+      "wns": 7.5247
+    },
+    "open_winner": {
+      "all_uncached": true,
+      "all_valid": true,
+      "area": 497.154,
+      "cells": 425,
+      "evaluation_id": "b5cc66f3adde6c17",
+      "hold_wns": 0.105133,
+      "power_w": 6.53099e-05,
+      "reward": 74.683046,
+      "rtl_sha256": "599a4ae091680c9975762ce1822c7703e29f815dc00a273d219f5be57e2e119e",
+      "runs": 3,
+      "stable": true,
+      "wns": 7.51802
+    },
+    "shared_seed": {
+      "all_uncached": true,
+      "all_valid": true,
+      "area": 530.936,
+      "cells": 465,
+      "evaluation_id": "3d495c794b4735bf",
+      "hold_wns": 0.109591,
+      "power_w": 6.79251e-05,
+      "reward": 74.655664,
+      "rtl_sha256": "6fc163a3e812dc9f75a62d4dcad56ff2975abcda8110c7bf8db6a3d52c27efc8",
+      "runs": 3,
+      "stable": true,
+      "wns": 7.51866
+    }
+  },
+  "shared_seed": {
+    "best_label": "0x000000",
+    "best_reward": 74.655664,
+    "candidate_count": 8
+  }
+}

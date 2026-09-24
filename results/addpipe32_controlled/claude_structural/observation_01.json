@@ -1,0 +1,254 @@
+{
+  "action_space": {
+    "interpretation": "bit i = 1 inserts a block boundary after datapath bit i",
+    "maximum": "0x7fffffff",
+    "minimum": "0x000000",
+    "size": 2147483648,
+    "type": "31-bit boundary mask"
+  },
+  "already_measured_masks": [
+    "0x00000000",
+    "0x00000080",
+    "0x00008000",
+    "0x00800000",
+    "0x00808080",
+    "0x08000000",
+    "0x08888888",
+    "0x2aaaaaaa",
+    "0x7fffffff"
+  ],
+  "benchmark": "addpipe32",
+  "current_frontier": [
+    {
+      "area": 720.062,
+      "blocks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "mask": "0x2aaaaaaa",
+      "power_w": 9.85607e-05,
+      "proxy_reward_v0": 69.346538,
+      "wns": 7.00666
+    },
+    {
+      "area": 735.49,
+      "blocks": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "mask": "0x08888888",
+      "power_w": 9.88616e-05,
+      "proxy_reward_v0": 71.60241,
+      "wns": 7.23379
+    },
+    {
+      "area": 738.682,
+      "blocks": [
+        16,
+        16
+      ],
+      "mask": "0x00008000",
+      "power_w": 0.000100652,
+      "proxy_reward_v0": 72.751818,
+      "wns": 7.34905
+    },
+    {
+      "area": 746.13,
+      "blocks": [
+        32
+      ],
+      "mask": "0x00000000",
+      "power_w": 9.89085e-05,
+      "proxy_reward_v0": 74.15097,
+      "wns": 7.48971
+    },
+    {
+      "area": 751.716,
+      "blocks": [
+        28,
+        4
+      ],
+      "mask": "0x08000000",
+      "power_w": 9.97864e-05,
+      "proxy_reward_v0": 74.256584,
+      "wns": 7.50083
+    }
+  ],
+  "objective": "proxy_reward_v0 = -0.001 * area + 10 * WNS",
+  "own_previous_queries": [
+    {
+      "area": 751.716,
+      "blocks": [
+        28,
+        4
+      ],
+      "mask": "0x08000000",
+      "power_w": 9.97864e-05,
+      "proxy_reward_v0": 74.256584,
+      "wns": 7.50083
+    }
+  ],
+  "query_budget": 16,
+  "query_number": 2,
+  "shared_seed_measurements": [
+    {
+      "area": 746.13,
+      "blocks": [
+        32
+      ],
+      "mask": "0x00000000",
+      "power_w": 9.89085e-05,
+      "proxy_reward_v0": 74.15097,
+      "wns": 7.48971
+    },
+    {
+      "area": 830.718,
+      "blocks": [
+        8,
+        24
+      ],
+      "mask": "0x00000080",
+      "power_w": 0.000113789,
+      "proxy_reward_v0": 72.106682,
+      "wns": 7.29374
+    },
+    {
+      "area": 738.682,
+      "blocks": [
+        16,
+        16
+      ],
+      "mask": "0x00008000",
+      "power_w": 0.000100652,
+      "proxy_reward_v0": 72.751818,
+      "wns": 7.34905
+    },
+    {
+      "area": 751.45,
+      "blocks": [
+        24,
+        8
+      ],
+      "mask": "0x00800000",
+      "power_w": 9.97901e-05,
+      "proxy_reward_v0": 74.10785,
+      "wns": 7.48593
+    },
+    {
+      "area": 743.736,
+      "blocks": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "mask": "0x00808080",
+      "power_w": 9.94423e-05,
+      "proxy_reward_v0": 71.417664,
+      "wns": 7.21614
+    },
+    {
+      "area": 735.49,
+      "blocks": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "mask": "0x08888888",
+      "power_w": 9.88616e-05,
+      "proxy_reward_v0": 71.60241,
+      "wns": 7.23379
+    },
+    {
+      "area": 720.062,
+      "blocks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "mask": "0x2aaaaaaa",
+      "power_w": 9.85607e-05,
+      "proxy_reward_v0": 69.346538,
+      "wns": 7.00666
+    },
+    {
+      "area": 883.386,
+      "blocks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "mask": "0x7fffffff",
+      "power_w": 0.000127053,
+      "proxy_reward_v0": 70.774714,
+      "wns": 7.16581
+    }
+  ]
+}

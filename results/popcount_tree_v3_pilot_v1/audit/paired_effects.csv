@@ -1,0 +1,10 @@
+seed,method_a,method_b,final_reward_delta_a_minus_b,best_proposed_reward_delta_a_minus_b,mean_K_delta_a_minus_b
+31001,v3_conditioned,v2_raw_aggregate,0.0,0.010432000000008657,0.75
+31001,v3_conditioned,v2_frozen,0.0,0.1539460000000048,2.0
+31001,v3_conditioned,v2_legacy,0.0,0.010432000000008657,0.75
+31002,v3_conditioned,v2_raw_aggregate,0.0,-0.0005740000000002965,-0.9375
+31002,v3_conditioned,v2_frozen,0.0,-0.056200000000004025,0.1875
+31002,v3_conditioned,v2_legacy,0.0,-0.0005740000000002965,-0.9375
+31003,v3_conditioned,v2_raw_aggregate,0.0,0.0,-0.5625
+31003,v3_conditioned,v2_frozen,0.0,0.05215599999999654,3.0625
+31003,v3_conditioned,v2_legacy,0.0,0.0,-0.5625

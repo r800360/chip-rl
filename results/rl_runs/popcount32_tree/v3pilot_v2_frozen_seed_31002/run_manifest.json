@@ -1,0 +1,7 @@
+{
+  "benchmark": "popcount32_tree",
+  "method": "v2_frozen",
+  "protocol_sha256": "bdf56e428f922f4a4e38a4203f44dc1f2d7ed959c1fe162667920bf5fcd6f37e",
+  "rng_seed": 31002,
+  "seed_results_sha256": "a9cedc5408b9599327865b659bf2f1b7d19aea9889d76713ef9ecfc610b5d55c"
+}

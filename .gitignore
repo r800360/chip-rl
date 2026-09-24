@@ -9,3 +9,11 @@ logs/
 reports/
 objects/
 results/nangate45/
+
+# Private notes, transcripts and credentials (never commit)
+resources/
+.env
+*.env
+
+# Test and proof scratch space
+.pytest_cache/

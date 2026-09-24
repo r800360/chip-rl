@@ -1,0 +1,422 @@
+{
+  "algorithms": {
+    "claude_structural": {
+      "algorithm": "claude_structural",
+      "best_new_query_reward": 74.256584,
+      "combined_frontier_points": 7,
+      "final_incumbent_mask": "0x08000000",
+      "final_incumbent_reward": 74.256584,
+      "first_seed_improvement_query": 1,
+      "maximum_query_boundaries": 2,
+      "mean_query_boundaries": 1.5,
+      "minimum_query_boundaries": 1,
+      "new_final_frontier_members": [
+        {
+          "area": 697.452,
+          "boundaries": 1,
+          "mask": "0x02000000",
+          "reward": 72.887248,
+          "wns": 7.35847
+        },
+        {
+          "area": 699.846,
+          "boundaries": 1,
+          "mask": "0x04000000",
+          "reward": 73.672854,
+          "wns": 7.43727
+        },
+        {
+          "area": 708.092,
+          "boundaries": 2,
+          "mask": "0x28000000",
+          "reward": 73.858808,
+          "wns": 7.45669
+        },
+        {
+          "area": 717.136,
+          "boundaries": 2,
+          "mask": "0x08800000",
+          "reward": 74.018164,
+          "wns": 7.47353
+        },
+        {
+          "area": 739.746,
+          "boundaries": 1,
+          "mask": "0x40000000",
+          "reward": 74.059554,
+          "wns": 7.47993
+        },
+        {
+          "area": 751.716,
+          "boundaries": 1,
+          "mask": "0x08000000",
+          "reward": 74.256584,
+          "wns": 7.50083
+        }
+      ],
+      "queries": 16,
+      "reward_improvement_over_seed": 0.10561400000000276,
+      "unique_query_masks": 16
+    },
+    "evolution": {
+      "algorithm": "evolution",
+      "best_new_query_reward": 73.37801,
+      "combined_frontier_points": 4,
+      "final_incumbent_mask": "0x00000000",
+      "final_incumbent_reward": 74.15097,
+      "first_seed_improvement_query": null,
+      "maximum_query_boundaries": 21,
+      "mean_query_boundaries": 6.25,
+      "minimum_query_boundaries": 1,
+      "new_final_frontier_members": [
+        {
+          "area": 697.452,
+          "boundaries": 1,
+          "mask": "0x02000000",
+          "reward": 72.887248,
+          "wns": 7.35847
+        },
+        {
+          "area": 716.338,
+          "boundaries": 2,
+          "mask": "0x08400000",
+          "reward": 73.112362,
+          "wns": 7.38287
+        },
+        {
+          "area": 735.49,
+          "boundaries": 3,
+          "mask": "0x08408000",
+          "reward": 73.37801,
+          "wns": 7.41135
+        }
+      ],
+      "queries": 16,
+      "reward_improvement_over_seed": 0.0,
+      "unique_query_masks": 16
+    },
+    "random": {
+      "algorithm": "random",
+      "best_new_query_reward": 71.8898,
+      "combined_frontier_points": 5,
+      "final_incumbent_mask": "0x00000000",
+      "final_incumbent_reward": 74.15097,
+      "first_seed_improvement_query": null,
+      "maximum_query_boundaries": 23,
+      "mean_query_boundaries": 14.6875,
+      "minimum_query_boundaries": 10,
+      "new_final_frontier_members": [
+        {
+          "area": 733.362,
+          "boundaries": 13,
+          "mask": "0x3de2a0c0",
+          "reward": 69.384338,
+          "wns": 7.01177
+        }
+      ],
+      "queries": 16,
+      "reward_improvement_over_seed": 0.0,
+      "unique_query_masks": 16
+    },
+    "reinforce": {
+      "algorithm": "reinforce",
+      "best_new_query_reward": 73.747818,
+      "combined_frontier_points": 4,
+      "final_incumbent_mask": "0x00000000",
+      "final_incumbent_reward": 74.15097,
+      "first_seed_improvement_query": null,
+      "maximum_query_boundaries": 4,
+      "mean_query_boundaries": 2.5625,
+      "minimum_query_boundaries": 1,
+      "new_final_frontier_members": [
+        {
+          "area": 691.334,
+          "boundaries": 3,
+          "mask": "0x0800c000",
+          "reward": 72.648066,
+          "wns": 7.33394
+        },
+        {
+          "area": 694.526,
+          "boundaries": 3,
+          "mask": "0x00840800",
+          "reward": 72.778474,
+          "wns": 7.3473
+        },
+        {
+          "area": 725.382,
+          "boundaries": 2,
+          "mask": "0x24000000",
+          "reward": 73.747818,
+          "wns": 7.44732
+        }
+      ],
+      "queries": 16,
+      "reward_improvement_over_seed": 0.0,
+      "unique_query_masks": 16
+    }
+  },
+  "benchmark": "addpipe32",
+  "pairwise_query_overlap": {
+    "claude_structural__reinforce": [
+      "0x00000010",
+      "0x24000000"
+    ],
+    "evolution__claude_structural": [
+      "0x02000000"
+    ],
+    "evolution__reinforce": [],
+    "random__claude_structural": [],
+    "random__evolution": [],
+    "random__reinforce": []
+  },
+  "reinforce_policy": {
+    "final_expected_boundaries": 2.1184793570592375,
+    "final_highest_probability_bits": [
+      {
+        "bit": 23,
+        "probability": 0.4989744570473079
+      },
+      {
+        "bit": 11,
+        "probability": 0.1224892400148049
+      },
+      {
+        "bit": 15,
+        "probability": 0.11553883452426059
+      },
+      {
+        "bit": 29,
+        "probability": 0.09106423170750502
+      },
+      {
+        "bit": 26,
+        "probability": 0.09101149320925297
+      },
+      {
+        "bit": 18,
+        "probability": 0.08938513755868599
+      },
+      {
+        "bit": 17,
+        "probability": 0.0794344833601759
+      },
+      {
+        "bit": 30,
+        "probability": 0.07015984920509648
+      },
+      {
+        "bit": 24,
+        "probability": 0.052928179392236215
+      },
+      {
+        "bit": 27,
+        "probability": 0.052749187728351556
+      }
+    ],
+    "initial_expected_boundaries": 1.9018859257705694,
+    "largest_probability_decreases": [
+      {
+        "bit": 7,
+        "delta": -0.02530378681622618,
+        "final_probability": 0.03298914516929036,
+        "initial_probability": 0.058292931985516536
+      },
+      {
+        "bit": 1,
+        "delta": -0.021046470990137216,
+        "final_probability": 0.024967617749405407,
+        "initial_probability": 0.04601408873954262
+      },
+      {
+        "bit": 5,
+        "delta": -0.01810732575202345,
+        "final_probability": 0.027906762987519172,
+        "initial_probability": 0.04601408873954262
+      },
+      {
+        "bit": 3,
+        "delta": -0.00871425887006022,
+        "final_probability": 0.0400698947056536,
+        "initial_probability": 0.04878415357571382
+      },
+      {
+        "bit": 0,
+        "delta": -0.0055317100616653,
+        "final_probability": 0.040451965317271736,
+        "initial_probability": 0.045983675378937036
+      },
+      {
+        "bit": 14,
+        "delta": -0.0054560001160785035,
+        "final_probability": 0.04052767526285853,
+        "initial_probability": 0.045983675378937036
+      },
+      {
+        "bit": 13,
+        "delta": -0.004472855613538725,
+        "final_probability": 0.0415412331260039,
+        "initial_probability": 0.04601408873954262
+      },
+      {
+        "bit": 19,
+        "delta": -0.003441777924684558,
+        "final_probability": 0.04534237565102926,
+        "initial_probability": 0.04878415357571382
+      }
+    ],
+    "largest_probability_increases": [
+      {
+        "bit": 11,
+        "delta": 0.07370508643909109,
+        "final_probability": 0.1224892400148049,
+        "initial_probability": 0.04878415357571382
+      },
+      {
+        "bit": 29,
+        "delta": 0.0450501429679624,
+        "final_probability": 0.09106423170750502,
+        "initial_probability": 0.04601408873954262
+      },
+      {
+        "bit": 26,
+        "delta": 0.04502781783031594,
+        "final_probability": 0.09101149320925297,
+        "initial_probability": 0.045983675378937036
+      },
+      {
+        "bit": 18,
+        "delta": 0.043401462179748954,
+        "final_probability": 0.08938513755868599,
+        "initial_probability": 0.045983675378937036
+      },
+      {
+        "bit": 15,
+        "delta": 0.03724389127107447,
+        "final_probability": 0.11553883452426059,
+        "initial_probability": 0.07829494325318612
+      },
+      {
+        "bit": 17,
+        "delta": 0.03342039462063328,
+        "final_probability": 0.0794344833601759,
+        "initial_probability": 0.04601408873954262
+      },
+      {
+        "bit": 23,
+        "delta": 0.03266453679763004,
+        "final_probability": 0.4989744570473079,
+        "initial_probability": 0.4663099202496779
+      },
+      {
+        "bit": 30,
+        "delta": 0.02417617382615944,
+        "final_probability": 0.07015984920509648,
+        "initial_probability": 0.045983675378937036
+      }
+    ]
+  },
+  "shared_seed": {
+    "best_area": 746.13,
+    "best_mask": "0x00000000",
+    "best_reward": 74.15097,
+    "best_wns": 7.48971,
+    "count": 8,
+    "frontier_points": 4
+  },
+  "union_frontier": [
+    {
+      "area": 691.334,
+      "boundaries": 3,
+      "discovered_by": [
+        "reinforce"
+      ],
+      "mask": "0x0800c000",
+      "reward": 72.648066,
+      "wns": 7.33394
+    },
+    {
+      "area": 694.526,
+      "boundaries": 3,
+      "discovered_by": [
+        "reinforce"
+      ],
+      "mask": "0x00840800",
+      "reward": 72.778474,
+      "wns": 7.3473
+    },
+    {
+      "area": 697.452,
+      "boundaries": 1,
+      "discovered_by": [
+        "claude_structural",
+        "evolution"
+      ],
+      "mask": "0x02000000",
+      "reward": 72.887248,
+      "wns": 7.35847
+    },
+    {
+      "area": 699.846,
+      "boundaries": 1,
+      "discovered_by": [
+        "claude_structural"
+      ],
+      "mask": "0x04000000",
+      "reward": 73.672854,
+      "wns": 7.43727
+    },
+    {
+      "area": 708.092,
+      "boundaries": 2,
+      "discovered_by": [
+        "claude_structural"
+      ],
+      "mask": "0x28000000",
+      "reward": 73.858808,
+      "wns": 7.45669
+    },
+    {
+      "area": 717.136,
+      "boundaries": 2,
+      "discovered_by": [
+        "claude_structural"
+      ],
+      "mask": "0x08800000",
+      "reward": 74.018164,
+      "wns": 7.47353
+    },
+    {
+      "area": 739.746,
+      "boundaries": 1,
+      "discovered_by": [
+        "claude_structural"
+      ],
+      "mask": "0x40000000",
+      "reward": 74.059554,
+      "wns": 7.47993
+    },
+    {
+      "area": 746.13,
+      "boundaries": 0,
+      "discovered_by": [
+        "shared_seed"
+      ],
+      "mask": "0x00000000",
+      "reward": 74.15097,
+      "wns": 7.48971
+    },
+    {
+      "area": 751.716,
+      "boundaries": 1,
+      "discovered_by": [
+        "claude_structural"
+      ],
+      "mask": "0x08000000",
+      "reward": 74.256584,
+      "wns": 7.50083
+    }
+  ],
+  "union_frontier_points": 9,
+  "unique_observed_masks": 69
+}

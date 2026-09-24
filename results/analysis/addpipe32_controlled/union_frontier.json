@@ -1,0 +1,93 @@
+[
+  {
+    "area": 691.334,
+    "boundaries": 3,
+    "discovered_by": [
+      "reinforce"
+    ],
+    "mask": "0x0800c000",
+    "reward": 72.648066,
+    "wns": 7.33394
+  },
+  {
+    "area": 694.526,
+    "boundaries": 3,
+    "discovered_by": [
+      "reinforce"
+    ],
+    "mask": "0x00840800",
+    "reward": 72.778474,
+    "wns": 7.3473
+  },
+  {
+    "area": 697.452,
+    "boundaries": 1,
+    "discovered_by": [
+      "claude_structural",
+      "evolution"
+    ],
+    "mask": "0x02000000",
+    "reward": 72.887248,
+    "wns": 7.35847
+  },
+  {
+    "area": 699.846,
+    "boundaries": 1,
+    "discovered_by": [
+      "claude_structural"
+    ],
+    "mask": "0x04000000",
+    "reward": 73.672854,
+    "wns": 7.43727
+  },
+  {
+    "area": 708.092,
+    "boundaries": 2,
+    "discovered_by": [
+      "claude_structural"
+    ],
+    "mask": "0x28000000",
+    "reward": 73.858808,
+    "wns": 7.45669
+  },
+  {
+    "area": 717.136,
+    "boundaries": 2,
+    "discovered_by": [
+      "claude_structural"
+    ],
+    "mask": "0x08800000",
+    "reward": 74.018164,
+    "wns": 7.47353
+  },
+  {
+    "area": 739.746,
+    "boundaries": 1,
+    "discovered_by": [
+      "claude_structural"
+    ],
+    "mask": "0x40000000",
+    "reward": 74.059554,
+    "wns": 7.47993
+  },
+  {
+    "area": 746.13,
+    "boundaries": 0,
+    "discovered_by": [
+      "shared_seed"
+    ],
+    "mask": "0x00000000",
+    "reward": 74.15097,
+    "wns": 7.48971
+  },
+  {
+    "area": 751.716,
+    "boundaries": 1,
+    "discovered_by": [
+      "claude_structural"
+    ],
+    "mask": "0x08000000",
+    "reward": 74.256584,
+    "wns": 7.50083
+  }
+]

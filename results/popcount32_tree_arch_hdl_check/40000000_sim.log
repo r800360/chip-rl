@@ -1,0 +1,2 @@
+PASS popcount32_tree randomized+protocol
+- /home/rohan/fpga/chip-rl/sim/tb_popcount32_tree.sv:82: Verilog $finish

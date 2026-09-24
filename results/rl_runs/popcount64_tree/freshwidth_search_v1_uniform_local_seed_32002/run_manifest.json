@@ -1,0 +1,8 @@
+{
+  "benchmark": "popcount64_tree",
+  "experiment": "popcount_freshwidth_search_v1",
+  "method": "uniform_local",
+  "protocol_sha256": "84c91ccd41f5fc3848491235c2507126aa67f1ccf1a16a89e3a7f721b2fc2f14",
+  "rng_seed": 32002,
+  "seed_results_sha256": "4f258e6ada6dfb4b33a4a06708f8703ef33bfebc7ced9df7cfbb8e322fa4a1d8"
+}

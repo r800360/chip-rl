@@ -1,0 +1,15 @@
+{
+  "algorithm": "evolution",
+  "all_queries_valid": true,
+  "best_blocks": [
+    40,
+    2,
+    6
+  ],
+  "best_mask": "0x028000000000",
+  "best_reward": 72.80009,
+  "combined_frontier_count": 5,
+  "new_query_count": 16,
+  "rng_seed": 20260921,
+  "shared_seed_count": 8
+}

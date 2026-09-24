@@ -1,0 +1,17 @@
+attempt,name,status,functional,formal_ok,place_route_ok,area,wns,power_w,reward,incumbent,incumbent_reward,frontier_size,frontier_changed
+1,addpipe24_structural_ripple,success,True,True,True,385.168,6.1642,5.28621e-05,61.256832,0x000000,74.655664,2,True
+2,addpipe24_kogge_stone,success,True,True,True,549.822,7.51732,7.08804e-05,74.623378,0x000000,74.655664,2,False
+3,addpipe24_sklansky,success,True,True,True,474.81,7.43502,6.14298e-05,73.87539,0x000000,74.655664,3,True
+4,addpipe24_cla_block4,success,True,True,True,520.828,7.43628,6.70263e-05,73.841972,0x000000,74.655664,4,True
+5,addpipe24_cla_block4_kstree,success,True,True,True,524.552,7.38883,6.77556e-05,73.363748,0x000000,74.655664,4,False
+6,addpipe24_han_carlson,success,True,True,True,469.49,7.34533,6.23468e-05,72.98381,0x000000,74.655664,5,True
+7,addpipe24_carry_select_1212,success,True,True,True,534.926,7.37772,7.02009e-05,73.242274,0x000000,74.655664,5,False
+8,addpipe24_cla_block3_kstree,success,True,True,True,485.45,7.35351,6.33007e-05,73.04965,0x000000,74.655664,5,False
+9,addpipe24_carry_skip4,success,True,True,True,466.032,5.96125,5.92145e-05,59.146468,0x000000,74.655664,5,False
+10,addpipe24_cla_block3_flat,success,True,True,True,491.036,7.39007,6.30438e-05,73.409664,0x000000,74.655664,5,False
+11,addpipe24_ks_vectorized,success,True,True,True,550.088,7.48544,7.15524e-05,74.304312,0x000000,74.655664,5,False
+12,addpipe24_full_flat_cla,success,True,True,True,639.73,7.43666,7.66749e-05,73.72687,0x000000,74.655664,5,False
+13,addpipe24_radix4_sparse_tree,simulation_failed,False,False,False,,,,-1000.0,0x000000,74.655664,5,False
+14,addpipe24_ks_fused_flat4,success,True,True,True,534.66,7.48589,6.98516e-05,74.32424,0x000000,74.655664,5,False
+15,addpipe24_ks_fused_window8,success,True,True,True,510.188,7.51012,6.63314e-05,74.591012,0x000000,74.655664,5,True
+16,addpipe24_ks_fused_window16,success,True,True,True,497.154,7.51802,6.53099e-05,74.683046,addpipe24_ks_fused_window16,74.683046,5,True

@@ -1,0 +1,13 @@
+{
+  "algorithm": "random",
+  "all_queries_valid": true,
+  "best_blocks": [
+    36
+  ],
+  "best_mask": "0x000000000",
+  "best_reward": 73.47108,
+  "combined_frontier_count": 2,
+  "new_query_count": 16,
+  "rng_seed": 20260921,
+  "shared_seed_count": 8
+}

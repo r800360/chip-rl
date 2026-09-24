@@ -1,0 +1,12 @@
+mask,area,wns,reward,methods
+0x00000000,264.67,7.01636,69.89893,shared_seed
+0x40000000,287.812,7.07262,70.438388,shared_seed
+0x0000ffff,308.294,7.10175,70.709206,shared_seed
+0x77800000,357.504,7.13781,71.020596,v2_frozen;v2_legacy;v2_raw_aggregate;v3_conditioned
+0x7fa02401,367.612,7.15855,71.217888,v3_conditioned
+0x7fdc4610,375.592,7.16023,71.226708,v2_legacy;v2_raw_aggregate
+0x7fdda200,377.986,7.16282,71.250214,v2_legacy;v2_raw_aggregate
+0x7ffe2004,380.114,7.16389,71.258786,v2_legacy;v2_raw_aggregate
+0x7ff70140,380.646,7.17807,71.400054,v2_frozen
+0x7fff1000,383.572,7.17936,71.410028,v2_legacy;v2_raw_aggregate;v3_conditioned
+0x7fffffff,384.636,7.18593,71.474664,shared_seed

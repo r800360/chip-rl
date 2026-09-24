@@ -1,0 +1,14 @@
+{
+  "algorithm": "reinforce_structural",
+  "best_so_far": {
+    "area": 1122.79,
+    "boundary_mask": 549755813888,
+    "mask": "0x008000000000",
+    "power_w": 0.000146895,
+    "proxy_reward_v0": 72.76501,
+    "wns": 7.38878
+  },
+  "final_expected_boundaries": 3.3671146679672073,
+  "frontier_count": 4,
+  "query_count": 16
+}

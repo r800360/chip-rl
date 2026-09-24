@@ -1,0 +1,316 @@
++ DEFAULT_IMAGE=openroad/orfs:latest
++ FLOW_DIR=/OpenROAD-flow-scripts/flow
++ USE_USER=false
++ DRY_RUN=false
++ PORTS=()
++ IMAGE=
++ CMD_ARGS=()
++ [[ 3 -gt 0 ]]
++ case "$1" in
++ CMD_ARGS=("$@")
++ break
++ IMAGE=openroad/orfs:local
++ get_container_engine
+++ docker --version
++ local 'DOCKER_VERSION_STRING=Docker version 29.8.1, build 4a63305'
++ [[ Docker version 29.8.1, build 4a63305 == *\D\o\c\k\e\r* ]]
++ container_engine=docker
+++ pwd
++ WORKSPACE=/home/rohan/fpga/chip-rl
++ YOSYS_EXE=/OpenROAD-flow-scripts/tools/install/yosys/bin/yosys
++ OPENROAD_EXE=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
++ KLAYOUT_CMD=/usr/bin/klayout
++ XSOCK=/tmp/.X11-unix
++ XAUTH=/tmp/.docker.xauth
++ false
++ xauth nlist :0
++ sed -e 's/^..../ffff/'
++ xauth -f /tmp/.docker.xauth nmerge -
+xauth:  file /home/rohan/.Xauthority does not exist
+xauth:  /tmp/.docker.xauth not writable, changes will be ignored
+xauth: (argv):1:  unable to read any entries from file "(stdin)"
++ test -t 0
++ DOCKER_INTERACTIVE=-ti
++ false
++ [[ docker == \p\o\d\m\a\n ]]
+++ id -u rohan
+++ id -g rohan
++ user_args='-u 1000:1000'
++ user_env=
++ PORT_ARGS=()
++ CMD_STR=
++ [[ 3 -gt 0 ]]
++ CMD_STR='yosys -s /work/.chiprl/formal/a6a2081a1c042f79.ys'
++ ENV_SH_CMD='if [ -f ../env.sh ]; then . ../env.sh; fi;'
++ DOCKER_CMD=("$container_engine" run --rm -i $DOCKER_INTERACTIVE $user_env $user_args -e LIBGL_ALWAYS_SOFTWARE=1 -e QT_X11_NO_MITSHM=1 -e XDG_RUNTIME_DIR=/tmp/xdg-run -e "DISPLAY=${DISPLAY:-:0}" -e QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb -v "$XSOCK:$XSOCK" -v "$XAUTH:$XAUTH" -e "XAUTHORITY=$XAUTH" -e FLOW_HOME=/OpenROAD-flow-scripts/flow/ -e WORK_HOME=/work -e "YOSYS_EXE=$YOSYS_EXE" -e "OPENROAD_EXE=$OPENROAD_EXE" -e "KLAYOUT_CMD=$KLAYOUT_CMD" -v "$WORKSPACE:/work:Z" --network host "${PORT_ARGS[@]}" "$IMAGE" bash -c "set -ex; mkdir /tmp/xdg-run; cd ${FLOW_DIR}; ${ENV_SH_CMD}$CMD_STR")
++ false
++ exec docker run --rm -i -ti -u 1000:1000 -e LIBGL_ALWAYS_SOFTWARE=1 -e QT_X11_NO_MITSHM=1 -e XDG_RUNTIME_DIR=/tmp/xdg-run -e DISPLAY=:0 -e QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb -v /tmp/.X11-unix:/tmp/.X11-unix -v /tmp/.docker.xauth:/tmp/.docker.xauth -e XAUTHORITY=/tmp/.docker.xauth -e FLOW_HOME=/OpenROAD-flow-scripts/flow/ -e WORK_HOME=/work -e YOSYS_EXE=/OpenROAD-flow-scripts/tools/install/yosys/bin/yosys -e OPENROAD_EXE=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad -e KLAYOUT_CMD=/usr/bin/klayout -v /home/rohan/fpga/chip-rl:/work:Z --network host openroad/orfs:local bash -c 'set -ex; mkdir /tmp/xdg-run; cd /OpenROAD-flow-scripts/flow; if [ -f ../env.sh ]; then . ../env.sh; fi;yosys -s /work/.chiprl/formal/a6a2081a1c042f79.ys'
++ mkdir /tmp/xdg-run
++ cd /OpenROAD-flow-scripts/flow
++ '[' -f ../env.sh ']'
++ . ../env.sh
+++ __setpaths
+++ [[ linux-gnu == \d\a\r\w\i\n* ]]
+++++ readlink -f ../env.sh
++++ dirname /OpenROAD-flow-scripts/env.sh
+++ DIR=/OpenROAD-flow-scripts
+++ export OPENROAD=/OpenROAD-flow-scripts/tools/OpenROAD
+++ OPENROAD=/OpenROAD-flow-scripts/tools/OpenROAD
+++ echo 'OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD'
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+++ export PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export PATH=/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export PATH=/OpenROAD-flow-scripts/tools/install/kepler-formal/bin:/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/OpenROAD-flow-scripts/tools/install/kepler-formal/bin:/OpenROAD-flow-scripts/tools/install/yosys/bin:/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:/usr/local/bin/wrapped-cc:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ [[ linux-gnu == \d\a\r\w\i\n* ]]
+++ export FLOW_HOME=/OpenROAD-flow-scripts/flow
+++ FLOW_HOME=/OpenROAD-flow-scripts/flow
+++ unset -f __setpaths
++ yosys -s /work/.chiprl/formal/a6a2081a1c042f79.ys
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+
+-- Executing script file `/work/.chiprl/formal/a6a2081a1c042f79.ys' --
+
+1. Executing Verilog-2005 frontend: /work/rtl/reference/popcount32_tree_ref.v
+Parsing formal Verilog input from `/work/rtl/reference/popcount32_tree_ref.v' to AST representation.
+Generating RTLIL representation for module `\popcount32_tree_ref'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v
+Parsing formal Verilog input from `/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v' to AST representation.
+Generating RTLIL representation for module `\popcount32_tree'.
+Successfully finished Verilog frontend.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:192$219 in module popcount32_tree.
+Marked 1 switch rules as full_case in process $proc$/work/rtl/reference/popcount32_tree_ref.v:17$35 in module popcount32_tree_ref.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 2 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~4 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\popcount32_tree.$proc$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:192$219'.
+     1/2: $0\valid_o[0:0]
+     2/2: $0\y_o[5:0]
+Creating decoders for process `\popcount32_tree_ref.$proc$/work/rtl/reference/popcount32_tree_ref.v:17$35'.
+     1/2: $0\valid_o[0:0]
+     2/2: $0\y_o[5:0]
+Creating decoders for process `\popcount32_tree_ref.$proc$/work/rtl/reference/popcount32_tree_ref.v:12$2'.
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\popcount32_tree_ref.\i' from process `\popcount32_tree_ref.$proc$/work/rtl/reference/popcount32_tree_ref.v:12$2'.
+No latch inferred for signal `\popcount32_tree_ref.\computed' from process `\popcount32_tree_ref.$proc$/work/rtl/reference/popcount32_tree_ref.v:12$2'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\popcount32_tree.\valid_o' using process `\popcount32_tree.$proc$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:192$219'.
+  created $dff cell `$procdff$237' with positive edge clock.
+Creating register for signal `\popcount32_tree.\y_o' using process `\popcount32_tree.$proc$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:192$219'.
+  created $dff cell `$procdff$238' with positive edge clock.
+Creating register for signal `\popcount32_tree_ref.\valid_o' using process `\popcount32_tree_ref.$proc$/work/rtl/reference/popcount32_tree_ref.v:17$35'.
+  created $dff cell `$procdff$239' with positive edge clock.
+Creating register for signal `\popcount32_tree_ref.\y_o' using process `\popcount32_tree_ref.$proc$/work/rtl/reference/popcount32_tree_ref.v:17$35'.
+  created $dff cell `$procdff$240' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\popcount32_tree.$proc$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:192$219'.
+Removing empty process `popcount32_tree.$proc$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:192$219'.
+Found and cleaned up 2 empty switches in `\popcount32_tree_ref.$proc$/work/rtl/reference/popcount32_tree_ref.v:17$35'.
+Removing empty process `popcount32_tree_ref.$proc$/work/rtl/reference/popcount32_tree_ref.v:17$35'.
+Removing empty process `popcount32_tree_ref.$proc$/work/rtl/reference/popcount32_tree_ref.v:12$2'.
+Cleaned up 4 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module popcount32_tree.
+<suppressed ~2 debug messages>
+Optimizing module popcount32_tree_ref.
+<suppressed ~2 debug messages>
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module popcount32_tree.
+Optimizing module popcount32_tree_ref.
+<suppressed ~1 debug messages>
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\popcount32_tree'.
+Computing hashes of 188 cells of `\popcount32_tree'.
+Finding duplicate cells in `\popcount32_tree'.
+Computing hashes of 172 cells of `\popcount32_tree'.
+Finding duplicate cells in `\popcount32_tree'.
+Computing hashes of 167 cells of `\popcount32_tree'.
+Finding duplicate cells in `\popcount32_tree'.
+Computing hashes of 166 cells of `\popcount32_tree'.
+Finding duplicate cells in `\popcount32_tree'.
+<suppressed ~66 debug messages>
+Finding identical cells in module `\popcount32_tree_ref'.
+Computing hashes of 38 cells of `\popcount32_tree_ref'.
+Finding duplicate cells in `\popcount32_tree_ref'.
+Removed a total of 22 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \popcount32_tree..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \popcount32_tree_ref..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \popcount32_tree.
+  Optimizing cells in module \popcount32_tree_ref.
+Performed a total of 0 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\popcount32_tree'.
+Computing hashes of 166 cells of `\popcount32_tree'.
+Finding duplicate cells in `\popcount32_tree'.
+Finding identical cells in module `\popcount32_tree_ref'.
+Computing hashes of 38 cells of `\popcount32_tree_ref'.
+Finding duplicate cells in `\popcount32_tree_ref'.
+Removed a total of 0 cells.
+
+4.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$237 ($dff) from module popcount32_tree (D = \valid_i, Q = \valid_o, rval = 1'0).
+Adding SRST signal on $procdff$238 ($dff) from module popcount32_tree (D = $procmux$224_Y, Q = \y_o, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:337:slice$242 ($sdff) from module popcount32_tree (D = { $or$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:190$218_Y $xor$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:189$204_Y $xor$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:188$194_Y $xor$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:187$188_Y $xor$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:186$185_Y $xor$/work/rtl/generated/popcount32_tree_arch_seed/mask_7f000000.v:174$175_Y }, Q = \y_o).
+Adding SRST signal on $procdff$239 ($dff) from module popcount32_tree_ref (D = \valid_i, Q = \valid_o, rval = 1'0).
+Adding SRST signal on $procdff$240 ($dff) from module popcount32_tree_ref (D = $procmux$232_Y, Q = \y_o, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:337:slice$245 ($sdff) from module popcount32_tree_ref (D = \computed, Q = \y_o).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \popcount32_tree..
+Finding unused cells or wires in module \popcount32_tree_ref..
+Removed 8 unused cells and 143 unused wires.
+<suppressed ~11 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module popcount32_tree.
+Optimizing module popcount32_tree_ref.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \popcount32_tree..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \popcount32_tree_ref..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \popcount32_tree.
+  Optimizing cells in module \popcount32_tree_ref.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\popcount32_tree'.
+Computing hashes of 162 cells of `\popcount32_tree'.
+Finding duplicate cells in `\popcount32_tree'.
+Finding identical cells in module `\popcount32_tree_ref'.
+Computing hashes of 33 cells of `\popcount32_tree_ref'.
+Finding duplicate cells in `\popcount32_tree_ref'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \popcount32_tree..
+Finding unused cells or wires in module \popcount32_tree_ref..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module popcount32_tree.
+Optimizing module popcount32_tree_ref.
+
+4.16. Finished fast OPT passes. (There is nothing left to do.)
+
+5. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: y_o_gold (\y_o_gold), y_o_gate (\y_o_gate) -> y_o
+Presumably equivalent wires: valid_o_gold (\valid_o_gold), valid_o_gate (\valid_o_gate) -> valid_o
+Presumably equivalent wires: b_i_gold (\b_i_gold), b_i_gate (\b_i_gate) -> b_i
+Presumably equivalent wires: a_i_gold (\a_i_gold), a_i_gate (\a_i_gate) -> a_i
+Presumably equivalent wires: valid_i_gold (\valid_i_gold), valid_i_gate (\valid_i_gate) -> valid_i
+Presumably equivalent wires: rst_n_gold (\rst_n_gold), rst_n_gate (\rst_n_gate) -> rst_n
+Presumably equivalent wires: clk_gold (\clk_gold), clk_gate (\clk_gate) -> clk
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \equiv
+
+6.2. Analyzing design hierarchy..
+Top module:  \equiv
+Removing unused module `\popcount32_tree'.
+Removing unused module `\popcount32_tree_ref'.
+Removed 2 unused modules.
+
+7. Executing EQUIV_SIMPLE pass.
+Found 7 unproven $equiv cells (2 groups) in equiv:
+  Trying to prove $equiv for \valid_o:ezsat
+ success!
+ Grouping SAT models for \y_o:
+  Trying to prove $equiv for \y_o [0]:ezsat
+ezsat
+ failed.
+  Trying to prove $equiv for \y_o [1]:ezsat
+ezsat
+ failed.
+  Trying to prove $equiv for \y_o [2]:ezsat
+ezsat
+ failed.
+  Trying to prove $equiv for \y_o [3]:ezsat
+ezsat
+ failed.
+  Trying to prove $equiv for \y_o [4]:ezsat
+ezsat
+ failed.
+  Trying to prove $equiv for \y_o [5]:ezsat
+ezsat
+ failed.
+Proved 1 previously unproven $equiv cells.
+
+8. Executing EQUIV_INDUCT pass.
+Found 6 unproven $equiv cells in module equiv:
+  Proving existence of base case for step 1. (8208 clauses over 3037 variables)
+  Proving induction step 1. (16744 clauses over 6181 variables)
+  Proof for induction step holds. Entire workset of 6 cells proven!
+Proved 6 previously unproven $equiv cells.
+
+9. Executing EQUIV_STATUS pass.
+Found 7 $equiv cells in equiv:
+  Of those cells 7 are proven and 0 are unproven.
+  Equivalence successfully proven!
+
+End of script. Logfile hash: 481c392b31, time: 0.19s, user: 0.20s, system: 0.01s, MEM: 29.54 MB peak
+Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Time spent: 89% 1x equiv_induct (0 sec), 4% 1x equiv_simple (0 sec), ...

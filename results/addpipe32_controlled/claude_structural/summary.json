@@ -1,0 +1,12 @@
+{
+  "algorithm": "claude_structural",
+  "best_blocks": [
+    28,
+    4
+  ],
+  "best_mask": "0x08000000",
+  "best_reward": 74.256584,
+  "combined_frontier_count": 7,
+  "new_query_count": 16,
+  "rejected_model_proposals": 0
+}
