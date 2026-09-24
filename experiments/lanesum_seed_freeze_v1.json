@@ -1,0 +1,39 @@
+{
+  "baseline_sha256": "c9b02c45725cb6f0f4f975d52b98534f203d1e02ec320c35eeeeacafb1fee2c7",
+  "experiment": "lanesum16x8_learned_local_study_v1",
+  "pilot_protocol_sha256": "619cfa322da3b712f413fc76fb1496c838a6e59ce0c82873519a7351883085d2",
+  "pilot_registration_tag": "cb269640242dbe3d7c25a23c99391ee81ff526d7",
+  "seed_best_mask": "0x0000",
+  "seed_best_reward": 67.980992,
+  "seed_frontier_sha256": "b47d060077cc0222ae80a48a3ddcc02368d50aa794a59c0dc99def62dd59a9ed",
+  "seed_mask_order": [
+    "0x0000",
+    "0x7fff",
+    "0x4000",
+    "0x7000",
+    "0x7f00",
+    "0x00ff",
+    "0x5555",
+    "0x2aaa"
+  ],
+  "seed_results_sha256": "cb2afe941a91f16cbbd8cc52d140686a7e6e1eb7631a5bbd1d6c4c132fa05830",
+  "seed_summary_sha256": "edeaf7a356f70873cec253ec00548ca2b35984bddff79b3ca4028df3806aa2df",
+  "source_sha256": {
+    "chiprl/autoregressive_policy.py": "8441ee22e82388f4f7ccf2fbf1c9abcb917be32f8cbe2012c7ffec37b9449e95",
+    "chiprl/benchmarks.py": "6692248c8d9663982a54d49d647df5b927b5004ae73c9a84462b918fe16b6ff9",
+    "chiprl/conditioned_autoregressive_policy.py": "96de26f912757ad8b28e041bfdc5b88e19caaac5aae733042a8469d2bb4e49aa",
+    "chiprl/conditioned_policy_gradient.py": "fb02736943121ecd6a4dde3b329c94b1c8ab72e09beac4abbeab5ce45cff207f",
+    "chiprl/evaluate.py": "f11ce560b85fd08a63072c3f51827770556b4224d107e8309050b37f2fcce59c",
+    "chiprl/formal.py": "00666de278fb1f4d4ca161e4461f88b47bd1357d64fa8e3bfca7cc4ff88b64ab",
+    "chiprl/lane_sum_tree_v1.py": "0a69659dda412ba31a6756bea02b98688435832fecefa95de09da85daedc7a91",
+    "chiprl/learned_local_edit_v1.py": "943813557c94eaa30a8229f98c5aa71d9a5be2618ccb40c5911264788e676528",
+    "chiprl/rl_env.py": "0573cd00111e4b24c751647f2f80f05aaabbff1425817f3684c991399339cdea",
+    "experiments/freeze_learned_local_v1.py": "e42c7969d8f0ff55a7cc8538f41c28c914c6e8c9306b424570600f2bf6ac8ac6",
+    "experiments/lanesum_pilot_v1.py": "9b1d4e9662cdfe8ab259450aa7afe991da29f098ee2e65ab64c37fd95ce0dbb4",
+    "experiments/learned_local_study_v1.py": "4fdd11c7afcae50ebb30ec20d45845cd96b10fce77825c108763dc4b84f260f2",
+    "experiments/run_learned_local_v1.sh": "1fa1a59dae64ab4eec64fb88d28c501e74e6407b632122d39c3799b42b984f1a",
+    "experiments/smoke_learned_local_v1.py": "2110eea96ba9ec8c5d479de1ceb5da5ab64c3d3f9b803e2f6400a7580e8373b5",
+    "experiments/summarize_learned_local_v1.py": "3a7a640aeb96cc9c469a9aab7b4381a318646b3794047f588d2b0f13ae3ff46b"
+  },
+  "stage": "EIGHT_SEEDS_FROZEN_BEFORE_SEARCH"
+}

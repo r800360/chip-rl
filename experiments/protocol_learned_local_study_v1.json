@@ -1,0 +1,78 @@
+{
+  "budget_per_run": 16,
+  "experiment": "lanesum16x8_learned_local_study_v1",
+  "frozen_uniform": "zero-initialized feature weights (exact uniform softmax over eligible bits), no local updates",
+  "global_only": "v3_global updates corrected conditioned-v3 parameters only after its own global queries",
+  "hybrid_global": "same conditioned-v3 policy initialized from lane-sum seeds, no updates in either hybrid",
+  "hybrid_schedule": "local at zero-based even query indices; global at odd indices, fixed 8+8",
+  "invalid_result_rule": "consumes one logical query; local receives clipped negative advantage, global existing failure reward",
+  "local_advantage_clip": 3.0,
+  "local_features": [
+    "node_is_cla",
+    "level_normalized",
+    "level_squared",
+    "is_root",
+    "position_normalized",
+    "edge_proximity",
+    "sibling_is_cla",
+    "level_cla_fraction_centered",
+    "cla_times_level",
+    "cla_times_level_density"
+  ],
+  "local_learning_rate": 0.15,
+  "local_parent": "Best own valid archived reward with eligible unseen one-flip neighbors; ties (lower area, lower mask).",
+  "local_reward_scale": 0.1,
+  "local_theta_clip": 3.0,
+  "local_update": "exact conditional softmax log-gradient over prequery unseen one-bit edits; clipped (candidate_reward-parent_reward)/0.10",
+  "methods": [
+    "v3_global",
+    "uniform_local",
+    "learned_local",
+    "frozen_hybrid",
+    "learned_hybrid"
+  ],
+  "pilot_protocol_sha256": "619cfa322da3b712f413fc76fb1496c838a6e59ce0c82873519a7351883085d2",
+  "primary": [
+    "paired learned_local minus uniform_local final incumbent reward gain by RNG seed",
+    "paired learned_hybrid minus frozen_hybrid final incumbent reward gain by RNG seed"
+  ],
+  "reward": "frozen -0.001*area + 10*WNS; no fmax-derived reward",
+  "rng_rule": "random.Random(seed*1000 + query_index*4 + (1 for local,2 for global))",
+  "rng_seeds": [
+    33001,
+    33002,
+    33003
+  ],
+  "scientific_scope": "New arithmetic function (multi-lane sum) but shared tree topology and ADD/CLA grammar; one family and only three paired RNG seeds; exploratory architecture-family transfer, not broad RTL generalization.",
+  "secondary": [
+    "v3_global minus uniform_local",
+    "time to first improvement (17 if censored)",
+    "incumbent reward trajectory AUC",
+    "own Pareto improvements",
+    "local policy gradient norm and proposal divergence",
+    "fresh/cached evaluations"
+  ],
+  "seed_freeze_sha256": "14eaf2f544e78aa590b508b098039fd607a877b05340e9511c88e12b31c1f365",
+  "seed_results_sha256": "cb2afe941a91f16cbbd8cc52d140686a7e6e1eb7631a5bbd1d6c4c132fa05830",
+  "source_sha256": {
+    "chiprl/autoregressive_policy.py": "8441ee22e82388f4f7ccf2fbf1c9abcb917be32f8cbe2012c7ffec37b9449e95",
+    "chiprl/benchmarks.py": "6692248c8d9663982a54d49d647df5b927b5004ae73c9a84462b918fe16b6ff9",
+    "chiprl/conditioned_autoregressive_policy.py": "96de26f912757ad8b28e041bfdc5b88e19caaac5aae733042a8469d2bb4e49aa",
+    "chiprl/conditioned_policy_gradient.py": "fb02736943121ecd6a4dde3b329c94b1c8ab72e09beac4abbeab5ce45cff207f",
+    "chiprl/evaluate.py": "f11ce560b85fd08a63072c3f51827770556b4224d107e8309050b37f2fcce59c",
+    "chiprl/formal.py": "00666de278fb1f4d4ca161e4461f88b47bd1357d64fa8e3bfca7cc4ff88b64ab",
+    "chiprl/lane_sum_tree_v1.py": "0a69659dda412ba31a6756bea02b98688435832fecefa95de09da85daedc7a91",
+    "chiprl/learned_local_edit_v1.py": "943813557c94eaa30a8229f98c5aa71d9a5be2618ccb40c5911264788e676528",
+    "chiprl/rl_env.py": "0573cd00111e4b24c751647f2f80f05aaabbff1425817f3684c991399339cdea",
+    "experiments/freeze_learned_local_v1.py": "e42c7969d8f0ff55a7cc8538f41c28c914c6e8c9306b424570600f2bf6ac8ac6",
+    "experiments/lanesum_pilot_v1.py": "9b1d4e9662cdfe8ab259450aa7afe991da29f098ee2e65ab64c37fd95ce0dbb4",
+    "experiments/learned_local_study_v1.py": "4fdd11c7afcae50ebb30ec20d45845cd96b10fce77825c108763dc4b84f260f2",
+    "experiments/run_learned_local_v1.sh": "1fa1a59dae64ab4eec64fb88d28c501e74e6407b632122d39c3799b42b984f1a",
+    "experiments/smoke_learned_local_v1.py": "2110eea96ba9ec8c5d479de1ceb5da5ab64c3d3f9b803e2f6400a7580e8373b5",
+    "experiments/summarize_learned_local_v1.py": "3a7a640aeb96cc9c469a9aab7b4381a318646b3794047f588d2b0f13ae3ff46b"
+  },
+  "stage": "AFTER_EIGHT_PHYSICAL_SEEDS_BEFORE_ANY_SEARCH",
+  "starting_archive": "Only eight preregistered lane-sum physical seed designs shared; no data from popcount search used as input.",
+  "stopping": "No retuning or extra trials in response to observed search performance; failed gate or fingerprint stops study.",
+  "total_logical_queries": 240
+}
