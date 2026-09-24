@@ -1,0 +1,77 @@
+{
+  "experiment": "agentic_rtl_eval_v1",
+  "question": "Given verification and physical-design tools, can Claude models improve verified post-route PPA of small RTL modules, and do cheap tools (simulation, formal, floorplan-stage estimate) help under a fixed budget of expensive place-and-route runs?",
+  "models": [
+    "claude-haiku-4-5",
+    "claude-sonnet-5",
+    "claude-opus-5"
+  ],
+  "model_settings": {
+    "claude-haiku-4-5": "thinking enabled, budget 8000 tokens",
+    "others": "adaptive thinking, effort high",
+    "max_tokens": 32000
+  },
+  "tasks": {
+    "addpipe32": {
+      "baseline_rtl": "rtl/addpipe32/baseline.v",
+      "baseline_score": 74.12607,
+      "best_known_score_hidden": 74.256584
+    },
+    "cmp32": {
+      "baseline_rtl": "rtl/cmp32/baseline.v",
+      "baseline_score": 75.942274,
+      "best_known_score_hidden": 76.324358
+    },
+    "priority32": {
+      "baseline_rtl": "rtl/priority32/baseline.v",
+      "baseline_score": 76.24689,
+      "best_known_score_hidden": 76.735174
+    },
+    "popcount32": {
+      "baseline_rtl": "rtl/popcount32/baseline.v",
+      "baseline_score": 69.89893,
+      "best_known_score_hidden": 69.95253
+    }
+  },
+  "conditions": {
+    "full_tools": "simulate, prove_equivalence, estimate_ppa, place_and_route, finish",
+    "pnr_only": "place_and_route, finish"
+  },
+  "reps": 3,
+  "episodes": 72,
+  "budgets": {
+    "place_and_route_submissions": 4,
+    "tool_calls": 30,
+    "api_turns": 40
+  },
+  "scoring": "best verified place_and_route proxy_reward_v0 (10*WNS - 0.001*area); every submission consumes budget; place_and_route re-runs simulation and formal first",
+  "primary_outcome": "best_minus_baseline per episode (null if no valid submission)",
+  "secondary_outcomes": [
+    "episodes improving on baseline",
+    "valid / total place_and_route submissions",
+    "tool usage",
+    "USD cost from token usage",
+    "wall time",
+    "gap to best known design from prior search"
+  ],
+  "analysis": "descriptive: per model and condition, mean and count of improving episodes; paired full_tools vs pnr_only within model x task x rep. Three reps per cell is exploratory.",
+  "pilot": "results/agentic_eval_v1_pilot (Sonnet 5, cmp32): led to the single-flat-module rule because the frozen formal checker does not flatten submodules",
+  "prompt_sha256": {
+    "addpipe32/full_tools": "4a3e46bfd12d60d7315d324ea1539d10d805de420886c5e6abc07a7afdce49af",
+    "addpipe32/pnr_only": "ecb3fae55aeeb84f406c2b34e1fdc1660d84041bb5a98e30fa4454262981c7d4",
+    "cmp32/full_tools": "52725c8c23b0c7a6d4ae8b12ed9b86b5ad774b3d0dbd78ca70d1772b0079362e",
+    "cmp32/pnr_only": "b10d475460c3b49923f4694a59f655eddfb3a6c6f03c0cef98abf1569b2c5b90",
+    "priority32/full_tools": "45c2a0073e67f10b23948b699f7cdb924ac0d8bc37637755fa33673d750a86a9",
+    "priority32/pnr_only": "4e77462bad3ec5acc998e67759cbb96d1d83a899a46bc895d80fd96f3eb1c6a8",
+    "popcount32/full_tools": "40f8dd543e9ca61d9aab8a6b357899221e72eaf77f2b70417d133b4653a7b6a4",
+    "popcount32/pnr_only": "8541d375c8cc95aee3690364e5f24042f610549fa6704d4a6dd01d8e60914118"
+  },
+  "source_sha256": {
+    "chiprl/agentic_env.py": "d57b743cd803ded1d83841b748150242ffbb85ae5b127d36b08b108f43d7c9e3",
+    "chiprl/llm.py": "2279ef7fe2503f25a8e9ff9d68a583a3c8d804b36506bf82fc5d94f5c9825b5d",
+    "experiments/agentic_rtl_eval_v1.py": "8800bdc77c5e82a463173ae3f689a4b1d5ddbe570944691bca76ec883e31d0cd",
+    "chiprl/evaluate.py": "f11ce560b85fd08a63072c3f51827770556b4224d107e8309050b37f2fcce59c",
+    "chiprl/formal.py": "00666de278fb1f4d4ca161e4461f88b47bd1357d64fa8e3bfca7cc4ff88b64ab",
+    "chiprl/formal_tree_v1.py": "7883a0a2ffda241226619a5013b12200a611fa41c658b23c908fcf46299cb37d"
+  }
+}
