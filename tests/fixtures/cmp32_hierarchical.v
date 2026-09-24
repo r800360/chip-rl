@@ -1,0 +1,25 @@
+// Correct cmp32 built from a helper module: v1 cannot prove it (no flatten), v2 can.
+module lt16 (input wire [15:0] a, input wire [15:0] b, output wire lt, output wire eq);
+  assign lt = a < b;
+  assign eq = a == b;
+endmodule
+
+module cmp32 (
+    input wire clk, input wire rst_n, input wire valid_i,
+    input wire [31:0] a_i, input wire [31:0] b_i,
+    output reg valid_o, output reg [0:0] y_o
+);
+wire lt_hi, eq_hi, lt_lo, eq_lo;
+lt16 hi (.a(a_i[31:16]), .b(b_i[31:16]), .lt(lt_hi), .eq(eq_hi));
+lt16 lo (.a(a_i[15:0]),  .b(b_i[15:0]),  .lt(lt_lo), .eq(eq_lo));
+always @(posedge clk) begin
+    if (!rst_n) begin
+        valid_o <= 1'b0;
+        y_o <= 1'd0;
+    end else begin
+        valid_o <= valid_i;
+        if (valid_i)
+            y_o <= lt_hi | (eq_hi & lt_lo);
+    end
+end
+endmodule
