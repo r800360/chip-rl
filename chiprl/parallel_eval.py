@@ -33,19 +33,29 @@ def design_lock(benchmark: str, candidate: Path):
 def _run(job: tuple[str, str, bool, bool]) -> dict:
     import contextlib
     import io
+    import types
 
     from chiprl.evaluate import evaluate
     from chiprl.benchmarks import BENCHMARKS
 
     candidate, bench_name, cache, clean = job
+    runner = types.SimpleNamespace(evaluate=evaluate)
+    formal_context = contextlib.nullcontext()
     if bench_name in BENCHMARKS:
         benchmark = bench_name
-    else:  # benchmarks created outside the registry
+    elif bench_name == "lanesum16x8_tree":
+        # Lane-sum designs need the decomposed tree proof (formal amendment 1);
+        # the monolithic checker does not finish on this benchmark.
+        from chiprl.lane_sum_tree_v1 import benchmark as lanesum_benchmark
+        from experiments.lanesum_amend1_common import tree_formal
+        benchmark = lanesum_benchmark()
+        formal_context = tree_formal(runner)  # also tags each record with the proof method
+    else:  # popcount tree widths created outside the registry
         from chiprl.popcount_tree_widths_v1 import benchmark as width_benchmark
         benchmark = width_benchmark(int(bench_name.removeprefix("popcount").removesuffix("_tree")))
     start = time.time()
-    with design_lock(bench_name, ROOT / candidate), contextlib.redirect_stdout(io.StringIO()):
-        result = evaluate(candidate, benchmark=benchmark, cache=cache, clean=clean)
+    with design_lock(bench_name, ROOT / candidate), contextlib.redirect_stdout(io.StringIO()), formal_context:
+        result = runner.evaluate(candidate, benchmark=benchmark, cache=cache, clean=clean)
     result["_started"] = start
     result["_finished"] = time.time()
     return result
