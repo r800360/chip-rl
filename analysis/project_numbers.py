@@ -18,15 +18,21 @@ def load(rel):
     return json.loads((ROOT / rel).read_text())
 
 
-def routed_designs() -> int:
-    n = 0
-    for path in glob.glob(str(ROOT / "results/evaluations/**/*.json"), recursive=True):
+def routed_records():
+    """Every routed evaluation record except reproduction copies. The Sept 20 8-bit
+    records predate per-benchmark folders and sit at the top of results/evaluations."""
+    paths = glob.glob(str(ROOT / "results/evaluations/*.json")) + \
+        glob.glob(str(ROOT / "results/evaluations/*/*.json"))
+    for path in sorted(paths):
         if path.endswith(".metrics.json"):
             continue
         r = json.loads(Path(path).read_text())
         if r.get("place_route_ok") and not r.get("candidate", "").startswith("rtl/repro/"):
-            n += 1
-    return n
+            yield r
+
+
+def routed_designs() -> int:
+    return len({r.get("evaluation_id") or r.get("id") for r in routed_records()})
 
 
 def rl_pairs():
@@ -51,9 +57,10 @@ def main():
     out = {"routed_designs": routed_designs()}
 
     cert = load("results/formal/lanesum16x8_tree_reassociation_certificate_v1.json")
-    per = [json.loads(Path(p).read_text())["formal_runtime_s"]
-           for p in glob.glob(str(ROOT / "results/evaluations/lanesum16x8_tree/*.json"))
-           if not p.endswith(".metrics.json")]
+    records = [json.loads(Path(p).read_text())
+               for p in glob.glob(str(ROOT / "results/evaluations/lanesum16x8_tree/*.json"))
+               if not p.endswith(".metrics.json")]
+    per = [r["formal_runtime_s"] for r in records if not r["candidate"].startswith("rtl/repro/")]
     out["formal_per_candidate_s"] = round(statistics.median(per), 2)
     out["formal_cert_s"] = round(cert["total_wall_s"], 1)
     out["formal_speedup"] = f"{(69 * 60 + 55) / statistics.median(per):,.0f}x faster"
@@ -64,14 +71,18 @@ def main():
         "mf_designs": mf["routed_designs"], "mf_benchmarks": fp["benchmarks"],
         "mf_floorplan_rho": f"{fp['median_spearman']:.2f}",
         "mf_floorplan_time": f"{100 * fp['median_time_fraction_of_flow']:.0f}%",
-        "mf_synth_rho": f"{mf['per_stage']['synth']['median_spearman']:.2f}",
+        "mf_synth_rho": f"{abs(mf['per_stage']['synth']['median_spearman']):.2f}"
+        if abs(mf['per_stage']['synth']['median_spearman']) < 0.005
+        else f"{mf['per_stage']['synth']['median_spearman']:.2f}",
         "mf_kept": fp["true_best_kept_at_25pct"] + " benchmarks",
+        "mf_gp_kept": mf["per_stage"]["global_place"]["true_best_kept_at_25pct"] + " benchmarks",
+        "mf_gp_time": f"{100 * mf['per_stage']['global_place']['median_time_fraction_of_flow']:.0f}%",
     })
     fid = list(csv.DictReader(open(ROOT / "results/analysis/multifidelity_v1/fidelity.csv")))
     fp_rows = [r for r in fid if r["stage"] == "floorplan"]
     out["mf_top1"] = f"{sum(r['top1_is_true_best'] == 'True' for r in fp_rows)} of {len(fp_rows)}"
     out["mf_table"] = [
-        (stage, f"{100 * v['median_time_fraction_of_flow']:.0f}%", f"{v['median_spearman']:.2f}",
+        (stage, f"{100 * v['median_time_fraction_of_flow']:.0f}%", f"{v['median_spearman']:.2f}".replace("-0.00", "0.00"),
          v["true_best_kept_at_25pct"])
         for stage, v in mf["per_stage"].items()
     ]
@@ -106,13 +117,27 @@ def main():
         out["agent_episodes"] = ag["episodes"]
         out["agent_cost"] = f"{ag['total_cost_usd']:.2f}"
         out["agent_improved"] = f"{sum(t['improved'] for t in ag['by_model_condition'])}/{ag['episodes']}"
+        out["agent_improved_material"] = (
+            f"{sum(t['improved_material'] for t in ag['by_model_condition'])}/{ag['episodes']}")
+        out["agent_noise_band"] = ag["null_edit_noise_band"]
+        out["agent_by_condition"] = ag["by_condition"]
         out["agent_by_model_condition"] = ag["by_model_condition"]
         out["agent_paired"] = ag["paired_full_minus_pnr_only"]
+        out["agent_paired_material"] = ag["paired_full_minus_pnr_only_material"]
         out["agent_best_per_task"] = ag["best_per_task"]
+
+    noise_path = ROOT / "results/flow_noise_v1/summary.json"
+    if noise_path.is_file():
+        noise = load("results/flow_noise_v1/summary.json")
+        out["noise_designs"] = len(noise["designs"])
+        out["noise_unchanged"] = len(noise["designs"]) - noise["designs_with_any_change"]
+        out["noise_max_spread"] = noise["max_spread"]
+        out["noise_rankings_held"] = f"{sum(c['robust'] for c in noise['comparisons'].values())}/{len(noise['comparisons'])}"
 
     (ROOT / "results/analysis").mkdir(parents=True, exist_ok=True)
     (ROOT / "results/analysis/project_numbers.json").write_text(json.dumps(out, indent=2) + "\n")
-    print(json.dumps({k: v for k, v in out.items() if k not in ("mf_table", "throughput", "agent_by_model_condition", "agent_best_per_task")}, indent=1))
+    hidden = ("mf_table", "throughput", "agent_by_model_condition", "agent_best_per_task", "agent_by_condition")
+    print(json.dumps({k: v for k, v in out.items() if k not in hidden}, indent=1))
 
 
 if __name__ == "__main__":

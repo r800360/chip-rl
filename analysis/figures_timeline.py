@@ -2,13 +2,12 @@
 from __future__ import annotations
 
 import datetime as dt
-import glob
 import os
 
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 
-from analysis.style import AXIS, BLUE, INK, INK_2, MUTED, ORANGE, ROOT, SURFACE, note, save, setup
+from analysis.style import AXIS, BLUE, INK, ORANGE, ROOT, SURFACE, note, save, setup
 
 MILESTONES = [
     ("2026-09-20 18:44", "evaluator: RTL to GDS"),
@@ -29,13 +28,8 @@ MILESTONES = [
 
 def routed_design_times():
     """GDS write time of every routed design, excluding reproduction copies."""
-    import json
-    for path in glob.glob(str(ROOT / "results/evaluations/*/*.json")):
-        if path.endswith(".metrics.json"):
-            continue
-        r = json.loads(open(path).read())
-        if not r.get("place_route_ok") or r.get("candidate", "").startswith("rtl/repro/"):
-            continue
+    from analysis.project_numbers import routed_records
+    for r in routed_records():
         gds = ROOT / (r.get("gds") or "")
         if r.get("gds") and gds.is_file():
             yield dt.datetime.fromtimestamp(os.path.getmtime(gds))

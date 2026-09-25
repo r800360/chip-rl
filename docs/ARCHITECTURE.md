@@ -27,7 +27,7 @@ It runs three gates in order and stops at the first failure, so expensive physic
 
 **Fixed physical conditions.** Every candidate of a benchmark uses the same floorplan (for example a 100 x 100 um die for the 32-bit families, 200 x 200 um for the lane sum), 20% I/O delay budgets on a 10 ns clock, target placement density 0.20, the same power grid, and `SYNTH_REPEATABLE_BUILD=1`. Only the RTL changes.
 
-**Determinism and caching.** Each evaluation gets an ID: the SHA-256 of the RTL, testbench, reference, ORFS config, SDC, formal depth, Docker image ID, ORFS commit and Verilator version. Results are cached under `results/evaluations/<benchmark>/<id>.json` and every ORFS run has its own directory (`FLOW_VARIANT=eval_<id>`). The flow is bit-reproducible: repeated uncached runs, a run one day later, and runs with an added comment line all return identical metrics.
+**Determinism and caching.** Each evaluation gets an ID: the SHA-256 of the RTL, testbench, reference, ORFS config, SDC, formal depth, Docker image ID, ORFS commit and Verilator version. Results are cached under `results/evaluations/<benchmark>/<id>.json` and every ORFS run has its own directory (`FLOW_VARIANT=eval_<id>`). The flow is bit-reproducible for identical files: repeated uncached runs, a run one day later and runs with 1 to 16 parallel workers return identical metrics. It is not invariant to formatting: comments that shift line numbers changed the result of 1 of 14 designs in the noise study ([RESULTS.md](RESULTS.md#14-how-much-of-a-score-is-formatting)).
 
 ## 2. Verification design
 
@@ -35,7 +35,7 @@ It runs three gates in order and stops at the first failure, so expensive physic
 
 **Decomposed proofs for reduction trees** (`chiprl/formal_tree_v1.py`). The lane-sum reference accumulates sixteen 8-bit lanes one at a time, while candidates reduce them with a balanced tree. The two circuits share no internal signals, so a monolithic SAT proof must re-derive associativity of addition at the bit level. It did not finish in 70 minutes, and the same 12,347-variable CNF defeats MiniSat, Glucose and CaDiCaL for 120 s each. The fix keeps the same Yosys commands and changes only the decomposition:
 
-1. **Per candidate**: prove `candidate == all-ADD tree`. Tree nodes have the same names (`n_<level>_<pos>`) in both, so `equiv_make` turns every node into a cut point and each node is proven locally (0.37 s median).
+1. **Per candidate**: prove `candidate == all-ADD tree`. Tree nodes have the same names (`n_<level>_<pos>`) in both, so `equiv_make` turns every node into a cut point and each node is proven locally (0.38 s median).
 2. **Once per benchmark**: prove `reference == all-ADD tree` through 46 intermediate designs. Each adjacent pair differs by one rewrite: swap two operands of the accumulation chain (28 swaps sort the lane order) or rotate `(A+B)+C` into `A+(B+C)` (17 rotations reach the balanced tree). Nodes are named by the set of lanes they sum (`s_<bitmask>`), so every unchanged node is a cut point and each link is a three-operand proof. All 47 links prove in 5 s total. Node widths are exact, so no step relies on wrap-around.
 3. **Transitivity**: every design has the same registers and reset values, so the two results give `candidate == reference`.
 
@@ -89,8 +89,8 @@ At initialization 41 to 50% of v2's probability sat on already-evaluated masks (
 |---|---|---|
 | `simulate(rtl)` | about 4 s | PASS, first mismatch, or compile errors |
 | `prove_equivalence(rtl)` | about 1 s | PROVEN, or the unproven signals |
-| `estimate_ppa(rtl)` | about 6 s | Synthesis plus floorplan-stage area and WNS (a proxy with median rank correlation 0.98 to the final score) |
-| `place_and_route(rtl)` | about 25 s, budget of 4 | Final verified score; re-runs simulation and formal first; failures still consume budget |
+| `estimate_ppa(rtl)` | about 6 s | Synthesis plus floorplan-stage area and WNS (a proxy with median rank correlation 0.97 to the final score) |
+| `place_and_route(rtl)` | about 23 s, budget of 4 | Final verified score; re-runs simulation and formal first; failures still consume budget |
 | `finish()` | | Ends the episode |
 
 Physical numbers come from the same frozen evaluator, so agent results are directly comparable with every RL result. Candidate hygiene rejects `initial` blocks, system tasks, compiler directives, and extra modules before any tool runs. `experiments/agentic_rtl_eval_v1.py` runs the manual tool-use loop (adaptive thinking, prompt caching, append-only history), records every tool call, token count and dollar cost, and runs episodes in parallel with per-design file locks.
@@ -100,7 +100,7 @@ Physical numbers come from the same frozen evaluator, so agent results are direc
 - **Preregistration.** Each study commits a protocol (methods, seeds, budgets, metrics, SHA-256 of every source file) and a git tag before any measurement. Runners refuse to start if a hashed file changed. Pre-measurement fixes are recorded as amendments (`experiments/amendment_*.json`).
 - **Controls.** Learning policies are compared with identically initialized frozen copies and with sparsity-matched samplers, so gains from initialization or sampling geometry are not credited to learning.
 - **Audits.** Completed studies are replayed from saved records: policy actions, parameter updates and physical fingerprints must match.
-- **Replication.** Small improvements are re-measured uncached (for example the 1.33 ps one-flip improvement, 3/3 identical).
+- **Replication and noise.** Small improvements are re-measured uncached (for example the 1.33 ps one-flip improvement, 3/3 identical) and checked against a measured noise floor: the same design in five comment-only formats (`experiments/flow_noise_study_v1.py`).
 
 ## 7. Code map
 

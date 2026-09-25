@@ -25,6 +25,29 @@ def load(rel: str) -> dict:
 
 def numbers() -> dict:
     n = load("results/analysis/project_numbers.json")
+    ag = load("results/analysis/agentic_eval_v1/summary.json")
+    full, pnr = ag["by_condition"]["full_tools"], ag["by_condition"]["pnr_only"]
+    noise = load("results/flow_noise_v1/summary.json")
+    n["agent_material"] = f"{full['improved_material'] + pnr['improved_material']}/{ag['episodes']}"
+    n["agent_headline"] = f"{full['improved_material']}/{full['episodes']} vs {pnr['improved_material']}/{pnr['episodes']}"
+    pop = ag["best_registered_per_task"]["popcount32"][0]
+    retimed = ag["unregistered_output_episodes"][0]["delta"]
+    n["agent_text"] = (
+        f"Episodes that beat the baseline by more than the flow's noise floor, with cheap verification and "
+        f"estimate tools versus place-and-route alone, over {ag['episodes']} episodes with Haiku 4.5, Sonnet 5 and "
+        f"Opus 5. Opus wrote registered popcount trees up to +{pop:.2f} and a Ling adder that beat all prior search. "
+        f"Agents also found two holes: null edits that leave the netlist unchanged moved scores by "
+        f"{ag['null_edit_noise_band'][0]:+.4f} to {ag['null_edit_noise_band'][1]:+.4f}, and Opus's top score "
+        f"(+{retimed:.2f}) retimed logic past the output register, a rule the checkers never enforced. Both are now flagged.")
+    n["noise_unchanged"] = f"{len(noise['designs']) - noise['designs_with_any_change']} of {len(noise['designs'])}"
+    n["noise_max"] = f"{noise['max_spread']:.3f}"
+    n["revisions"] = [
+        ("Sept 20", "evaluate() v0; first optimizer finds a reward hack; exhaustive testbench and formal gate close it"),
+        ("Sept 21", "Autonomous Claude adders (16/16 verified); first preregistered study; RL environment; REINFORCE v1"),
+        ("Sept 22", "Hierarchical REINFORCE v2 improves 3/3 fresh adder widths"),
+        ("Sept 23", "Frozen-policy controls, gradient audit and v3, ADD/CLA tree grammar, one-flip sweep, global vs local search"),
+        ("Sept 24", "Decomposed formal proof, lane-sum study, stage-proxy analysis, agentic Claude eval, latency and noise studies"),
+    ]
     return n
 
 
@@ -98,6 +121,7 @@ def build() -> Path:
         "Query-budgeted RL environment with duplicate rejection, exact replay and frozen-policy controls",
         "Tool-using agent environment for Claude: simulate, prove, estimate, budgeted place-and-route",
         f"Stage-proxy screening: floorplan timing ranks designs with rho {n['mf_floorplan_rho']} at {n['mf_floorplan_time']} of tool time",
+        f"Measured noise floor: comment-only edits left {n['noise_unchanged']} designs bit-identical; null edits are scored as ties",
         f"{n['routed_designs']:,} routed designs, 15 benchmark widths and families, 20+ preregistered studies",
     ]
     chars = [
@@ -106,10 +130,13 @@ def build() -> Path:
         ("Formal proof, lane-sum tree", "per candidate / one-time certificate", f"{n['formal_per_candidate_s']} s / {n['formal_cert_s']} s"),
         ("Formal proof, monolithic", "MiniSat, Glucose, CaDiCaL", "no result in 120 s"),
         ("Proxy fidelity", f"floorplan stage, {n['mf_benchmarks']} benchmarks", f"median rho {n['mf_floorplan_rho']}"),
-        ("Screening recall", "true best kept in top 25%", f"{n['mf_kept']}"),
-        ("Reward hacks admitted", "after the formal gate", "0"),
+        ("Screening recall", "true best kept in top 25%, floorplan proxy", f"{n['mf_kept']}"),
+        ("Screening recall", f"true best kept in top 25%, global placement ({n['mf_gp_time']} of tool time)", f"{n['mf_gp_kept']}"),
+        ("Functionally incorrect designs rewarded", "after the formal gate", "0"),
+        ("Spec loopholes found by agents", "registered-output rule, not enforced by the checkers", "1 design, flagged"),
         ("Learning vs frozen policy", f"{n['rl_pairs']} matched pairs, 4 studies", f"{n['rl_signs']}"),
-        ("Agentic eval", f"{n['agent_episodes']} episodes, 3 Claude models", f"{n['agent_improved']} improved"),
+        ("Reward noise from formatting", "14 designs x 5 comment-only variants", f"{n['noise_unchanged']} unchanged, max {n['noise_max']}"),
+        ("Agentic eval", f"{n['agent_episodes']} episodes, 3 Claude models", f"{n['agent_material']} beat the noise floor"),
         ("API cost", "whole agentic eval", f"${n['agent_cost']}"),
     ]
     findings = [
@@ -120,7 +147,8 @@ def build() -> Path:
          "Proving a 16-lane adder tree against a sequential accumulator has no shared internal signals, so SAT stalls. Cut-point proofs plus a 47-step rewrite certificate prove it in seconds and still reject 7 of 7 injected bugs.",
          "formal_scaling.png"),
         ("Proxy rewards for EDA latency", f"rho {n['mf_floorplan_rho']}",
-         f"Static timing at the floorplan stage predicts the post-route ranking across {n['mf_designs']:,} designs. Synthesis area alone does not (median rho {n['mf_synth_rho']}).",
+         f"Static timing at the floorplan stage predicts the post-route ranking across {n['mf_designs']:,} designs; synthesis area alone does not (median rho {n['mf_synth_rho']}). "
+         f"It is a screen, not an oracle: it ranked the most novel adder 40th of 116, while screening after global placement kept the true best in {n['mf_gp_kept']}.",
          "multifidelity_proxy.png"),
         ("RL under controls", n["rl_signs"],
          "Hierarchical REINFORCE beat a factorized one on fresh adder widths, but identical frozen policies matched it. I fixed a policy-gradient bias from rejection sampling and traced the real limit to search coverage.",
@@ -141,7 +169,10 @@ def build() -> Path:
     pipeline_svg = (FIG / "pipeline.svg").read_text()
     pipeline_svg = pipeline_svg[pipeline_svg.index("<svg"):]
 
-    page = f"""<title>Chip-RL</title>
+    page = f"""<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chip-RL Datasheet</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>{CSS}</style>

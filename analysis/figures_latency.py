@@ -49,20 +49,27 @@ def main():
     workers = sorted(int(w) for w in thr)
     rate = [thr[str(w)]["designs_per_hour"] for w in workers]
     base = rate[0]
-    a2.plot(workers, [base * w for w in workers], color=AXIS, lw=1.2, ls="--", label="linear scaling")
+    top = max(rate) * 1.3
+    ideal_x = [w for w in range(1, 17) if base * w <= top]
+    a2.plot(ideal_x, [base * w for w in ideal_x], color=AXIS, lw=1.2, ls="--", label="linear scaling")
     a2.plot(workers, rate, color=BLUE, lw=2, marker="o", markersize=7, markeredgecolor=SURFACE,
             markeredgewidth=2, label="measured")
     for w, r in zip(workers, rate):
-        a2.text(w, r + base * 0.6, f"{r:.0f}/h", ha="center", fontsize=8.5, color=INK)
-    a2.set_xscale("log", base=2)
-    a2.set_xticks(workers, [str(w) for w in workers])
-    a2.set_ylim(0, max(rate) * 1.35)
-    a2.set_xlabel("parallel worker processes")
+        a2.text(w + 0.35, r - 45, f"{r:.0f}/h ({r / base:.1f}x)", fontsize=8.3, color=INK)
+    a2.set_xlim(0, 18)
+    a2.set_xticks(workers)
+    a2.set_ylim(0, top)
+    a2.set_xlabel("parallel worker processes (22 logical CPUs)")
     a2.set_ylabel("designs per hour")
     a2.set_title("Throughput with parallel workers")
     a2.legend(loc="upper left")
-    ident = "all runs bit-identical to frozen results" if s["all_runs_identical_to_frozen"] else "NOT identical"
-    note(a2, f"{s['cpu_count']} logical CPUs; {ident}.", y=-0.2)
+    runs = json.loads((ROOT / "results/eda_latency_v1/runs.json").read_text())
+    differing = {tuple(sorted(r["candidate"] for r in v["rows"] if not r["identical_to_frozen"]))
+                 for v in runs.values()}
+    msg = ("Every worker count gave identical results for identical files. "
+           f"{len(next(iter(differing)))} of 32 differ from the originals only\nbecause of the added comment line "
+           "(see the noise study).") if len(differing) == 1 else "Results varied across worker counts."
+    note(a2, msg, y=-0.2)
     fig.tight_layout(w_pad=3)
     return save(fig, "eda_latency")
 

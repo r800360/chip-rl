@@ -1,0 +1,286 @@
+{
+  "routed_designs": 1752,
+  "formal_per_candidate_s": 0.38,
+  "formal_cert_s": 5.0,
+  "formal_speedup": "11,142x faster",
+  "mf_designs": 1752,
+  "mf_benchmarks": 15,
+  "mf_floorplan_rho": "0.97",
+  "mf_floorplan_time": "15%",
+  "mf_synth_rho": "0.00",
+  "mf_kept": "14/15 benchmarks",
+  "mf_gp_kept": "15/15 benchmarks",
+  "mf_gp_time": "27%",
+  "mf_top1": "5 of 15",
+  "mf_table": [
+    [
+      "synth",
+      "7%",
+      "0.00",
+      "2/15"
+    ],
+    [
+      "floorplan",
+      "15%",
+      "0.97",
+      "14/15"
+    ],
+    [
+      "global_place",
+      "27%",
+      "1.00",
+      "15/15"
+    ],
+    [
+      "detailed_place",
+      "33%",
+      "0.99",
+      "15/15"
+    ],
+    [
+      "cts",
+      "40%",
+      "0.99",
+      "15/15"
+    ],
+    [
+      "global_route",
+      "51%",
+      "0.99",
+      "15/15"
+    ]
+  ],
+  "rl_pairs": 24,
+  "rl_signs": "2 better, 2 worse, 20 tied",
+  "latency_total_s": 23.3,
+  "latency_verilator_s": 4.2,
+  "latency_formal_s": 0.23,
+  "latency_orfs_s": 18.7,
+  "latency_tool_s": 10.3,
+  "latency_overhead_s": 8.3,
+  "cpus": 22,
+  "best_workers": 16,
+  "best_rate": 691,
+  "single_rate": 150,
+  "best_speedup": 4.6,
+  "latency_identical": false,
+  "throughput": {
+    "1": {
+      "wall_s": 767.89,
+      "designs_per_hour": 150.0,
+      "speedup": 1.0
+    },
+    "2": {
+      "wall_s": 440.86,
+      "designs_per_hour": 261.3,
+      "speedup": 1.74
+    },
+    "4": {
+      "wall_s": 276.59,
+      "designs_per_hour": 416.5,
+      "speedup": 2.78
+    },
+    "8": {
+      "wall_s": 206.4,
+      "designs_per_hour": 558.1,
+      "speedup": 3.72
+    },
+    "16": {
+      "wall_s": 166.81,
+      "designs_per_hour": 690.6,
+      "speedup": 4.6
+    }
+  },
+  "agent_episodes": 72,
+  "agent_cost": "65.54",
+  "agent_improved": "39/72",
+  "agent_improved_material": "24/72",
+  "agent_noise_band": [
+    -0.0865,
+    0.0304
+  ],
+  "agent_by_condition": {
+    "full_tools": {
+      "episodes": 36,
+      "improved": 22,
+      "improved_material": 15,
+      "mean_delta": 0.3488,
+      "mean_material_delta": 0.3474
+    },
+    "pnr_only": {
+      "episodes": 36,
+      "improved": 17,
+      "improved_material": 9,
+      "mean_delta": 0.1565,
+      "mean_material_delta": 0.1539
+    }
+  },
+  "agent_by_model_condition": [
+    {
+      "model": "claude-haiku-4-5",
+      "condition": "full_tools",
+      "episodes": 12,
+      "improved": 6,
+      "improved_material": 2,
+      "mean_delta": 0.053,
+      "mean_material_delta": 0.0518,
+      "max_delta": 1.1186,
+      "submissions": 48,
+      "null_edit_submissions": 23,
+      "failed_verification_submissions": 0,
+      "failed_share": 0.0,
+      "mean_tool_calls": 18.5,
+      "mean_cost_usd": 0.107,
+      "total_cost_usd": 1.28,
+      "mean_wall_min": 5.1,
+      "finished_early": 0
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "condition": "pnr_only",
+      "episodes": 12,
+      "improved": 5,
+      "improved_material": 0,
+      "mean_delta": 0.0074,
+      "mean_material_delta": 0.0,
+      "max_delta": 0.0304,
+      "submissions": 47,
+      "null_edit_submissions": 26,
+      "failed_verification_submissions": 4,
+      "failed_share": 0.085,
+      "mean_tool_calls": 4,
+      "mean_cost_usd": 0.034,
+      "total_cost_usd": 0.41,
+      "mean_wall_min": 2.6,
+      "finished_early": 1
+    },
+    {
+      "model": "claude-sonnet-5",
+      "condition": "full_tools",
+      "episodes": 12,
+      "improved": 7,
+      "improved_material": 5,
+      "mean_delta": 0.1878,
+      "mean_material_delta": 0.1873,
+      "max_delta": 1.1965,
+      "submissions": 25,
+      "null_edit_submissions": 6,
+      "failed_verification_submissions": 1,
+      "failed_share": 0.04,
+      "mean_tool_calls": 10.3,
+      "mean_cost_usd": 0.323,
+      "total_cost_usd": 3.88,
+      "mean_wall_min": 5.2,
+      "finished_early": 11
+    },
+    {
+      "model": "claude-sonnet-5",
+      "condition": "pnr_only",
+      "episodes": 12,
+      "improved": 4,
+      "improved_material": 1,
+      "mean_delta": 0.0365,
+      "mean_material_delta": 0.0359,
+      "max_delta": 0.4308,
+      "submissions": 31,
+      "null_edit_submissions": 10,
+      "failed_verification_submissions": 1,
+      "failed_share": 0.032,
+      "mean_tool_calls": 3.6,
+      "mean_cost_usd": 0.201,
+      "total_cost_usd": 2.42,
+      "mean_wall_min": 3.9,
+      "finished_early": 12
+    },
+    {
+      "model": "claude-opus-5",
+      "condition": "full_tools",
+      "episodes": 12,
+      "improved": 9,
+      "improved_material": 8,
+      "mean_delta": 0.8056,
+      "mean_material_delta": 0.8031,
+      "max_delta": 5.0076,
+      "submissions": 34,
+      "null_edit_submissions": 4,
+      "failed_verification_submissions": 0,
+      "failed_share": 0.0,
+      "mean_tool_calls": 27.4,
+      "mean_cost_usd": 2.965,
+      "total_cost_usd": 35.58,
+      "mean_wall_min": 20.2,
+      "finished_early": 7
+    },
+    {
+      "model": "claude-opus-5",
+      "condition": "pnr_only",
+      "episodes": 12,
+      "improved": 8,
+      "improved_material": 8,
+      "mean_delta": 0.4257,
+      "mean_material_delta": 0.4257,
+      "max_delta": 2.0202,
+      "submissions": 48,
+      "null_edit_submissions": 4,
+      "failed_verification_submissions": 0,
+      "failed_share": 0.0,
+      "mean_tool_calls": 4,
+      "mean_cost_usd": 1.832,
+      "total_cost_usd": 21.98,
+      "mean_wall_min": 13.9,
+      "finished_early": 0
+    }
+  ],
+  "agent_paired": {
+    "pairs": 36,
+    "positive": 15,
+    "negative": 7,
+    "zero": 14,
+    "mean": 0.19227
+  },
+  "agent_paired_material": {
+    "pairs": 36,
+    "positive": 12,
+    "negative": 5,
+    "zero": 19,
+    "mean": 0.19354
+  },
+  "agent_best_per_task": {
+    "addpipe32": {
+      "episode": "addpipe32__full_tools__claude-haiku-4-5__r1",
+      "best_score": 74.15647,
+      "delta": 0.0304,
+      "gap_to_best_known": 0.100114,
+      "headroom": 0.130514,
+      "null_edit": true
+    },
+    "cmp32": {
+      "episode": "cmp32__full_tools__claude-opus-5__r2",
+      "best_score": 76.223468,
+      "delta": 0.281194,
+      "gap_to_best_known": 0.10089,
+      "headroom": 0.382084,
+      "null_edit": false
+    },
+    "priority32": {
+      "episode": "priority32__full_tools__claude-sonnet-5__r1",
+      "best_score": 76.677648,
+      "delta": 0.430758,
+      "gap_to_best_known": 0.057526,
+      "headroom": 0.488284,
+      "null_edit": false
+    },
+    "popcount32": {
+      "episode": "popcount32__full_tools__claude-opus-5__r2",
+      "best_score": 74.906506,
+      "delta": 5.007576,
+      "gap_to_best_known": -3.811078,
+      "headroom": 1.196498,
+      "null_edit": false
+    }
+  },
+  "noise_designs": 14,
+  "noise_unchanged": 13,
+  "noise_max_spread": 0.113402,
+  "noise_rankings_held": "7/7"
+}

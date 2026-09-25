@@ -1,0 +1,718 @@
+{
+  "null_edit_noise_band": [
+    -0.0865,
+    0.0304
+  ],
+  "episodes": 72,
+  "total_cost_usd": 65.54,
+  "by_condition": {
+    "full_tools": {
+      "episodes": 36,
+      "improved": 22,
+      "improved_material": 15,
+      "mean_delta": 0.3488,
+      "mean_material_delta": 0.3474
+    },
+    "pnr_only": {
+      "episodes": 36,
+      "improved": 17,
+      "improved_material": 9,
+      "mean_delta": 0.1565,
+      "mean_material_delta": 0.1539
+    }
+  },
+  "by_model": {
+    "claude-haiku-4-5": {
+      "episodes": 24,
+      "improved": 11,
+      "improved_material": 2,
+      "mean_material_delta": 0.0259,
+      "total_cost_usd": 1.69,
+      "paired_material": {
+        "pairs": 12,
+        "positive": 2,
+        "negative": 1,
+        "zero": 9,
+        "mean": 0.05177
+      }
+    },
+    "claude-sonnet-5": {
+      "episodes": 24,
+      "improved": 11,
+      "improved_material": 6,
+      "mean_material_delta": 0.1116,
+      "total_cost_usd": 6.29,
+      "paired_material": {
+        "pairs": 12,
+        "positive": 4,
+        "negative": 1,
+        "zero": 7,
+        "mean": 0.15144
+      }
+    },
+    "claude-opus-5": {
+      "episodes": 24,
+      "improved": 17,
+      "improved_material": 16,
+      "mean_material_delta": 0.6144,
+      "total_cost_usd": 57.56,
+      "paired_material": {
+        "pairs": 12,
+        "positive": 6,
+        "negative": 3,
+        "zero": 3,
+        "mean": 0.37741
+      }
+    }
+  },
+  "by_model_condition": [
+    {
+      "model": "claude-haiku-4-5",
+      "condition": "full_tools",
+      "episodes": 12,
+      "improved": 6,
+      "improved_material": 2,
+      "mean_delta": 0.053,
+      "mean_material_delta": 0.0518,
+      "max_delta": 1.1186,
+      "submissions": 48,
+      "null_edit_submissions": 23,
+      "failed_verification_submissions": 0,
+      "failed_share": 0.0,
+      "mean_tool_calls": 18.5,
+      "mean_cost_usd": 0.107,
+      "total_cost_usd": 1.28,
+      "mean_wall_min": 5.1,
+      "finished_early": 0
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "condition": "pnr_only",
+      "episodes": 12,
+      "improved": 5,
+      "improved_material": 0,
+      "mean_delta": 0.0074,
+      "mean_material_delta": 0.0,
+      "max_delta": 0.0304,
+      "submissions": 47,
+      "null_edit_submissions": 26,
+      "failed_verification_submissions": 4,
+      "failed_share": 0.085,
+      "mean_tool_calls": 4,
+      "mean_cost_usd": 0.034,
+      "total_cost_usd": 0.41,
+      "mean_wall_min": 2.6,
+      "finished_early": 1
+    },
+    {
+      "model": "claude-sonnet-5",
+      "condition": "full_tools",
+      "episodes": 12,
+      "improved": 7,
+      "improved_material": 5,
+      "mean_delta": 0.1878,
+      "mean_material_delta": 0.1873,
+      "max_delta": 1.1965,
+      "submissions": 25,
+      "null_edit_submissions": 6,
+      "failed_verification_submissions": 1,
+      "failed_share": 0.04,
+      "mean_tool_calls": 10.3,
+      "mean_cost_usd": 0.323,
+      "total_cost_usd": 3.88,
+      "mean_wall_min": 5.2,
+      "finished_early": 11
+    },
+    {
+      "model": "claude-sonnet-5",
+      "condition": "pnr_only",
+      "episodes": 12,
+      "improved": 4,
+      "improved_material": 1,
+      "mean_delta": 0.0365,
+      "mean_material_delta": 0.0359,
+      "max_delta": 0.4308,
+      "submissions": 31,
+      "null_edit_submissions": 10,
+      "failed_verification_submissions": 1,
+      "failed_share": 0.032,
+      "mean_tool_calls": 3.6,
+      "mean_cost_usd": 0.201,
+      "total_cost_usd": 2.42,
+      "mean_wall_min": 3.9,
+      "finished_early": 12
+    },
+    {
+      "model": "claude-opus-5",
+      "condition": "full_tools",
+      "episodes": 12,
+      "improved": 9,
+      "improved_material": 8,
+      "mean_delta": 0.8056,
+      "mean_material_delta": 0.8031,
+      "max_delta": 5.0076,
+      "submissions": 34,
+      "null_edit_submissions": 4,
+      "failed_verification_submissions": 0,
+      "failed_share": 0.0,
+      "mean_tool_calls": 27.4,
+      "mean_cost_usd": 2.965,
+      "total_cost_usd": 35.58,
+      "mean_wall_min": 20.2,
+      "finished_early": 7
+    },
+    {
+      "model": "claude-opus-5",
+      "condition": "pnr_only",
+      "episodes": 12,
+      "improved": 8,
+      "improved_material": 8,
+      "mean_delta": 0.4257,
+      "mean_material_delta": 0.4257,
+      "max_delta": 2.0202,
+      "submissions": 48,
+      "null_edit_submissions": 4,
+      "failed_verification_submissions": 0,
+      "failed_share": 0.0,
+      "mean_tool_calls": 4,
+      "mean_cost_usd": 1.832,
+      "total_cost_usd": 21.98,
+      "mean_wall_min": 13.9,
+      "finished_early": 0
+    }
+  ],
+  "by_task": [
+    {
+      "task": "addpipe32",
+      "model": "claude-haiku-4-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.0304,
+        0.0,
+        0.0304
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 2,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.130514
+    },
+    {
+      "task": "addpipe32",
+      "model": "claude-haiku-4-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.0226,
+        0.0304,
+        0.0304
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 3,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.130514
+    },
+    {
+      "task": "addpipe32",
+      "model": "claude-sonnet-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 0,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.130514
+    },
+    {
+      "task": "addpipe32",
+      "model": "claude-sonnet-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 0,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.130514
+    },
+    {
+      "task": "addpipe32",
+      "model": "claude-opus-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.0304,
+        0.0,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 1,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.130514
+    },
+    {
+      "task": "addpipe32",
+      "model": "claude-opus-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 0,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.130514
+    },
+    {
+      "task": "cmp32",
+      "model": "claude-haiku-4-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 0,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.382084
+    },
+    {
+      "task": "cmp32",
+      "model": "claude-haiku-4-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 0,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.382084
+    },
+    {
+      "task": "cmp32",
+      "model": "claude-sonnet-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.0,
+        0.0,
+        0.167332
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.167332
+      ],
+      "improved": 1,
+      "improved_material": 1,
+      "headroom_to_best_known": 0.382084
+    },
+    {
+      "task": "cmp32",
+      "model": "claude-sonnet-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 0,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.382084
+    },
+    {
+      "task": "cmp32",
+      "model": "claude-opus-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.241224,
+        0.281194,
+        0.0
+      ],
+      "material_deltas": [
+        0.241224,
+        0.281194,
+        0.0
+      ],
+      "improved": 2,
+      "improved_material": 2,
+      "headroom_to_best_known": 0.382084
+    },
+    {
+      "task": "cmp32",
+      "model": "claude-opus-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.119408,
+        0.119408,
+        0.261108
+      ],
+      "material_deltas": [
+        0.119408,
+        0.119408,
+        0.261108
+      ],
+      "improved": 3,
+      "improved_material": 3,
+      "headroom_to_best_known": 0.382084
+    },
+    {
+      "task": "priority32",
+      "model": "claude-haiku-4-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.226714,
+        -0.05084,
+        -0.72405
+      ],
+      "material_deltas": [
+        0.226714,
+        0.0,
+        -0.72405
+      ],
+      "improved": 1,
+      "improved_material": 1,
+      "headroom_to_best_known": 0.488284
+    },
+    {
+      "task": "priority32",
+      "model": "claude-haiku-4-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 0,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.488284
+    },
+    {
+      "task": "priority32",
+      "model": "claude-sonnet-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.430758,
+        0.226714,
+        0.226714
+      ],
+      "material_deltas": [
+        0.430758,
+        0.226714,
+        0.226714
+      ],
+      "improved": 3,
+      "improved_material": 3,
+      "headroom_to_best_known": 0.488284
+    },
+    {
+      "task": "priority32",
+      "model": "claude-sonnet-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.0,
+        0.430758,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.430758,
+        0.0
+      ],
+      "improved": 1,
+      "improved_material": 1,
+      "headroom_to_best_known": 0.488284
+    },
+    {
+      "task": "priority32",
+      "model": "claude-opus-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.196148,
+        0.226714,
+        0.32411
+      ],
+      "material_deltas": [
+        0.196148,
+        0.226714,
+        0.32411
+      ],
+      "improved": 3,
+      "improved_material": 3,
+      "headroom_to_best_known": 0.488284
+    },
+    {
+      "task": "priority32",
+      "model": "claude-opus-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.1421,
+        0.420522,
+        0.0
+      ],
+      "material_deltas": [
+        0.1421,
+        0.420522,
+        0.0
+      ],
+      "improved": 2,
+      "improved_material": 2,
+      "headroom_to_best_known": 0.488284
+    },
+    {
+      "task": "popcount32",
+      "model": "claude-haiku-4-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.0026,
+        1.118554,
+        0.0026
+      ],
+      "material_deltas": [
+        0.0,
+        1.118554,
+        0.0
+      ],
+      "improved": 3,
+      "improved_material": 1,
+      "headroom_to_best_known": 0.0536
+    },
+    {
+      "task": "popcount32",
+      "model": "claude-haiku-4-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.0026,
+        0.0026,
+        0.0
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 2,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.0536
+    },
+    {
+      "task": "popcount32",
+      "model": "claude-sonnet-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        0.0026,
+        0.0026,
+        1.196498
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        1.196498
+      ],
+      "improved": 3,
+      "improved_material": 1,
+      "headroom_to_best_known": 0.0536
+    },
+    {
+      "task": "popcount32",
+      "model": "claude-sonnet-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.0026,
+        0.0026,
+        0.0026
+      ],
+      "material_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "improved": 3,
+      "improved_material": 0,
+      "headroom_to_best_known": 0.0536
+    },
+    {
+      "task": "popcount32",
+      "model": "claude-opus-5",
+      "condition": "full_tools",
+      "episodes": 3,
+      "deltas": [
+        1.68499,
+        5.007576,
+        1.675122
+      ],
+      "material_deltas": [
+        1.68499,
+        5.007576,
+        1.675122
+      ],
+      "improved": 3,
+      "improved_material": 3,
+      "headroom_to_best_known": 1.196498
+    },
+    {
+      "task": "popcount32",
+      "model": "claude-opus-5",
+      "condition": "pnr_only",
+      "episodes": 3,
+      "deltas": [
+        0.51219,
+        1.513222,
+        2.02019
+      ],
+      "material_deltas": [
+        0.51219,
+        1.513222,
+        2.02019
+      ],
+      "improved": 3,
+      "improved_material": 3,
+      "headroom_to_best_known": 1.196498
+    }
+  ],
+  "paired_full_minus_pnr_only": {
+    "pairs": 36,
+    "positive": 15,
+    "negative": 7,
+    "zero": 14,
+    "mean": 0.19227
+  },
+  "paired_full_minus_pnr_only_material": {
+    "pairs": 36,
+    "positive": 12,
+    "negative": 5,
+    "zero": 19,
+    "mean": 0.19354
+  },
+  "best_per_task": {
+    "addpipe32": {
+      "episode": "addpipe32__full_tools__claude-haiku-4-5__r1",
+      "best_score": 74.15647,
+      "delta": 0.0304,
+      "gap_to_best_known": 0.100114,
+      "headroom": 0.130514,
+      "null_edit": true
+    },
+    "cmp32": {
+      "episode": "cmp32__full_tools__claude-opus-5__r2",
+      "best_score": 76.223468,
+      "delta": 0.281194,
+      "gap_to_best_known": 0.10089,
+      "headroom": 0.382084,
+      "null_edit": false
+    },
+    "priority32": {
+      "episode": "priority32__full_tools__claude-sonnet-5__r1",
+      "best_score": 76.677648,
+      "delta": 0.430758,
+      "gap_to_best_known": 0.057526,
+      "headroom": 0.488284,
+      "null_edit": false
+    },
+    "popcount32": {
+      "episode": "popcount32__full_tools__claude-opus-5__r2",
+      "best_score": 74.906506,
+      "delta": 5.007576,
+      "gap_to_best_known": -3.811078,
+      "headroom": 1.196498,
+      "null_edit": false
+    }
+  },
+  "episodes_whose_best_is_a_null_edit": 6,
+  "unregistered_output_episodes": [
+    {
+      "episode": "popcount32__full_tools__claude-opus-5__r2",
+      "delta": 5.007576,
+      "best_registered_delta": null,
+      "unregistered_submissions": 2
+    }
+  ],
+  "best_registered_per_task": {
+    "addpipe32": [
+      0.0304,
+      "addpipe32__pnr_only__claude-haiku-4-5__r3"
+    ],
+    "cmp32": [
+      0.281194,
+      "cmp32__full_tools__claude-opus-5__r2"
+    ],
+    "priority32": [
+      0.430758,
+      "priority32__pnr_only__claude-sonnet-5__r2"
+    ],
+    "popcount32": [
+      2.02019,
+      "popcount32__pnr_only__claude-opus-5__r3"
+    ]
+  },
+  "null_edit_submissions": 73
+}

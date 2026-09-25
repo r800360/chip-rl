@@ -57,7 +57,7 @@ def formal_scaling():
         if p.name.endswith(".metrics.json"):
             continue
         r = json.loads(p.read_text())
-        if r.get("formal_ok"):
+        if r.get("formal_ok") and not r["candidate"].startswith("rtl/repro/"):  # study designs only
             per_candidate.append(r["formal_runtime_s"])
 
     fig, (a1, a2) = plt.subplots(1, 2, figsize=(10.2, 3.9), gridspec_kw={"width_ratios": [1, 1.25]})
@@ -68,7 +68,7 @@ def formal_scaling():
         for p in (ROOT / "results/evaluations" / bench).glob("*.json"):
             if not p.name.endswith(".metrics.json"):
                 r = json.loads(p.read_text())
-                if r.get("formal_ok"):
+                if r.get("formal_ok") and not r["candidate"].startswith("rtl/repro/"):
                     vals.append(r["formal_runtime_s"])
         return statistics.median(vals)
 

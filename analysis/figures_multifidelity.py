@@ -8,7 +8,7 @@ from collections import defaultdict
 import matplotlib.pyplot as plt
 
 from analysis.style import (
-    AXIS, BLUE, GRID, INK, INK_2, MUTED, ORANGE, ROOT, SURFACE, note, save, setup,
+    AXIS, BLUE, INK, INK_2, MUTED, ORANGE, ROOT, SURFACE, note, save, setup,
 )
 
 STAGES = ["synth", "floorplan", "global_place", "detailed_place", "cts", "global_route"]
@@ -55,8 +55,9 @@ def main():
     a1.plot([], [], color=BLUE, lw=2, marker="o", label="median")
     a1.legend(loc="lower right")
 
-    # Right: one benchmark's floorplan proxy vs final score.
-    bench = "cmp32"
+    # Right: the benchmark where floorplan screening misses the true best design.
+    missed = [b for b in by_bench if by_bench[b]["floorplan"]["true_best_kept_at_25pct"] != "True"]
+    bench = missed[0] if missed else "cmp32"
     pts = [r for r in runs if r["benchmark"] == bench]
     fp = [10 * float(r["floorplan_wns"]) - 0.001 * float(r["floorplan_area"]) for r in pts]
     fin = [float(r["final_reward"]) for r in pts]
@@ -64,15 +65,21 @@ def main():
     best = max(range(len(fin)), key=lambda i: fin[i])
     a2.scatter([fp[best]], [fin[best]], s=70, color=ORANGE, edgecolor=SURFACE, linewidth=2,
                marker="D", zorder=3, label="best routed design")
+    rank = 1 + sum(f > fp[best] for f in fp)
+    a2.annotate(f"best after routing,\nfloorplan rank {rank} of {len(fp)}", xy=(fp[best], fin[best]),
+                xytext=(-14, -2), textcoords="offset points", fontsize=8.2, color=INK, va="top", ha="right")
     cut = sorted(fp, reverse=True)[max(0, round(0.25 * len(fp)) - 1)]
     a2.axvline(cut, color=MUTED, lw=0.8)
-    a2.text(cut, min(fin), "  keep top 25%\n  by floorplan proxy", fontsize=8, color=INK_2, va="bottom")
+    # Zoom to the top designs, where the screening decision happens.
+    a2.set_xlim(cut - 1.2, max(fp) + 0.12)
+    a2.set_ylim(fin[best] - 1.1, fin[best] + 0.15)
+    a2.text(cut + 0.02, fin[best] - 1.07, "kept (top 25%)", rotation=90,
+            fontsize=8, color=INK_2, va="bottom", ha="left")
     r = by_bench[bench]["floorplan"]
-    a2.margins(0.06)
-    a2.set_title(f"{bench}: floorplan proxy vs final (rho {float(r['spearman_rho']):.2f})")
+    a2.set_title(f"{bench}, top designs: floorplan proxy vs final (rho {float(r['spearman_rho']):.2f} overall)",
+                 fontsize=10.5)
     a2.set_xlabel("floorplan-stage proxy score")
     a2.set_ylabel("final post-route score")
-    a2.legend(loc="upper left")
 
     kept = sum(by_bench[b]["floorplan"]["true_best_kept_at_25pct"] == "True" for b in by_bench)
     note(a1, f"{len(runs):,} routed designs. Screening to the top 25% by floorplan proxy kept "

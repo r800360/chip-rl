@@ -75,11 +75,26 @@ def proxy(area, wns):
     return -0.001 * area + 10.0 * wns
 
 
+def repro_ids() -> set[str]:
+    """Evaluation IDs of re-runs of existing designs (toolchain and latency checks)."""
+    ids = set()
+    for path in (ROOT / "results" / "evaluations").rglob("*.json"):
+        if path.name.endswith(".metrics.json"):
+            continue
+        r = json.loads(path.read_text())
+        if r.get("candidate", "").startswith("rtl/repro/"):
+            ids.add(r["evaluation_id"])
+    return ids
+
+
 def collect() -> list[dict]:
     rows = []
+    skip = repro_ids()
     for bench_dir in sorted(LOGS.iterdir()):
         benchmark = BENCHMARK_OF_DIR.get(bench_dir.name, bench_dir.name)
         for run in sorted(bench_dir.glob("eval_*")):
+            if run.name[5:] in skip:
+                continue
             final = load(run / "6_report.json")
             if "finish__timing__setup__ws" not in final:
                 continue
