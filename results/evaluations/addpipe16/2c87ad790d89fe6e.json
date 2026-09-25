@@ -2,7 +2,8 @@
   "area": 359.366,
   "benchmark": "addpipe16",
   "cache_hit": false,
-  "candidate": "rtl/agent/claude_sonnet5_history16/attempt_000_addpipe16_koggestone.v",
+  "candidate": "rtl/agent/claude_sonnet5_history16_aborted_12k/attempt_000_addpipe16_koggestone.v",
+  "candidate_moved_from": "rtl/agent/claude_sonnet5_history16/attempt_000_addpipe16_koggestone.v",
   "cells": 311,
   "environment": {
     "or_image": "openroad/orfs:local",

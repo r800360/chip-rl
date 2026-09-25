@@ -1,0 +1,178 @@
+{
+ "episode_id": "addpipe32__pnr_only__claude-haiku-4-5__r2",
+ "model": "claude-haiku-4-5",
+ "task": "addpipe32",
+ "condition": "pnr_only",
+ "rep": 2,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "enabled",
+   "budget_tokens": 8000
+  }
+ },
+ "baseline_score": 74.12607,
+ "best_known_score": 74.256584,
+ "best_score": 74.15647,
+ "best_minus_baseline": 0.0304,
+ "valid_submissions": 4,
+ "submissions": [
+  {
+   "rtl": "rtl/agentic_eval_v1/addpipe32__pnr_only__claude-haiku-4-5__r2/call00_place_and_route_bb20c12a2cfc.v",
+   "submission": 1,
+   "remaining": 3,
+   "status": "OK",
+   "area_um2": 746.13,
+   "wns_ns": 7.48949,
+   "cells": 622,
+   "power_w": 9.89724e-05,
+   "score": 74.14877,
+   "score_minus_baseline": 0.0227,
+   "evaluation_id": "9995a721f592273b",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/addpipe32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_bb2b870199be.v",
+   "submission": 2,
+   "remaining": 2,
+   "status": "OK",
+   "area_um2": 746.13,
+   "wns_ns": 7.48722,
+   "cells": 622,
+   "power_w": 9.9164e-05,
+   "score": 74.12607,
+   "score_minus_baseline": 0.0,
+   "evaluation_id": "c0542dcfa0c65131",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/addpipe32__pnr_only__claude-haiku-4-5__r2/call02_place_and_route_9852150e52c4.v",
+   "submission": 3,
+   "remaining": 1,
+   "status": "OK",
+   "area_um2": 746.13,
+   "wns_ns": 7.49026,
+   "cells": 622,
+   "power_w": 9.89046e-05,
+   "score": 74.15647,
+   "score_minus_baseline": 0.0304,
+   "evaluation_id": "8821f99cb2beab44",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/addpipe32__pnr_only__claude-haiku-4-5__r2/call03_place_and_route_9bb8a37fddab.v",
+   "submission": 4,
+   "remaining": 0,
+   "status": "OK",
+   "area_um2": 746.13,
+   "wns_ns": 7.48722,
+   "cells": 622,
+   "power_w": 9.9164e-05,
+   "score": 74.12607,
+   "score_minus_baseline": 0.0,
+   "evaluation_id": "5338633e3532e00a",
+   "cache_hit": true
+  }
+ ],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 4,
+ "last_stop_reason": "tool_use",
+ "error": null,
+ "tool_counts": {
+  "place_and_route": 4
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__pnr_only__claude-haiku-4-5__r2/call00_place_and_route_bb20c12a2cfc.v",
+   "rtl_sha256": "bb20c12a2cfc6475f7915d1121fd139814bf61f35ada25114ec44e7c89a71e02",
+   "result": {
+    "submission": 1,
+    "remaining": 3,
+    "status": "OK",
+    "area_um2": 746.13,
+    "wns_ns": 7.48949,
+    "cells": 622,
+    "power_w": 9.89724e-05,
+    "score": 74.14877,
+    "score_minus_baseline": 0.0227,
+    "evaluation_id": "9995a721f592273b",
+    "cache_hit": false
+   },
+   "wall_s": 43.93
+  },
+  {
+   "index": 1,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_bb2b870199be.v",
+   "rtl_sha256": "bb2b870199bec132fb23bcba33e3523c6293f7d3a588e5a63bc92ef557d060c0",
+   "result": {
+    "submission": 2,
+    "remaining": 2,
+    "status": "OK",
+    "area_um2": 746.13,
+    "wns_ns": 7.48722,
+    "cells": 622,
+    "power_w": 9.9164e-05,
+    "score": 74.12607,
+    "score_minus_baseline": 0.0,
+    "evaluation_id": "c0542dcfa0c65131",
+    "cache_hit": false
+   },
+   "wall_s": 49.11
+  },
+  {
+   "index": 2,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__pnr_only__claude-haiku-4-5__r2/call02_place_and_route_9852150e52c4.v",
+   "rtl_sha256": "9852150e52c4857bb304df36eb74ee2ee844c4453601f0fadb7fa7ab43e755df",
+   "result": {
+    "submission": 3,
+    "remaining": 1,
+    "status": "OK",
+    "area_um2": 746.13,
+    "wns_ns": 7.49026,
+    "cells": 622,
+    "power_w": 9.89046e-05,
+    "score": 74.15647,
+    "score_minus_baseline": 0.0304,
+    "evaluation_id": "8821f99cb2beab44",
+    "cache_hit": false
+   },
+   "wall_s": 49.66
+  },
+  {
+   "index": 3,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__pnr_only__claude-haiku-4-5__r2/call03_place_and_route_9bb8a37fddab.v",
+   "rtl_sha256": "9bb8a37fddab7e5dc7d1e7a4c50c2a5094e01fb707157e2696e3c067b47a9422",
+   "result": {
+    "submission": 4,
+    "remaining": 0,
+    "status": "OK",
+    "area_um2": 746.13,
+    "wns_ns": 7.48722,
+    "cells": 622,
+    "power_w": 9.9164e-05,
+    "score": 74.12607,
+    "score_minus_baseline": 0.0,
+    "evaluation_id": "5338633e3532e00a",
+    "cache_hit": true,
+    "note": "Budget exhausted; the episode will end."
+   },
+   "wall_s": 5.26
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 4246,
+  "cache_read_input_tokens": 0,
+  "input_tokens": 8600,
+  "output_tokens": 2892
+ },
+ "cost_usd": 0.0284,
+ "wall_s": 170.5
+}

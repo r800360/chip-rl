@@ -495,7 +495,7 @@ def main():
         "==============================================================="
     )
     print(
-        "SEARCH BENCHMARK — 1000 REPEATED TRIALS"
+        "SEARCH BENCHMARK: 1000 REPEATED TRIALS"
     )
     print(
         "==============================================================="

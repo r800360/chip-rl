@@ -1,0 +1,555 @@
+{
+ "episode_id": "priority32__full_tools__claude-opus-5__r2",
+ "model": "claude-opus-5",
+ "task": "priority32",
+ "condition": "full_tools",
+ "rep": 2,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "baseline_score": 76.24689,
+ "best_known_score": 76.735174,
+ "best_score": 76.473604,
+ "best_minus_baseline": 0.226714,
+ "valid_submissions": 3,
+ "submissions": [
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call14_place_and_route_1475d697a197.v",
+   "submission": 1,
+   "remaining": 3,
+   "status": "OK",
+   "area_um2": 210.672,
+   "wns_ns": 7.65138,
+   "cells": 263,
+   "power_w": 1.92539e-05,
+   "score": 76.303128,
+   "score_minus_baseline": 0.056238,
+   "evaluation_id": "dde2190541432b94",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call18_place_and_route_17c67fa187c1.v",
+   "submission": 2,
+   "remaining": 2,
+   "status": "OK",
+   "area_um2": 195.51,
+   "wns_ns": 7.6636,
+   "cells": 254,
+   "power_w": 1.78325e-05,
+   "score": 76.44049,
+   "score_minus_baseline": 0.1936,
+   "evaluation_id": "5886a73dc6fa2977",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call29_place_and_route_55ab3f7e104a.v",
+   "submission": 3,
+   "remaining": 1,
+   "status": "OK",
+   "area_um2": 201.096,
+   "wns_ns": 7.66747,
+   "cells": 260,
+   "power_w": 1.90101e-05,
+   "score": 76.473604,
+   "score_minus_baseline": 0.226714,
+   "evaluation_id": "5394d458d86ce1ab",
+   "cache_hit": false
+  }
+ ],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 16,
+ "last_stop_reason": "tool_use",
+ "error": null,
+ "tool_counts": {
+  "estimate_ppa": 23,
+  "prove_equivalence": 3,
+  "simulate": 1,
+  "place_and_route": 4
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call00_estimate_ppa_4afaf8ce4844.v",
+   "rtl_sha256": "4afaf8ce484445babc59bf979044932bef8220933f2f1ddce36a84fc46e5d9d3",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 152.152,
+    "estimated_wns_ns": 7.67668,
+    "estimated_reward": 76.614648,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.76
+   },
+   "wall_s": 4.76
+  },
+  {
+   "index": 1,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call01_estimate_ppa_62259246a8c1.v",
+   "rtl_sha256": "62259246a8c1ff933002834b2e8ad85307d78770ab2fe8a87165b72521718ba8",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 147.896,
+    "estimated_wns_ns": 7.54039,
+    "estimated_reward": 75.256004,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.05
+   },
+   "wall_s": 5.05
+  },
+  {
+   "index": 2,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call02_estimate_ppa_193e2a1be488.v",
+   "rtl_sha256": "193e2a1be4886ca8d24fee58fdc147fd7fae88bb4805314f77b2c7ce76038377",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 54.53,
+    "estimated_wns_ns": 7.85517,
+    "estimated_reward": 78.49717,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 0.0
+   },
+   "wall_s": 0.0
+  },
+  {
+   "index": 3,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call03_estimate_ppa_2a2dc6f17c12.v",
+   "rtl_sha256": "2a2dc6f17c1246efaa35ecd86ffedf4577a8cd364f5983265def6e38cb921604",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 140.98,
+    "estimated_wns_ns": 7.69796,
+    "estimated_reward": 76.83862,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.33
+   },
+   "wall_s": 5.33
+  },
+  {
+   "index": 4,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call04_estimate_ppa_1475d697a197.v",
+   "rtl_sha256": "1475d697a197d9debe02e40a0b3608a7f25337069b501d83d151787ef2e66f84",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 141.512,
+    "estimated_wns_ns": 7.74349,
+    "estimated_reward": 77.293388,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.44
+   },
+   "wall_s": 5.44
+  },
+  {
+   "index": 5,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call05_estimate_ppa_55ab3f7e104a.v",
+   "rtl_sha256": "55ab3f7e104ac9b39856048a5f9e54d26e04bf2a9f3d48a77847bc59ac32da3a",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 134.596,
+    "estimated_wns_ns": 7.72998,
+    "estimated_reward": 77.165204,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.32
+   },
+   "wall_s": 5.32
+  },
+  {
+   "index": 6,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call06_estimate_ppa_17c67fa187c1.v",
+   "rtl_sha256": "17c67fa187c1344b017bb7b8db7a8b4dbb75ab09e1db366c44968395e244a6c9",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 126.084,
+    "estimated_wns_ns": 7.73306,
+    "estimated_reward": 77.204516,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 14.69
+   },
+   "wall_s": 14.69
+  },
+  {
+   "index": 7,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call07_estimate_ppa_9f24db00990c.v",
+   "rtl_sha256": "9f24db00990c4e69461af23c10f8ebfcf43bdc4bea2d79c562d7efb11e0ff142",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 133.798,
+    "estimated_wns_ns": 7.72429,
+    "estimated_reward": 77.109102,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 9.61
+   },
+   "wall_s": 9.61
+  },
+  {
+   "index": 8,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call08_estimate_ppa_c710b14c1136.v",
+   "rtl_sha256": "c710b14c11363c85f26eca8e1c788b4378e8dc1453486384041bf72f984d3913",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 125.286,
+    "estimated_wns_ns": 7.6706,
+    "estimated_reward": 76.580714,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.72
+   },
+   "wall_s": 4.73
+  },
+  {
+   "index": 9,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call09_estimate_ppa_faea06c9682c.v",
+   "rtl_sha256": "faea06c9682c0bb2388e3720d8163021676326de0a0075df6e2f9fbe345e3511",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 121.03,
+    "estimated_wns_ns": 7.67253,
+    "estimated_reward": 76.60427,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.8
+   },
+   "wall_s": 4.8
+  },
+  {
+   "index": 10,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call10_estimate_ppa_b52e91634e92.v",
+   "rtl_sha256": "b52e91634e922ba0d01831006d5af874db30f255fe2a8e6b649e0cab94f69205",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 127.946,
+    "estimated_wns_ns": 7.71218,
+    "estimated_reward": 76.993854,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.63
+   },
+   "wall_s": 4.63
+  },
+  {
+   "index": 11,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call11_estimate_ppa_ba316811897e.v",
+   "rtl_sha256": "ba316811897e5aea64b453fd5c8e97c128cc694de4544788ef97fba1b4b41dee",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 129.808,
+    "estimated_wns_ns": 7.72155,
+    "estimated_reward": 77.085692,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.71
+   },
+   "wall_s": 4.71
+  },
+  {
+   "index": 12,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call12_prove_equivalence_1475d697a197.v",
+   "rtl_sha256": "1475d697a197d9debe02e40a0b3608a7f25337069b501d83d151787ef2e66f84",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.22
+   },
+   "wall_s": 0.22
+  },
+  {
+   "index": 13,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call13_simulate_1475d697a197.v",
+   "rtl_sha256": "1475d697a197d9debe02e40a0b3608a7f25337069b501d83d151787ef2e66f84",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-EOFNEWLINE: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call13_simulate_1475d697a197.v:62:10: Missing newline at end of file (POSIX 3.206).",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call13_simulate_1475d697a197.v:1:8: Filename 'call13_simulate_1475d697a197' does not match MODULE name: 'priority32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call13_simulate_1475d697a197.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call13_simulate_1475d697a197.v:6:23: Signal is not used: 'b_i'",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 4.05
+   },
+   "wall_s": 4.06
+  },
+  {
+   "index": 14,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call14_place_and_route_1475d697a197.v",
+   "rtl_sha256": "1475d697a197d9debe02e40a0b3608a7f25337069b501d83d151787ef2e66f84",
+   "result": {
+    "submission": 1,
+    "remaining": 3,
+    "status": "OK",
+    "area_um2": 210.672,
+    "wns_ns": 7.65138,
+    "cells": 263,
+    "power_w": 1.92539e-05,
+    "score": 76.303128,
+    "score_minus_baseline": 0.056238,
+    "evaluation_id": "dde2190541432b94",
+    "cache_hit": false
+   },
+   "wall_s": 29.08
+  },
+  {
+   "index": 15,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call15_estimate_ppa_d3f7f183bf3b.v",
+   "rtl_sha256": "d3f7f183bf3b7d089821cad07cc5f2779bd2605947c4a06114675796c2731689",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 125.818,
+    "estimated_wns_ns": 7.72261,
+    "estimated_reward": 77.100282,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.27
+   },
+   "wall_s": 5.27
+  },
+  {
+   "index": 16,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call16_prove_equivalence_17c67fa187c1.v",
+   "rtl_sha256": "17c67fa187c1344b017bb7b8db7a8b4dbb75ab09e1db366c44968395e244a6c9",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.26
+   },
+   "wall_s": 0.26
+  },
+  {
+   "index": 17,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call17_estimate_ppa_90e6fedf20b7.v",
+   "rtl_sha256": "90e6fedf20b775d061d0acf5a4cf5064c7c8125c468dabd3ea10dbd0da79a151",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 140.448,
+    "estimated_wns_ns": 7.73257,
+    "estimated_reward": 77.185252,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.63
+   },
+   "wall_s": 5.63
+  },
+  {
+   "index": 18,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call18_place_and_route_17c67fa187c1.v",
+   "rtl_sha256": "17c67fa187c1344b017bb7b8db7a8b4dbb75ab09e1db366c44968395e244a6c9",
+   "result": {
+    "submission": 2,
+    "remaining": 2,
+    "status": "OK",
+    "area_um2": 195.51,
+    "wns_ns": 7.6636,
+    "cells": 254,
+    "power_w": 1.78325e-05,
+    "score": 76.44049,
+    "score_minus_baseline": 0.1936,
+    "evaluation_id": "5886a73dc6fa2977",
+    "cache_hit": false
+   },
+   "wall_s": 27.79
+  },
+  {
+   "index": 19,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call19_estimate_ppa_8d50a290b492.v",
+   "rtl_sha256": "8d50a290b492c59c6570259ab1c5b5b36c4d64d33c039410027d09cefcc76608",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 207.214,
+    "estimated_wns_ns": 7.6372,
+    "estimated_reward": 76.164786,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.93
+   },
+   "wall_s": 4.93
+  },
+  {
+   "index": 20,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call20_estimate_ppa_9de7b89ae7cd.v",
+   "rtl_sha256": "9de7b89ae7cd64d9fc9e7fb28bd4d47298d5442b78c3017565ccaadacf40c9ff",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 120.232,
+    "estimated_wns_ns": 7.68375,
+    "estimated_reward": 76.717268,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.74
+   },
+   "wall_s": 4.74
+  },
+  {
+   "index": 21,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call21_estimate_ppa_c89eed9461ca.v",
+   "rtl_sha256": "c89eed9461ca1d3264c5b598cc47582f9a30ec721ac1ec04b038818621209b55",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 118.104,
+    "estimated_wns_ns": 7.67328,
+    "estimated_reward": 76.614696,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.71
+   },
+   "wall_s": 4.72
+  },
+  {
+   "index": 22,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call22_estimate_ppa_0c217fc07e6b.v",
+   "rtl_sha256": "0c217fc07e6b1bfb82d9e95165d9a401c1a821a22fc994c094980122eb858c65",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 125.818,
+    "estimated_wns_ns": 7.72261,
+    "estimated_reward": 77.100282,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.7
+   },
+   "wall_s": 4.7
+  },
+  {
+   "index": 23,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call23_estimate_ppa_b4d3f729f765.v",
+   "rtl_sha256": "b4d3f729f765dc7af1f732578fea6d5389c33b56436147161b1d57dfe5874826",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 122.36,
+    "estimated_wns_ns": 7.66535,
+    "estimated_reward": 76.53114,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.73
+   },
+   "wall_s": 4.73
+  },
+  {
+   "index": 24,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call24_estimate_ppa_4fa50f5a819f.v",
+   "rtl_sha256": "4fa50f5a819f3039310489a5c53e53ba80fcef0532ebef0f797cfa02ad48faca",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 126.084,
+    "estimated_wns_ns": 7.73306,
+    "estimated_reward": 77.204516,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.81
+   },
+   "wall_s": 4.81
+  },
+  {
+   "index": 25,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call25_estimate_ppa_083efc578be4.v",
+   "rtl_sha256": "083efc578be46e631e83e7d569744aec35f92ea47375994118bd391867b2aa8c",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 139.65,
+    "estimated_wns_ns": 7.6829,
+    "estimated_reward": 76.68935,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.76
+   },
+   "wall_s": 4.76
+  },
+  {
+   "index": 26,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call26_estimate_ppa_2298b80ad7e2.v",
+   "rtl_sha256": "2298b80ad7e27e44c2553d5c778faff9662a65939cb9b93582a6eb9fb0be01fd",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 125.286,
+    "estimated_wns_ns": 7.6706,
+    "estimated_reward": 76.580714,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.78
+   },
+   "wall_s": 5.78
+  },
+  {
+   "index": 27,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call27_estimate_ppa_1156c29c02c8.v",
+   "rtl_sha256": "1156c29c02c80f6b69ac83757e2735bdfcddd7696161272c265f9d69eb4a650a",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 146.034,
+    "estimated_wns_ns": 7.7266,
+    "estimated_reward": 77.119966,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.48
+   },
+   "wall_s": 5.48
+  },
+  {
+   "index": 28,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call28_prove_equivalence_90e6fedf20b7.v",
+   "rtl_sha256": "90e6fedf20b775d061d0acf5a4cf5064c7c8125c468dabd3ea10dbd0da79a151",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.32
+   },
+   "wall_s": 0.32
+  },
+  {
+   "index": 29,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r2/call29_place_and_route_55ab3f7e104a.v",
+   "rtl_sha256": "55ab3f7e104ac9b39856048a5f9e54d26e04bf2a9f3d48a77847bc59ac32da3a",
+   "result": {
+    "submission": 3,
+    "remaining": 1,
+    "status": "OK",
+    "area_um2": 201.096,
+    "wns_ns": 7.66747,
+    "cells": 260,
+    "power_w": 1.90101e-05,
+    "score": 76.473604,
+    "score_minus_baseline": 0.226714,
+    "evaluation_id": "5394d458d86ce1ab",
+    "cache_hit": false
+   },
+   "wall_s": 30.38
+  },
+  {
+   "index": 30,
+   "tool": "place_and_route",
+   "result": {
+    "status": "TOOL_CALL_LIMIT",
+    "message": "No tool calls left."
+   },
+   "wall_s": 0.0
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 76496,
+  "cache_read_input_tokens": 575697,
+  "input_tokens": 32,
+  "output_tokens": 73676
+ },
+ "cost_usd": 2.608,
+ "wall_s": 1005.4
+}

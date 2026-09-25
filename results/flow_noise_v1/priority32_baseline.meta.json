@@ -1,0 +1,11 @@
+{
+ "label": "priority32 baseline",
+ "benchmark": "priority32",
+ "group": "priority32",
+ "source": "rtl/priority32/baseline.v",
+ "original": {
+  "area": 208.81,
+  "wns": 7.64557,
+  "reward": 76.24689
+ }
+}

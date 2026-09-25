@@ -1,0 +1,188 @@
+{
+ "episode_id": "priority32__pnr_only__claude-haiku-4-5__r2",
+ "model": "claude-haiku-4-5",
+ "task": "priority32",
+ "condition": "pnr_only",
+ "rep": 2,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "enabled",
+   "budget_tokens": 8000
+  }
+ },
+ "baseline_score": 76.24689,
+ "best_known_score": 76.735174,
+ "best_score": 76.24689,
+ "best_minus_baseline": 0.0,
+ "valid_submissions": 3,
+ "submissions": [
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call00_place_and_route_1cd2f9016d1a.v",
+   "submission": 1,
+   "remaining": 3,
+   "status": "OK",
+   "area_um2": 202.16,
+   "wns_ns": 7.5725,
+   "cells": 264,
+   "power_w": 1.89492e-05,
+   "score": 75.52284,
+   "score_minus_baseline": -0.72405,
+   "evaluation_id": "7cdb92170883ff5c",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v",
+   "submission": 2,
+   "remaining": 2,
+   "status": "SIMULATION_FAILED",
+   "simulation": {
+    "status": "TEST_FAILED",
+    "output": "[66000] %Fatal: tb_priority32.sv:32: Assertion failed in TOP.tb.check: valid result mismatch: a=ffffffff b=00000001 got=37 expected=3f\n%Error: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:32: Verilog $stop\nAborting...",
+    "lint_warnings": [
+     "%Warning-EOFNEWLINE: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v:52:10: Missing newline at end of file (POSIX 3.206).",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v:1:8: Filename 'call01_place_and_route_55d117f97416' does not match MODULE name: 'priority32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v:6:23: Signal is not used: 'b_i'",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 8.01
+   }
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call02_place_and_route_c63cf3662b08.v",
+   "submission": 3,
+   "remaining": 1,
+   "status": "OK",
+   "area_um2": 199.5,
+   "wns_ns": 7.62447,
+   "cells": 266,
+   "power_w": 1.83113e-05,
+   "score": 76.0452,
+   "score_minus_baseline": -0.20169,
+   "evaluation_id": "b977f51c13c5a4e6",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call03_place_and_route_d71914280371.v",
+   "submission": 4,
+   "remaining": 0,
+   "status": "OK",
+   "area_um2": 208.81,
+   "wns_ns": 7.64557,
+   "cells": 266,
+   "power_w": 1.92811e-05,
+   "score": 76.24689,
+   "score_minus_baseline": 0.0,
+   "evaluation_id": "6377d898efb249d7",
+   "cache_hit": false
+  }
+ ],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 4,
+ "last_stop_reason": "tool_use",
+ "error": null,
+ "tool_counts": {
+  "place_and_route": 4
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call00_place_and_route_1cd2f9016d1a.v",
+   "rtl_sha256": "1cd2f9016d1a8144449e889b5462e883b8705f9d4cfb0970f683ccacf13151f7",
+   "result": {
+    "submission": 1,
+    "remaining": 3,
+    "status": "OK",
+    "area_um2": 202.16,
+    "wns_ns": 7.5725,
+    "cells": 264,
+    "power_w": 1.89492e-05,
+    "score": 75.52284,
+    "score_minus_baseline": -0.72405,
+    "evaluation_id": "7cdb92170883ff5c",
+    "cache_hit": false
+   },
+   "wall_s": 36.79
+  },
+  {
+   "index": 1,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v",
+   "rtl_sha256": "55d117f974167f158cc93abbb97e064b2ebace35356ba7754febdb1bd8b17f16",
+   "result": {
+    "submission": 2,
+    "remaining": 2,
+    "status": "SIMULATION_FAILED",
+    "simulation": {
+     "status": "TEST_FAILED",
+     "output": "[66000] %Fatal: tb_priority32.sv:32: Assertion failed in TOP.tb.check: valid result mismatch: a=ffffffff b=00000001 got=37 expected=3f\n%Error: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:32: Verilog $stop\nAborting...",
+     "lint_warnings": [
+      "%Warning-EOFNEWLINE: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v:52:10: Missing newline at end of file (POSIX 3.206).",
+      "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v:1:8: Filename 'call01_place_and_route_55d117f97416' does not match MODULE name: 'priority32'",
+      "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+      "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+      "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call01_place_and_route_55d117f97416.v:6:23: Signal is not used: 'b_i'",
+      "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+     ],
+     "runtime_s": 8.01
+    }
+   },
+   "wall_s": 8.01
+  },
+  {
+   "index": 2,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call02_place_and_route_c63cf3662b08.v",
+   "rtl_sha256": "c63cf3662b080a5b20ecc9e77f8a44362c1d13eabffd01cb9a8d39e2f84d03d6",
+   "result": {
+    "submission": 3,
+    "remaining": 1,
+    "status": "OK",
+    "area_um2": 199.5,
+    "wns_ns": 7.62447,
+    "cells": 266,
+    "power_w": 1.83113e-05,
+    "score": 76.0452,
+    "score_minus_baseline": -0.20169,
+    "evaluation_id": "b977f51c13c5a4e6",
+    "cache_hit": false
+   },
+   "wall_s": 37.62
+  },
+  {
+   "index": 3,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r2/call03_place_and_route_d71914280371.v",
+   "rtl_sha256": "d719142803714447a1c8a1a0068df2d73155d808fa76c9d0941d8886b0d6fd33",
+   "result": {
+    "submission": 4,
+    "remaining": 0,
+    "status": "OK",
+    "area_um2": 208.81,
+    "wns_ns": 7.64557,
+    "cells": 266,
+    "power_w": 1.92811e-05,
+    "score": 76.24689,
+    "score_minus_baseline": 0.0,
+    "evaluation_id": "6377d898efb249d7",
+    "cache_hit": false,
+    "note": "Budget exhausted; the episode will end."
+   },
+   "wall_s": 40.05
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 7001,
+  "cache_read_input_tokens": 10275,
+  "input_tokens": 1854,
+  "output_tokens": 5049
+ },
+ "cost_usd": 0.0369,
+ "wall_s": 167.9
+}

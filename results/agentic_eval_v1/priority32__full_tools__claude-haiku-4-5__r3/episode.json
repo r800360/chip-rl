@@ -1,0 +1,353 @@
+{
+ "episode_id": "priority32__full_tools__claude-haiku-4-5__r3",
+ "model": "claude-haiku-4-5",
+ "task": "priority32",
+ "condition": "full_tools",
+ "rep": 3,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "enabled",
+   "budget_tokens": 8000
+  }
+ },
+ "baseline_score": 76.24689,
+ "best_known_score": 76.735174,
+ "best_score": 75.52284,
+ "best_minus_baseline": -0.72405,
+ "valid_submissions": 4,
+ "submissions": [
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call05_place_and_route_c2bf40b469b2.v",
+   "submission": 1,
+   "remaining": 3,
+   "status": "OK",
+   "area_um2": 224.504,
+   "wns_ns": 7.55847,
+   "cells": 272,
+   "power_w": 2.00931e-05,
+   "score": 75.360196,
+   "score_minus_baseline": -0.886694,
+   "evaluation_id": "f352728c8c6906ea",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call06_place_and_route_da8a3354df7e.v",
+   "submission": 2,
+   "remaining": 2,
+   "status": "OK",
+   "area_um2": 227.164,
+   "wns_ns": 7.47089,
+   "cells": 274,
+   "power_w": 1.97354e-05,
+   "score": 74.481736,
+   "score_minus_baseline": -1.765154,
+   "evaluation_id": "cc0d91af8d895f96",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call10_place_and_route_22183d108aec.v",
+   "submission": 3,
+   "remaining": 1,
+   "status": "OK",
+   "area_um2": 196.84,
+   "wns_ns": 7.56644,
+   "cells": 266,
+   "power_w": 1.82348e-05,
+   "score": 75.46756,
+   "score_minus_baseline": -0.77933,
+   "evaluation_id": "13c1f09a3a6fad95",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call14_place_and_route_22f40463cf86.v",
+   "submission": 4,
+   "remaining": 0,
+   "status": "OK",
+   "area_um2": 202.16,
+   "wns_ns": 7.5725,
+   "cells": 264,
+   "power_w": 1.89492e-05,
+   "score": 75.52284,
+   "score_minus_baseline": -0.72405,
+   "evaluation_id": "bf18b488223ee7f6",
+   "cache_hit": false
+  }
+ ],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 15,
+ "last_stop_reason": "tool_use",
+ "error": null,
+ "tool_counts": {
+  "simulate": 4,
+  "estimate_ppa": 4,
+  "prove_equivalence": 3,
+  "place_and_route": 4
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call00_simulate_d0de0b02061e.v",
+   "rtl_sha256": "d0de0b02061eb178bb924ff69c61c2bf8a2bfbfcd3fc02a708c1b76c0cdb7577",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call00_simulate_d0de0b02061e.v:1:8: Filename 'call00_simulate_d0de0b02061e' does not match MODULE name: 'priority32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call00_simulate_d0de0b02061e.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call00_simulate_d0de0b02061e.v:6:23: Signal is not used: 'b_i'",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 5.76
+   },
+   "wall_s": 5.76
+  },
+  {
+   "index": 1,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call01_estimate_ppa_da8a3354df7e.v",
+   "rtl_sha256": "da8a3354df7ebf857cbd8e8eebc128b30a563f40f3751533a86647c80e044bfa",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 157.206,
+    "estimated_wns_ns": 7.5962,
+    "estimated_reward": 75.804794,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 6.69
+   },
+   "wall_s": 6.69
+  },
+  {
+   "index": 2,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call02_simulate_da8a3354df7e.v",
+   "rtl_sha256": "da8a3354df7ebf857cbd8e8eebc128b30a563f40f3751533a86647c80e044bfa",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call02_simulate_da8a3354df7e.v:1:8: Filename 'call02_simulate_da8a3354df7e' does not match MODULE name: 'priority32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call02_simulate_da8a3354df7e.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call02_simulate_da8a3354df7e.v:6:23: Signal is not used: 'b_i'",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call02_simulate_da8a3354df7e.v:17:6: Signal is not used: 'hit_l'",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call02_simulate_da8a3354df7e.v:33:12: Bits of signal are not used: 'data_s4'[0]",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 6.31
+   },
+   "wall_s": 6.32
+  },
+  {
+   "index": 3,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call03_prove_equivalence_da8a3354df7e.v",
+   "rtl_sha256": "da8a3354df7ebf857cbd8e8eebc128b30a563f40f3751533a86647c80e044bfa",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.29
+   },
+   "wall_s": 0.29
+  },
+  {
+   "index": 4,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call04_estimate_ppa_c2bf40b469b2.v",
+   "rtl_sha256": "c2bf40b469b21d0f68312ca9cedbc5fa574125c161fb3813432536c9237af5fc",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 155.344,
+    "estimated_wns_ns": 7.62885,
+    "estimated_reward": 76.133156,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.88
+   },
+   "wall_s": 5.88
+  },
+  {
+   "index": 5,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call05_place_and_route_c2bf40b469b2.v",
+   "rtl_sha256": "c2bf40b469b21d0f68312ca9cedbc5fa574125c161fb3813432536c9237af5fc",
+   "result": {
+    "submission": 1,
+    "remaining": 3,
+    "status": "OK",
+    "area_um2": 224.504,
+    "wns_ns": 7.55847,
+    "cells": 272,
+    "power_w": 2.00931e-05,
+    "score": 75.360196,
+    "score_minus_baseline": -0.886694,
+    "evaluation_id": "f352728c8c6906ea",
+    "cache_hit": false
+   },
+   "wall_s": 40.93
+  },
+  {
+   "index": 6,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call06_place_and_route_da8a3354df7e.v",
+   "rtl_sha256": "da8a3354df7ebf857cbd8e8eebc128b30a563f40f3751533a86647c80e044bfa",
+   "result": {
+    "submission": 2,
+    "remaining": 2,
+    "status": "OK",
+    "area_um2": 227.164,
+    "wns_ns": 7.47089,
+    "cells": 274,
+    "power_w": 1.97354e-05,
+    "score": 74.481736,
+    "score_minus_baseline": -1.765154,
+    "evaluation_id": "cc0d91af8d895f96",
+    "cache_hit": false
+   },
+   "wall_s": 42.87
+  },
+  {
+   "index": 7,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call07_estimate_ppa_22183d108aec.v",
+   "rtl_sha256": "22183d108aec2dd1c77a0a6ad67ca8a75684bd6444f11b3c303e9448d99e5e64",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 126.616,
+    "estimated_wns_ns": 7.63578,
+    "estimated_reward": 76.231184,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 6.31
+   },
+   "wall_s": 6.31
+  },
+  {
+   "index": 8,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call08_simulate_22183d108aec.v",
+   "rtl_sha256": "22183d108aec2dd1c77a0a6ad67ca8a75684bd6444f11b3c303e9448d99e5e64",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call08_simulate_22183d108aec.v:1:8: Filename 'call08_simulate_22183d108aec' does not match MODULE name: 'priority32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call08_simulate_22183d108aec.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call08_simulate_22183d108aec.v:6:23: Signal is not used: 'b_i'",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call08_simulate_22183d108aec.v:23:6: Signal is not used: 'hit_bot'",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 5.86
+   },
+   "wall_s": 5.86
+  },
+  {
+   "index": 9,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call09_prove_equivalence_22183d108aec.v",
+   "rtl_sha256": "22183d108aec2dd1c77a0a6ad67ca8a75684bd6444f11b3c303e9448d99e5e64",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.35
+   },
+   "wall_s": 0.35
+  },
+  {
+   "index": 10,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call10_place_and_route_22183d108aec.v",
+   "rtl_sha256": "22183d108aec2dd1c77a0a6ad67ca8a75684bd6444f11b3c303e9448d99e5e64",
+   "result": {
+    "submission": 3,
+    "remaining": 1,
+    "status": "OK",
+    "area_um2": 196.84,
+    "wns_ns": 7.56644,
+    "cells": 266,
+    "power_w": 1.82348e-05,
+    "score": 75.46756,
+    "score_minus_baseline": -0.77933,
+    "evaluation_id": "13c1f09a3a6fad95",
+    "cache_hit": false
+   },
+   "wall_s": 36.47
+  },
+  {
+   "index": 11,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call11_estimate_ppa_22f40463cf86.v",
+   "rtl_sha256": "22f40463cf86cb4b484c66852c8873c64a6d7d68b45728f7be10cee35bb24602",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 131.936,
+    "estimated_wns_ns": 7.65759,
+    "estimated_reward": 76.443964,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 6.3
+   },
+   "wall_s": 6.3
+  },
+  {
+   "index": 12,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call12_simulate_22f40463cf86.v",
+   "rtl_sha256": "22f40463cf86cb4b484c66852c8873c64a6d7d68b45728f7be10cee35bb24602",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call12_simulate_22f40463cf86.v:1:8: Filename 'call12_simulate_22f40463cf86' does not match MODULE name: 'priority32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call12_simulate_22f40463cf86.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call12_simulate_22f40463cf86.v:6:23: Signal is not used: 'b_i'",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 6.19
+   },
+   "wall_s": 6.19
+  },
+  {
+   "index": 13,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call13_prove_equivalence_22f40463cf86.v",
+   "rtl_sha256": "22f40463cf86cb4b484c66852c8873c64a6d7d68b45728f7be10cee35bb24602",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.27
+   },
+   "wall_s": 0.27
+  },
+  {
+   "index": 14,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-haiku-4-5__r3/call14_place_and_route_22f40463cf86.v",
+   "rtl_sha256": "22f40463cf86cb4b484c66852c8873c64a6d7d68b45728f7be10cee35bb24602",
+   "result": {
+    "submission": 4,
+    "remaining": 0,
+    "status": "OK",
+    "area_um2": 202.16,
+    "wns_ns": 7.5725,
+    "cells": 264,
+    "power_w": 1.89492e-05,
+    "score": 75.52284,
+    "score_minus_baseline": -0.72405,
+    "evaluation_id": "bf18b488223ee7f6",
+    "cache_hit": false,
+    "note": "Budget exhausted; the episode will end."
+   },
+   "wall_s": 38.2
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 17474,
+  "cache_read_input_tokens": 136169,
+  "input_tokens": 2393,
+  "output_tokens": 13217
+ },
+ "cost_usd": 0.1039,
+ "wall_s": 280.8
+}

@@ -1,0 +1,145 @@
+{
+ "episode_id": "addpipe32__pnr_only__claude-opus-5__r3",
+ "model": "claude-opus-5",
+ "task": "addpipe32",
+ "condition": "pnr_only",
+ "rep": 3,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "baseline_score": 74.12607,
+ "best_known_score": 74.256584,
+ "best_score": 74.294864,
+ "best_minus_baseline": 0.168794,
+ "valid_submissions": 3,
+ "submissions": [
+  {
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/addpipe32__pnr_only__claude-opus-5__r3/call00_place_and_route_d482688bd51f.v",
+   "submission": 1,
+   "remaining": 3,
+   "status": "OK",
+   "area_um2": 739.48,
+   "wns_ns": 7.48276,
+   "cells": 658,
+   "power_w": 9.7734e-05,
+   "score": 74.08812,
+   "score_minus_baseline": -0.03795,
+   "evaluation_id": "034a7c1b5cafa5c6",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/addpipe32__pnr_only__claude-opus-5__r3/call01_place_and_route_806e80f60655.v",
+   "submission": 2,
+   "remaining": 2,
+   "status": "OK",
+   "area_um2": 903.336,
+   "wns_ns": 7.51982,
+   "cells": 782,
+   "power_w": 0.000110565,
+   "score": 74.294864,
+   "score_minus_baseline": 0.168794,
+   "evaluation_id": "1e54a2751dcdbcd4",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/addpipe32__pnr_only__claude-opus-5__r3/call02_place_and_route_df72ea299629.v",
+   "submission": 3,
+   "remaining": 1,
+   "status": "OK",
+   "area_um2": 849.338,
+   "wns_ns": 7.44386,
+   "cells": 681,
+   "power_w": 0.000102273,
+   "score": 73.589262,
+   "score_minus_baseline": -0.536808,
+   "evaluation_id": "3d71c76aae81ba51",
+   "cache_hit": false
+  }
+ ],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 4,
+ "last_stop_reason": "tool_use",
+ "error": "API request failed; the episode stopped early and was rerun from scratch (results/agentic_eval_v1/addpipe32__pnr_only__claude-opus-5__r3/)",
+ "tool_counts": {
+  "place_and_route": 3
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/addpipe32__pnr_only__claude-opus-5__r3/call00_place_and_route_d482688bd51f.v",
+   "rtl_sha256": "d482688bd51fd3a326c388a7454b66a83ae161a567b056077493d4e2259c7d9c",
+   "result": {
+    "submission": 1,
+    "remaining": 3,
+    "status": "OK",
+    "area_um2": 739.48,
+    "wns_ns": 7.48276,
+    "cells": 658,
+    "power_w": 9.7734e-05,
+    "score": 74.08812,
+    "score_minus_baseline": -0.03795,
+    "evaluation_id": "034a7c1b5cafa5c6",
+    "cache_hit": false
+   },
+   "wall_s": 33.62
+  },
+  {
+   "index": 1,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/addpipe32__pnr_only__claude-opus-5__r3/call01_place_and_route_806e80f60655.v",
+   "rtl_sha256": "806e80f6065502003d7d84b374ec2476bf32892241658e3bba65d95a4552a6f3",
+   "result": {
+    "submission": 2,
+    "remaining": 2,
+    "status": "OK",
+    "area_um2": 903.336,
+    "wns_ns": 7.51982,
+    "cells": 782,
+    "power_w": 0.000110565,
+    "score": 74.294864,
+    "score_minus_baseline": 0.168794,
+    "evaluation_id": "1e54a2751dcdbcd4",
+    "cache_hit": false
+   },
+   "wall_s": 37.86
+  },
+  {
+   "index": 2,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/addpipe32__pnr_only__claude-opus-5__r3/call02_place_and_route_df72ea299629.v",
+   "rtl_sha256": "df72ea299629ad13a15a978d28ca09c25954272e8aae5987fafeca00fe5a543c",
+   "result": {
+    "submission": 3,
+    "remaining": 1,
+    "status": "OK",
+    "area_um2": 849.338,
+    "wns_ns": 7.44386,
+    "cells": 681,
+    "power_w": 0.000102273,
+    "score": 73.589262,
+    "score_minus_baseline": -0.536808,
+    "evaluation_id": "3d71c76aae81ba51",
+    "cache_hit": false
+   },
+   "wall_s": 36.91
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 15853,
+  "cache_read_input_tokens": 8688,
+  "input_tokens": 6,
+  "output_tokens": 33572
+ },
+ "cost_usd": 0.9428,
+ "wall_s": 591.8
+}

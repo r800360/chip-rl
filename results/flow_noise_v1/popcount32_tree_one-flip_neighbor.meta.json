@@ -1,0 +1,11 @@
+{
+ "label": "popcount32_tree one-flip neighbor",
+ "benchmark": "popcount32_tree",
+ "group": "oneflip",
+ "source": "rtl/generated/popcount32_tree_oneflip_v1/mask_7ffffffb.v",
+ "original": {
+  "area": 387.03,
+  "wns": 7.18726,
+  "reward": 71.48557
+ }
+}

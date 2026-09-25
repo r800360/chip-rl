@@ -1,0 +1,18 @@
+{
+  "candidate": "rtl/agentic_eval_v1/popcount32__full_tools__claude-opus-5__r2/call27_place_and_route_8197ded8a7ac.v",
+  "checker_v2": {
+    "formal_method": "equiv_v2",
+    "status": "PROVEN",
+    "runtime_s": 0.45
+  },
+  "bounded_8_cycles": {
+    "mismatch_trace": [],
+    "passed": true,
+    "timed_out": false
+  },
+  "bounded_16_cycles": {
+    "mismatch_trace": [],
+    "passed": true,
+    "timed_out": false
+  }
+}

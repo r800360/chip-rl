@@ -1,0 +1,11 @@
+{
+ "label": "cmp32 baseline",
+ "benchmark": "cmp32",
+ "group": "cmp32",
+ "source": "rtl/cmp32/baseline.v",
+ "original": {
+  "area": 268.926,
+  "wns": 7.62112,
+  "reward": 75.942274
+ }
+}

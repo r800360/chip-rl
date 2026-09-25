@@ -1,0 +1,184 @@
+{
+  "designs": {
+    "addpipe32 baseline": {
+      "n": 6,
+      "mean": 74.12607,
+      "std": 0.0,
+      "min": 74.12607,
+      "max": 74.12607,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "addpipe32 Opus Ling adder": {
+      "n": 6,
+      "mean": 74.294864,
+      "std": 0.0,
+      "min": 74.294864,
+      "max": 74.294864,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "cmp32 baseline": {
+      "n": 6,
+      "mean": 75.942274,
+      "std": 0.0,
+      "min": 75.942274,
+      "max": 75.942274,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "cmp32 Sonnet nibble tree": {
+      "n": 6,
+      "mean": 76.109606,
+      "std": 0.0,
+      "min": 76.109606,
+      "max": 76.109606,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "priority32 baseline": {
+      "n": 6,
+      "mean": 76.24689,
+      "std": 0.0,
+      "min": 76.24689,
+      "max": 76.24689,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "priority32 Sonnet folded chain": {
+      "n": 6,
+      "mean": 76.677648,
+      "std": 0.0,
+      "min": 76.677648,
+      "max": 76.677648,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "popcount32 baseline": {
+      "n": 6,
+      "mean": 69.89893,
+      "std": 0.0,
+      "min": 69.89893,
+      "max": 69.89893,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "popcount32 Sonnet LUT tree": {
+      "n": 6,
+      "mean": 71.095428,
+      "std": 0.0,
+      "min": 71.095428,
+      "max": 71.095428,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "popcount32_tree best seed (all CLA)": {
+      "n": 6,
+      "mean": 71.417613,
+      "std": 0.04242,
+      "min": 71.361262,
+      "max": 71.474664,
+      "spread": 0.113402,
+      "all_valid": true
+    },
+    "popcount32_tree one-flip neighbor": {
+      "n": 6,
+      "mean": 71.48557,
+      "std": 0.0,
+      "min": 71.48557,
+      "max": 71.48557,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "addpipe16 plain adder": {
+      "n": 6,
+      "mean": 75.38345,
+      "std": 0.0,
+      "min": 75.38345,
+      "max": 75.38345,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "addpipe16 Claude ripple2+Sklansky14": {
+      "n": 6,
+      "mean": 75.389868,
+      "std": 0.0,
+      "min": 75.389868,
+      "max": 75.389868,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "lanesum all-ADD": {
+      "n": 6,
+      "mean": 67.980992,
+      "std": 0.0,
+      "min": 67.980992,
+      "max": 67.980992,
+      "spread": 0.0,
+      "all_valid": true
+    },
+    "lanesum root CLA": {
+      "n": 6,
+      "mean": 67.781822,
+      "std": 0.0,
+      "min": 67.781822,
+      "max": 67.781822,
+      "spread": 0.0,
+      "all_valid": true
+    }
+  },
+  "comparisons": {
+    "adder32": {
+      "reference": "addpipe32 baseline",
+      "candidate": "addpipe32 Opus Ling adder",
+      "mean_difference": 0.168794,
+      "robust": true,
+      "direction": "better"
+    },
+    "cmp32": {
+      "reference": "cmp32 baseline",
+      "candidate": "cmp32 Sonnet nibble tree",
+      "mean_difference": 0.167332,
+      "robust": true,
+      "direction": "better"
+    },
+    "priority32": {
+      "reference": "priority32 baseline",
+      "candidate": "priority32 Sonnet folded chain",
+      "mean_difference": 0.430758,
+      "robust": true,
+      "direction": "better"
+    },
+    "popcount32": {
+      "reference": "popcount32 baseline",
+      "candidate": "popcount32 Sonnet LUT tree",
+      "mean_difference": 1.196498,
+      "robust": true,
+      "direction": "better"
+    },
+    "oneflip": {
+      "reference": "popcount32_tree best seed (all CLA)",
+      "candidate": "popcount32_tree one-flip neighbor",
+      "mean_difference": 0.067957,
+      "robust": true,
+      "direction": "better"
+    },
+    "adder16": {
+      "reference": "addpipe16 plain adder",
+      "candidate": "addpipe16 Claude ripple2+Sklansky14",
+      "mean_difference": 0.006418,
+      "robust": true,
+      "direction": "better"
+    },
+    "lanesum": {
+      "reference": "lanesum all-ADD",
+      "candidate": "lanesum root CLA",
+      "mean_difference": -0.19917,
+      "robust": true,
+      "direction": "worse"
+    }
+  },
+  "median_spread": 0.0,
+  "max_spread": 0.113402,
+  "designs_with_any_change": 1
+}

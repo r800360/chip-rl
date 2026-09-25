@@ -1,0 +1,11 @@
+{
+ "label": "addpipe16 plain adder",
+ "benchmark": "addpipe16",
+ "group": "adder16",
+ "source": "rtl/addpipe16/baseline.v",
+ "original": {
+  "area": 365.75,
+  "wns": 7.57492,
+  "reward": 75.38345
+ }
+}

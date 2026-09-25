@@ -1,0 +1,282 @@
+{
+ "episode_id": "priority32__full_tools__claude-opus-5__r1",
+ "model": "claude-opus-5",
+ "task": "priority32",
+ "condition": "full_tools",
+ "rep": 1,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "baseline_score": 76.24689,
+ "best_known_score": 76.735174,
+ "best_score": 75.980538,
+ "best_minus_baseline": -0.266352,
+ "valid_submissions": 1,
+ "submissions": [
+  {
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call10_place_and_route_9cdef891645e.v",
+   "submission": 1,
+   "remaining": 3,
+   "status": "OK",
+   "area_um2": 201.362,
+   "wns_ns": 7.61819,
+   "cells": 256,
+   "power_w": 1.83726e-05,
+   "score": 75.980538,
+   "score_minus_baseline": -0.266352,
+   "evaluation_id": "052301747834e3da",
+   "cache_hit": false
+  }
+ ],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 9,
+ "last_stop_reason": "tool_use",
+ "error": "API request failed; the episode stopped early and was rerun from scratch (results/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/)",
+ "tool_counts": {
+  "simulate": 1,
+  "estimate_ppa": 10,
+  "prove_equivalence": 3,
+  "place_and_route": 1
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call00_simulate_6db26bbe1585.v",
+   "rtl_sha256": "6db26bbe158558237309eaa3f10972f6b20d60abb5d098af27a0f85d38ab5f8e",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call00_simulate_6db26bbe1585.v:1:8: Filename 'call00_simulate_6db26bbe1585' does not match MODULE name: 'priority32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call00_simulate_6db26bbe1585.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call00_simulate_6db26bbe1585.v:6:23: Signal is not used: 'b_i'",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 4.14
+   },
+   "wall_s": 4.14
+  },
+  {
+   "index": 1,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call01_estimate_ppa_6db26bbe1585.v",
+   "rtl_sha256": "6db26bbe158558237309eaa3f10972f6b20d60abb5d098af27a0f85d38ab5f8e",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 133.798,
+    "estimated_wns_ns": 7.72429,
+    "estimated_reward": 77.109102,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.81
+   },
+   "wall_s": 4.81
+  },
+  {
+   "index": 2,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call02_estimate_ppa_7f3a6b8be959.v",
+   "rtl_sha256": "7f3a6b8be95940a46c32ead3fb008eefa2db0a47b184c9406d7034286ad25395",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 54.53,
+    "estimated_wns_ns": 7.85517,
+    "estimated_reward": 78.49717,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.21
+   },
+   "wall_s": 5.21
+  },
+  {
+   "index": 3,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call03_prove_equivalence_6db26bbe1585.v",
+   "rtl_sha256": "6db26bbe158558237309eaa3f10972f6b20d60abb5d098af27a0f85d38ab5f8e",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.25
+   },
+   "wall_s": 0.25
+  },
+  {
+   "index": 4,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call04_estimate_ppa_9cdef891645e.v",
+   "rtl_sha256": "9cdef891645e49435b95d9f8f8929f297421a4ffe5b2e3c8bcf1f760b8be901a",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 133.0,
+    "estimated_wns_ns": 7.72429,
+    "estimated_reward": 77.1099,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.52
+   },
+   "wall_s": 5.52
+  },
+  {
+   "index": 5,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call05_estimate_ppa_16fdaf6ff002.v",
+   "rtl_sha256": "16fdaf6ff002c0bb82a929a18c6581d275dfd61b432cd35b83b91d19825e3f0d",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 125.552,
+    "estimated_wns_ns": 7.67168,
+    "estimated_reward": 76.591248,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.46
+   },
+   "wall_s": 5.46
+  },
+  {
+   "index": 6,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call06_estimate_ppa_c276d2fd1916.v",
+   "rtl_sha256": "c276d2fd19165d3293816cdf9af7f547a4ddbdbddb99bbb6d405020569cb39bb",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 140.98,
+    "estimated_wns_ns": 7.70442,
+    "estimated_reward": 76.90322,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.66
+   },
+   "wall_s": 4.66
+  },
+  {
+   "index": 7,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call07_estimate_ppa_58f6311d22fb.v",
+   "rtl_sha256": "58f6311d22fbd77462bb8e31ff131f640b92dec7ba117d555245eb8680eff1e2",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 125.818,
+    "estimated_wns_ns": 7.65856,
+    "estimated_reward": 76.459782,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.74
+   },
+   "wall_s": 4.75
+  },
+  {
+   "index": 8,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call08_prove_equivalence_9cdef891645e.v",
+   "rtl_sha256": "9cdef891645e49435b95d9f8f8929f297421a4ffe5b2e3c8bcf1f760b8be901a",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.23
+   },
+   "wall_s": 0.23
+  },
+  {
+   "index": 9,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call09_estimate_ppa_bf14ae26c930.v",
+   "rtl_sha256": "bf14ae26c93001a1c375614facd5c17aa23597109538057fce0ffe4ba0dba986",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 125.286,
+    "estimated_wns_ns": 7.67536,
+    "estimated_reward": 76.628314,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.01
+   },
+   "wall_s": 5.01
+  },
+  {
+   "index": 10,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call10_place_and_route_9cdef891645e.v",
+   "rtl_sha256": "9cdef891645e49435b95d9f8f8929f297421a4ffe5b2e3c8bcf1f760b8be901a",
+   "result": {
+    "submission": 1,
+    "remaining": 3,
+    "status": "OK",
+    "area_um2": 201.362,
+    "wns_ns": 7.61819,
+    "cells": 256,
+    "power_w": 1.83726e-05,
+    "score": 75.980538,
+    "score_minus_baseline": -0.266352,
+    "evaluation_id": "052301747834e3da",
+    "cache_hit": false
+   },
+   "wall_s": 27.94
+  },
+  {
+   "index": 11,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call11_estimate_ppa_3ca6a6b1de67.v",
+   "rtl_sha256": "3ca6a6b1de67d0d62b2f0725855e800033c8feda09779cc16386272d11620b89",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 123.424,
+    "estimated_wns_ns": 7.74029,
+    "estimated_reward": 77.279476,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.49
+   },
+   "wall_s": 5.49
+  },
+  {
+   "index": 12,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call12_estimate_ppa_ba3709eb305e.v",
+   "rtl_sha256": "ba3709eb305e1414d87c01c96fd1b79086cb650ae7a3cc8f6b4dac75c3d12d27",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 101.878,
+    "estimated_wns_ns": 7.73437,
+    "estimated_reward": 77.241822,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.9
+   },
+   "wall_s": 5.9
+  },
+  {
+   "index": 13,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call13_prove_equivalence_3ca6a6b1de67.v",
+   "rtl_sha256": "3ca6a6b1de67d0d62b2f0725855e800033c8feda09779cc16386272d11620b89",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.24
+   },
+   "wall_s": 0.24
+  },
+  {
+   "index": 14,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/priority32__full_tools__claude-opus-5__r1/call14_estimate_ppa_22c43611fd52.v",
+   "rtl_sha256": "22c43611fd52504e68dde0154f03d5c9fec56dded7f07001a46d4fe9610117b2",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 101.878,
+    "estimated_wns_ns": 7.73437,
+    "estimated_reward": 77.241822,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.26
+   },
+   "wall_s": 5.26
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 43953,
+  "cache_read_input_tokens": 131674,
+  "input_tokens": 16,
+  "output_tokens": 43012
+ },
+ "cost_usd": 1.4159,
+ "wall_s": 687.5
+}

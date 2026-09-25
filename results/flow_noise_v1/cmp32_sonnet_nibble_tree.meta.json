@@ -1,0 +1,11 @@
+{
+ "label": "cmp32 Sonnet nibble tree",
+ "benchmark": "cmp32",
+ "group": "cmp32",
+ "source": "rtl/agentic_eval_v1/cmp32__full_tools__claude-sonnet-5__r3/call12_place_and_route_3811f61fbdf0.v",
+ "original": {
+  "area": 268.394,
+  "wns": 7.6378,
+  "reward": 76.109606
+ }
+}

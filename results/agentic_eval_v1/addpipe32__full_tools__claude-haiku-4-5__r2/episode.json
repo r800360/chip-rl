@@ -1,0 +1,433 @@
+{
+ "episode_id": "addpipe32__full_tools__claude-haiku-4-5__r2",
+ "model": "claude-haiku-4-5",
+ "task": "addpipe32",
+ "condition": "full_tools",
+ "rep": 2,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "enabled",
+   "budget_tokens": 8000
+  }
+ },
+ "baseline_score": 74.12607,
+ "best_known_score": 74.256584,
+ "best_score": 74.12607,
+ "best_minus_baseline": 0.0,
+ "valid_submissions": 4,
+ "submissions": [
+  {
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call07_place_and_route_057570c4132d.v",
+   "submission": 1,
+   "remaining": 3,
+   "status": "OK",
+   "area_um2": 746.13,
+   "wns_ns": 7.48722,
+   "cells": 622,
+   "power_w": 9.9164e-05,
+   "score": 74.12607,
+   "score_minus_baseline": 0.0,
+   "evaluation_id": "f4bfe985ee1af398",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call10_place_and_route_b042ba47e05e.v",
+   "submission": 2,
+   "remaining": 2,
+   "status": "OK",
+   "area_um2": 746.13,
+   "wns_ns": 7.48722,
+   "cells": 622,
+   "power_w": 9.9164e-05,
+   "score": 74.12607,
+   "score_minus_baseline": 0.0,
+   "evaluation_id": "d1e387017ed28e16",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call15_place_and_route_44b166b5187e.v",
+   "submission": 3,
+   "remaining": 1,
+   "status": "OK",
+   "area_um2": 746.13,
+   "wns_ns": 7.48722,
+   "cells": 622,
+   "power_w": 9.9164e-05,
+   "score": 74.12607,
+   "score_minus_baseline": 0.0,
+   "evaluation_id": "334577d4a00f580d",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call19_place_and_route_9fa3bdfa470d.v",
+   "submission": 4,
+   "remaining": 0,
+   "status": "OK",
+   "area_um2": 746.13,
+   "wns_ns": 7.48722,
+   "cells": 622,
+   "power_w": 9.9164e-05,
+   "score": 74.12607,
+   "score_minus_baseline": 0.0,
+   "evaluation_id": "107e2de9eb146916",
+   "cache_hit": false
+  }
+ ],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 20,
+ "last_stop_reason": "tool_use",
+ "error": null,
+ "tool_counts": {
+  "simulate": 6,
+  "estimate_ppa": 7,
+  "prove_equivalence": 3,
+  "place_and_route": 4
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call00_simulate_ad32db026d6d.v",
+   "rtl_sha256": "ad32db026d6de3b63ba963a0d95571c2531eee2a235d42ee214b66924611987c",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-EOFNEWLINE: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call00_simulate_ad32db026d6d.v:23:10: Missing newline at end of file (POSIX 3.206).",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call00_simulate_ad32db026d6d.v:1:8: Filename 'call00_simulate_ad32db026d6d' does not match MODULE name: 'addpipe32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:3:8: Filename 'tb_addpipe32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call00_simulate_ad32db026d6d.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:30:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 4.8
+   },
+   "wall_s": 4.8
+  },
+  {
+   "index": 1,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call01_estimate_ppa_5536665c55a5.v",
+   "rtl_sha256": "5536665c55a5554bd0a33fed8f826fe5fbbba40f131b2ec305785a560ae5b445",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 671.384,
+    "estimated_wns_ns": 7.57073,
+    "estimated_reward": 75.035916,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 6.19
+   },
+   "wall_s": 6.19
+  },
+  {
+   "index": 2,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call02_prove_equivalence_5536665c55a5.v",
+   "rtl_sha256": "5536665c55a5554bd0a33fed8f826fe5fbbba40f131b2ec305785a560ae5b445",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.26
+   },
+   "wall_s": 0.26
+  },
+  {
+   "index": 3,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call03_estimate_ppa_057570c4132d.v",
+   "rtl_sha256": "057570c4132da110c0d1c18223d18e01dc094ecae58e1904bedd1c1a6608ed26",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 671.384,
+    "estimated_wns_ns": 7.57073,
+    "estimated_reward": 75.035916,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 0.0
+   },
+   "wall_s": 0.96
+  },
+  {
+   "index": 4,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call04_estimate_ppa_19b23eb023db.v",
+   "rtl_sha256": "19b23eb023db169b26eebc49ef339c74642a30f466e2bbafa4055846496ec1de",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 671.384,
+    "estimated_wns_ns": 7.57073,
+    "estimated_reward": 75.035916,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 7.17
+   },
+   "wall_s": 7.18
+  },
+  {
+   "index": 5,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call05_simulate_057570c4132d.v",
+   "rtl_sha256": "057570c4132da110c0d1c18223d18e01dc094ecae58e1904bedd1c1a6608ed26",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-EOFNEWLINE: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call05_simulate_057570c4132d.v:21:10: Missing newline at end of file (POSIX 3.206).",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call05_simulate_057570c4132d.v:1:8: Filename 'call05_simulate_057570c4132d' does not match MODULE name: 'addpipe32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:3:8: Filename 'tb_addpipe32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call05_simulate_057570c4132d.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:30:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 5.59
+   },
+   "wall_s": 5.59
+  },
+  {
+   "index": 6,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call06_prove_equivalence_057570c4132d.v",
+   "rtl_sha256": "057570c4132da110c0d1c18223d18e01dc094ecae58e1904bedd1c1a6608ed26",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.3
+   },
+   "wall_s": 0.31
+  },
+  {
+   "index": 7,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call07_place_and_route_057570c4132d.v",
+   "rtl_sha256": "057570c4132da110c0d1c18223d18e01dc094ecae58e1904bedd1c1a6608ed26",
+   "result": {
+    "submission": 1,
+    "remaining": 3,
+    "status": "OK",
+    "area_um2": 746.13,
+    "wns_ns": 7.48722,
+    "cells": 622,
+    "power_w": 9.9164e-05,
+    "score": 74.12607,
+    "score_minus_baseline": 0.0,
+    "evaluation_id": "f4bfe985ee1af398",
+    "cache_hit": false
+   },
+   "wall_s": 46.51
+  },
+  {
+   "index": 8,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call08_estimate_ppa_b042ba47e05e.v",
+   "rtl_sha256": "b042ba47e05e9d8b0fe03cc0ff5cdf55a9f047fcc3286b5dc85a6687494cdae4",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 671.384,
+    "estimated_wns_ns": 7.57073,
+    "estimated_reward": 75.035916,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 8.8
+   },
+   "wall_s": 8.8
+  },
+  {
+   "index": 9,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call09_simulate_b042ba47e05e.v",
+   "rtl_sha256": "b042ba47e05e9d8b0fe03cc0ff5cdf55a9f047fcc3286b5dc85a6687494cdae4",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-EOFNEWLINE: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call09_simulate_b042ba47e05e.v:23:10: Missing newline at end of file (POSIX 3.206).",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call09_simulate_b042ba47e05e.v:1:8: Filename 'call09_simulate_b042ba47e05e' does not match MODULE name: 'addpipe32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:3:8: Filename 'tb_addpipe32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call09_simulate_b042ba47e05e.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:30:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 6.77
+   },
+   "wall_s": 6.77
+  },
+  {
+   "index": 10,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call10_place_and_route_b042ba47e05e.v",
+   "rtl_sha256": "b042ba47e05e9d8b0fe03cc0ff5cdf55a9f047fcc3286b5dc85a6687494cdae4",
+   "result": {
+    "submission": 2,
+    "remaining": 2,
+    "status": "OK",
+    "area_um2": 746.13,
+    "wns_ns": 7.48722,
+    "cells": 622,
+    "power_w": 9.9164e-05,
+    "score": 74.12607,
+    "score_minus_baseline": 0.0,
+    "evaluation_id": "d1e387017ed28e16",
+    "cache_hit": false
+   },
+   "wall_s": 46.58
+  },
+  {
+   "index": 11,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call11_estimate_ppa_0c6b32b39ef9.v",
+   "rtl_sha256": "0c6b32b39ef9eac88b4e54a8e83a17dc79bc8017e2cb21da0298de99eb1056ac",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 671.384,
+    "estimated_wns_ns": 7.57073,
+    "estimated_reward": 75.035916,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 7.86
+   },
+   "wall_s": 7.86
+  },
+  {
+   "index": 12,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call12_simulate_0c6b32b39ef9.v",
+   "rtl_sha256": "0c6b32b39ef9eac88b4e54a8e83a17dc79bc8017e2cb21da0298de99eb1056ac",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-EOFNEWLINE: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call12_simulate_0c6b32b39ef9.v:29:10: Missing newline at end of file (POSIX 3.206).",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call12_simulate_0c6b32b39ef9.v:1:8: Filename 'call12_simulate_0c6b32b39ef9' does not match MODULE name: 'addpipe32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:3:8: Filename 'tb_addpipe32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call12_simulate_0c6b32b39ef9.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:30:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 6.13
+   },
+   "wall_s": 6.13
+  },
+  {
+   "index": 13,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call13_estimate_ppa_44b166b5187e.v",
+   "rtl_sha256": "44b166b5187e1033adde6cdd51084a12242dcc8a5df908452a5a0b1541f65ab1",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 671.384,
+    "estimated_wns_ns": 7.57073,
+    "estimated_reward": 75.035916,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 7.48
+   },
+   "wall_s": 7.48
+  },
+  {
+   "index": 14,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call14_simulate_44b166b5187e.v",
+   "rtl_sha256": "44b166b5187e1033adde6cdd51084a12242dcc8a5df908452a5a0b1541f65ab1",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-EOFNEWLINE: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call14_simulate_44b166b5187e.v:16:10: Missing newline at end of file (POSIX 3.206).",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call14_simulate_44b166b5187e.v:1:8: Filename 'call14_simulate_44b166b5187e' does not match MODULE name: 'addpipe32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:3:8: Filename 'tb_addpipe32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call14_simulate_44b166b5187e.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:30:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 5.9
+   },
+   "wall_s": 5.9
+  },
+  {
+   "index": 15,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call15_place_and_route_44b166b5187e.v",
+   "rtl_sha256": "44b166b5187e1033adde6cdd51084a12242dcc8a5df908452a5a0b1541f65ab1",
+   "result": {
+    "submission": 3,
+    "remaining": 1,
+    "status": "OK",
+    "area_um2": 746.13,
+    "wns_ns": 7.48722,
+    "cells": 622,
+    "power_w": 9.9164e-05,
+    "score": 74.12607,
+    "score_minus_baseline": 0.0,
+    "evaluation_id": "334577d4a00f580d",
+    "cache_hit": false
+   },
+   "wall_s": 47.77
+  },
+  {
+   "index": 16,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call16_estimate_ppa_9fa3bdfa470d.v",
+   "rtl_sha256": "9fa3bdfa470dfca07b59b5ece2da88b8ccde470eb011d787a6f7fb5968417b3f",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 671.384,
+    "estimated_wns_ns": 7.57073,
+    "estimated_reward": 75.035916,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 8.26
+   },
+   "wall_s": 8.26
+  },
+  {
+   "index": 17,
+   "tool": "simulate",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call17_simulate_9fa3bdfa470d.v",
+   "rtl_sha256": "9fa3bdfa470dfca07b59b5ece2da88b8ccde470eb011d787a6f7fb5968417b3f",
+   "result": {
+    "status": "PASS",
+    "output": "",
+    "lint_warnings": [
+     "%Warning-EOFNEWLINE: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call17_simulate_9fa3bdfa470d.v:23:10: Missing newline at end of file (POSIX 3.206).",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call17_simulate_9fa3bdfa470d.v:1:8: Filename 'call17_simulate_9fa3bdfa470d' does not match MODULE name: 'addpipe32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:3:8: Filename 'tb_addpipe32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call17_simulate_9fa3bdfa470d.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_addpipe32.sv:30:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 5.77
+   },
+   "wall_s": 5.77
+  },
+  {
+   "index": 18,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call18_prove_equivalence_9fa3bdfa470d.v",
+   "rtl_sha256": "9fa3bdfa470dfca07b59b5ece2da88b8ccde470eb011d787a6f7fb5968417b3f",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.31
+   },
+   "wall_s": 0.31
+  },
+  {
+   "index": 19,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/addpipe32__full_tools__claude-haiku-4-5__r2/call19_place_and_route_9fa3bdfa470d.v",
+   "rtl_sha256": "9fa3bdfa470dfca07b59b5ece2da88b8ccde470eb011d787a6f7fb5968417b3f",
+   "result": {
+    "submission": 4,
+    "remaining": 0,
+    "status": "OK",
+    "area_um2": 746.13,
+    "wns_ns": 7.48722,
+    "cells": 622,
+    "power_w": 9.9164e-05,
+    "score": 74.12607,
+    "score_minus_baseline": 0.0,
+    "evaluation_id": "107e2de9eb146916",
+    "cache_hit": false,
+    "note": "Budget exhausted; the episode will end."
+   },
+   "wall_s": 49.65
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 11773,
+  "cache_read_input_tokens": 121237,
+  "input_tokens": 9196,
+  "output_tokens": 6481
+ },
+ "cost_usd": 0.0684,
+ "wall_s": 321.3
+}

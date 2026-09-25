@@ -1,0 +1,11 @@
+{
+ "label": "popcount32 baseline",
+ "benchmark": "popcount32",
+ "group": "popcount32",
+ "source": "rtl/popcount32/baseline.v",
+ "original": {
+  "area": 264.67,
+  "wns": 7.01636,
+  "reward": 69.89893
+ }
+}

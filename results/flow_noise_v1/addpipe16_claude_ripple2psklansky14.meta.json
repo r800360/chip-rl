@@ -1,0 +1,11 @@
+{
+ "label": "addpipe16 Claude ripple2+Sklansky14",
+ "benchmark": "addpipe16",
+ "group": "adder16",
+ "source": "rtl/agent/claude_sonnet5_history16/attempt_014_addpipe16_ripple2_sklansky14.v",
+ "original": {
+  "area": 319.732,
+  "wns": 7.57096,
+  "reward": 75.389868
+ }
+}

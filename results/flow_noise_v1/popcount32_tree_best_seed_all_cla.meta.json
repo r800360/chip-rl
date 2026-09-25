@@ -1,0 +1,11 @@
+{
+ "label": "popcount32_tree best seed (all CLA)",
+ "benchmark": "popcount32_tree",
+ "group": "oneflip",
+ "source": "rtl/generated/popcount32_tree_arch_seed/mask_7fffffff.v",
+ "original": {
+  "area": 384.636,
+  "wns": 7.18593,
+  "reward": 71.474664
+ }
+}

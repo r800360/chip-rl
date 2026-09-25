@@ -1,0 +1,11 @@
+{
+ "label": "popcount32 Sonnet LUT tree",
+ "benchmark": "popcount32",
+ "group": "popcount32",
+ "source": "rtl/agentic_eval_v1/popcount32__full_tools__claude-sonnet-5__r3/call13_place_and_route_8fa33f8882bd.v",
+ "original": {
+  "area": 317.072,
+  "wns": 7.14125,
+  "reward": 71.095428
+ }
+}

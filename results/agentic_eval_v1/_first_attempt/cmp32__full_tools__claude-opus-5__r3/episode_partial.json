@@ -1,0 +1,162 @@
+{
+ "episode_id": "cmp32__full_tools__claude-opus-5__r3",
+ "model": "claude-opus-5",
+ "task": "cmp32",
+ "condition": "full_tools",
+ "rep": 3,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "baseline_score": 75.942274,
+ "best_known_score": 76.324358,
+ "best_score": null,
+ "best_minus_baseline": null,
+ "valid_submissions": 0,
+ "submissions": [],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 5,
+ "last_stop_reason": "tool_use",
+ "error": "API request failed; the episode stopped early and was rerun from scratch (results/agentic_eval_v1/cmp32__full_tools__claude-opus-5__r3/)",
+ "tool_counts": {
+  "estimate_ppa": 8
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/cmp32__full_tools__claude-opus-5__r3/call00_estimate_ppa_edac5c15cc21.v",
+   "rtl_sha256": "edac5c15cc216eeea1bfcac30194caec5fb603bdf33e014bac781f69b613130f",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 179.284,
+    "estimated_wns_ns": 7.66465,
+    "estimated_reward": 76.467216,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.8
+   },
+   "wall_s": 4.8
+  },
+  {
+   "index": 1,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/cmp32__full_tools__claude-opus-5__r3/call01_estimate_ppa_12bc8c446d51.v",
+   "rtl_sha256": "12bc8c446d517e44de17eebb73cfcc6dc5b2693da884d29e32e2958c4426cd05",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 179.018,
+    "estimated_wns_ns": 7.67355,
+    "estimated_reward": 76.556482,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.8
+   },
+   "wall_s": 4.8
+  },
+  {
+   "index": 2,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/cmp32__full_tools__claude-opus-5__r3/call02_estimate_ppa_bfea788af46f.v",
+   "rtl_sha256": "bfea788af46f778455fa3fbc4110abd124dfb12248537b820b92dcb91c20d4a7",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 13.3,
+    "estimated_wns_ns": 7.87964,
+    "estimated_reward": 78.7831,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.81
+   },
+   "wall_s": 4.81
+  },
+  {
+   "index": 3,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/cmp32__full_tools__claude-opus-5__r3/call03_estimate_ppa_eb1864154d29.v",
+   "rtl_sha256": "eb1864154d29d0fd3c22dc37e6125e89a46c3cd4de8dd5cb28f163959c310b87",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 57.456,
+    "estimated_wns_ns": 7.74586,
+    "estimated_reward": 77.401144,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.74
+   },
+   "wall_s": 4.74
+  },
+  {
+   "index": 4,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/cmp32__full_tools__claude-opus-5__r3/call04_estimate_ppa_c672fb7d7dcf.v",
+   "rtl_sha256": "c672fb7d7dcfbf324d038a2f82ef1f65b9d588f15a72b415a89f562d3d83d708",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 183.274,
+    "estimated_wns_ns": 7.62312,
+    "estimated_reward": 76.047926,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 6.38
+   },
+   "wall_s": 6.38
+  },
+  {
+   "index": 5,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/cmp32__full_tools__claude-opus-5__r3/call05_estimate_ppa_296cb68359a8.v",
+   "rtl_sha256": "296cb68359a85b5deb37b0404a70c2539d30bc2557746afb77ee73b0482a6ba0",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 180.88,
+    "estimated_wns_ns": 7.63849,
+    "estimated_reward": 76.20402,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.59
+   },
+   "wall_s": 5.59
+  },
+  {
+   "index": 6,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/cmp32__full_tools__claude-opus-5__r3/call06_estimate_ppa_38303e339126.v",
+   "rtl_sha256": "38303e3391268823845c374df5b97c2b5c4eee52f3d9d8c9360c9f7d4d99f0cc",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 188.86,
+    "estimated_wns_ns": 7.64724,
+    "estimated_reward": 76.28354,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.66
+   },
+   "wall_s": 4.66
+  },
+  {
+   "index": 7,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/_first_attempt/cmp32__full_tools__claude-opus-5__r3/call07_estimate_ppa_72882134cdf6.v",
+   "rtl_sha256": "72882134cdf6f46cf43785aa21ba429b6b14fcba154a59fef1c12db1675e9fb6",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 173.432,
+    "estimated_wns_ns": 7.70533,
+    "estimated_reward": 76.879868,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.93
+   },
+   "wall_s": 4.93
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 8762,
+  "cache_read_input_tokens": 18089,
+  "input_tokens": 8,
+  "output_tokens": 12604
+ },
+ "cost_usd": 0.3789,
+ "wall_s": 195.0
+}

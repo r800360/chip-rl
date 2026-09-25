@@ -1,0 +1,526 @@
+{
+ "episode_id": "priority32__full_tools__claude-opus-5__r1",
+ "model": "claude-opus-5",
+ "task": "priority32",
+ "condition": "full_tools",
+ "rep": 1,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "baseline_score": 76.24689,
+ "best_known_score": 76.735174,
+ "best_score": 76.443038,
+ "best_minus_baseline": 0.196148,
+ "valid_submissions": 4,
+ "submissions": [
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call13_place_and_route_85e79c1f898d.v",
+   "submission": 1,
+   "remaining": 3,
+   "status": "OK",
+   "area_um2": 198.436,
+   "wns_ns": 7.65298,
+   "cells": 260,
+   "power_w": 1.88247e-05,
+   "score": 76.331364,
+   "score_minus_baseline": 0.084474,
+   "evaluation_id": "f3cd0d591577e967",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call21_place_and_route_da9a4640b28a.v",
+   "submission": 2,
+   "remaining": 2,
+   "status": "OK",
+   "area_um2": 197.904,
+   "wns_ns": 7.6322,
+   "cells": 254,
+   "power_w": 1.83639e-05,
+   "score": 76.124096,
+   "score_minus_baseline": -0.122794,
+   "evaluation_id": "99bd32eaaaae4ffd",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call26_place_and_route_6d41ba8a905d.v",
+   "submission": 3,
+   "remaining": 1,
+   "status": "OK",
+   "area_um2": 201.362,
+   "wns_ns": 7.66444,
+   "cells": 262,
+   "power_w": 1.88296e-05,
+   "score": 76.443038,
+   "score_minus_baseline": 0.196148,
+   "evaluation_id": "8d762e266b90b61a",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call27_place_and_route_e0810fa34e46.v",
+   "submission": 4,
+   "remaining": 0,
+   "status": "OK",
+   "area_um2": 206.682,
+   "wns_ns": 7.64134,
+   "cells": 261,
+   "power_w": 1.89586e-05,
+   "score": 76.206718,
+   "score_minus_baseline": -0.040172,
+   "evaluation_id": "bbeb476baf7931de",
+   "cache_hit": false
+  }
+ ],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 14,
+ "last_stop_reason": "tool_use",
+ "error": null,
+ "tool_counts": {
+  "estimate_ppa": 20,
+  "prove_equivalence": 4,
+  "place_and_route": 4
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call00_estimate_ppa_28d038c57aeb.v",
+   "rtl_sha256": "28d038c57aeb3beaaa79ac2fe5efca12db75e04cbdd215ffd52429a286689378",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 152.152,
+    "estimated_wns_ns": 7.55563,
+    "estimated_reward": 75.404148,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.8
+   },
+   "wall_s": 4.8
+  },
+  {
+   "index": 1,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call01_estimate_ppa_cbd247c9e160.v",
+   "rtl_sha256": "cbd247c9e160bc8d0361536b3dfad0675141af397a289b628442c4f16b90e0d5",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 207.214,
+    "estimated_wns_ns": 7.6372,
+    "estimated_reward": 76.164786,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.95
+   },
+   "wall_s": 4.95
+  },
+  {
+   "index": 2,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call02_estimate_ppa_9f1b4ae90acc.v",
+   "rtl_sha256": "9f1b4ae90acc14a6f9fa7fc6c91cd730befdb38df78affc79311daec6b383d91",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 54.53,
+    "estimated_wns_ns": 7.85517,
+    "estimated_reward": 78.49717,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.87
+   },
+   "wall_s": 4.87
+  },
+  {
+   "index": 3,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call03_estimate_ppa_ae35ec5ee1be.v",
+   "rtl_sha256": "ae35ec5ee1be11b8192ec1c354a020f5a4ed4a99f48a3df35148a0095ca04ac2",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 134.064,
+    "estimated_wns_ns": 7.65095,
+    "estimated_reward": 76.375436,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.13
+   },
+   "wall_s": 5.13
+  },
+  {
+   "index": 4,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call04_estimate_ppa_d9e42ef15206.v",
+   "rtl_sha256": "d9e42ef1520682ea8ac3b03ac0427ed05fb0ced826655aa2e4d9c39808334eb2",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 125.286,
+    "estimated_wns_ns": 7.67536,
+    "estimated_reward": 76.628314,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 9.49
+   },
+   "wall_s": 9.49
+  },
+  {
+   "index": 5,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call05_estimate_ppa_71bbc82dcf3e.v",
+   "rtl_sha256": "71bbc82dcf3e4452877944b355495dbbec9abc0d729cc43ac3de7d92afb2a7a7",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 31.92,
+    "estimated_wns_ns": 7.78009,
+    "estimated_reward": 77.76898,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 6.31
+   },
+   "wall_s": 6.31
+  },
+  {
+   "index": 6,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call06_estimate_ppa_1dd859ada830.v",
+   "rtl_sha256": "1dd859ada8309792b89648ec750abbe3dc30ce42276ffd7c656e69ac9526195f",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 132.468,
+    "estimated_wns_ns": 7.71998,
+    "estimated_reward": 77.067332,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 9.57
+   },
+   "wall_s": 9.57
+  },
+  {
+   "index": 7,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call07_estimate_ppa_ae39df49bb83.v",
+   "rtl_sha256": "ae39df49bb83a57d3918aebd7ad683e2e0f60d59cc7356d1b4349e24a175595c",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 126.084,
+    "estimated_wns_ns": 7.67267,
+    "estimated_reward": 76.600616,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 6.65
+   },
+   "wall_s": 6.66
+  },
+  {
+   "index": 8,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call08_prove_equivalence_85e79c1f898d.v",
+   "rtl_sha256": "85e79c1f898d34dc2a34cd49d3e1f1acda660586dc8932b8522c100c4618f528",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.24
+   },
+   "wall_s": 0.24
+  },
+  {
+   "index": 9,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call09_estimate_ppa_5c2854f2adb4.v",
+   "rtl_sha256": "5c2854f2adb412b528dc2f9d5e3e7016fb4d6d626ed3fe45aa3b6eb6ee410a14",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 126.616,
+    "estimated_wns_ns": 7.62491,
+    "estimated_reward": 76.122484,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.79
+   },
+   "wall_s": 4.8
+  },
+  {
+   "index": 10,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call10_estimate_ppa_97453e026817.v",
+   "rtl_sha256": "97453e026817675dd40de77107822c63a8e7d4b5e7b449d598121b8beec09814",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 135.926,
+    "estimated_wns_ns": 7.66415,
+    "estimated_reward": 76.505574,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.78
+   },
+   "wall_s": 4.78
+  },
+  {
+   "index": 11,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call11_estimate_ppa_0e08667ce946.v",
+   "rtl_sha256": "0e08667ce946d3384da13cc366f8ba79890815b883fcf54261d6b2b98a9bf179",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 133.0,
+    "estimated_wns_ns": 7.66338,
+    "estimated_reward": 76.5008,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.92
+   },
+   "wall_s": 4.92
+  },
+  {
+   "index": 12,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call12_estimate_ppa_1157cf9743d7.v",
+   "rtl_sha256": "1157cf9743d74c220328741ec1b0c1df9654a1ecc9cdfed7ea39bc2475e40b8c",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 189.924,
+    "estimated_wns_ns": 7.60002,
+    "estimated_reward": 75.810276,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.04
+   },
+   "wall_s": 5.04
+  },
+  {
+   "index": 13,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call13_place_and_route_85e79c1f898d.v",
+   "rtl_sha256": "85e79c1f898d34dc2a34cd49d3e1f1acda660586dc8932b8522c100c4618f528",
+   "result": {
+    "submission": 1,
+    "remaining": 3,
+    "status": "OK",
+    "area_um2": 198.436,
+    "wns_ns": 7.65298,
+    "cells": 260,
+    "power_w": 1.88247e-05,
+    "score": 76.331364,
+    "score_minus_baseline": 0.084474,
+    "evaluation_id": "f3cd0d591577e967",
+    "cache_hit": false
+   },
+   "wall_s": 27.92
+  },
+  {
+   "index": 14,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call14_estimate_ppa_1d1d9180b833.v",
+   "rtl_sha256": "1d1d9180b83385208c799a1f152dfbc04abcf232a793744b6dd6eb35ec988fcd",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 135.128,
+    "estimated_wns_ns": 7.71172,
+    "estimated_reward": 76.982072,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 5.51
+   },
+   "wall_s": 5.51
+  },
+  {
+   "index": 15,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call15_estimate_ppa_6d41ba8a905d.v",
+   "rtl_sha256": "6d41ba8a905ddbc3c03029c52100434bbe2c31014b0ec344bd3cf61eb23e3adc",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 133.0,
+    "estimated_wns_ns": 7.72011,
+    "estimated_reward": 77.0681,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.66
+   },
+   "wall_s": 4.66
+  },
+  {
+   "index": 16,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call16_estimate_ppa_e1e8415c8d9c.v",
+   "rtl_sha256": "e1e8415c8d9c5cb0eb1428cec7f03800e3683c7ba90b2f8ae5c27125bdc74de8",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 129.276,
+    "estimated_wns_ns": 7.62424,
+    "estimated_reward": 76.113124,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.69
+   },
+   "wall_s": 4.69
+  },
+  {
+   "index": 17,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call17_estimate_ppa_6c443b067e80.v",
+   "rtl_sha256": "6c443b067e804572ce124005e8700e16e37230b9f6ae7fa6cdeef8fc1642d2b8",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 128.478,
+    "estimated_wns_ns": 7.71795,
+    "estimated_reward": 77.051022,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.6
+   },
+   "wall_s": 4.6
+  },
+  {
+   "index": 18,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call18_prove_equivalence_da9a4640b28a.v",
+   "rtl_sha256": "da9a4640b28aa54f2fe40194e5a48a19fc253cc3348968c42ca5c2e5152f2f1e",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.23
+   },
+   "wall_s": 0.23
+  },
+  {
+   "index": 19,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call19_estimate_ppa_960936c86557.v",
+   "rtl_sha256": "960936c865576a2442ffa5c5231a34ad7ad769f7e0776263af3fb61a487aad81",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 135.394,
+    "estimated_wns_ns": 7.68291,
+    "estimated_reward": 76.693706,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.77
+   },
+   "wall_s": 4.77
+  },
+  {
+   "index": 20,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call20_estimate_ppa_31adde6b068c.v",
+   "rtl_sha256": "31adde6b068c5031d76f80b51754e1120316a6c7f7ab284345826c8b18b96063",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 135.394,
+    "estimated_wns_ns": 7.68291,
+    "estimated_reward": 76.693706,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.79
+   },
+   "wall_s": 4.79
+  },
+  {
+   "index": 21,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call21_place_and_route_da9a4640b28a.v",
+   "rtl_sha256": "da9a4640b28aa54f2fe40194e5a48a19fc253cc3348968c42ca5c2e5152f2f1e",
+   "result": {
+    "submission": 2,
+    "remaining": 2,
+    "status": "OK",
+    "area_um2": 197.904,
+    "wns_ns": 7.6322,
+    "cells": 254,
+    "power_w": 1.83639e-05,
+    "score": 76.124096,
+    "score_minus_baseline": -0.122794,
+    "evaluation_id": "99bd32eaaaae4ffd",
+    "cache_hit": false
+   },
+   "wall_s": 37.6
+  },
+  {
+   "index": 22,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call22_estimate_ppa_dd70d7d15b03.v",
+   "rtl_sha256": "dd70d7d15b033a1f4de6fbb35972ada9903246cc51030e43d8047636c8b35287",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 140.448,
+    "estimated_wns_ns": 7.71167,
+    "estimated_reward": 76.976252,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.7
+   },
+   "wall_s": 4.7
+  },
+  {
+   "index": 23,
+   "tool": "estimate_ppa",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call23_estimate_ppa_1b1507787c85.v",
+   "rtl_sha256": "1b1507787c85ea9d708a19c3083adcbaae9de3b6658acbd5a0e05d70cef271bb",
+   "result": {
+    "status": "OK",
+    "estimated_area_um2": 138.852,
+    "estimated_wns_ns": 7.71868,
+    "estimated_reward": 77.047948,
+    "note": "Pre-placement estimate (no placement, buffering or routing).",
+    "runtime_s": 4.7
+   },
+   "wall_s": 4.7
+  },
+  {
+   "index": 24,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call24_prove_equivalence_6d41ba8a905d.v",
+   "rtl_sha256": "6d41ba8a905ddbc3c03029c52100434bbe2c31014b0ec344bd3cf61eb23e3adc",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.24
+   },
+   "wall_s": 0.24
+  },
+  {
+   "index": 25,
+   "tool": "prove_equivalence",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call25_prove_equivalence_e0810fa34e46.v",
+   "rtl_sha256": "e0810fa34e46932fcb32367c60be3dc332d8c29ed6d4f5ac71b0cd8572c45107",
+   "result": {
+    "status": "PROVEN",
+    "runtime_s": 0.23
+   },
+   "wall_s": 0.23
+  },
+  {
+   "index": 26,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call26_place_and_route_6d41ba8a905d.v",
+   "rtl_sha256": "6d41ba8a905ddbc3c03029c52100434bbe2c31014b0ec344bd3cf61eb23e3adc",
+   "result": {
+    "submission": 3,
+    "remaining": 1,
+    "status": "OK",
+    "area_um2": 201.362,
+    "wns_ns": 7.66444,
+    "cells": 262,
+    "power_w": 1.88296e-05,
+    "score": 76.443038,
+    "score_minus_baseline": 0.196148,
+    "evaluation_id": "8d762e266b90b61a",
+    "cache_hit": false
+   },
+   "wall_s": 28.53
+  },
+  {
+   "index": 27,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__full_tools__claude-opus-5__r1/call27_place_and_route_e0810fa34e46.v",
+   "rtl_sha256": "e0810fa34e46932fcb32367c60be3dc332d8c29ed6d4f5ac71b0cd8572c45107",
+   "result": {
+    "submission": 4,
+    "remaining": 0,
+    "status": "OK",
+    "area_um2": 206.682,
+    "wns_ns": 7.64134,
+    "cells": 261,
+    "power_w": 1.89586e-05,
+    "score": 76.206718,
+    "score_minus_baseline": -0.040172,
+    "evaluation_id": "bbeb476baf7931de",
+    "cache_hit": false,
+    "note": "Budget exhausted; the episode will end."
+   },
+   "wall_s": 31.49
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 87281,
+  "cache_read_input_tokens": 550338,
+  "input_tokens": 28,
+  "output_tokens": 83664
+ },
+ "cost_usd": 2.9124,
+ "wall_s": 1182.3
+}

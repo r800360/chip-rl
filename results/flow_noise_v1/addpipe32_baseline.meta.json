@@ -1,0 +1,11 @@
+{
+ "label": "addpipe32 baseline",
+ "benchmark": "addpipe32",
+ "group": "adder32",
+ "source": "rtl/addpipe32/baseline.v",
+ "original": {
+  "area": 746.13,
+  "wns": 7.48722,
+  "reward": 74.12607
+ }
+}

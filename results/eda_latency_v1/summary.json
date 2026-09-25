@@ -1,0 +1,47 @@
+{
+  "designs": 32,
+  "cpu_count": 22,
+  "all_runs_identical_to_frozen": false,
+  "median_seconds_single_worker": {
+    "total": 23.250500000000002,
+    "verilator_build_and_sim": 4.2005,
+    "formal_equivalence": 0.2345,
+    "orfs_wall": 18.695,
+    "orfs_tool_time_in_logs": 10.325,
+    "orfs_overhead": 8.347000000000001,
+    "stage_synth": 0.73,
+    "stage_floorplan": 1.0,
+    "stage_global_place": 1.255,
+    "stage_detailed_place": 0.59,
+    "stage_cts": 0.865,
+    "stage_global_route": 1.245,
+    "stage_final": 4.755
+  },
+  "throughput": {
+    "1": {
+      "wall_s": 767.89,
+      "designs_per_hour": 150.0,
+      "speedup": 1.0
+    },
+    "2": {
+      "wall_s": 440.86,
+      "designs_per_hour": 261.3,
+      "speedup": 1.74
+    },
+    "4": {
+      "wall_s": 276.59,
+      "designs_per_hour": 416.5,
+      "speedup": 2.78
+    },
+    "8": {
+      "wall_s": 206.4,
+      "designs_per_hour": 558.1,
+      "speedup": 3.72
+    },
+    "16": {
+      "wall_s": 166.81,
+      "designs_per_hour": 690.6,
+      "speedup": 4.6
+    }
+  }
+}

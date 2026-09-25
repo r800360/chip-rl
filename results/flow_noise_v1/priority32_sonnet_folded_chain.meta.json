@@ -1,0 +1,11 @@
+{
+ "label": "priority32 Sonnet folded chain",
+ "benchmark": "priority32",
+ "group": "priority32",
+ "source": "rtl/agentic_eval_v1/priority32__full_tools__claude-sonnet-5__r1/call06_place_and_route_03912a166c13.v",
+ "original": {
+  "area": 205.352,
+  "wns": 7.6883,
+  "reward": 76.677648
+ }
+}

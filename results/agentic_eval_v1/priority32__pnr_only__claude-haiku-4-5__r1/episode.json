@@ -1,0 +1,198 @@
+{
+ "episode_id": "priority32__pnr_only__claude-haiku-4-5__r1",
+ "model": "claude-haiku-4-5",
+ "task": "priority32",
+ "condition": "pnr_only",
+ "rep": 1,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "enabled",
+   "budget_tokens": 8000
+  }
+ },
+ "baseline_score": 76.24689,
+ "best_known_score": 76.735174,
+ "best_score": 76.24689,
+ "best_minus_baseline": 0.0,
+ "valid_submissions": 2,
+ "submissions": [
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call00_place_and_route_40008230fb7b.v",
+   "submission": 1,
+   "remaining": 3,
+   "status": "OK",
+   "area_um2": 219.45,
+   "wns_ns": 7.62406,
+   "cells": 267,
+   "power_w": 1.94545e-05,
+   "score": 76.02115,
+   "score_minus_baseline": -0.22574,
+   "evaluation_id": "a743b589ffc43e20",
+   "cache_hit": false
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v",
+   "submission": 2,
+   "remaining": 2,
+   "status": "SIMULATION_FAILED",
+   "simulation": {
+    "status": "TEST_FAILED",
+    "output": "[66000] %Fatal: tb_priority32.sv:32: Assertion failed in TOP.tb.check: valid result mismatch: a=ffffffff b=00000001 got=37 expected=3f\n%Error: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:32: Verilog $stop\nAborting...",
+    "lint_warnings": [
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v:1:8: Filename 'call01_place_and_route_0355ab284ccf' does not match MODULE name: 'priority32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-WIDTHTRUNC: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v:42:17: Operator ASSIGNW expects 5 bits on the Assign RHS, but Assign RHS's COND generates 6 bits.",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v:6:23: Signal is not used: 'b_i'",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 7.71
+   }
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v",
+   "submission": 3,
+   "remaining": 1,
+   "status": "SIMULATION_FAILED",
+   "simulation": {
+    "status": "TEST_FAILED",
+    "output": "[66000] %Fatal: tb_priority32.sv:32: Assertion failed in TOP.tb.check: valid result mismatch: a=ffffffff b=00000001 got=27 expected=3f\n%Error: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:32: Verilog $stop\nAborting...",
+    "lint_warnings": [
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v:1:8: Filename 'call02_place_and_route_991261c7a5e2' does not match MODULE name: 'priority32'",
+     "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+     "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+     "%Warning-WIDTHEXPAND: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v:43:32: Operator COND expects 5 bits on the Conditional False, but Conditional False's REPLICATE generates 4 bits.",
+     "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v:6:23: Signal is not used: 'b_i'",
+     "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+    ],
+    "runtime_s": 7.88
+   }
+  },
+  {
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call03_place_and_route_bee5f80db233.v",
+   "submission": 4,
+   "remaining": 0,
+   "status": "OK",
+   "area_um2": 208.81,
+   "wns_ns": 7.64557,
+   "cells": 266,
+   "power_w": 1.92811e-05,
+   "score": 76.24689,
+   "score_minus_baseline": 0.0,
+   "evaluation_id": "080c3a26fde4ee81",
+   "cache_hit": false
+  }
+ ],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 4,
+ "last_stop_reason": "tool_use",
+ "error": null,
+ "tool_counts": {
+  "place_and_route": 4
+ },
+ "calls": [
+  {
+   "index": 0,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call00_place_and_route_40008230fb7b.v",
+   "rtl_sha256": "40008230fb7bdb9b20b6a1f9a300e8149838cbe7ac6570774c978d28ad28a875",
+   "result": {
+    "submission": 1,
+    "remaining": 3,
+    "status": "OK",
+    "area_um2": 219.45,
+    "wns_ns": 7.62406,
+    "cells": 267,
+    "power_w": 1.94545e-05,
+    "score": 76.02115,
+    "score_minus_baseline": -0.22574,
+    "evaluation_id": "a743b589ffc43e20",
+    "cache_hit": false
+   },
+   "wall_s": 40.3
+  },
+  {
+   "index": 1,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v",
+   "rtl_sha256": "0355ab284ccf1587334893506dc88035fbbdd9852486f77eefca000c54560d7e",
+   "result": {
+    "submission": 2,
+    "remaining": 2,
+    "status": "SIMULATION_FAILED",
+    "simulation": {
+     "status": "TEST_FAILED",
+     "output": "[66000] %Fatal: tb_priority32.sv:32: Assertion failed in TOP.tb.check: valid result mismatch: a=ffffffff b=00000001 got=37 expected=3f\n%Error: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:32: Verilog $stop\nAborting...",
+     "lint_warnings": [
+      "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v:1:8: Filename 'call01_place_and_route_0355ab284ccf' does not match MODULE name: 'priority32'",
+      "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+      "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+      "%Warning-WIDTHTRUNC: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v:42:17: Operator ASSIGNW expects 5 bits on the Assign RHS, but Assign RHS's COND generates 6 bits.",
+      "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call01_place_and_route_0355ab284ccf.v:6:23: Signal is not used: 'b_i'",
+      "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+     ],
+     "runtime_s": 7.71
+    }
+   },
+   "wall_s": 7.71
+  },
+  {
+   "index": 2,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v",
+   "rtl_sha256": "991261c7a5e2c664a63b8553cc5c81623818f825e55e21e73392a827416cad74",
+   "result": {
+    "submission": 3,
+    "remaining": 1,
+    "status": "SIMULATION_FAILED",
+    "simulation": {
+     "status": "TEST_FAILED",
+     "output": "[66000] %Fatal: tb_priority32.sv:32: Assertion failed in TOP.tb.check: valid result mismatch: a=ffffffff b=00000001 got=27 expected=3f\n%Error: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:32: Verilog $stop\nAborting...",
+     "lint_warnings": [
+      "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v:1:8: Filename 'call02_place_and_route_991261c7a5e2' does not match MODULE name: 'priority32'",
+      "%Warning-DECLFILENAME: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:2:8: Filename 'tb_priority32' does not match MODULE name: 'tb'",
+      "%Warning-TIMESCALEMOD: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)",
+      "%Warning-WIDTHEXPAND: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v:43:32: Operator COND expects 5 bits on the Conditional False, but Conditional False's REPLICATE generates 4 bits.",
+      "%Warning-UNUSEDSIGNAL: /home/rohan/fpga/chip-rl/rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call02_place_and_route_991261c7a5e2.v:6:23: Signal is not used: 'b_i'",
+      "%Warning-BLKSEQ: /home/rohan/fpga/chip-rl/sim/tb_priority32.sv:11:15: Blocking assignment '=' in sequential logic process"
+     ],
+     "runtime_s": 7.88
+    }
+   },
+   "wall_s": 7.88
+  },
+  {
+   "index": 3,
+   "tool": "place_and_route",
+   "rtl": "rtl/agentic_eval_v1/priority32__pnr_only__claude-haiku-4-5__r1/call03_place_and_route_bee5f80db233.v",
+   "rtl_sha256": "bee5f80db2330fe9dc7d7c8b75edd1a0cc08ab3685c01c10116c117dae076a30",
+   "result": {
+    "submission": 4,
+    "remaining": 0,
+    "status": "OK",
+    "area_um2": 208.81,
+    "wns_ns": 7.64557,
+    "cells": 266,
+    "power_w": 1.92811e-05,
+    "score": 76.24689,
+    "score_minus_baseline": 0.0,
+    "evaluation_id": "080c3a26fde4ee81",
+    "cache_hit": false,
+    "note": "Budget exhausted; the episode will end."
+   },
+   "wall_s": 42.31
+  }
+ ],
+ "usage": {
+  "cache_creation_input_tokens": 10348,
+  "cache_read_input_tokens": 15317,
+  "input_tokens": 1854,
+  "output_tokens": 7809
+ },
+ "cost_usd": 0.0554,
+ "wall_s": 163.8
+}

@@ -1,0 +1,3082 @@
+{
+ "1": {
+  "workers": 1,
+  "wall_s": 767.89,
+  "designs": 32,
+  "designs_per_hour": 150.0,
+  "rows": [
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 20.721,
+    "verilator_s": 3.695,
+    "formal_s": 0.207,
+    "orfs_s": 16.818,
+    "stage_s": {
+     "synth": 0.68,
+     "floorplan": 0.93,
+     "global_place": 1.18,
+     "detailed_place": 0.56,
+     "cts": 0.81,
+     "global_route": 0.69,
+     "final": 4.07
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 22.108,
+    "verilator_s": 3.957,
+    "formal_s": 0.21,
+    "orfs_s": 17.939,
+    "stage_s": {
+     "synth": 0.68,
+     "floorplan": 0.93,
+     "global_place": 1.14,
+     "detailed_place": 0.54,
+     "cts": 0.84,
+     "global_route": 1.26,
+     "final": 4.62
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 21.547,
+    "verilator_s": 3.945,
+    "formal_s": 0.234,
+    "orfs_s": 17.367,
+    "stage_s": {
+     "synth": 0.69,
+     "floorplan": 0.98,
+     "global_place": 1.24,
+     "detailed_place": 0.55,
+     "cts": 0.84,
+     "global_route": 0.95,
+     "final": 4.04
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 21.852,
+    "verilator_s": 4.099,
+    "formal_s": 0.225,
+    "orfs_s": 17.525,
+    "stage_s": {
+     "synth": 0.73,
+     "floorplan": 0.96,
+     "global_place": 1.22,
+     "detailed_place": 0.59,
+     "cts": 0.87,
+     "global_route": 0.75,
+     "final": 4.19
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 22.194,
+    "verilator_s": 3.992,
+    "formal_s": 0.204,
+    "orfs_s": 17.996,
+    "stage_s": {
+     "synth": 0.72,
+     "floorplan": 0.98,
+     "global_place": 1.17,
+     "detailed_place": 0.6,
+     "cts": 0.83,
+     "global_route": 1.0,
+     "final": 4.5
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.478,
+    "verilator_s": 4.236,
+    "formal_s": 0.231,
+    "orfs_s": 19.009,
+    "stage_s": {
+     "synth": 0.72,
+     "floorplan": 1.0,
+     "global_place": 1.23,
+     "detailed_place": 0.58,
+     "cts": 0.88,
+     "global_route": 1.34,
+     "final": 4.91
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.189,
+    "verilator_s": 4.062,
+    "formal_s": 0.206,
+    "orfs_s": 18.919,
+    "stage_s": {
+     "synth": 0.74,
+     "floorplan": 0.96,
+     "global_place": 1.38,
+     "detailed_place": 0.59,
+     "cts": 0.83,
+     "global_route": 1.28,
+     "final": 4.76
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_07_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 22.437,
+    "verilator_s": 4.246,
+    "formal_s": 0.235,
+    "orfs_s": 17.956,
+    "stage_s": {
+     "synth": 0.74,
+     "floorplan": 0.98,
+     "global_place": 1.28,
+     "detailed_place": 0.56,
+     "cts": 0.83,
+     "global_route": 0.73,
+     "final": 4.62
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.812,
+    "verilator_s": 4.219,
+    "formal_s": 0.229,
+    "orfs_s": 19.363,
+    "stage_s": {
+     "synth": 0.71,
+     "floorplan": 0.98,
+     "global_place": 1.22,
+     "detailed_place": 0.58,
+     "cts": 0.84,
+     "global_route": 1.43,
+     "final": 5.3
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.772,
+    "verilator_s": 4.171,
+    "formal_s": 0.252,
+    "orfs_s": 19.348,
+    "stage_s": {
+     "synth": 0.72,
+     "floorplan": 0.98,
+     "global_place": 1.21,
+     "detailed_place": 0.58,
+     "cts": 0.89,
+     "global_route": 1.37,
+     "final": 5.29
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.079,
+    "verilator_s": 4.142,
+    "formal_s": 0.237,
+    "orfs_s": 18.699,
+    "stage_s": {
+     "synth": 0.74,
+     "floorplan": 0.98,
+     "global_place": 1.25,
+     "detailed_place": 0.58,
+     "cts": 0.83,
+     "global_route": 1.38,
+     "final": 4.56
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.889,
+    "verilator_s": 4.196,
+    "formal_s": 0.236,
+    "orfs_s": 19.456,
+    "stage_s": {
+     "synth": 0.73,
+     "floorplan": 1.01,
+     "global_place": 1.27,
+     "detailed_place": 0.56,
+     "cts": 0.82,
+     "global_route": 1.23,
+     "final": 5.49
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 22.279,
+    "verilator_s": 4.188,
+    "formal_s": 0.224,
+    "orfs_s": 17.866,
+    "stage_s": {
+     "synth": 0.74,
+     "floorplan": 1.01,
+     "global_place": 1.33,
+     "detailed_place": 0.57,
+     "cts": 0.87,
+     "global_route": 0.72,
+     "final": 4.35
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.576,
+    "verilator_s": 4.286,
+    "formal_s": 0.219,
+    "orfs_s": 19.07,
+    "stage_s": {
+     "synth": 0.72,
+     "floorplan": 0.98,
+     "global_place": 1.26,
+     "detailed_place": 0.58,
+     "cts": 0.88,
+     "global_route": 1.28,
+     "final": 4.98
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 22.657,
+    "verilator_s": 4.205,
+    "formal_s": 0.257,
+    "orfs_s": 18.193,
+    "stage_s": {
+     "synth": 0.72,
+     "floorplan": 0.97,
+     "global_place": 1.26,
+     "detailed_place": 0.58,
+     "cts": 0.84,
+     "global_route": 0.9,
+     "final": 4.7
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 24.049,
+    "verilator_s": 4.375,
+    "formal_s": 0.253,
+    "orfs_s": 19.42,
+    "stage_s": {
+     "synth": 0.74,
+     "floorplan": 1.01,
+     "global_place": 1.23,
+     "detailed_place": 0.57,
+     "cts": 0.85,
+     "global_route": 1.35,
+     "final": 5.35
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.616,
+    "verilator_s": 4.186,
+    "formal_s": 0.228,
+    "orfs_s": 22.201,
+    "stage_s": {
+     "synth": 0.96,
+     "floorplan": 1.01,
+     "global_place": 1.41,
+     "detailed_place": 0.71,
+     "cts": 1.02,
+     "global_route": 1.43,
+     "final": 7.27
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 28.771,
+    "verilator_s": 4.154,
+    "formal_s": 0.222,
+    "orfs_s": 24.393,
+    "stage_s": {
+     "synth": 1.1,
+     "floorplan": 1.01,
+     "global_place": 1.46,
+     "detailed_place": 0.75,
+     "cts": 0.97,
+     "global_route": 2.15,
+     "final": 8.51
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.722,
+    "verilator_s": 4.35,
+    "formal_s": 0.231,
+    "orfs_s": 22.141,
+    "stage_s": {
+     "synth": 1.01,
+     "floorplan": 1.03,
+     "global_place": 1.42,
+     "detailed_place": 0.72,
+     "cts": 1.02,
+     "global_route": 1.46,
+     "final": 7.04
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 27.054,
+    "verilator_s": 4.462,
+    "formal_s": 0.232,
+    "orfs_s": 22.359,
+    "stage_s": {
+     "synth": 0.95,
+     "floorplan": 1.01,
+     "global_place": 1.41,
+     "detailed_place": 0.75,
+     "cts": 0.97,
+     "global_route": 1.48,
+     "final": 7.44
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.746,
+    "verilator_s": 4.127,
+    "formal_s": 0.227,
+    "orfs_s": 22.391,
+    "stage_s": {
+     "synth": 0.92,
+     "floorplan": 1.03,
+     "global_place": 1.36,
+     "detailed_place": 0.74,
+     "cts": 1.02,
+     "global_route": 1.99,
+     "final": 6.84
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 27.469,
+    "verilator_s": 4.342,
+    "formal_s": 0.229,
+    "orfs_s": 22.897,
+    "stage_s": {
+     "synth": 0.9,
+     "floorplan": 1.03,
+     "global_place": 1.37,
+     "detailed_place": 0.74,
+     "cts": 1.02,
+     "global_route": 1.92,
+     "final": 7.53
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.165,
+    "verilator_s": 4.414,
+    "formal_s": 0.253,
+    "orfs_s": 21.496,
+    "stage_s": {
+     "synth": 0.83,
+     "floorplan": 1.03,
+     "global_place": 1.39,
+     "detailed_place": 0.72,
+     "cts": 0.93,
+     "global_route": 1.34,
+     "final": 6.85
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 27.37,
+    "verilator_s": 4.221,
+    "formal_s": 0.246,
+    "orfs_s": 22.901,
+    "stage_s": {
+     "synth": 0.93,
+     "floorplan": 1.0,
+     "global_place": 1.43,
+     "detailed_place": 0.76,
+     "cts": 0.99,
+     "global_route": 1.93,
+     "final": 7.54
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 22.863,
+    "verilator_s": 4.304,
+    "formal_s": 0.393,
+    "orfs_s": 18.164,
+    "stage_s": {
+     "synth": 0.69,
+     "floorplan": 1.01,
+     "global_place": 1.24,
+     "detailed_place": 0.59,
+     "cts": 0.88,
+     "global_route": 0.93,
+     "final": 4.49
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 22.971,
+    "verilator_s": 4.218,
+    "formal_s": 0.436,
+    "orfs_s": 18.316,
+    "stage_s": {
+     "synth": 0.72,
+     "floorplan": 0.99,
+     "global_place": 1.23,
+     "detailed_place": 0.59,
+     "cts": 0.86,
+     "global_route": 1.01,
+     "final": 4.68
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_40000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 22.237,
+    "verilator_s": 4.257,
+    "formal_s": 0.426,
+    "orfs_s": 17.553,
+    "stage_s": {
+     "synth": 0.68,
+     "floorplan": 0.99,
+     "global_place": 1.26,
+     "detailed_place": 0.58,
+     "cts": 0.82,
+     "global_route": 0.94,
+     "final": 3.99
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_70000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 22.726,
+    "verilator_s": 4.061,
+    "formal_s": 0.396,
+    "orfs_s": 18.268,
+    "stage_s": {
+     "synth": 0.68,
+     "floorplan": 1.0,
+     "global_place": 1.23,
+     "detailed_place": 0.59,
+     "cts": 0.85,
+     "global_route": 0.99,
+     "final": 4.58
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7f000000.v",
+    "identical_to_frozen": false,
+    "runtime_s": 23.092,
+    "verilator_s": 4.066,
+    "formal_s": 0.42,
+    "orfs_s": 18.604,
+    "stage_s": {
+     "synth": 0.72,
+     "floorplan": 1.01,
+     "global_place": 1.23,
+     "detailed_place": 0.61,
+     "cts": 0.85,
+     "global_route": 1.01,
+     "final": 4.75
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_0000ffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.312,
+    "verilator_s": 4.276,
+    "formal_s": 0.454,
+    "orfs_s": 18.581,
+    "stage_s": {
+     "synth": 0.71,
+     "floorplan": 1.03,
+     "global_place": 1.18,
+     "detailed_place": 0.61,
+     "cts": 0.86,
+     "global_route": 0.93,
+     "final": 4.85
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_55555555.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.367,
+    "verilator_s": 4.271,
+    "formal_s": 0.403,
+    "orfs_s": 18.691,
+    "stage_s": {
+     "synth": 0.73,
+     "floorplan": 1.02,
+     "global_place": 1.26,
+     "detailed_place": 0.61,
+     "cts": 0.91,
+     "global_route": 1.08,
+     "final": 4.72
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 23.056,
+    "verilator_s": 4.135,
+    "formal_s": 0.404,
+    "orfs_s": 18.515,
+    "stage_s": {
+     "synth": 0.73,
+     "floorplan": 1.0,
+     "global_place": 1.24,
+     "detailed_place": 0.59,
+     "cts": 0.92,
+     "global_route": 1.0,
+     "final": 4.68
+    },
+    "cache_hit": false
+   }
+  ]
+ },
+ "2": {
+  "workers": 2,
+  "wall_s": 440.86,
+  "designs": 32,
+  "designs_per_hour": 261.3,
+  "rows": [
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 24.611,
+    "verilator_s": 4.522,
+    "formal_s": 0.222,
+    "orfs_s": 19.866,
+    "stage_s": {
+     "synth": 0.77,
+     "floorplan": 1.07,
+     "global_place": 1.5,
+     "detailed_place": 0.65,
+     "cts": 0.92,
+     "global_route": 1.01,
+     "final": 5.05
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 25.604,
+    "verilator_s": 4.522,
+    "formal_s": 0.227,
+    "orfs_s": 20.854,
+    "stage_s": {
+     "synth": 0.79,
+     "floorplan": 1.07,
+     "global_place": 1.46,
+     "detailed_place": 0.64,
+     "cts": 0.94,
+     "global_route": 1.63,
+     "final": 5.6
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 25.09,
+    "verilator_s": 4.591,
+    "formal_s": 0.207,
+    "orfs_s": 20.29,
+    "stage_s": {
+     "synth": 0.82,
+     "floorplan": 1.1,
+     "global_place": 1.41,
+     "detailed_place": 0.69,
+     "cts": 0.97,
+     "global_route": 1.16,
+     "final": 4.98
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 24.833,
+    "verilator_s": 4.617,
+    "formal_s": 0.222,
+    "orfs_s": 19.993,
+    "stage_s": {
+     "synth": 0.81,
+     "floorplan": 1.08,
+     "global_place": 1.41,
+     "detailed_place": 0.65,
+     "cts": 1.0,
+     "global_route": 0.88,
+     "final": 4.98
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 25.805,
+    "verilator_s": 4.594,
+    "formal_s": 0.223,
+    "orfs_s": 20.986,
+    "stage_s": {
+     "synth": 0.78,
+     "floorplan": 1.11,
+     "global_place": 1.32,
+     "detailed_place": 0.7,
+     "cts": 1.0,
+     "global_route": 1.26,
+     "final": 5.59
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.39,
+    "verilator_s": 4.613,
+    "formal_s": 0.228,
+    "orfs_s": 21.547,
+    "stage_s": {
+     "synth": 0.79,
+     "floorplan": 1.09,
+     "global_place": 1.45,
+     "detailed_place": 0.66,
+     "cts": 1.02,
+     "global_route": 1.75,
+     "final": 5.61
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.064,
+    "verilator_s": 4.691,
+    "formal_s": 0.232,
+    "orfs_s": 21.14,
+    "stage_s": {
+     "synth": 0.84,
+     "floorplan": 1.1,
+     "global_place": 1.41,
+     "detailed_place": 0.68,
+     "cts": 0.99,
+     "global_route": 1.44,
+     "final": 5.67
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_07_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 25.276,
+    "verilator_s": 4.712,
+    "formal_s": 0.257,
+    "orfs_s": 20.306,
+    "stage_s": {
+     "synth": 0.82,
+     "floorplan": 1.12,
+     "global_place": 1.43,
+     "detailed_place": 0.66,
+     "cts": 1.08,
+     "global_route": 1.03,
+     "final": 5.17
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 27.158,
+    "verilator_s": 4.743,
+    "formal_s": 0.251,
+    "orfs_s": 22.163,
+    "stage_s": {
+     "synth": 0.8,
+     "floorplan": 1.11,
+     "global_place": 1.42,
+     "detailed_place": 0.67,
+     "cts": 0.98,
+     "global_route": 1.73,
+     "final": 6.39
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 27.036,
+    "verilator_s": 4.734,
+    "formal_s": 0.256,
+    "orfs_s": 22.044,
+    "stage_s": {
+     "synth": 0.79,
+     "floorplan": 1.13,
+     "global_place": 1.42,
+     "detailed_place": 0.65,
+     "cts": 1.0,
+     "global_route": 2.12,
+     "final": 5.9
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.275,
+    "verilator_s": 4.671,
+    "formal_s": 0.267,
+    "orfs_s": 21.335,
+    "stage_s": {
+     "synth": 0.78,
+     "floorplan": 1.09,
+     "global_place": 1.36,
+     "detailed_place": 0.65,
+     "cts": 0.95,
+     "global_route": 1.9,
+     "final": 5.33
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 27.106,
+    "verilator_s": 4.683,
+    "formal_s": 0.244,
+    "orfs_s": 22.178,
+    "stage_s": {
+     "synth": 0.78,
+     "floorplan": 1.11,
+     "global_place": 1.42,
+     "detailed_place": 0.65,
+     "cts": 1.03,
+     "global_route": 1.81,
+     "final": 6.35
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 25.105,
+    "verilator_s": 4.77,
+    "formal_s": 0.268,
+    "orfs_s": 20.066,
+    "stage_s": {
+     "synth": 0.84,
+     "floorplan": 1.09,
+     "global_place": 1.44,
+     "detailed_place": 0.68,
+     "cts": 0.95,
+     "global_route": 0.83,
+     "final": 5.21
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.22,
+    "verilator_s": 4.759,
+    "formal_s": 0.256,
+    "orfs_s": 21.203,
+    "stage_s": {
+     "synth": 0.85,
+     "floorplan": 1.12,
+     "global_place": 1.41,
+     "detailed_place": 0.66,
+     "cts": 0.95,
+     "global_route": 1.8,
+     "final": 5.49
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.093,
+    "verilator_s": 4.782,
+    "formal_s": 0.251,
+    "orfs_s": 21.058,
+    "stage_s": {
+     "synth": 0.86,
+     "floorplan": 1.15,
+     "global_place": 1.41,
+     "detailed_place": 0.7,
+     "cts": 1.02,
+     "global_route": 1.07,
+     "final": 5.44
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.871,
+    "verilator_s": 4.84,
+    "formal_s": 0.269,
+    "orfs_s": 21.761,
+    "stage_s": {
+     "synth": 0.83,
+     "floorplan": 1.11,
+     "global_place": 1.39,
+     "detailed_place": 0.71,
+     "cts": 1.1,
+     "global_route": 1.59,
+     "final": 5.75
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 31.068,
+    "verilator_s": 4.682,
+    "formal_s": 0.245,
+    "orfs_s": 26.14,
+    "stage_s": {
+     "synth": 1.09,
+     "floorplan": 1.13,
+     "global_place": 1.55,
+     "detailed_place": 0.81,
+     "cts": 1.09,
+     "global_route": 1.79,
+     "final": 9.11
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 33.137,
+    "verilator_s": 4.607,
+    "formal_s": 0.242,
+    "orfs_s": 28.286,
+    "stage_s": {
+     "synth": 1.21,
+     "floorplan": 1.16,
+     "global_place": 1.67,
+     "detailed_place": 1.1,
+     "cts": 1.5,
+     "global_route": 2.64,
+     "final": 9.45
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 30.878,
+    "verilator_s": 4.777,
+    "formal_s": 0.251,
+    "orfs_s": 25.848,
+    "stage_s": {
+     "synth": 1.14,
+     "floorplan": 1.15,
+     "global_place": 1.61,
+     "detailed_place": 0.83,
+     "cts": 1.1,
+     "global_route": 1.76,
+     "final": 8.47
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 31.142,
+    "verilator_s": 4.663,
+    "formal_s": 0.228,
+    "orfs_s": 26.25,
+    "stage_s": {
+     "synth": 1.15,
+     "floorplan": 1.2,
+     "global_place": 1.93,
+     "detailed_place": 1.08,
+     "cts": 1.14,
+     "global_route": 1.73,
+     "final": 8.36
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 30.699,
+    "verilator_s": 4.697,
+    "formal_s": 0.256,
+    "orfs_s": 25.745,
+    "stage_s": {
+     "synth": 1.08,
+     "floorplan": 1.17,
+     "global_place": 1.46,
+     "detailed_place": 0.8,
+     "cts": 1.07,
+     "global_route": 2.2,
+     "final": 8.43
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 30.982,
+    "verilator_s": 4.743,
+    "formal_s": 0.243,
+    "orfs_s": 25.994,
+    "stage_s": {
+     "synth": 0.98,
+     "floorplan": 1.11,
+     "global_place": 1.84,
+     "detailed_place": 1.03,
+     "cts": 1.17,
+     "global_route": 2.18,
+     "final": 8.31
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 29.807,
+    "verilator_s": 4.589,
+    "formal_s": 0.248,
+    "orfs_s": 24.969,
+    "stage_s": {
+     "synth": 0.94,
+     "floorplan": 1.13,
+     "global_place": 1.53,
+     "detailed_place": 0.78,
+     "cts": 1.03,
+     "global_route": 1.59,
+     "final": 8.49
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 31.422,
+    "verilator_s": 4.688,
+    "formal_s": 0.259,
+    "orfs_s": 26.474,
+    "stage_s": {
+     "synth": 1.09,
+     "floorplan": 1.13,
+     "global_place": 2.65,
+     "detailed_place": 0.98,
+     "cts": 1.11,
+     "global_route": 2.22,
+     "final": 8.06
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 25.428,
+    "verilator_s": 4.741,
+    "formal_s": 0.437,
+    "orfs_s": 20.249,
+    "stage_s": {
+     "synth": 0.77,
+     "floorplan": 1.16,
+     "global_place": 1.33,
+     "detailed_place": 0.68,
+     "cts": 0.97,
+     "global_route": 0.99,
+     "final": 5.19
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 26.063,
+    "verilator_s": 4.772,
+    "formal_s": 0.486,
+    "orfs_s": 20.804,
+    "stage_s": {
+     "synth": 0.82,
+     "floorplan": 1.23,
+     "global_place": 1.39,
+     "detailed_place": 0.64,
+     "cts": 1.0,
+     "global_route": 1.22,
+     "final": 5.27
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_40000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 24.966,
+    "verilator_s": 4.904,
+    "formal_s": 0.458,
+    "orfs_s": 19.602,
+    "stage_s": {
+     "synth": 0.81,
+     "floorplan": 1.13,
+     "global_place": 1.34,
+     "detailed_place": 0.64,
+     "cts": 0.93,
+     "global_route": 1.0,
+     "final": 4.56
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_70000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 25.7,
+    "verilator_s": 4.747,
+    "formal_s": 0.426,
+    "orfs_s": 20.526,
+    "stage_s": {
+     "synth": 0.82,
+     "floorplan": 1.21,
+     "global_place": 1.34,
+     "detailed_place": 0.67,
+     "cts": 0.92,
+     "global_route": 1.15,
+     "final": 5.14
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7f000000.v",
+    "identical_to_frozen": false,
+    "runtime_s": 26.027,
+    "verilator_s": 4.894,
+    "formal_s": 0.463,
+    "orfs_s": 20.668,
+    "stage_s": {
+     "synth": 0.84,
+     "floorplan": 1.13,
+     "global_place": 1.36,
+     "detailed_place": 0.67,
+     "cts": 0.96,
+     "global_route": 1.21,
+     "final": 5.33
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_0000ffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 25.964,
+    "verilator_s": 4.713,
+    "formal_s": 0.493,
+    "orfs_s": 20.757,
+    "stage_s": {
+     "synth": 0.78,
+     "floorplan": 1.31,
+     "global_place": 1.31,
+     "detailed_place": 0.64,
+     "cts": 0.97,
+     "global_route": 1.03,
+     "final": 5.56
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_55555555.v",
+    "identical_to_frozen": true,
+    "runtime_s": 26.101,
+    "verilator_s": 4.882,
+    "formal_s": 0.401,
+    "orfs_s": 20.816,
+    "stage_s": {
+     "synth": 0.85,
+     "floorplan": 1.14,
+     "global_place": 1.42,
+     "detailed_place": 0.7,
+     "cts": 0.99,
+     "global_route": 1.17,
+     "final": 5.36
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 25.566,
+    "verilator_s": 4.874,
+    "formal_s": 0.465,
+    "orfs_s": 20.225,
+    "stage_s": {
+     "synth": 0.87,
+     "floorplan": 1.26,
+     "global_place": 1.34,
+     "detailed_place": 0.69,
+     "cts": 0.96,
+     "global_route": 1.14,
+     "final": 4.84
+    },
+    "cache_hit": false
+   }
+  ]
+ },
+ "4": {
+  "workers": 4,
+  "wall_s": 276.59,
+  "designs": 32,
+  "designs_per_hour": 416.5,
+  "rows": [
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 29.78,
+    "verilator_s": 5.16,
+    "formal_s": 0.253,
+    "orfs_s": 24.365,
+    "stage_s": {
+     "synth": 0.96,
+     "floorplan": 1.29,
+     "global_place": 1.97,
+     "detailed_place": 0.75,
+     "cts": 1.11,
+     "global_route": 1.63,
+     "final": 6.44
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 30.921,
+    "verilator_s": 5.311,
+    "formal_s": 0.258,
+    "orfs_s": 25.35,
+    "stage_s": {
+     "synth": 0.89,
+     "floorplan": 1.24,
+     "global_place": 1.94,
+     "detailed_place": 0.74,
+     "cts": 1.07,
+     "global_route": 2.7,
+     "final": 6.59
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 29.206,
+    "verilator_s": 4.863,
+    "formal_s": 0.24,
+    "orfs_s": 24.102,
+    "stage_s": {
+     "synth": 0.93,
+     "floorplan": 1.23,
+     "global_place": 1.82,
+     "detailed_place": 0.79,
+     "cts": 1.03,
+     "global_route": 1.87,
+     "final": 6.07
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 29.587,
+    "verilator_s": 4.758,
+    "formal_s": 0.241,
+    "orfs_s": 24.587,
+    "stage_s": {
+     "synth": 0.95,
+     "floorplan": 1.23,
+     "global_place": 1.85,
+     "detailed_place": 0.82,
+     "cts": 1.16,
+     "global_route": 1.68,
+     "final": 6.55
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 31.058,
+    "verilator_s": 5.404,
+    "formal_s": 0.25,
+    "orfs_s": 25.402,
+    "stage_s": {
+     "synth": 0.95,
+     "floorplan": 1.29,
+     "global_place": 1.73,
+     "detailed_place": 0.89,
+     "cts": 1.07,
+     "global_route": 1.87,
+     "final": 7.14
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 31.792,
+    "verilator_s": 5.528,
+    "formal_s": 0.25,
+    "orfs_s": 26.013,
+    "stage_s": {
+     "synth": 0.96,
+     "floorplan": 1.26,
+     "global_place": 1.83,
+     "detailed_place": 0.83,
+     "cts": 1.11,
+     "global_route": 2.38,
+     "final": 7.18
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 31.837,
+    "verilator_s": 5.372,
+    "formal_s": 0.226,
+    "orfs_s": 26.237,
+    "stage_s": {
+     "synth": 0.99,
+     "floorplan": 1.3,
+     "global_place": 1.85,
+     "detailed_place": 0.83,
+     "cts": 1.22,
+     "global_route": 2.46,
+     "final": 7.07
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_07_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 30.841,
+    "verilator_s": 5.327,
+    "formal_s": 0.251,
+    "orfs_s": 25.262,
+    "stage_s": {
+     "synth": 0.97,
+     "floorplan": 1.28,
+     "global_place": 1.91,
+     "detailed_place": 0.76,
+     "cts": 1.57,
+     "global_route": 1.51,
+     "final": 6.47
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 33.092,
+    "verilator_s": 5.551,
+    "formal_s": 0.269,
+    "orfs_s": 27.27,
+    "stage_s": {
+     "synth": 0.98,
+     "floorplan": 1.27,
+     "global_place": 1.86,
+     "detailed_place": 0.86,
+     "cts": 1.1,
+     "global_route": 2.16,
+     "final": 8.27
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.899,
+    "verilator_s": 5.602,
+    "formal_s": 0.281,
+    "orfs_s": 27.014,
+    "stage_s": {
+     "synth": 0.97,
+     "floorplan": 1.29,
+     "global_place": 1.91,
+     "detailed_place": 0.81,
+     "cts": 1.21,
+     "global_route": 2.75,
+     "final": 7.54
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.319,
+    "verilator_s": 5.723,
+    "formal_s": 0.249,
+    "orfs_s": 26.346,
+    "stage_s": {
+     "synth": 0.93,
+     "floorplan": 1.32,
+     "global_place": 1.97,
+     "detailed_place": 0.78,
+     "cts": 1.42,
+     "global_route": 2.84,
+     "final": 6.7
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.914,
+    "verilator_s": 5.27,
+    "formal_s": 0.273,
+    "orfs_s": 27.37,
+    "stage_s": {
+     "synth": 0.96,
+     "floorplan": 1.32,
+     "global_place": 1.97,
+     "detailed_place": 0.73,
+     "cts": 1.24,
+     "global_route": 2.6,
+     "final": 7.96
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 30.572,
+    "verilator_s": 5.378,
+    "formal_s": 0.286,
+    "orfs_s": 24.907,
+    "stage_s": {
+     "synth": 1.0,
+     "floorplan": 1.34,
+     "global_place": 1.86,
+     "detailed_place": 0.83,
+     "cts": 1.15,
+     "global_route": 0.95,
+     "final": 6.72
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.091,
+    "verilator_s": 5.55,
+    "formal_s": 0.284,
+    "orfs_s": 26.255,
+    "stage_s": {
+     "synth": 0.95,
+     "floorplan": 1.29,
+     "global_place": 1.77,
+     "detailed_place": 0.85,
+     "cts": 1.21,
+     "global_route": 2.3,
+     "final": 7.33
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 31.419,
+    "verilator_s": 5.904,
+    "formal_s": 0.295,
+    "orfs_s": 25.219,
+    "stage_s": {
+     "synth": 0.96,
+     "floorplan": 1.31,
+     "global_place": 1.72,
+     "detailed_place": 0.78,
+     "cts": 1.31,
+     "global_route": 1.88,
+     "final": 6.6
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.849,
+    "verilator_s": 5.829,
+    "formal_s": 0.257,
+    "orfs_s": 26.762,
+    "stage_s": {
+     "synth": 0.96,
+     "floorplan": 1.38,
+     "global_place": 1.83,
+     "detailed_place": 0.78,
+     "cts": 1.22,
+     "global_route": 2.69,
+     "final": 7.07
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 40.672,
+    "verilator_s": 5.592,
+    "formal_s": 0.253,
+    "orfs_s": 34.825,
+    "stage_s": {
+     "synth": 1.34,
+     "floorplan": 1.37,
+     "global_place": 2.0,
+     "detailed_place": 1.07,
+     "cts": 1.35,
+     "global_route": 2.14,
+     "final": 14.3
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 43.119,
+    "verilator_s": 5.433,
+    "formal_s": 0.272,
+    "orfs_s": 37.413,
+    "stage_s": {
+     "synth": 1.51,
+     "floorplan": 1.32,
+     "global_place": 1.95,
+     "detailed_place": 1.11,
+     "cts": 1.93,
+     "global_route": 4.92,
+     "final": 13.47
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 40.741,
+    "verilator_s": 5.45,
+    "formal_s": 0.262,
+    "orfs_s": 35.027,
+    "stage_s": {
+     "synth": 1.37,
+     "floorplan": 1.45,
+     "global_place": 2.15,
+     "detailed_place": 1.06,
+     "cts": 1.88,
+     "global_route": 3.94,
+     "final": 12.14
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 41.527,
+    "verilator_s": 5.756,
+    "formal_s": 0.257,
+    "orfs_s": 35.512,
+    "stage_s": {
+     "synth": 1.39,
+     "floorplan": 1.41,
+     "global_place": 1.97,
+     "detailed_place": 1.38,
+     "cts": 2.88,
+     "global_route": 3.6,
+     "final": 10.9
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 40.952,
+    "verilator_s": 5.818,
+    "formal_s": 0.287,
+    "orfs_s": 34.846,
+    "stage_s": {
+     "synth": 1.36,
+     "floorplan": 1.42,
+     "global_place": 1.88,
+     "detailed_place": 1.01,
+     "cts": 1.45,
+     "global_route": 3.02,
+     "final": 12.46
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 41.507,
+    "verilator_s": 5.809,
+    "formal_s": 0.286,
+    "orfs_s": 35.411,
+    "stage_s": {
+     "synth": 1.25,
+     "floorplan": 1.36,
+     "global_place": 1.9,
+     "detailed_place": 1.07,
+     "cts": 1.84,
+     "global_route": 3.47,
+     "final": 13.45
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 40.143,
+    "verilator_s": 5.962,
+    "formal_s": 0.311,
+    "orfs_s": 33.868,
+    "stage_s": {
+     "synth": 1.07,
+     "floorplan": 1.47,
+     "global_place": 2.06,
+     "detailed_place": 1.28,
+     "cts": 2.39,
+     "global_route": 3.31,
+     "final": 10.82
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 41.732,
+    "verilator_s": 5.993,
+    "formal_s": 0.299,
+    "orfs_s": 35.439,
+    "stage_s": {
+     "synth": 1.33,
+     "floorplan": 1.44,
+     "global_place": 2.3,
+     "detailed_place": 1.39,
+     "cts": 2.15,
+     "global_route": 4.69,
+     "final": 10.23
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.027,
+    "verilator_s": 5.624,
+    "formal_s": 0.474,
+    "orfs_s": 25.928,
+    "stage_s": {
+     "synth": 0.97,
+     "floorplan": 1.32,
+     "global_place": 1.59,
+     "detailed_place": 0.9,
+     "cts": 1.31,
+     "global_route": 1.31,
+     "final": 7.07
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 32.702,
+    "verilator_s": 5.704,
+    "formal_s": 0.576,
+    "orfs_s": 26.42,
+    "stage_s": {
+     "synth": 0.99,
+     "floorplan": 1.39,
+     "global_place": 1.74,
+     "detailed_place": 0.9,
+     "cts": 1.32,
+     "global_route": 1.69,
+     "final": 7.11
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_40000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 31.35,
+    "verilator_s": 5.411,
+    "formal_s": 0.53,
+    "orfs_s": 25.407,
+    "stage_s": {
+     "synth": 0.96,
+     "floorplan": 1.39,
+     "global_place": 1.79,
+     "detailed_place": 0.95,
+     "cts": 1.45,
+     "global_route": 1.56,
+     "final": 6.17
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_70000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.666,
+    "verilator_s": 6.088,
+    "formal_s": 0.502,
+    "orfs_s": 26.075,
+    "stage_s": {
+     "synth": 0.98,
+     "floorplan": 1.47,
+     "global_place": 1.79,
+     "detailed_place": 0.95,
+     "cts": 1.54,
+     "global_route": 1.67,
+     "final": 6.1
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7f000000.v",
+    "identical_to_frozen": false,
+    "runtime_s": 32.691,
+    "verilator_s": 5.649,
+    "formal_s": 0.521,
+    "orfs_s": 26.519,
+    "stage_s": {
+     "synth": 1.09,
+     "floorplan": 1.34,
+     "global_place": 1.68,
+     "detailed_place": 0.9,
+     "cts": 1.26,
+     "global_route": 1.46,
+     "final": 7.32
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_0000ffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.976,
+    "verilator_s": 6.104,
+    "formal_s": 0.563,
+    "orfs_s": 26.307,
+    "stage_s": {
+     "synth": 0.95,
+     "floorplan": 1.38,
+     "global_place": 1.81,
+     "detailed_place": 0.82,
+     "cts": 1.43,
+     "global_route": 1.51,
+     "final": 7.14
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_55555555.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.553,
+    "verilator_s": 5.617,
+    "formal_s": 0.503,
+    "orfs_s": 26.433,
+    "stage_s": {
+     "synth": 1.01,
+     "floorplan": 1.5,
+     "global_place": 1.83,
+     "detailed_place": 1.01,
+     "cts": 1.56,
+     "global_route": 1.83,
+     "final": 6.65
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 32.267,
+    "verilator_s": 5.719,
+    "formal_s": 0.521,
+    "orfs_s": 26.025,
+    "stage_s": {
+     "synth": 1.09,
+     "floorplan": 1.58,
+     "global_place": 1.77,
+     "detailed_place": 1.04,
+     "cts": 1.51,
+     "global_route": 1.74,
+     "final": 6.01
+    },
+    "cache_hit": false
+   }
+  ]
+ },
+ "8": {
+  "workers": 8,
+  "wall_s": 206.4,
+  "designs": 32,
+  "designs_per_hour": 558.1,
+  "rows": [
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 44.301,
+    "verilator_s": 6.858,
+    "formal_s": 0.308,
+    "orfs_s": 37.133,
+    "stage_s": {
+     "synth": 1.34,
+     "floorplan": 1.73,
+     "global_place": 2.99,
+     "detailed_place": 1.4,
+     "cts": 1.66,
+     "global_route": 2.25,
+     "final": 10.53
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 46.398,
+    "verilator_s": 6.836,
+    "formal_s": 0.293,
+    "orfs_s": 39.267,
+    "stage_s": {
+     "synth": 1.43,
+     "floorplan": 2.02,
+     "global_place": 3.16,
+     "detailed_place": 1.2,
+     "cts": 1.53,
+     "global_route": 3.85,
+     "final": 11.85
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 44.303,
+    "verilator_s": 6.876,
+    "formal_s": 0.299,
+    "orfs_s": 37.126,
+    "stage_s": {
+     "synth": 1.53,
+     "floorplan": 1.76,
+     "global_place": 3.3,
+     "detailed_place": 1.2,
+     "cts": 2.12,
+     "global_route": 3.24,
+     "final": 9.34
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 46.043,
+    "verilator_s": 8.79,
+    "formal_s": 0.305,
+    "orfs_s": 36.947,
+    "stage_s": {
+     "synth": 1.6,
+     "floorplan": 2.04,
+     "global_place": 3.11,
+     "detailed_place": 1.07,
+     "cts": 2.58,
+     "global_route": 2.51,
+     "final": 8.68
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 45.813,
+    "verilator_s": 7.184,
+    "formal_s": 0.309,
+    "orfs_s": 38.318,
+    "stage_s": {
+     "synth": 1.47,
+     "floorplan": 1.73,
+     "global_place": 3.11,
+     "detailed_place": 1.33,
+     "cts": 1.69,
+     "global_route": 3.53,
+     "final": 11.14
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 46.714,
+    "verilator_s": 7.641,
+    "formal_s": 0.325,
+    "orfs_s": 38.746,
+    "stage_s": {
+     "synth": 1.25,
+     "floorplan": 1.89,
+     "global_place": 3.15,
+     "detailed_place": 1.22,
+     "cts": 1.68,
+     "global_route": 4.31,
+     "final": 11.01
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 46.898,
+    "verilator_s": 7.368,
+    "formal_s": 0.321,
+    "orfs_s": 39.207,
+    "stage_s": {
+     "synth": 1.39,
+     "floorplan": 1.7,
+     "global_place": 3.26,
+     "detailed_place": 1.15,
+     "cts": 1.96,
+     "global_route": 3.89,
+     "final": 10.96
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_07_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 46.826,
+    "verilator_s": 8.535,
+    "formal_s": 0.304,
+    "orfs_s": 37.985,
+    "stage_s": {
+     "synth": 1.54,
+     "floorplan": 1.95,
+     "global_place": 2.95,
+     "detailed_place": 1.09,
+     "cts": 2.07,
+     "global_route": 2.42,
+     "final": 10.15
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 48.762,
+    "verilator_s": 7.963,
+    "formal_s": 0.356,
+    "orfs_s": 40.44,
+    "stage_s": {
+     "synth": 1.41,
+     "floorplan": 1.81,
+     "global_place": 2.92,
+     "detailed_place": 1.34,
+     "cts": 1.73,
+     "global_route": 3.86,
+     "final": 12.95
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 49.542,
+    "verilator_s": 8.497,
+    "formal_s": 0.372,
+    "orfs_s": 40.67,
+    "stage_s": {
+     "synth": 1.6,
+     "floorplan": 1.81,
+     "global_place": 3.12,
+     "detailed_place": 1.25,
+     "cts": 1.91,
+     "global_route": 4.11,
+     "final": 11.67
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 46.777,
+    "verilator_s": 7.322,
+    "formal_s": 0.336,
+    "orfs_s": 39.117,
+    "stage_s": {
+     "synth": 1.47,
+     "floorplan": 1.73,
+     "global_place": 3.03,
+     "detailed_place": 1.45,
+     "cts": 1.56,
+     "global_route": 3.49,
+     "final": 11.31
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 49.38,
+    "verilator_s": 7.498,
+    "formal_s": 0.358,
+    "orfs_s": 41.522,
+    "stage_s": {
+     "synth": 1.32,
+     "floorplan": 1.87,
+     "global_place": 3.31,
+     "detailed_place": 1.13,
+     "cts": 1.59,
+     "global_route": 4.42,
+     "final": 12.66
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 45.847,
+    "verilator_s": 7.348,
+    "formal_s": 0.372,
+    "orfs_s": 38.126,
+    "stage_s": {
+     "synth": 1.33,
+     "floorplan": 1.92,
+     "global_place": 3.15,
+     "detailed_place": 1.13,
+     "cts": 1.76,
+     "global_route": 2.63,
+     "final": 10.52
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 47.87,
+    "verilator_s": 7.979,
+    "formal_s": 0.324,
+    "orfs_s": 39.565,
+    "stage_s": {
+     "synth": 1.29,
+     "floorplan": 1.83,
+     "global_place": 3.17,
+     "detailed_place": 1.18,
+     "cts": 2.55,
+     "global_route": 4.14,
+     "final": 9.98
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 47.19,
+    "verilator_s": 9.258,
+    "formal_s": 0.374,
+    "orfs_s": 37.556,
+    "stage_s": {
+     "synth": 1.31,
+     "floorplan": 2.07,
+     "global_place": 2.9,
+     "detailed_place": 0.95,
+     "cts": 2.12,
+     "global_route": 3.43,
+     "final": 9.75
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 47.725,
+    "verilator_s": 7.25,
+    "formal_s": 0.351,
+    "orfs_s": 40.122,
+    "stage_s": {
+     "synth": 1.36,
+     "floorplan": 1.8,
+     "global_place": 3.29,
+     "detailed_place": 1.17,
+     "cts": 2.17,
+     "global_route": 4.41,
+     "final": 11.31
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 63.638,
+    "verilator_s": 8.015,
+    "formal_s": 0.362,
+    "orfs_s": 55.259,
+    "stage_s": {
+     "synth": 1.89,
+     "floorplan": 1.94,
+     "global_place": 3.24,
+     "detailed_place": 1.57,
+     "cts": 2.17,
+     "global_route": 5.89,
+     "final": 23.08
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 67.066,
+    "verilator_s": 7.187,
+    "formal_s": 0.345,
+    "orfs_s": 59.532,
+    "stage_s": {
+     "synth": 2.36,
+     "floorplan": 1.97,
+     "global_place": 3.55,
+     "detailed_place": 1.7,
+     "cts": 1.77,
+     "global_route": 8.73,
+     "final": 24.24
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 62.668,
+    "verilator_s": 7.539,
+    "formal_s": 0.327,
+    "orfs_s": 54.8,
+    "stage_s": {
+     "synth": 1.9,
+     "floorplan": 1.96,
+     "global_place": 3.39,
+     "detailed_place": 1.56,
+     "cts": 1.82,
+     "global_route": 6.38,
+     "final": 22.62
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 64.236,
+    "verilator_s": 7.292,
+    "formal_s": 0.303,
+    "orfs_s": 56.638,
+    "stage_s": {
+     "synth": 2.08,
+     "floorplan": 1.71,
+     "global_place": 3.42,
+     "detailed_place": 1.7,
+     "cts": 2.42,
+     "global_route": 6.93,
+     "final": 22.12
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 63.119,
+    "verilator_s": 7.808,
+    "formal_s": 0.313,
+    "orfs_s": 54.996,
+    "stage_s": {
+     "synth": 1.83,
+     "floorplan": 1.7,
+     "global_place": 3.46,
+     "detailed_place": 1.51,
+     "cts": 2.74,
+     "global_route": 8.43,
+     "final": 18.81
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 64.489,
+    "verilator_s": 8.13,
+    "formal_s": 0.35,
+    "orfs_s": 56.006,
+    "stage_s": {
+     "synth": 1.8,
+     "floorplan": 1.86,
+     "global_place": 3.27,
+     "detailed_place": 1.54,
+     "cts": 2.8,
+     "global_route": 8.89,
+     "final": 19.21
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 64.019,
+    "verilator_s": 9.31,
+    "formal_s": 0.35,
+    "orfs_s": 54.357,
+    "stage_s": {
+     "synth": 1.75,
+     "floorplan": 2.08,
+     "global_place": 3.31,
+     "detailed_place": 1.32,
+     "cts": 4.01,
+     "global_route": 6.2,
+     "final": 19.23
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 64.327,
+    "verilator_s": 8.205,
+    "formal_s": 0.359,
+    "orfs_s": 55.761,
+    "stage_s": {
+     "synth": 1.75,
+     "floorplan": 2.04,
+     "global_place": 3.64,
+     "detailed_place": 1.49,
+     "cts": 4.38,
+     "global_route": 10.29,
+     "final": 15.45
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 46.609,
+    "verilator_s": 8.119,
+    "formal_s": 0.672,
+    "orfs_s": 37.816,
+    "stage_s": {
+     "synth": 1.42,
+     "floorplan": 1.83,
+     "global_place": 2.57,
+     "detailed_place": 1.33,
+     "cts": 1.67,
+     "global_route": 2.04,
+     "final": 11.32
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 47.621,
+    "verilator_s": 7.87,
+    "formal_s": 0.702,
+    "orfs_s": 39.047,
+    "stage_s": {
+     "synth": 1.37,
+     "floorplan": 1.76,
+     "global_place": 2.82,
+     "detailed_place": 1.37,
+     "cts": 1.97,
+     "global_route": 2.17,
+     "final": 12.58
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_40000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 46.583,
+    "verilator_s": 9.54,
+    "formal_s": 0.686,
+    "orfs_s": 36.355,
+    "stage_s": {
+     "synth": 1.35,
+     "floorplan": 1.96,
+     "global_place": 3.02,
+     "detailed_place": 1.3,
+     "cts": 1.86,
+     "global_route": 3.25,
+     "final": 8.45
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_70000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 47.199,
+    "verilator_s": 8.21,
+    "formal_s": 0.615,
+    "orfs_s": 38.373,
+    "stage_s": {
+     "synth": 1.38,
+     "floorplan": 1.8,
+     "global_place": 2.93,
+     "detailed_place": 1.23,
+     "cts": 2.46,
+     "global_route": 3.91,
+     "final": 10.19
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7f000000.v",
+    "identical_to_frozen": false,
+    "runtime_s": 47.114,
+    "verilator_s": 7.94,
+    "formal_s": 0.788,
+    "orfs_s": 38.384,
+    "stage_s": {
+     "synth": 1.27,
+     "floorplan": 1.66,
+     "global_place": 2.98,
+     "detailed_place": 1.43,
+     "cts": 1.98,
+     "global_route": 4.45,
+     "final": 10.18
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_0000ffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 45.665,
+    "verilator_s": 7.026,
+    "formal_s": 0.715,
+    "orfs_s": 37.923,
+    "stage_s": {
+     "synth": 1.32,
+     "floorplan": 1.86,
+     "global_place": 2.87,
+     "detailed_place": 1.44,
+     "cts": 2.03,
+     "global_route": 3.24,
+     "final": 10.67
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_55555555.v",
+    "identical_to_frozen": true,
+    "runtime_s": 46.024,
+    "verilator_s": 7.575,
+    "formal_s": 0.595,
+    "orfs_s": 37.852,
+    "stage_s": {
+     "synth": 1.51,
+     "floorplan": 1.85,
+     "global_place": 2.97,
+     "detailed_place": 1.06,
+     "cts": 1.9,
+     "global_route": 3.79,
+     "final": 10.17
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 46.064,
+    "verilator_s": 7.776,
+    "formal_s": 0.594,
+    "orfs_s": 37.692,
+    "stage_s": {
+     "synth": 1.31,
+     "floorplan": 2.05,
+     "global_place": 2.83,
+     "detailed_place": 1.17,
+     "cts": 1.86,
+     "global_route": 3.43,
+     "final": 9.75
+    },
+    "cache_hit": false
+   }
+  ]
+ },
+ "16": {
+  "workers": 16,
+  "wall_s": 166.81,
+  "designs": 32,
+  "designs_per_hour": 690.6,
+  "rows": [
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 70.857,
+    "verilator_s": 9.748,
+    "formal_s": 0.459,
+    "orfs_s": 60.648,
+    "stage_s": {
+     "synth": 2.09,
+     "floorplan": 2.62,
+     "global_place": 5.87,
+     "detailed_place": 1.78,
+     "cts": 2.17,
+     "global_route": 3.34,
+     "final": 19.71
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 74.451,
+    "verilator_s": 12.479,
+    "formal_s": 0.529,
+    "orfs_s": 61.441,
+    "stage_s": {
+     "synth": 2.02,
+     "floorplan": 2.78,
+     "global_place": 5.18,
+     "detailed_place": 1.61,
+     "cts": 3.07,
+     "global_route": 7.38,
+     "final": 17.82
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 74.111,
+    "verilator_s": 14.743,
+    "formal_s": 0.543,
+    "orfs_s": 58.822,
+    "stage_s": {
+     "synth": 1.98,
+     "floorplan": 2.82,
+     "global_place": 5.81,
+     "detailed_place": 1.76,
+     "cts": 3.8,
+     "global_route": 7.86,
+     "final": 13.18
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 70.935,
+    "verilator_s": 11.363,
+    "formal_s": 0.454,
+    "orfs_s": 59.115,
+    "stage_s": {
+     "synth": 2.35,
+     "floorplan": 2.57,
+     "global_place": 5.8,
+     "detailed_place": 1.73,
+     "cts": 2.58,
+     "global_route": 3.19,
+     "final": 17.65
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 76.435,
+    "verilator_s": 13.479,
+    "formal_s": 0.524,
+    "orfs_s": 62.43,
+    "stage_s": {
+     "synth": 1.93,
+     "floorplan": 2.65,
+     "global_place": 5.48,
+     "detailed_place": 1.88,
+     "cts": 3.71,
+     "global_route": 8.58,
+     "final": 16.95
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 71.818,
+    "verilator_s": 9.378,
+    "formal_s": 0.431,
+    "orfs_s": 62.006,
+    "stage_s": {
+     "synth": 1.88,
+     "floorplan": 2.65,
+     "global_place": 5.57,
+     "detailed_place": 1.73,
+     "cts": 2.43,
+     "global_route": 4.86,
+     "final": 21.2
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 73.536,
+    "verilator_s": 11.1,
+    "formal_s": 0.476,
+    "orfs_s": 61.957,
+    "stage_s": {
+     "synth": 2.1,
+     "floorplan": 2.63,
+     "global_place": 5.74,
+     "detailed_place": 1.86,
+     "cts": 2.57,
+     "global_route": 5.55,
+     "final": 19.94
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "cmp32",
+    "candidate": "rtl/repro/latency_study_v1/cmp32/seed_07_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 74.137,
+    "verilator_s": 13.559,
+    "formal_s": 0.54,
+    "orfs_s": 60.036,
+    "stage_s": {
+     "synth": 2.29,
+     "floorplan": 2.61,
+     "global_place": 5.88,
+     "detailed_place": 1.68,
+     "cts": 3.67,
+     "global_route": 5.93,
+     "final": 16.42
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 77.419,
+    "verilator_s": 12.639,
+    "formal_s": 0.616,
+    "orfs_s": 64.161,
+    "stage_s": {
+     "synth": 2.09,
+     "floorplan": 2.58,
+     "global_place": 5.86,
+     "detailed_place": 1.64,
+     "cts": 3.17,
+     "global_route": 9.27,
+     "final": 18.46
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 70.362,
+    "verilator_s": 7.827,
+    "formal_s": 0.549,
+    "orfs_s": 61.983,
+    "stage_s": {
+     "synth": 1.88,
+     "floorplan": 2.84,
+     "global_place": 5.72,
+     "detailed_place": 1.71,
+     "cts": 2.82,
+     "global_route": 4.57,
+     "final": 20.82
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 75.656,
+    "verilator_s": 14.755,
+    "formal_s": 0.586,
+    "orfs_s": 60.313,
+    "stage_s": {
+     "synth": 1.9,
+     "floorplan": 2.89,
+     "global_place": 5.67,
+     "detailed_place": 1.73,
+     "cts": 3.26,
+     "global_route": 9.06,
+     "final": 14.01
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 75.883,
+    "verilator_s": 14.024,
+    "formal_s": 0.592,
+    "orfs_s": 61.265,
+    "stage_s": {
+     "synth": 1.92,
+     "floorplan": 2.57,
+     "global_place": 5.88,
+     "detailed_place": 1.58,
+     "cts": 3.09,
+     "global_route": 8.54,
+     "final": 17.78
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 72.354,
+    "verilator_s": 13.821,
+    "formal_s": 0.582,
+    "orfs_s": 57.948,
+    "stage_s": {
+     "synth": 1.99,
+     "floorplan": 2.62,
+     "global_place": 5.96,
+     "detailed_place": 1.54,
+     "cts": 3.44,
+     "global_route": 5.96,
+     "final": 15.49
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 74.931,
+    "verilator_s": 12.424,
+    "formal_s": 0.543,
+    "orfs_s": 61.96,
+    "stage_s": {
+     "synth": 2.29,
+     "floorplan": 2.61,
+     "global_place": 5.67,
+     "detailed_place": 1.56,
+     "cts": 3.06,
+     "global_route": 8.32,
+     "final": 17.4
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 75.309,
+    "verilator_s": 13.783,
+    "formal_s": 0.591,
+    "orfs_s": 60.933,
+    "stage_s": {
+     "synth": 2.18,
+     "floorplan": 2.74,
+     "global_place": 6.04,
+     "detailed_place": 1.61,
+     "cts": 3.28,
+     "global_route": 8.0,
+     "final": 16.25
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "priority32",
+    "candidate": "rtl/repro/latency_study_v1/priority32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 73.524,
+    "verilator_s": 9.812,
+    "formal_s": 0.546,
+    "orfs_s": 63.164,
+    "stage_s": {
+     "synth": 2.08,
+     "floorplan": 2.72,
+     "global_place": 5.43,
+     "detailed_place": 1.72,
+     "cts": 2.7,
+     "global_route": 5.44,
+     "final": 21.25
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_00_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 91.327,
+    "verilator_s": 13.132,
+    "formal_s": 0.491,
+    "orfs_s": 77.702,
+    "stage_s": {
+     "synth": 2.67,
+     "floorplan": 2.49,
+     "global_place": 6.18,
+     "detailed_place": 2.16,
+     "cts": 3.45,
+     "global_route": 10.87,
+     "final": 29.3
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_01_00000080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 95.528,
+    "verilator_s": 13.482,
+    "formal_s": 0.541,
+    "orfs_s": 81.504,
+    "stage_s": {
+     "synth": 3.08,
+     "floorplan": 2.9,
+     "global_place": 6.07,
+     "detailed_place": 2.0,
+     "cts": 3.29,
+     "global_route": 21.4,
+     "final": 24.11
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_02_00008000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 92.35,
+    "verilator_s": 13.609,
+    "formal_s": 0.51,
+    "orfs_s": 78.229,
+    "stage_s": {
+     "synth": 2.63,
+     "floorplan": 2.8,
+     "global_place": 6.16,
+     "detailed_place": 2.1,
+     "cts": 3.1,
+     "global_route": 14.98,
+     "final": 26.62
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_03_00800000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 88.817,
+    "verilator_s": 10.139,
+    "formal_s": 0.468,
+    "orfs_s": 78.208,
+    "stage_s": {
+     "synth": 2.82,
+     "floorplan": 2.32,
+     "global_place": 5.73,
+     "detailed_place": 2.27,
+     "cts": 2.64,
+     "global_route": 5.22,
+     "final": 37.4
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_04_00808080.v",
+    "identical_to_frozen": true,
+    "runtime_s": 91.075,
+    "verilator_s": 11.914,
+    "formal_s": 0.508,
+    "orfs_s": 78.65,
+    "stage_s": {
+     "synth": 2.92,
+     "floorplan": 2.56,
+     "global_place": 5.87,
+     "detailed_place": 2.02,
+     "cts": 3.39,
+     "global_route": 15.76,
+     "final": 25.84
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_05_08888888.v",
+    "identical_to_frozen": true,
+    "runtime_s": 91.369,
+    "verilator_s": 13.776,
+    "formal_s": 0.534,
+    "orfs_s": 77.057,
+    "stage_s": {
+     "synth": 2.53,
+     "floorplan": 2.69,
+     "global_place": 6.23,
+     "detailed_place": 2.31,
+     "cts": 4.71,
+     "global_route": 14.33,
+     "final": 23.31
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_06_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 88.96,
+    "verilator_s": 12.203,
+    "formal_s": 0.557,
+    "orfs_s": 76.198,
+    "stage_s": {
+     "synth": 2.48,
+     "floorplan": 2.68,
+     "global_place": 5.72,
+     "detailed_place": 2.2,
+     "cts": 3.3,
+     "global_route": 12.3,
+     "final": 27.87
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "addpipe32",
+    "candidate": "rtl/repro/latency_study_v1/addpipe32/seed_07_7fffffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 90.648,
+    "verilator_s": 13.447,
+    "formal_s": 0.575,
+    "orfs_s": 76.623,
+    "stage_s": {
+     "synth": 2.59,
+     "floorplan": 2.96,
+     "global_place": 6.43,
+     "detailed_place": 2.92,
+     "cts": 5.59,
+     "global_route": 12.91,
+     "final": 22.22
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_00000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 75.366,
+    "verilator_s": 9.836,
+    "formal_s": 1.018,
+    "orfs_s": 64.509,
+    "stage_s": {
+     "synth": 1.96,
+     "floorplan": 2.72,
+     "global_place": 5.11,
+     "detailed_place": 1.69,
+     "cts": 2.78,
+     "global_route": 3.56,
+     "final": 22.8
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7fffffff.v",
+    "identical_to_frozen": false,
+    "runtime_s": 86.335,
+    "verilator_s": 13.61,
+    "formal_s": 1.006,
+    "orfs_s": 71.717,
+    "stage_s": {
+     "synth": 2.23,
+     "floorplan": 2.53,
+     "global_place": 5.41,
+     "detailed_place": 1.74,
+     "cts": 2.88,
+     "global_route": 11.55,
+     "final": 21.6
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_40000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 80.014,
+    "verilator_s": 13.415,
+    "formal_s": 0.852,
+    "orfs_s": 65.746,
+    "stage_s": {
+     "synth": 1.89,
+     "floorplan": 2.38,
+     "global_place": 5.28,
+     "detailed_place": 1.63,
+     "cts": 3.02,
+     "global_route": 8.59,
+     "final": 19.1
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_70000000.v",
+    "identical_to_frozen": true,
+    "runtime_s": 82.129,
+    "verilator_s": 10.049,
+    "formal_s": 0.989,
+    "orfs_s": 71.089,
+    "stage_s": {
+     "synth": 2.05,
+     "floorplan": 2.48,
+     "global_place": 5.45,
+     "detailed_place": 1.84,
+     "cts": 2.85,
+     "global_route": 8.15,
+     "final": 23.58
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_7f000000.v",
+    "identical_to_frozen": false,
+    "runtime_s": 80.826,
+    "verilator_s": 10.176,
+    "formal_s": 1.188,
+    "orfs_s": 69.46,
+    "stage_s": {
+     "synth": 2.03,
+     "floorplan": 2.74,
+     "global_place": 5.65,
+     "detailed_place": 1.52,
+     "cts": 3.12,
+     "global_route": 9.16,
+     "final": 22.84
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_0000ffff.v",
+    "identical_to_frozen": true,
+    "runtime_s": 80.198,
+    "verilator_s": 9.894,
+    "formal_s": 1.044,
+    "orfs_s": 69.256,
+    "stage_s": {
+     "synth": 1.91,
+     "floorplan": 2.84,
+     "global_place": 5.42,
+     "detailed_place": 1.77,
+     "cts": 2.84,
+     "global_route": 7.1,
+     "final": 23.88
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_55555555.v",
+    "identical_to_frozen": true,
+    "runtime_s": 84.388,
+    "verilator_s": 14.026,
+    "formal_s": 0.888,
+    "orfs_s": 69.472,
+    "stage_s": {
+     "synth": 2.04,
+     "floorplan": 2.74,
+     "global_place": 5.74,
+     "detailed_place": 2.21,
+     "cts": 5.01,
+     "global_route": 9.54,
+     "final": 18.9
+    },
+    "cache_hit": false
+   },
+   {
+    "benchmark": "popcount32_tree",
+    "candidate": "rtl/repro/latency_study_v1/popcount32_tree/mask_2aaaaaaa.v",
+    "identical_to_frozen": true,
+    "runtime_s": 80.176,
+    "verilator_s": 8.157,
+    "formal_s": 1.013,
+    "orfs_s": 71.004,
+    "stage_s": {
+     "synth": 2.07,
+     "floorplan": 2.86,
+     "global_place": 5.69,
+     "detailed_place": 1.59,
+     "cts": 2.77,
+     "global_route": 8.44,
+     "final": 23.61
+    },
+    "cache_hit": false
+   }
+  ]
+ }
+}

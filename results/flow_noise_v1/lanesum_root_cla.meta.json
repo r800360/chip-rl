@@ -1,0 +1,11 @@
+{
+ "label": "lanesum root CLA",
+ "benchmark": "lanesum16x8_tree",
+ "group": "lanesum",
+ "source": "rtl/generated/lanesum16x8_tree_arch_seed_v1/mask_4000.v",
+ "original": {
+  "area": 913.178,
+  "wns": 6.8695,
+  "reward": 67.781822
+ }
+}

@@ -1,6 +1,6 @@
 # Deterministic popcount-tree one-flip neighborhood study
 
-Exploratory follow-up to the frozen 192-query v3 pilot. Earlier adaptive samplers did not propose any architecture with 24–30 carry-lookahead nodes; the best seed has all 31 nodes set to CLA. This study exhaustively evaluates all 31 Hamming-distance-one masks obtained by converting one CLA node to an arithmetic adder. The 31 candidate masks, their order, RTL hashes, existing seed measurements, physical flow fingerprints and primary metrics are fixed **before** any neighborhood PPA is taken. This is a deterministic sweep, **not another RL trial**.
+Exploratory follow-up to the frozen 192-query v3 pilot. Earlier adaptive samplers did not propose any architecture with 24 to 30 carry-lookahead nodes; the best seed has all 31 nodes set to CLA. This study exhaustively evaluates all 31 Hamming-distance-one masks obtained by converting one CLA node to an arithmetic adder. The 31 candidate masks, their order, RTL hashes, existing seed measurements, physical flow fingerprints and primary metrics are fixed **before** any neighborhood PPA is taken. This is a deterministic sweep, **not another RL trial**.
 
 1. Preserve the previous v3 ZIP and create tag `popcount-tree-v3-final-v1` if not already done.
 2. Install the three Python files from this ZIP in `experiments/`.

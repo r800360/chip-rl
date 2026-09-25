@@ -1,0 +1,34 @@
+{
+ "episode_id": "popcount32__full_tools__claude-opus-5__r3",
+ "model": "claude-opus-5",
+ "task": "popcount32",
+ "condition": "full_tools",
+ "rep": 3,
+ "settings": {
+  "max_tokens": 32000,
+  "pnr_budget": 4,
+  "max_tool_calls": 30,
+  "thinking": {
+   "type": "adaptive"
+  },
+  "output_config": {
+   "effort": "high"
+  }
+ },
+ "baseline_score": 69.89893,
+ "best_known_score": 69.95253,
+ "best_score": null,
+ "best_minus_baseline": null,
+ "valid_submissions": 0,
+ "submissions": [],
+ "finished_by_agent": false,
+ "finish_summary": "",
+ "api_turns": 1,
+ "last_stop_reason": null,
+ "error": "API request failed; the episode stopped early and was rerun from scratch (results/agentic_eval_v1/popcount32__full_tools__claude-opus-5__r3/)",
+ "tool_counts": {},
+ "calls": [],
+ "usage": {},
+ "cost_usd": 0.0,
+ "wall_s": 0.3
+}

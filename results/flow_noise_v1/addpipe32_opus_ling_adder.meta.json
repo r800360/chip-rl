@@ -1,0 +1,11 @@
+{
+ "label": "addpipe32 Opus Ling adder",
+ "benchmark": "addpipe32",
+ "group": "adder32",
+ "source": "rtl/showcase/addpipe32_opus5_ling.v",
+ "original": {
+  "area": 903.336,
+  "wns": 7.51982,
+  "reward": 74.294864
+ }
+}

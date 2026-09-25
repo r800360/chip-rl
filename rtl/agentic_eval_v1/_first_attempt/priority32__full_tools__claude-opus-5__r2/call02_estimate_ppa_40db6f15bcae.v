@@ -1,0 +1,62 @@
+module priority32 (
+    input wire clk,
+    input wire rst_n,
+    input wire valid_i,
+    input wire [31:0] a_i,
+    input wire [31:0] b_i,
+    output reg valid_o,
+    output reg [5:0] y_o
+);
+// direct wide prefix NORs (shallow)
+wire n6 = ~|a_i[31:28];
+wire n5 = ~|a_i[31:24];
+wire n4 = ~|a_i[31:20];
+wire n3 = ~|a_i[31:16];
+wire n2 = ~|a_i[31:12];
+wire n1 = ~|a_i[31:8];
+wire n0 = ~|a_i[31:4];
+wire hit = |a_i[31:0];
+
+wire q0 = |a_i[3:0];
+wire q1 = |a_i[7:4];
+wire q2 = |a_i[11:8];
+wire q3 = |a_i[15:12];
+wire q5 = |a_i[23:20];
+wire q7 = |a_i[31:28];
+
+wire e1_0 = a_i[3]  | a_i[2];
+wire e1_1 = a_i[7]  | a_i[6];
+wire e1_2 = a_i[11] | a_i[10];
+wire e1_3 = a_i[15] | a_i[14];
+wire e1_4 = a_i[19] | a_i[18];
+wire e1_5 = a_i[23] | a_i[22];
+wire e1_6 = a_i[27] | a_i[26];
+wire e1_7 = a_i[31] | a_i[30];
+
+wire e0_0 = a_i[3]  | (~a_i[2]  & a_i[1]);
+wire e0_1 = a_i[7]  | (~a_i[6]  & a_i[5]);
+wire e0_2 = a_i[11] | (~a_i[10] & a_i[9]);
+wire e0_3 = a_i[15] | (~a_i[14] & a_i[13]);
+wire e0_4 = a_i[19] | (~a_i[18] & a_i[17]);
+wire e0_5 = a_i[23] | (~a_i[22] & a_i[21]);
+wire e0_6 = a_i[27] | (~a_i[26] & a_i[25]);
+wire e0_7 = a_i[31] | (~a_i[30] & a_i[29]);
+
+wire idx4 = ~n3;
+wire idx3 = (~n5) | (n3 & ~n1);
+wire idx2 = q7 | (n5 & q5) | (n3 & q3) | (n1 & q1);
+wire idx1 = e1_7 | (n6 & e1_6) | (n5 & e1_5) | (n4 & e1_4) |
+            (n3 & e1_3) | (n2 & e1_2) | (n1 & e1_1) | (n0 & e1_0);
+wire idx0 = e0_7 | (n6 & e0_6) | (n5 & e0_5) | (n4 & e0_4) |
+            (n3 & e0_3) | (n2 & e0_2) | (n1 & e0_1) | (n0 & e0_0);
+
+wire [5:0] chosen = {hit, idx4, idx3, idx2, idx1, idx0};
+
+wire sc = rst_n & valid_i;
+wire sh = rst_n & ~valid_i;
+
+always @(posedge clk) begin
+    valid_o <= sc;
+    y_o <= (chosen & {6{sc}}) | (y_o & {6{sh}});
+end
+endmodule

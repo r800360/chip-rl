@@ -1,0 +1,11 @@
+{
+ "label": "lanesum all-ADD",
+ "benchmark": "lanesum16x8_tree",
+ "group": "lanesum",
+ "source": "rtl/lanesum16x8_tree/baseline.v",
+ "original": {
+  "area": 887.908,
+  "wns": 6.88689,
+  "reward": 67.980992
+ }
+}
